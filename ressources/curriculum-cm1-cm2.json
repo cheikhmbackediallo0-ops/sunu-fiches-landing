@@ -1,0 +1,619 @@
+{
+  "meta": {
+    "source": "Guide pédagogique — Enseignement élémentaire, 3ème étape CM1-CM2, Ministère de l'Éducation nationale du Sénégal, nouvelle édition juin 2016 (STP du curriculum, appui du Canada).",
+    "fichier_source": "ressources/guides/elementaire/etape-3.txt",
+    "approche": "APC — Approche par les compétences / Pédagogie de l'intégration",
+    "etape": 3,
+    "niveaux": ["CM1", "CM2"],
+    "version": "2.0",
+    "profondeur": "Complète : compétences d'étape, compétences de base, critères, paliers avec OA / objectifs spécifiques / contenus / durées, échelons Dubois-Buyse, situations d'intégration et situations d'évaluation avec barèmes.",
+    "specificite_etape_3": "Huit paliers en Langue et Communication, quatre par niveau, couvrant SEPT types de textes : narratif, descriptif, injonctif, informatif, informatif explicatif, argumentatif, dialogué et poétique. L'ARGUMENTATIF et l'EXPLICATIF sont propres à cette étape. En EPSA, on passe de l'initiation sportive (étape 2) à la COMPÉTITION. En ESVS, la géographie et VDSM deviennent explicatives : chaque palier porte sur des INTERRELATIONS.",
+    "horaires": "ESVS : séances de 45 mn (contre 30 mn aux étapes 1 et 2), activités d'intégration 90 mn. EPS : séances de 45 mn. Éducation musicale et arts scéniques : séances de 30 mn.",
+    "regle_integration": "Chaque palier se termine par un apprentissage de l'intégration exigeant AU MOINS 3 SSI, puis des activités de remédiation. Une situation d'évaluation critériée clôt les paliers 4 (fin CM1) et 8 (fin CM2).",
+    "ecoles_franco_arabes": "Le guide signale à plusieurs paliers qu'en raison des contraintes de temps, certains OS peuvent ne pas être traités dans les écoles franco-arabes."
+  },
+
+  "competences_etape": {
+    "mathematiques": "À la fin de la troisième étape, l'élève doit intégrer des outils mathématiques (numération décimale, nombres décimaux et fractionnaires, opérations arithmétiques, éléments de géométrie, mesure de grandeurs et raisonnement) dans des situations familières de résolution de problèmes.",
+    "production_ecrits": "À la fin de l'étape, l'élève doit intégrer le vocabulaire adéquat, les indices significatifs, des structures et des règles syntaxiques dans des situations de production de textes narratifs, descriptifs, injonctifs, informatifs, argumentatifs, dialogués et poétiques.",
+    "epsa_eps": "Intégrer des règles de base, des activités motrices, des techniques simples et des systèmes de jeu dans des situations de compétitions sportives.",
+    "epsa_artistique": "Intégrer des techniques élémentaires d'observation, de reproduction et de création dans des situations de production artistique."
+  },
+
+  "typologie_criteres": {
+    "note": "Typologie commune aux trois guides de l'élémentaire. Trois critères au maximum, indépendants les uns des autres.",
+    "langue_communication": [
+      { "code": "C1", "nom": "Pertinence de la production", "definition": "La production est en adéquation avec la situation d'évaluation et avec la consigne." },
+      { "code": "C2", "nom": "Cohérence de la production", "definition": "Les différents éléments s'enchaînent de manière logique." },
+      { "code": "C3", "nom": "Correction de la langue", "definition": "Les outils de la discipline sont correctement utilisés." },
+      { "code": "C4", "nom": "Présentation de la production", "definition": "La production est soignée." }
+    ],
+    "mathematiques": [
+      { "code": "C1", "nom": "Pertinence des solutions", "definition": "L'outil, l'opération ou la stratégie utilisés sont appropriés à la situation." },
+      { "code": "C2", "nom": "Justesse des opérations", "definition": "Les résultats des opérations sont exacts." }
+    ],
+    "esvs": [
+      { "code": "C1", "nom": "Pertinence de la solution", "definition": "Les techniques, démarches et solutions proposées sont en adéquation avec la situation." },
+      { "code": "C2", "nom": "Justesse des faits ou des résultats", "definition": "Les faits historiques ou géographiques, les résultats de l'analyse ou les solutions proposés sont exacts." },
+      { "code": "C3", "nom": "Exhaustivité des réponses", "definition": "La réponse fournie est complète." },
+      { "code": "C4", "nom": "Faisabilité des solutions", "definition": "La solution proposée est réaliste au regard du contexte et des ressources disponibles." }
+    ]
+  },
+
+  "domaines": [
+    {
+      "code": "LC",
+      "nom": "Langue et Communication",
+      "sous_domaines": [
+        {
+          "code": "CO",
+          "nom": "Communication orale",
+          "activites": [{
+            "code": "EO",
+            "nom": "Expression orale et Récitation",
+            "competence_base": "Intégrer le vocabulaire adéquat, les comportements non verbaux, le schéma intonatif et des règles syntaxiques dans des situations de compréhension et de production de messages oraux relatifs à la transmission d'informations et aux échanges verbaux.",
+            "note": "Les situations d'expression orale de cette étape sont essentiellement dialoguées et interactives. Remarque récurrente du guide : « il convient de recourir à une large gamme d'activités pour chaque OS ».",
+            "recitation": "La RÉCITATION accompagne chaque palier : 2 textes tout au long du palier (un poème, un texte en prose), avec expression, intonation et gestes qui conviennent. Au palier 7, elle devient « s'initier au jeu théâtral » avec récitation de textes dialogués.",
+            "criteres": [
+              { "nom": "Pertinence", "note_max": 22, "note_max_variante": 25 },
+              { "nom": "Cohérence", "note_max": 17, "bareme": "Toutes les phrases en lien 17 · les 2 tiers 12 · la moitié 7 · le tiers 2 · moins du tiers 0" },
+              { "nom": "Correction", "note_max": 16, "bareme": "0 à 3 erreurs 16 · 3 à 5 erreurs 11 · 5 à 10 erreurs 6 · plus de 10 erreurs 0" },
+              { "nom": "Comportement non verbal", "note_max": 5, "bareme": "Gestes, posture, regard corrects 5 · une déficience notoire 2 · deux manquements 1 · plus de 2 manquements 0" }
+            ],
+            "total": 60,
+            "paliers": [
+              {
+                "n": 1, "niveau": "CM1", "duree_semaines": 7, "type_texte": "narratif",
+                "enonce": "Intégrer le vocabulaire adéquat, les comportements non verbaux, le schéma intonatif et des règles syntaxiques dans des situations de transmission d'informations de type narratif.",
+                "oa": [
+                  { "intitule": "Relater un événement vécu ou entendu", "os": ["Relater un événement vécu, une expérience personnelle", "Relater un fait divers, un événement entendu"] },
+                  { "intitule": "Relater un récit imaginé", "os": ["Raconter une histoire imaginée", "Raconter un conte imaginé"] }
+                ],
+                "contenus": "Le respect du thème, l'articulation, le rythme de la parole, la maîtrise du souffle, la fidélité, la concision, la cohérence (chronologie des faits, étapes de la narration) dans le récit, le lexique adapté (connecteurs, emploi de verbes d'action)."
+              },
+              {
+                "n": 2, "niveau": "CM1", "duree_semaines": 5, "type_texte": "descriptif",
+                "enonce": "Intégrer le vocabulaire adéquat, les comportements non verbaux, le schéma intonatif et des règles syntaxiques dans des situations de transmission d'informations de type descriptif.",
+                "oa": [
+                  { "intitule": "Décrire une chose connue", "os": ["Décrire un objet familier", "Décrire un problème d'environnement ou de santé", "Décrire un itinéraire", "Décrire un lieu public"] },
+                  { "intitule": "Décrire une personne, un animal", "os": ["Faire le portrait d'une personne (aspects physiques et moraux)", "Décrire un animal (aspect physique et caractère)"] }
+                ],
+                "contenus": "Le respect du thème, l'articulation, le rythme de la parole, la maîtrise du souffle, la fidélité, la concision, la cohérence, le lexique adapté (connecteurs, emploi de verbes d'état, d'adjectifs qualificatifs).",
+                "nb_efa": "En raison des contraintes de temps, dans les écoles franco-arabes, l'OS n°3 peut ne pas être traité.",
+                "situation_integration": { "contexte": "Tu participes à un concours de description en classe. Chaque participant est invité soit à décrire un problème d'environnement, un phénomène physique, un lieu public ou un animal, soit à faire le portrait d'une personne.", "consigne": "Présente ta description." },
+                "situation_integration_2": { "contexte": "Au tableau sont affichées des illustrations découpées dans des journaux (personnages, paysages…). Tu dois en choisir une « dans ta tête » pour la décrire à tes camarades afin qu'ils la découvrent. L'élève qui découvrira en premier ton choix deviendra à son tour le « descripteur ».", "consigne": "Choisis une image et présente ta description.", "variante": "Au lieu des illustrations, afficher des dessins d'élèves." }
+              },
+              {
+                "n": 3, "niveau": "CM1", "duree_semaines": 4, "type_texte": "injonctif",
+                "enonce": "Intégrer le vocabulaire adéquat, les comportements non verbaux, le schéma intonatif et des règles syntaxiques dans des situations de transmission d'informations de type injonctif.",
+                "oa": [{ "intitule": "Faire agir", "os": ["Donner des conseils pratiques", "Donner des ordres", "Donner des consignes", "Donner des règles à observer"] }],
+                "contenus": "Emploi correct de formules impersonnelles (il faut + infinitif) et de l'impératif.",
+                "situation_integration": { "contexte": "Des groupes de travail (entretien de la classe, entretien de la cour, jardinage, surveillance du point d'eau, entretien du poulailler) sont mis en place en début d'année. Aujourd'hui, tu es le responsable de ton groupe qui doit assurer le travail demandé.", "consigne": "Joue la scène.", "production_attendue": "L'élève donne des règles à observer, des conseils, des recommandations." }
+              },
+              {
+                "n": 4, "niveau": "CM1", "duree_semaines": 4, "type_texte": "informatif",
+                "enonce": "Intégrer le vocabulaire adéquat, les comportements non verbaux, le schéma intonatif et des règles syntaxiques dans des situations de transmission d'informations de type informatif.",
+                "oa": [
+                  { "intitule": "Donner des informations", "os": ["Annoncer un événement, une cérémonie", "Donner des informations tirées de sa lecture, des médias (radio, TV, presse)"] },
+                  { "intitule": "Expliquer une tâche", "os": ["Expliquer les actions nécessaires à la réalisation d'une tâche"] },
+                  { "intitule": "Expliquer un mécanisme, un phénomène", "os": ["Expliquer l'utilisation d'un appareil simple", "Faire comprendre un phénomène, un schéma, un montage"] }
+                ],
+                "contenus": "La manière de présenter les idées, l'articulation, la clarté, le rythme de la parole, la maîtrise du souffle, la justesse des informations, la cohérence.",
+                "situation_integration": { "contexte": "Des accidents domestiques sont fréquents dans ta localité. Tu as lu un article de presse (« Encore une imprudence coupable ! ») relatant l'incendie du quartier Fass Paillote, causé par une bonbonne de gaz mal manipulée par une fillette. L'article rappelle les précautions : faire l'opération en plein air, s'assurer qu'il n'y a pas de feu à côté, fermer le bec du gaz avant de le mettre dans l'embout et le visser à fond, vérifier s'il n'y a pas de fuite.", "consigne": "Donne les informations utiles à tes camarades pour éviter un tel accident.", "indications": "Faire lire le texte, expliciter la consigne. L'enseignant peut disposer de coupures de presse similaires afin de varier les textes. Faire travailler les élèves par groupes pour éviter la duplication." },
+                "situation_evaluation": { "contexte": "Tu as trouvé dans le journal un article (« Une noyade ») racontant comment un maître-nageur puis les sapeurs-pompiers ont réanimé le jeune Christophe : retourner l'enfant sur le ventre, lui tourner la tête sur le côté, appuyer fortement sur le dos, relâcher la pression et recommencer avec méthode jusqu'à ce que l'eau sorte.", "consigne": "Donne les informations utiles à tes amis pour expliquer comment secourir une personne sauvée d'une noyade.", "bareme": "Pertinence 22 (toutes les étapes 22 · la moitié 17 · le tiers 12 · une seule 7 · aucune 0) · Cohérence 17 · Correction 16 · Comportement non verbal 5 — total 60" }
+              },
+              {
+                "n": 5, "niveau": "CM2", "duree_semaines": 6, "type_texte": "informatif (explicatif)",
+                "enonce": "Intégrer le vocabulaire adéquat, les comportements non verbaux, le schéma intonatif et des règles syntaxiques dans des situations de transmission d'informations de type informatif.",
+                "oa": [{ "intitule": "Faire un exposé", "os": ["Exposer une idée", "Exposer un programme (élection de délégués, par exemple)", "Exposer un projet"] }],
+                "contenus": "La manière de présenter des idées, l'articulation, la clarté, le rythme de la parole, la maîtrise du souffle, la justesse des informations, la cohérence.",
+                "situation_integration": { "contexte": "C'est l'élection des délégués de la classe (ou des députés du Gouvernement scolaire). Tu es candidat et tu dois exposer ton programme pour être élu.", "consigne": "Expose ton programme." }
+              },
+              {
+                "n": 6, "niveau": "CM2", "duree_semaines": 6, "type_texte": "argumentatif",
+                "enonce": "Intégrer le vocabulaire adéquat, les comportements non verbaux, le schéma intonatif et des règles syntaxiques dans des situations d'échanges verbaux de type argumentatif.",
+                "oa": [
+                  { "intitule": "Participer à une conversation", "os": ["Participer à une conversation (plusieurs séances)"] },
+                  { "intitule": "Participer à un débat", "os": ["Donner son avis, son point de vue", "Défendre son point de vue, argumenter", "Tenir compte de ce que dit l'autre", "Réfuter le point de vue de l'autre"] }
+                ],
+                "contenus": "L'écoute, le respect du thème (thèmes variés, un thème par séance), l'argumentation, la manière de présenter des idées, l'articulation, le rythme de la parole, la maîtrise du souffle.",
+                "situation_integration": { "contexte": "Après un événement lié à un talibé (par exemple un accident de circulation), un débat sur la mendicité est organisé en classe.", "consigne": "Participe au débat.", "production_attendue": "Les participants doivent savoir écouter, poser des questions, donner leur point de vue, défendre leur avis en tenant compte de celui des autres.", "indications": "L'enseignant rappelle l'enjeu du débat et joue le rôle d'animateur." }
+              },
+              {
+                "n": 7, "niveau": "CM2", "duree_semaines": 6, "type_texte": "dialogué",
+                "enonce": "Intégrer le vocabulaire adéquat, les comportements non verbaux, le schéma intonatif et des règles syntaxiques dans des situations d'échanges verbaux de type dialogué.",
+                "oa": [
+                  { "intitule": "Converser au téléphone", "os": ["Demander des informations au téléphone", "Transmettre des informations au téléphone", "Répondre à une sollicitation au téléphone"] },
+                  { "intitule": "Conduire une interview", "os": ["Poser des questions précises", "Reformuler des questions"] }
+                ],
+                "contenus": "L'écoute, le respect du thème, l'argumentation, la manière de présenter des idées, l'articulation, le rythme de la parole, la maîtrise du souffle.",
+                "situation_integration": { "contexte": "Tu dois faire une enquête sur l'histoire de ta localité. Tu dois chercher des informations auprès de quelqu'un, après avoir pris rendez-vous avec lui au téléphone.", "consigne": "Joue la scène.", "indications": "Jouer le rôle de l'informateur. Organiser la mise en scène : le téléphone, l'entrevue. Faire varier les thèmes de l'enquête pour éviter les redondances." }
+              },
+              {
+                "n": 8, "niveau": "CM2", "duree_semaines": 6, "type_texte": "poétique",
+                "enonce": "Intégrer le vocabulaire adéquat, les comportements non verbaux, le schéma intonatif et des règles syntaxiques dans des situations d'expression poétique.",
+                "oa": [
+                  { "intitule": "Produire des mots, des phrases selon des contraintes sonores", "os": ["Jouer avec les mots et les sonorités"] },
+                  { "intitule": "Produire des énoncés poétiques", "os": ["À partir d'un modèle, inventer des énoncés, à la manière de…", "Transformer des textes en prose en texte poétique"] },
+                  { "intitule": "Déclamer un texte poétique dans une mise en scène théâtrale", "os": ["Jouer le rôle d'un personnage dans une pièce de théâtre poétique"] }
+                ],
+                "contenus": "Phrases amusantes à partir de sons voisins : virelangues (« ton tas de riz tenta le rat ») ; jeu du marabout (chat – chapeau – chapeau de paille – paillasson). Ateliers poétiques : transformation de poème, création poétique de type « slam ». Pièces de théâtre poétique.",
+                "situation_integration": { "contexte": "Tu fais partie de la troupe théâtrale de ton école qui doit présenter une pièce à l'occasion d'une cérémonie de sensibilisation sur un thème d'utilité sociale.", "consigne": "Joue la scène.", "indications": "Choisir un texte adapté au thème et organiser la mise en scène. Plusieurs actes étalés sur plusieurs jours permettront à plusieurs élèves de participer." },
+                "situation_integration_2": { "contexte": "Tu participes à un concours de création de textes de « rap ». Tu voudrais faire partie des lauréats.", "consigne": "Présente au jury le texte que tu as créé." },
+                "situation_evaluation": { "contexte": "Nous organisons en classe un concours du meilleur conteur. Le conte doit comporter une partie descriptive et des moments de dialogue entre des personnages.", "consigne": "Présente un conte, d'au moins dix phrases, pour gagner.", "bareme": "Pertinence 25 (conte contenant les 2 parties descriptive et dialoguée 25 · une seule partie 20) · Cohérence · Correction · Comportement non verbal" }
+              }
+            ]
+          }]
+        },
+        {
+          "code": "CE",
+          "nom": "Communication écrite",
+          "activites": [
+            {
+              "code": "LECT",
+              "nom": "Lecture",
+              "competence_base": "Intégrer les mécanismes d'identification des mots et des stratégies de compréhension dans des situations de lecture de textes narratifs, descriptifs, injonctifs, informatifs, argumentatifs, dialogués et poétiques.",
+              "note": "Le guide met en garde : ne pas se cantonner au seul type de texte indiqué dans le palier, pour rompre la monotonie et préserver la motivation. Remarque récurrente : plusieurs OS peuvent être exploités au cours d'une même séance, selon leur intérêt par rapport au texte d'étude.",
+              "structure_oa_constante": [
+                "Comprendre des textes du type visé (le bloc d'OS le plus fourni)",
+                "Identifier des mots fréquents — reconnaître instantanément et savoir orthographier (échelle Dubois-Buyse)",
+                "Développer la fluidité de la lecture — lire à voix haute avec rapidité, précision et expression"
+              ],
+              "os_comprehension_type": [
+                "Identifier les éléments constitutifs du texte (personnages, sujet central, temps, lieux…)",
+                "Se construire une représentation personnelle (« film » mental, images mentales)",
+                "Reformuler avec ses propres mots",
+                "Regrouper les idées principales pour résumer",
+                "Extraire des informations explicites et implicites",
+                "Donner un avis personnel et le justifier",
+                "Apprécier les effets produits auprès de différents lecteurs",
+                "Défendre son appréciation en s'appuyant sur des critères et des exemples pertinents",
+                "Mettre en réseaux des textes du même type : ressemblances, différences, variantes"
+              ],
+              "activites_fluidite": [
+                "Lecture répétée de petits textes de complexité graduée, avec chronométrage",
+                "Lecture expressive à haute voix de textes divers",
+                "Lecture expressive polyphonique (par plusieurs élèves) : narrateur, personnages",
+                "Lecture à voix haute en situation de vraie communication (seuls les lecteurs ont le texte)"
+              ],
+              "paliers": [
+                { "n": 1, "niveau": "CM1", "duree_semaines": 7, "type_texte": "narratifs", "echelon_dubois_buyse": "13, 2ème partie", "enonce": "Intégrer les mécanismes d'identification des mots et des stratégies de compréhension dans des situations de lecture et de compréhension de textes narratifs.", "contenus": "Construction de sens à partir de textes narratifs : récits, contes, albums de littérature jeunesse, BD. Marques de ponctuation ou de parole (deux points, guillemets). Termes désignant un même personnage (substituts). Relations établies par les connecteurs (temporelles, spatiales, causales). Temps des verbes marquant la chronologie. Distinction auteur / narrateur / personnages.", "situation_integration": { "contexte": "Ton maître veut identifier les meilleurs lecteurs de la classe pour les sélectionner aux Olympiades sur la lecture organisées dans l'école.", "consigne": "Lis le texte qui t'est soumis et réponds aux questions. Ensuite, tu le liras à voix haute.", "titre_texte": "Les frères jumeaux", "texte": "Deux frères jumeaux s'aimaient beaucoup mais n'arrêtaient pas de se disputer. Quand Kossi voulait piocher le champ d'ignames, son frère préférait aller à la chasse. Un soir, un vieil homme leur demanda l'hospitalité. Les jumeaux qui avaient mauvais caractère mais bon cœur le traitèrent royalement. Pour les remercier, le vieillard leur offrit le lendemain une flûte magique capable de leur procurer tout ce qu'ils désiraient. Aussitôt seuls, les deux frères se disputèrent pour savoir ce qu'ils allaient demander à la flûte. Dans la dispute, ils s'arrachèrent l'instrument qui se brisa en plusieurs morceaux. Cela leur servit de leçon. Depuis ce jour, ils s'entendent à merveille et ne se disputent plus.", "source_texte": "D'après « Kouakou »", "questions": ["Entoure la bonne réponse : Les jumeaux étaient toujours d'accord sur ce qu'il faut faire — VRAI ou FAUX", "Ils n'ont pas utilisé la flûte qu'on leur a offerte — VRAI ou FAUX", "Les jumeaux ont refusé d'aider le vieillard — VRAI ou FAUX", "Propose un autre titre pour ce texte.", "Donne ton point de vue sur les personnages du texte."], "indications": "Les élèves répondent individuellement aux questions. Pour éviter la duplication en lecture à voix haute, l'enseignant s'isole avec l'élève qui lit." } },
+                { "n": 2, "niveau": "CM1", "duree_semaines": 5, "type_texte": "descriptifs", "echelon_dubois_buyse": "13, 2ème partie", "enonce": "Intégrer les mécanismes d'identification des mots et des stratégies de compréhension dans des situations de lecture et de compréhension de textes descriptifs.", "contenus": "Construction de sens à partir de textes descriptifs. Marques de ponctuation. Mots ou groupes de mots qui en remplacent d'autres (substituts : pronoms, synonymes, mot générique). Repérage des ajouts successifs d'éléments affinant la description du sujet central." },
+                { "n": 3, "niveau": "CM1", "duree_semaines": 4, "type_texte": "injonctifs", "echelon_dubois_buyse": "14, 2ème partie", "enonce": "Intégrer les mécanismes d'identification des mots et des stratégies de compréhension dans des situations de lecture et de compréhension de textes injonctifs." },
+                { "n": 4, "niveau": "CM1", "duree_semaines": 5, "type_texte": "informatifs", "echelon_dubois_buyse": "15, 1ère partie", "enonce": "Intégrer les mécanismes d'identification des mots et des stratégies de compréhension dans des situations de lecture et de compréhension de textes informatifs." },
+                { "n": 5, "niveau": "CM2", "duree_semaines": 6, "type_texte": "informatifs (explicatifs)", "echelon_dubois_buyse": "15, 2ème partie", "enonce": "Intégrer les mécanismes d'identification des mots et des stratégies de compréhension dans des situations de lecture et de compréhension de textes informatifs (type explicatif).", "os_specifique": "Repérer la façon de présenter les informations." },
+                { "n": 6, "niveau": "CM2", "duree_semaines": 6, "type_texte": "argumentatifs", "echelon_dubois_buyse": "16, 1ère partie", "enonce": "Intégrer les mécanismes d'identification des mots et des stratégies de compréhension dans des situations de lecture et de compréhension de textes argumentatifs.", "os_specifique": "Identifier la thèse et les arguments." },
+                { "n": 7, "niveau": "CM2", "duree_semaines": 6, "type_texte": "dialogués", "echelon_dubois_buyse": "16, 2ème partie", "enonce": "Intégrer les mécanismes d'identification des mots et des stratégies de compréhension dans des situations de lecture et de compréhension de textes dialogués.", "os_specifique": "Répondre à des questions explicites ou implicites sur un texte dialogué. Adoption de différentes stratégies pour soutenir sa compréhension." },
+                { "n": 8, "niveau": "CM2", "duree_semaines": 6, "type_texte": "poétiques", "echelon_dubois_buyse": "17", "enonce": "Intégrer les mécanismes d'identification des mots et des stratégies de compréhension dans des situations de lecture et de compréhension de textes poétiques.", "os_specifique": "Reformuler avec ses propres mots un texte poétique ; défendre son appréciation d'un texte poétique en s'appuyant sur des critères." }
+              ]
+            },
+            {
+              "code": "PE",
+              "nom": "Production d'écrits",
+              "competence_base": "À la fin de l'étape, l'élève doit intégrer le vocabulaire adéquat, les indices significatifs, des structures et des règles syntaxiques dans des situations de production de textes narratifs, descriptifs, injonctifs, informatifs, argumentatifs, dialogués et poétiques.",
+              "note_programmation": "Il ne s'agit pas de réaliser les OA ou les OS les uns après les autres. C'est le 1er OS de l'OA n°2 (identifier les caractéristiques du type de texte à produire) qui commande : il doit être placé au DÉBUT de la programmation de l'enseignant, pour toute la durée du palier.",
+              "structure_oa_constante": [
+                "OA1 — Maîtriser les outils de langue indispensables à la production d'écrits (Vocabulaire, Grammaire, Conjugaison, Orthographe)",
+                "OA2 — Produire des textes du type visé : identifier les caractéristiques du type de texte, constituer un référentiel (banque de mots), établir une fiche de critères de réussite, s'exercer à rédiger",
+                "OA3 — Recopier un extrait de texte (10 à 15 lignes) avec variation des types de copie"
+              ],
+              "paliers": [
+                {
+                  "n": 1, "niveau": "CM1", "duree_semaines": 7, "type_texte": "narratifs", "echelon_dubois_buyse": "13, 2ème partie",
+                  "enonce": "Intégrer le vocabulaire adéquat, les indices significatifs et des règles syntaxiques dans des situations de production de textes narratifs.",
+                  "outils_langue": {
+                    "vocabulaire": ["Employer des mots adaptés au thème du texte à produire (phrase d'emploi, définition, contraire, synonyme)", "Employer des connecteurs logiques : donc, alors, ainsi, en effet, mais, car, parce que", "Identifier des mots de la même famille — repérage d'intrus (enfant, enfantin, enfin, enfance, enfanter)", "Classer des mots d'une même famille selon leur classe grammaticale (excuse, excuser, excusable / largeur, élargir, large)", "Identifier le sens des suffixes des adjectifs en -able, -ible", "Rechercher le sens d'un mot inconnu dans un dictionnaire en sélectionnant la définition adaptée au contexte"],
+                    "grammaire": ["Identifier le groupe sujet et le groupe verbal", "Distinguer phrases simples et complexes — notion de proposition", "Identifier des propositions juxtaposées et coordonnées", "Repérer des conjonctions de coordination : mais, ou, et, donc, or, ni, car", "Employer des pronoms personnels sujets et compléments (le, la, l', lui)"],
+                    "conjugaison": ["Conjuguer les verbes des 1er, 2ème et 3ème groupes au passé simple", "Conjuguer être et avoir au passé simple", "Distinguer l'opposition passé simple / imparfait dans un texte narratif", "Employer des verbes des 1er, 2ème et 3ème groupes aux temps simples de l'indicatif"],
+                    "orthographe": ["Utiliser correctement une ponctuation variée : virgule, point, point d'exclamation, d'interrogation", "Accorder le verbe avec son sujet (commun, partiel)", "Écrire sans erreur les noms féminins terminés par -é", "Appliquer l'accord du participe passé avec les verbes construits avec être (sauf pronominaux)", "Écrire sous la dictée — dictée de textes courts avec variation des types de dictée"]
+                  },
+                  "nb_efa": "Dans les écoles franco-arabes, le dernier OS en conjugaison peut ne pas être traité."
+                },
+                {
+                  "n": 2, "niveau": "CM1", "duree_semaines": 5, "type_texte": "descriptifs", "echelon_dubois_buyse": "14, 1ère partie",
+                  "enonce": "Intégrer le vocabulaire adéquat, les indices significatifs et des règles syntaxiques dans des situations de production de textes descriptifs.",
+                  "outils_langue": {
+                    "vocabulaire": ["Employer des connecteurs spatiaux : ici, là-bas, à droite, à gauche…", "Identifier le sens de quelques préfixes : para-, télé-, anti-", "Repérer la distinction des homonymes : mètre / mettre ; champ / chant ; mer / maire", "Rechercher un mot dans un dictionnaire et en sélectionner la définition"],
+                    "grammaire": ["Identifier l'attribut du sujet", "Employer l'adjectif qualificatif : fonctions épithète (lié au nom) et mis en apposition", "Employer le complément du nom (prépositions à, de, avec)", "Identifier le sujet, le verbe, les compléments", "Employer les compléments essentiels et circonstanciels"],
+                    "conjugaison": ["Conjuguer des verbes usuels au plus-que-parfait : emploi et formes verbales", "Verbes venir, prendre, lire, dire…", "Conjuguer des verbes du 3ème groupe aux temps simples et composés de l'indicatif", "Distinguer dans un texte les différents temps"],
+                    "orthographe": ["Employer correctement l'accord de l'adjectif épithète et attribut", "Accorder sans erreur l'adjectif qualificatif", "Écrire sous la dictée"]
+                  },
+                  "oa3": "Recopier un extrait de texte descriptif."
+                },
+                {
+                  "n": 3, "niveau": "CM1", "duree_semaines": 4, "type_texte": "injonctifs", "echelon_dubois_buyse": "14, 2ème partie",
+                  "enonce": "Intégrer le vocabulaire adéquat, les indices significatifs et des règles syntaxiques dans des situations de production de textes injonctifs.",
+                  "outils_langue": {
+                    "vocabulaire": ["Employer des mots adaptés au thème du texte injonctif", "Identifier le sens des préfixes bi-, tri-, quadri-, pluri-", "Rechercher dans un dictionnaire le type de définition", "Rechercher un mot dans un dictionnaire"],
+                    "grammaire": ["Employer la phrase impérative", "Employer la phrase impersonnelle (il faut)", "Employer des phrases infinitives", "Identifier la classe des mots — nature et fonction dans la phrase", "Employer les compléments circonstanciels de moyen"],
+                    "conjugaison": ["Employer l'infinitif dans des textes — verbes usuels des 1er, 2ème et 3ème groupes", "Conjuguer des verbes usuels à l'impératif présent : emploi et formes verbales", "Conjuguer aux temps simples"],
+                    "orthographe": ["Écrire correctement les infinitifs des verbes du 1er groupe après une préposition", "Employer correctement les adverbes en -ment (formation : douce → doucement, affectueusement)", "Employer correctement leur / leurs (homophones à distinguer selon la classe grammaticale : pronom / adjectif possessif)", "Écrire sous la dictée"]
+                  },
+                  "caracteristiques_texte": "Caractéristiques d'un texte injonctif : phrases courtes, énumération, ordre logique des opérations.",
+                  "oa2": "Constituer un référentiel en lien avec le texte injonctif visé (banque de mots : noms, verbes…)."
+                },
+                {
+                  "n": 4, "niveau": "CM1", "duree_semaines": 5, "type_texte": "informatifs", "echelon_dubois_buyse": "14, 2ème partie",
+                  "enonce": "Intégrer le vocabulaire adéquat, les indices significatifs et des règles syntaxiques dans des situations de production de textes informatifs.",
+                  "genre_vise": "La LETTRE ORDINAIRE — caractéristiques : lieu et date, formule d'appel, corps de la lettre, formule de politesse, signature.",
+                  "outils_langue": {
+                    "vocabulaire": ["Employer des mots composés : arc-en-ciel, poisson-chat, belle-fille, pomme de terre", "Repérer les variations de sens d'un mot", "Rechercher le sens d'un mot dans un dictionnaire"],
+                    "grammaire": ["Employer des adjectifs indéfinis (chaque, tout, quelque)", "Employer des adjectifs numéraux cardinaux et ordinaux", "Utiliser des adverbes de lieu, de temps", "Distinguer proposition principale et proposition subordonnée"],
+                    "conjugaison": ["Conjuguer des verbes du 1er groupe au conditionnel présent : emploi et formes", "Distinguer les emplois d'avoir et être aux temps indiqués"],
+                    "orthographe": ["Écrire correctement les infinitifs après une préposition", "Employer correctement les adverbes en -ment", "Employer correctement leur / leurs", "Écrire sous la dictée"]
+                  }
+                },
+                {
+                  "n": 5, "niveau": "CM2", "duree_semaines": 6, "type_texte": "informatifs (explicatifs)", "echelon_dubois_buyse": "15, 2ème partie",
+                  "enonce": "Intégrer le vocabulaire adéquat, les indices significatifs et des règles syntaxiques dans des situations de production de textes informatifs (explicatifs).",
+                  "intention": "Faire comprendre un phénomène pour qu'il soit mieux compris, communiquer des connaissances.",
+                  "outils_langue": {
+                    "vocabulaire": ["Identifier le sens propre et le sens figuré (ex. : lire avec avidité)", "Utiliser différents dictionnaires pour élucider la polysémie (film, fleuve, bouchon, cœur)"],
+                    "grammaire": ["Identifier la proposition subordonnée relative complément du nom", "Employer des pronoms possessifs (la mienne, les siens, le leur, les leurs)", "Employer les propositions subordonnées conjonctives"],
+                    "conjugaison": ["Conjuguer des verbes des 1er, 2ème et 3ème groupes aux temps étudiés", "Conjuguer les verbes en -eter (acheter) aux différents temps étudiés"],
+                    "orthographe": ["Employer correctement le participe présent", "Écrire correctement quand, quant, qu'en (homophones)", "Écrire sans erreur des mots préfixés par in-, im-, il-, ir-", "Maîtriser la coupure syllabique à la ligne", "Écrire sous la dictée"]
+                  }
+                },
+                {
+                  "n": 6, "niveau": "CM2", "duree_semaines": 6, "type_texte": "argumentatifs", "echelon_dubois_buyse": "16, 1ère partie",
+                  "enonce": "Intégrer le vocabulaire adéquat, les indices significatifs et des règles syntaxiques dans des situations de production de textes argumentatifs.",
+                  "intention": "Persuader, convaincre.",
+                  "outils_langue": {
+                    "vocabulaire": ["Identifier, dans des listes, des mots commençant ou finissant de la même façon", "Utiliser avec aisance un dictionnaire (rapidité)", "Utiliser différents dictionnaires, y compris le dictionnaire électronique"],
+                    "grammaire": ["Employer les propositions circonstancielles de temps, de lieu", "Employer des pronoms démonstratifs (celui-ci, celle-ci)", "Identifier le complément d'objet second et le complément d'attribution", "Distinguer le COI du COS", "Identifier les sujets, les verbes, les constituants de la phrase"],
+                    "conjugaison": ["Conjuguer les verbes en -eler, en -eter, en -yer (essuyer, balayer) aux différents temps étudiés", "Conjuguer les verbes en è + consonne", "Conjuguer des verbes des 1er, 2ème et 3ème groupes"],
+                    "orthographe": ["Écrire correctement quel, quels, quelle, quelles (homophones selon la classe grammaticale)", "Utiliser les règles d'emploi", "Écrire sous la dictée"]
+                  }
+                },
+                {
+                  "n": 7, "niveau": "CM2", "duree_semaines": 6, "type_texte": "dialogués", "echelon_dubois_buyse": "16, 2ème partie",
+                  "enonce": "Intégrer le vocabulaire adéquat, les indices significatifs et des règles syntaxiques dans des situations de production de textes dialogués.",
+                  "caracteristiques_texte": "Superstructure du texte dialogué ; ponctuation du dialogue.",
+                  "outils_langue": {
+                    "vocabulaire": ["Rechercher dans un dictionnaire le sens familier de quelques mots", "Utiliser différents dictionnaires, y compris électronique"],
+                    "grammaire": ["Employer les propositions circonstancielles de cause, de conséquence", "Employer des pronoms indéfinis (plusieurs…)", "Employer des pronoms interrogatifs (qui, quel)", "Utiliser les discours direct et indirect — identification du style direct / indirect"],
+                    "conjugaison": ["Conjuguer des verbes des 1er, 2ème et 3ème groupes au passé antérieur : emploi et formes verbales", "Conjuguer des verbes pronominaux : emploi et formes"],
+                    "orthographe": ["Écrire correctement le début des répliques", "Écrire sous la dictée"]
+                  },
+                  "oa3": "Recopier un extrait de texte argumentatif — copie de différents textes (10 à 15 lignes) avec variation des types de copie."
+                },
+                {
+                  "n": 8, "niveau": "CM2", "duree_semaines": 6, "type_texte": "poétiques", "echelon_dubois_buyse": "17",
+                  "enonce": "Intégrer le vocabulaire adéquat, les indices significatifs et des règles syntaxiques dans des situations de production de textes poétiques.",
+                  "caracteristiques_texte": "Le titre, la présentation (vers, prose, calligramme), les sonorités, le rythme, les figures de style.",
+                  "outils_langue": {
+                    "vocabulaire": ["Identifier différentes locutions imagées : dormir à poings fermés…", "Employer des figures de style : métaphores courantes", "Rechercher dans un dictionnaire", "Utiliser différents dictionnaires"],
+                    "grammaire": ["Employer les propositions", "Utiliser les degrés de l'adjectif et de l'adverbe", "Conjonctions de subordination ou locutions conjonctives"],
+                    "conjugaison": ["Conjuguer des verbes des 1er, 2ème et 3ème groupes au conditionnel passé : emploi et formes verbales", "Conjuguer des verbes variés aux temps simples et composés"],
+                    "orthographe": ["Employer correctement la, là, l'a, l'as (homophones)", "Écrire correctement lequel, laquelle, lesquels, lesquelles", "Écrire sous la dictée"]
+                  },
+                  "oa2": "Constituer un référentiel en lien avec le texte poétique visé (banque de mots : noms, verbes…).",
+                  "oa3": "Recopier un extrait de texte poétique."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+
+    {
+      "code": "MATH",
+      "nom": "Mathématiques",
+      "activites": [
+        {
+          "code": "AN",
+          "nom": "Activités numériques",
+          "paliers": [
+            { "n": 1, "niveau": "CM1", "enonce": "Intégrer les nombres entiers naturels ainsi que les opérations arithmétiques (sens et techniques de l'addition, de la soustraction et de la multiplication) dans des situations de résolution de problèmes de numération et de calculs.", "oa": [
+              { "intitule": "Découvrir les nombres entiers naturels", "os": ["Découvrir les nombres entiers naturels"], "contenus": "Les grands nombres. Classes des nombres : unités de mille, dizaines de mille, centaines de mille ; unités de millions, dizaines de millions, centaines de millions.", "duree": "2 leçons d'1 séance chacune" },
+              { "intitule": "Utiliser les caractères de divisibilité", "os": ["Découvrir et appliquer les caractères de divisibilité par 2 et par 5", "Découvrir et appliquer les caractères spécifiques par 3 et par 9"], "contenus": "Caractères de divisibilité par 2, par 5, par 3 et par 9.", "duree": "2 leçons d'1 séance chacune" },
+              { "intitule": "Maîtriser l'addition, la soustraction et la multiplication", "os": ["Utiliser à bon escient l'addition", "Appliquer les mécanismes opératoires de l'addition, de la soustraction et de la multiplication"], "contenus": "Sens de l'addition ; addition sans et avec retenue. Sens de la soustraction ; soustraction sans et avec emprunt. Sens de la multiplication ; multiplication avec plusieurs chiffres au multiplicateur." }
+            ] },
+            { "n": 2, "niveau": "CM1", "enonce": "Intégrer les nombres entiers naturels, les nombres décimaux ainsi que les quatre opérations arithmétiques (diviseur ou dividende décimal) dans des situations de résolution de problèmes de numération et de calculs.", "oa": [
+              { "intitule": "Maîtriser la division", "os": ["Utiliser à bon escient la division", "Appliquer les mécanismes opératoires de la division"], "contenus": "Sens de la division. Division des nombres entiers : plusieurs chiffres au diviseur.", "duree": "2 leçons d'une séance chacune" },
+              { "intitule": "Découvrir les nombres décimaux", "os": ["Découvrir les nombres décimaux"], "contenus": "Les nombres décimaux.", "duree": "2 leçons d'une séance chacune" },
+              { "intitule": "Appliquer les mécanismes des opérations arithmétiques sur les nombres décimaux", "os": ["Appliquer les mécanismes opératoires de l'addition des nombres décimaux", "… de la soustraction", "… de la multiplication", "… de la division (diviseur ou dividende décimal)"], "duree": "2 à 3 leçons d'une séance chacune" }
+            ] },
+            { "n": 3, "niveau": "CM1", "enonce": "Intégrer les nombres entiers naturels, les nombres décimaux, les nombres fractionnaires ainsi que les opérations arithmétiques (pour les fractions, l'addition et la soustraction seulement) dans des situations de résolution de problèmes de numération et de calculs.", "oa": [
+              { "intitule": "Découvrir les fractions", "os": ["Découvrir les fractions"], "contenus": "Fractions ordinaires, fractions décimales.", "duree": "2 leçons d'une séance chacune" },
+              { "intitule": "Comparer des fractions", "os": ["Comparer des fractions à l'unité", "Comparer deux fractions ayant le même dénominateur ou le même numérateur", "Identifier des fractions égales"], "contenus": "Simplification des fractions et réduction au même dénominateur.", "duree": "3 leçons d'une séance chacune" },
+              { "intitule": "Appliquer les mécanismes des opérations arithmétiques sur les fractions", "os": ["Appliquer les mécanismes opératoires de l'addition des fractions", "Appliquer les mécanismes opératoires de la soustraction des fractions"], "contenus": "Fractions de mêmes dénominateurs ; fractions n'ayant pas le même dénominateur." }
+            ] },
+            { "n": 4, "niveau": "CM2", "enonce": "Intégrer les nombres entiers naturels ainsi que les quatre opérations arithmétiques (sens et techniques) dans des situations de résolution de problèmes de numération et de calculs.", "oa": [
+              { "intitule": "Maîtriser les mécanismes de la numération décimale", "os": ["Utiliser les mécanismes de la numération décimale"], "contenus": "Les grands nombres. Classes des nombres : unité, dizaine, centaine, mille, million et milliard." },
+              { "intitule": "Caractériser un nombre entier", "os": ["Caractériser un nombre entier"] },
+              { "intitule": "Maîtriser l'addition et la soustraction des grands nombres", "os": ["Utiliser à bon escient l'addition", "Appliquer les mécanismes opératoires de l'addition", "Utiliser à bon escient la soustraction", "Appliquer les mécanismes opératoires de la soustraction"], "contenus": "Le sens de l'addition ; l'addition sans et avec retenue. Le sens de la soustraction ; la soustraction sans et avec retenue." }
+            ] },
+            { "n": 5, "niveau": "CM2", "enonce": "Intégrer les nombres entiers naturels, les nombres décimaux ainsi que les quatre opérations arithmétiques dans des situations de résolution de problèmes de numération et de calculs.", "oa": [
+              { "intitule": "Maîtriser le mécanisme de fonctionnement des nombres décimaux", "os": ["Lire et écrire les nombres décimaux", "Comparer les nombres décimaux"], "contenus": "Les nombres décimaux : lecture, écriture, changement d'unité, comparaison.", "duree": "2 leçons d'1 séance chacune" },
+              { "intitule": "Effectuer les opérations sur les décimaux", "os": ["Appliquer les mécanismes opératoires de l'addition", "… de la soustraction", "… de la multiplication", "… de la division"], "contenus": "L'addition sans et avec retenue. La soustraction sans et avec emprunt. La multiplication : multiplicateur ou multiplicande entiers ou décimaux. La division : quotient décimal, quotient approché, dividende entier ou décimal, diviseur et dividende décimaux.", "duree": "jusqu'à 4 leçons d'1 séance" },
+              { "intitule": "Maîtriser les tables de multiplication (transversal)", "os": ["Utiliser les tables de multiplication de 9 à 11"], "contenus": "Tables de 9 à 11." },
+              { "intitule": "Utiliser une stratégie de calcul mental sur les décimaux", "os": ["Effectuer des additions et des soustractions mentalement"] }
+            ] },
+            { "n": 6, "niveau": "CM2", "enonce": "Intégrer les nombres entiers naturels, les nombres décimaux, les fractions ainsi que les quatre opérations arithmétiques (sens et techniques) dans des situations de résolution de problèmes de numération et de calculs.", "oa": [
+              { "intitule": "Maîtriser les mécanismes de fonctionnement des fractions", "os": ["Consolider la notion de fraction", "Comparer des fractions"], "contenus": "Fractions ordinaires, fractions décimales, nombres fractionnaires. Simplification des fractions. Réduction de fractions au même dénominateur. Comparaison de fractions." },
+              { "intitule": "Appliquer les mécanismes des opérations arithmétiques sur les fractions", "os": ["Appliquer les mécanismes opératoires de l'addition et de la soustraction sur les fractions", "… de la multiplication sur les fractions", "… de la division sur les fractions"] },
+              { "intitule": "Prendre une fraction d'une grandeur", "os": ["Prendre une fraction d'une grandeur", "Trouver une grandeur dont on connaît une fraction"], "contenus": "Fractions ordinaires et fractions décimales." }
+            ] }
+          ]
+        },
+        {
+          "code": "AG",
+          "nom": "Activités géométriques",
+          "structure_oa_constante": ["Reproduire des figures géométriques / des solides", "Découvrir les propriétés élémentaires de figures géométriques planes / de solides", "Construire des figures géométriques à l'aide d'instruments (règle, double décimètre, équerre, compas, rapporteur)"],
+          "paliers": [
+            { "n": 1, "niveau": "CM1", "enonce": "Intégrer les notions liées aux positions relatives des droites et aux angles ainsi que des techniques d'utilisation d'instruments dans des situations de résolution de problèmes de traçage.", "oa": [{ "intitule": "Identifier et représenter les positions relatives des droites à l'aide d'instruments", "os": ["Identifier et représenter des droites sécantes et des droites perpendiculaires", "Identifier et représenter des droites parallèles"], "contenus": "Droites sécantes et droites perpendiculaires. Droites parallèles.", "duree": "1 leçon d'1 séance par OS" }, { "intitule": "Construire des angles à l'aide d'instruments", "os": ["Construire des angles à l'aide d'instruments (règle, double décimètre, équerre, compas)"], "contenus": "Angle droit ; angle obtus ; angle aigu." }], "situation_integration": { "contexte": "Ton école veut aménager un jardin qui a la forme d'un rectangle (ABCD), avec 2 allées représentées chacune par une bande. Les 2 allées se coupent en un point O. La première allée (MN) est parallèle à la longueur ; la deuxième (KH) est parallèle à la largeur.", "consigne": "Dessine le plan du jardin." } },
+            { "n": 2, "niveau": "CM1", "figures": ["carré", "rectangle", "triangles", "parallélogramme", "cercle"], "enonce": "Intégrer les notions liées aux positions relatives des droites et aux angles, les propriétés de figures planes (carré, rectangle, triangles, parallélogramme, cercle) ainsi que des techniques d'utilisation d'instruments dans des situations de résolution de problèmes de constructions géométriques.", "os": ["Construire le carré", "Construire le rectangle", "Construire le triangle", "Construire le parallélogramme", "Construire le cercle"], "contenus": "Propriétés du carré, du rectangle, des triangles, du parallélogramme, du cercle.", "duree": "1 leçon d'1 séance par figure" },
+            { "n": 3, "niveau": "CM1", "solides": ["cube", "pavé droit", "cylindre"], "enonce": "Intégrer les notions liées aux positions relatives des droites et aux angles, les propriétés de figures planes et de solides (cube, pavé droit, cylindre) ainsi que des techniques d'utilisation d'instruments dans des situations de résolution de problèmes de constructions géométriques.", "os": ["Construire le cube", "Construire le pavé droit", "Construire le cylindre"], "contenus": "Propriétés du cube, du pavé droit, du cylindre.", "duree": "2 leçons d'1 séance chacune par solide", "situation_integration": { "contexte": "Vous avez perdu le dé et le pot de votre ludo. Tu dois donner un modèle au menuisier qui va vous fabriquer un dé et un pot.", "consigne": "1. Reproduis sur un carton les patrons du dé et du pot représentés. 2. Construis le dé et le pot.", "indications": "Prévoir des onglets pour le collage des solides." } },
+            { "n": 4, "niveau": "CM1", "transformations": ["symétrie", "translation"], "enonce": "Intégrer les notions liées aux positions relatives des droites et aux angles, les propriétés de figures planes et de solides, les transformations ponctuelles (symétrie, translation) ainsi que des techniques d'utilisation d'instruments dans des situations de résolution de problèmes de constructions géométriques.", "os": ["Découvrir et appliquer les notions élémentaires de symétrie par rapport à un axe", "Découvrir et appliquer les notions élémentaires de translation"], "contenus": "Figures symétriques ; axe de symétrie. Notion de translation ; image de figures obtenues par translation.", "duree": "2 leçons d'1 séance chacune", "situation_integration": { "contexte": "Ta tante fait du carrelage mais elle est analphabète. Elle doit terminer le carrelage de deux chambres. Pour la première, c'est la symétrie par rapport à une médiane qu'il faut utiliser ; pour la deuxième, la translation de 10 carreaux dans le sens indiqué par la flèche.", "consigne": "Complète les dessins pour aider ta tante à réaliser le carrelage. Explique-lui les techniques utilisées." } },
+            { "n": 5, "niveau": "CM2", "figures": ["carré", "rectangle", "triangles", "parallélogramme", "losange", "trapèze", "cercle", "tangram"], "enonce": "Intégrer les notions liées aux positions relatives des droites et aux angles, les propriétés de figures planes (carré, rectangle, triangles, parallélogramme, losange, trapèze, cercle) ainsi que des techniques d'utilisation d'instruments dans des situations de résolution de problèmes de constructions géométriques.", "os": ["Construire le carré et le rectangle", "Construire le triangle", "Construire le parallélogramme", "Construire le cercle", "Construire le losange", "Construire le trapèze", "Construire le tangram"], "duree": "1 leçon d'1 séance par figure" },
+            { "n": 6, "niveau": "CM2", "figures": ["polygones réguliers", "polygones irréguliers"], "solides": ["cube", "pavé droit", "cylindre", "prisme droit"], "enonce": "Intégrer les notions liées aux positions relatives des droites et aux angles, les propriétés de figures planes (polygones réguliers, polygones irréguliers) et de solides (cube, pavé droit, cylindre, prisme droit) ainsi que des techniques d'utilisation d'instruments dans des situations de résolution de problèmes de constructions géométriques.", "os": ["Construire un hexagone", "Construire un octogone", "Décomposer des polygones irréguliers à l'aide d'instruments", "Construire le cube", "Construire le pavé droit", "Construire le cylindre", "Construire le prisme droit"], "contenus": "Propriétés de l'hexagone, de l'octogone, des polygones irréguliers, du cube, du pavé droit, du cylindre, du prisme droit." },
+            { "n": 7, "niveau": "CM2", "transformations": ["symétrie", "translation", "agrandissement", "réduction"], "enonce": "Intégrer les notions liées aux positions relatives des droites et aux angles, les propriétés de figures planes et de solides, les transformations ponctuelles (symétrie, translation, agrandissement, réduction) ainsi que des techniques d'utilisation d'instruments dans des situations de résolution de problèmes de constructions géométriques.", "os": ["Découvrir et appliquer les notions élémentaires de symétrie par rapport à un axe", "Découvrir et appliquer les notions élémentaires de translation", "Découvrir et appliquer les procédés d'agrandissement et de réduction"], "situation_integration": { "contexte": "Dans le cadre du Défi mathématique, l'exercice suivant est donné à ta classe.", "consigne": "Observe les 2 fusées et trouve la règle de réduction utilisée. Dessine une autre fusée plus petite que la fusée A en utilisant la même règle de réduction." } }
+          ]
+        },
+        {
+          "code": "AM",
+          "nom": "Activités de mesure",
+          "note": "La progression ajoute une grandeur à chaque palier : longueur/capacité/masse/angle → + aire, volume, durée → + monnaie. Le cycle se répète au CM2 avec des grandeurs travaillées plus finement.",
+          "paliers": [
+            { "n": 1, "niveau": "CM1", "grandeurs": ["longueur", "capacité", "masse", "angle"], "enonce": "Intégrer les notions de longueur, de capacité, de masse, d'angle et des techniques d'utilisation d'instruments conventionnels et les opérations arithmétiques dans des situations de résolution de problèmes de mesure et de calcul.", "oa": [
+              { "intitule": "Effectuer des mesures et des calculs sur les longueurs", "os": ["Effectuer des mesures de longueur", "Établir les relations entre le mètre, ses multiples et ses sous-multiples", "Calculer un périmètre", "Calculer des dimensions", "Effectuer des calculs sur les intervalles"], "contenus": "Mètre, multiples et sous-multiples. Périmètre du carré, du rectangle, du cercle. Côté du carré ; longueur ou largeur du rectangle ; diamètre ou rayon du cercle. Les intervalles (ligne fermée, ligne ouverte)." },
+              { "intitule": "Effectuer des mesures et des calculs sur les capacités", "os": ["Effectuer des mesures de capacité", "Établir les relations entre le litre, ses multiples et ses sous-multiples"], "contenus": "Litre, multiples et sous-multiples." },
+              { "intitule": "Effectuer des mesures et des calculs sur les masses", "os": ["Effectuer des mesures de masse", "Établir les relations entre le kilogramme, ses multiples et ses sous-multiples", "Calculer des masses"] },
+              { "intitule": "Effectuer des mesures d'angles", "os": ["Effectuer des mesures d'angles"] }
+            ] },
+            { "n": 2, "niveau": "CM1", "grandeurs": ["longueur", "capacité", "masse", "angle", "aire", "volume", "durée"], "enonce": "Intégrer les notions de longueur, de capacité, de masse, d'angle, d'aire, de volume et de durée ainsi que des techniques d'utilisation d'instruments conventionnels et les opérations arithmétiques dans des situations de résolution de problèmes de mesure et de calcul.", "oa": [
+              { "intitule": "Effectuer des calculs d'aires et de dimensions", "os": ["Découvrir les mesures d'aire", "Établir les relations entre le m² et ses multiples et sous-multiples", "Calculer l'aire et la dimension du carré", "Calculer l'aire et une dimension du rectangle", "Calculer l'aire et une dimension du triangle", "Calculer l'aire et une dimension du parallélogramme", "Calculer l'aire et la dimension du cercle"], "contenus": "Le m², multiples et sous-multiples. Aire et dimensions du carré, du rectangle, du triangle, du parallélogramme, du cercle." },
+              { "intitule": "Effectuer des calculs de volume et de dimensions", "os": ["Découvrir les mesures de volume", "Établir les relations entre le m³ et ses sous-multiples", "Établir les relations entre volume, capacité et masse", "Calculer la masse volumique"], "contenus": "Le m³ et ses sous-multiples ; conversions d'unités." },
+              { "intitule": "Effectuer des calculs de durée et de distances", "os": ["Effectuer des calculs de durée et de distances"] }
+            ] },
+            { "n": 3, "niveau": "CM1", "grandeurs": ["longueur", "capacité", "masse", "angle", "aire", "volume", "durée", "monnaie"], "enonce": "Intégrer les notions de longueur, de capacité, de masse, d'angle, d'aire, de volume, de durée et de monnaie ainsi que des techniques d'utilisation d'instruments conventionnels et les opérations arithmétiques dans des situations de résolution de problèmes de mesure et de calcul.", "oa": [
+              { "intitule": "Effectuer des calculs portant sur la monnaie", "os": ["Effectuer des calculs portant sur le budget familial", "Effectuer des calculs portant sur les prix"], "contenus": "Budget familial : gain, dépense, économie, dette. Prix d'achat, prix de revient, prix de vente, perte, bénéfice, frais." },
+              { "intitule": "Résoudre des problèmes de partage", "os": ["Résoudre des problèmes de partage en parts égales", "Résoudre des problèmes de partage en parts inégales"], "contenus": "Parts égales. Parts inégales : part multiple, tant de plus / tant de moins." }
+            ], "situation_integration": { "contexte": "À la fin du mois, maman qui a un gain de 162 550 F te demande de l'aider à gérer le budget de la famille. Dépenses : facture d'eau 12 000 F ; facture d'électricité 23 700 F ; médicament 20 400 F ; coût de la nourriture 3/5 du salaire ; prix d'achat du mouton de Tabaski 70 000 F.", "consigne": "Aide-la à établir le budget." } },
+            { "n": 4, "niveau": "CM2", "grandeurs": ["longueur", "capacité", "masse", "angle"], "enonce": "Intégrer les notions de longueur, de capacité, de masse, d'angle et des techniques d'utilisation d'instruments conventionnels et les opérations arithmétiques dans des situations de résolution de problèmes de mesure et de calcul." },
+            { "n": 5, "niveau": "CM2", "grandeurs": ["longueur", "capacité", "masse", "angle", "aire", "volume", "durée"], "enonce": "Intégrer les notions de longueur, de capacité, de masse, d'angle, d'aire, de volume et de durée ainsi que des techniques d'utilisation d'instruments conventionnels et les opérations arithmétiques dans des situations de résolution de problèmes de mesure et de calcul." },
+            { "n": 6, "niveau": "CM2", "grandeurs": ["longueur", "capacité", "masse", "angle", "aire", "volume", "durée", "monnaie"], "enonce": "Intégrer les notions de longueur, de capacité, de masse, d'angle, d'aire, de volume, de durée et de monnaie ainsi que des techniques d'utilisation d'instruments conventionnels et les opérations arithmétiques dans des situations de résolution de problèmes de mesure et de calcul." }
+          ]
+        },
+        {
+          "code": "RP",
+          "nom": "Activités de résolution de problèmes",
+          "note": "Deux paliers par niveau : l'analyse de l'énoncé d'abord, les démarches de raisonnement ensuite.",
+          "paliers": [
+            { "n": 1, "niveau": "CM1", "enonce": "Intégrer des données, des consignes et des questions dans des situations d'analyse d'énoncés mathématiques.", "oa": [
+              { "intitule": "Identifier et organiser les données d'un énoncé", "os": ["Identifier les données d'un énoncé", "Organiser les données d'un énoncé"], "contenus": "Types de données : utiles, inutiles, manquantes.", "duree": "1 leçon d'1 séance" },
+              { "intitule": "Traiter les consignes, les questions", "os": ["Identifier et organiser les consignes, les questions", "Formuler des questions pour compléter un énoncé"], "contenus": "Consignes. Questions finales. Questions intermédiaires.", "duree": "2 leçons d'1 séance chacune" },
+              { "intitule": "Interpréter un énoncé", "os": ["Lire des données sur un schéma, un graphique, un tableau", "Représenter un problème, un énoncé à l'aide d'un dessin"], "contenus": "Tableaux, graphiques, schémas.", "duree": "2 leçons d'1 séance chacune" }
+            ] },
+            { "n": 2, "niveau": "CM1", "enonce": "Intégrer des données, des consignes et des questions d'un énoncé mathématique ainsi que les démarches de raisonnement dans des situations de recherche de solutions appropriées.", "oa": [
+              { "intitule": "Construire un énoncé", "os": ["Construire un énoncé à partir de données", "Construire un énoncé à partir d'une résolution"], "contenus": "Données numériques (factures, tableaux, schémas, graphiques). Informations non numériques. Solutions de problèmes.", "duree": "2 leçons d'1 séance chacune" },
+              { "intitule": "Trouver et corriger l'erreur dans une résolution", "os": ["Trouver et corriger l'erreur dans une résolution"], "contenus": "Types d'erreurs : erreur de calcul, erreur de raisonnement, erreur d'application de règles ou de formules.", "duree": "2 leçons d'1 séance chacune" },
+              { "intitule": "Proposer une procédure de résolution de problème", "os": ["Raisonner sans les données numériques avec la démarche progressive", "Raisonner sans les données numériques avec la démarche régressive"], "contenus": "Démarche progressive. Démarche régressive.", "duree": "2 leçons d'1 séance chacune" }
+            ], "situation_integration": { "contexte": "Tu encadres ton jeune frère qui est au CE2. Tu lui proposes un énoncé à partir des données suivantes : un panier de 20 kg de mangues ; le prix d'achat d'un panier : 3 750 F ; le prix de vente de la moitié du panier : 250 F le kg ; prix de vente du reste : 170 F le kg.", "consigne": "Construis l'énoncé." } },
+            { "n": 3, "niveau": "CM2", "enonce": "Intégrer des données, des consignes et des questions dans des situations d'analyse d'énoncés mathématiques." },
+            { "n": 4, "niveau": "CM2", "enonce": "Intégrer des données, des consignes et des questions d'un énoncé mathématique ainsi que les démarches de raisonnement dans des situations de recherche de solutions appropriées." }
+          ]
+        }
+      ]
+    },
+
+    {
+      "code": "ESVS",
+      "nom": "Éducation à la Science et à la Vie Sociale",
+      "horaire": "Séances de 45 mn. Activités d'intégration : 90 mn.",
+      "sous_domaines": [
+        {
+          "code": "DM",
+          "nom": "Découverte du monde",
+          "activites": [
+            {
+              "code": "HIST",
+              "nom": "Histoire",
+              "note": "L'élève quitte ici le milieu proche : préhistoire, histoire du Sénégal, grands empires ouest-africains, puis inventions et essor scientifique.",
+              "paliers": [
+                { "n": 1, "niveau": "CM1", "enonce": "Intégrer des démarches et techniques de recherche dans des situations de découverte des faits saillants de la préhistoire.", "oa": [
+                  { "intitule": "Découvrir les traits caractéristiques de la civilisation préhistorique", "os": ["Découvrir la notion de préhistoire", "Caractériser la préhistoire"], "contenus": "Notions d'histoire et de préhistoire : définition de l'histoire ; découverte des métaux et de l'écriture, définition de la préhistoire. Caractéristiques de la préhistoire : types d'activités, habits en peaux de bête, mode d'alimentation, d'organisation, types d'habitat (vie dans des grottes).", "duree": "2 séances de 45 mn" },
+                  { "intitule": "Découvrir les grandes étapes de la préhistoire", "os": ["Découvrir l'âge de la pierre taillée", "Découvrir l'âge de la pierre polie", "Découvrir l'âge des métaux"], "contenus": "Caractéristiques de l'âge de la pierre taillée : les outils et les armes (le biface).", "duree": "90 minutes" }
+                ] },
+                { "n": 2, "niveau": "CM1", "enonce": "Intégrer des démarches et techniques de recherche dans des situations de découverte des faits saillants de l'histoire du Sénégal.", "oa": [
+                  { "intitule": "Découvrir les faits saillants de l'histoire des royaumes du Sénégal", "os": ["Découvrir les faits saillants de l'histoire des royaumes du Sénégal avant l'arrivée des Blancs", "Découvrir les faits saillants de l'histoire des royaumes du Sénégal après l'arrivée des Blancs"], "contenus": "Organisation sociale, politique, culturelle, économique et militaire ; principaux événements et personnages marquants ; commerce, religion, santé et hygiène ; mission civilisatrice, exploration, éducation, esclavage.", "duree": "1 séance de 45 mn par séance thématique" },
+                  { "intitule": "Découvrir les conséquences des premiers contacts", "os": ["Découvrir les conséquences des premiers contacts avec les Arabes", "Découvrir les conséquences des premiers contacts avec les Européens"], "duree": "1 séance de 45 mn" }
+                ] },
+                { "n": 3, "niveau": "CM2", "enonce": "Intégrer des démarches et techniques de recherche dans des situations de découverte des faits saillants de l'histoire de l'Afrique de l'Ouest.", "oa": [
+                  { "intitule": "Découvrir des faits saillants de l'histoire des grands empires noirs de l'Afrique de l'Ouest", "os": ["Découvrir des faits saillants de l'histoire de l'empire du Ghana", "Découvrir des faits saillants de l'histoire de l'empire du Mali", "Découvrir des faits saillants de l'histoire de l'empire du Gao"], "contenus": "Pour chaque empire : création ; situation ; limites ; organisation sociale, politique, militaire, administrative et économique ; faits saillants et personnages marquants ; apogée ; déclin.", "duree": "1 séance de 45 mn par empire" }
+                ] },
+                { "n": 4, "niveau": "CM2", "enonce": "Intégrer des démarches et techniques de recherche dans des situations de découverte des grandes inventions du 15ème siècle et de l'essor scientifique des 19ème et 20ème siècles.", "oa": [
+                  { "intitule": "Découvrir les progrès scientifiques et techniques du 15ème siècle", "os": ["Découvrir les grandes inventions et découvertes au 15ème siècle", "Découvrir les raisons de l'expansion européenne", "Découvrir les conséquences des grandes inventions"], "contenus": "La boussole, la caravelle, le gouvernail, les progrès de l'imprimerie et de la cartographie. Raisons de l'expansion européenne : goût de l'aventure, raisons économiques, raisons politiques.", "duree": "1 à 2 séances de 45 mn" },
+                  { "intitule": "Découvrir l'essor scientifique et technique des 19ème et 20ème siècles", "os": ["Découvrir l'essor scientifique et technique des 19ème et 20ème siècles"] }
+                ] }
+              ]
+            },
+            {
+              "code": "GEO",
+              "nom": "Géographie",
+              "note": "À cette étape la géographie devient EXPLICATIVE : à partir du palier 2, chaque palier porte sur des INTERRELATIONS, non plus sur de simples localisations.",
+              "paliers": [
+                { "n": 1, "niveau": "CM1", "enonce": "Intégrer des démarches et des techniques d'investigation dans des situations de découverte de la géographie de son milieu.", "oa": [
+                  { "intitule": "Découvrir les caractéristiques physiques et le découpage administratif de son milieu", "os": ["Découvrir les caractéristiques physiques de son milieu", "Découvrir le découpage administratif de son milieu"], "contenus": "Exploitation d'une carte (dessin, situation, limites, étendue, lecture, situation d'éléments). Relief, climat, cours d'eau, végétation, sols. Découpage administratif : communauté rurale, commune, arrondissement, département, région.", "duree": "2 séances de 45 mn puis 1 séance" },
+                  { "intitule": "Découvrir les caractéristiques humaines et économiques de son milieu", "os": ["Découvrir les caractéristiques humaines de son milieu", "Découvrir les caractéristiques économiques de son milieu"], "contenus": "Taille de la population ; composition ethnique." }
+                ] },
+                { "n": 2, "niveau": "CM1", "enonce": "Intégrer des démarches et des techniques d'investigation dans des situations d'explication des interrelations entre les types d'habitat ou d'habitation, les ressources et les caractéristiques du milieu.", "oa": [
+                  { "intitule": "Découvrir les ressources du milieu", "os": ["Découvrir les ressources du milieu"], "contenus": "Ressources en rapport avec les types d'habitat et d'habitation : argile, paille, bois, tiges de mil, rôniers, ciment, bambou, tôles en zinc ou en fibrociment, tuiles, gravier, fer, carreaux. Ressources économiques : produits de l'agriculture, de l'élevage, de la pêche, de l'industrie ; le tourisme.", "duree": "2 séances de 45 mn chacune" },
+                  { "intitule": "Découvrir les interrelations entre les types d'habitat, d'habitation et les ressources", "os": ["Établir les liens entre les ressources du milieu et les types d'habitat et d'habitation"], "duree": "1 séance de 45 mn" }
+                ] },
+                { "n": 3, "niveau": "CM2", "enonce": "Intégrer des démarches et des techniques d'investigation dans des situations d'explication des interrelations entre les activités économiques, sociales, les ressources et les caractéristiques du milieu.", "oa": [
+                  { "intitule": "Découvrir les interrelations entre les activités économiques et les ressources du milieu", "os": ["Découvrir les activités économiques du milieu", "Établir les liens entre les activités économiques, les ressources et les potentialités du milieu"], "contenus": "Agriculture, élevage, pêche, industrie, artisanat, commerce, tourisme. Produits tirés de ces activités." },
+                  { "intitule": "Découvrir les interrelations entre les activités sociales et le milieu", "os": ["Découvrir les activités sociales du milieu"] }
+                ] },
+                { "n": 4, "niveau": "CM2", "enonce": "Intégrer des démarches et des techniques d'investigation dans des situations d'explication des interrelations entre les voies, les moyens de communication, les caractéristiques de la population et du milieu.", "oa": [
+                  { "intitule": "Découvrir les caractéristiques de la population", "os": ["Découvrir les caractéristiques de la population"], "contenus": "Composition (hommes et femmes) ; pyramide des âges. Hiérarchisation : autorité liée à l'âge, au sexe, au savoir-faire, composition ethnique.", "duree": "2 séances de 45 mn chacune" },
+                  { "intitule": "Découvrir les interrelations entre les activités économiques et les caractéristiques de la population", "os": ["Établir les liens entre les activités économiques et les caractéristiques de la population"] }
+                ] }
+              ]
+            },
+            {
+              "code": "IST",
+              "nom": "Initiation scientifique et technologique",
+              "paliers": [
+                { "n": 1, "niveau": "CM1", "enonce": "Intégrer des principes, démarches et techniques dans des situations d'utilisation et de réalisation d'objets techniques.", "oa": [
+                  { "intitule": "Identifier les différentes parties d'un objet technique", "os": ["Identifier les différentes parties d'un objet technique"], "contenus": "1 ou 2 objets (jouet, roue, levier, poulie) ; 1 ou 2 appareils électriques (radio, ventilateur, ordinateur, téléphone, réfrigérateur, cuisinière, réchaud).", "duree": "2 séances de 30 mn" },
+                  { "intitule": "Découvrir le fonctionnement d'un objet technique simple", "os": ["Découvrir le fonctionnement d'un objet technique simple (utilisation et description)"], "contenus": "Séances 1 et 2 : 1 ou 2 objets (jouet, roue, levier, poulie, girouette) ; séances 3 et 4 : 1 ou 2 appareils électriques.", "duree": "6 séances de 45 mn chacune" }
+                ] },
+                { "n": 2, "niveau": "CM1", "enonce": "Intégrer des principes, démarches et techniques dans des situations d'explication scientifique de propriétés et de phénomènes simples.", "oa": [
+                  { "intitule": "Découvrir des phénomènes de la vie courante", "os": ["Découvrir des phénomènes de la vie courante"], "contenus": "Le temps qu'il fait : le vent, la pluie, la température. Les combustions : combustion vive, combustion lente. Les changements d'états : fusion, évaporation, condensation. La dilatation des corps (eau, air, métaux).", "duree": "7 séances de 45 mn chacune" },
+                  { "intitule": "Découvrir des propriétés de quelques substances", "os": ["Découvrir des propriétés de quelques substances"], "contenus": "Les propriétés de l'air : expansibilité, compressibilité. Les propriétés de l'eau : incolore, inodore…", "duree": "8 séances de 45 mn chacune" }
+                ] },
+                { "n": 3, "niveau": "CM2", "enonce": "Intégrer des principes, démarches et techniques dans des situations d'utilisation et d'entretien d'objets techniques.", "oa": [
+                  { "intitule": "Utiliser des objets techniques courants", "os": ["Utiliser des outils technologiques courants"], "contenus": "Utilisation du tournevis, de la truelle, du râteau, du pinceau, du marteau, des pinces, des ciseaux, des tenailles, de la poulie, de divers types de robinets ; de la brouette (outils leviers). NB : 2 à 3 outils dans chaque catégorie.", "duree": "2 séances de 45 mn chacune" },
+                  { "intitule": "Manipuler des appareils courants", "os": ["Manipuler des appareils simples"], "contenus": "Manipulation du téléphone, de la radio, de la télévision, de l'ordinateur.", "duree": "4 séances de 45 mn chacune" }
+                ] },
+                { "n": 4, "niveau": "CM2", "enonce": "Intégrer des principes, démarches et techniques dans des situations d'explication scientifique de l'adaptation des êtres vivants au milieu.", "oa": [
+                  { "intitule": "Découvrir des êtres du milieu aquatique", "os": ["Découvrir des êtres du milieu aquatique"], "contenus": "Poissons, grenouilles, tortues, crabes, crocodiles, baleine.", "duree": "1 séance de 45 mn" },
+                  { "intitule": "Expliquer les formes d'adaptation de quelques êtres au milieu aquatique", "os": ["Décrire des modes d'adaptation"], "contenus": "Formes d'adaptation : nage, respiration. Relation entre la forme du corps, les organes et la nage : corps en fuseau, nageoires, queue, pattes palmées (poissons, grenouilles, tortues, crocodiles, requins, baleine). Relation entre l'organe (poumons, branchies) et le mode respiratoire.", "duree": "2 à 5 séances de 45 mn chacune" }
+                ] }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "EDD",
+          "nom": "Éducation au développement durable",
+          "activites": [
+            {
+              "code": "VDSM",
+              "nom": "Vivre dans son milieu",
+              "note": "Chaque palier porte sur une CHAÎNE D'INTERRELATIONS (et non sur un problème isolé) : c'est la marque de l'étape 3.",
+              "paliers": [
+                { "n": 1, "niveau": "CM1", "enonce": "Intégrer des notions de base, des démarches et des techniques simples dans des situations d'explication et de proposition de solutions pertinentes à des problèmes nés des interrelations entre insalubrité, promiscuité et paludisme (ou maladies diarrhéiques).", "oa": [
+                  { "intitule": "Proposer des solutions à des problèmes nés des interrelations entre insalubrité, promiscuité et paludisme", "os": ["Décrire les formes de cohabitation et les manifestations de l'insalubrité", "Décrire les modes de gestion des déchets ménagers", "Proposer des solutions"], "contenus": "Formes de cohabitation : voisinage de concessions, grande famille, plusieurs familles dans une même maison, plusieurs personnes dans une même pièce. Manifestations de l'insalubrité : accumulation (surproduction) de déchets domestiques (ordures et eaux usées, péril fécal, prolifération des mouches et autres parasites). Mode de gestion des déchets ménagers : collecte, traitement, évacuation.", "duree": "1 à 3 séances de 45 mn chacune" }
+                ] },
+                { "n": 2, "niveau": "CM1", "enonce": "Intégrer des notions de base, des démarches et des techniques simples dans des situations d'explication et de proposition de solutions pertinentes à des problèmes nés des interrelations entre pollution, promiscuité et maladies respiratoires ou cutanées.", "oa": [
+                  { "intitule": "Décrire les types de maladies respiratoires", "os": ["Décrire les types de maladies (allergies) respiratoires"], "contenus": "Asthme (description et manifestations, causes, conséquences) ; bronchite, pneumonie (description et manifestations, causes, conséquences).", "duree": "2 séances de 45 mn chacune" },
+                  { "intitule": "Proposer des solutions à des problèmes nés des interrelations", "os": ["Identifier les principales causes", "Proposer des mesures contre les maladies respiratoires et cutanées"], "contenus": "Causes : pollution (fumée industrielle et gaz d'échappement) ; allergènes (pollen, encens, fumée, poussière, poils d'animaux, courant d'air, eaux de pluie).", "duree": "1 à 2 séances de 45 mn" }
+                ] },
+                { "n": 3, "niveau": "CM2", "enonce": "Intégrer des notions de base, des démarches et des techniques simples dans des situations d'explication et de proposition de solutions pertinentes à des problèmes nés des interrelations entre dégradation des ressources, pauvreté, troubles nutritionnels et maladies." },
+                { "n": 4, "niveau": "CM2", "enonce": "Intégrer des notions de base, des démarches et des techniques simples dans des situations d'explication et de proposition de solutions pertinentes à des problèmes nés des interrelations entre taille de la famille, santé de la mère et de l'enfant (prévention des IST / VIH-SIDA par exemple)." }
+              ]
+            },
+            {
+              "code": "VENS",
+              "nom": "Vivre ensemble",
+              "note": "L'élève sort du milieu proche : les paliers 3 et 4 portent sur les organisations communautaires, sous-régionales et régionales, puis sur les institutions nationales et internationales.",
+              "paliers": [
+                { "n": 1, "niveau": "CM1", "enonce": "Intégrer des règles de base du savoir-vivre, le respect des différences et des choix personnels dans des situations d'explication et de proposition de solutions à des problèmes liés à la vie en société.", "oa": [
+                  { "intitule": "Identifier des problèmes nés de la divergence d'opinions", "os": ["Identifier des problèmes nés de la divergence d'opinion"], "contenus": "Oppositions radicales ; propos vifs ; querelles ; intransigeance ; railleries, ironie ; agressions verbales ; injures ; bouderie ; bagarres.", "duree": "1 séance de 45 mn" },
+                  { "intitule": "Proposer des solutions à des problèmes nés de la divergence d'opinions", "os": ["Proposer des modes de gestion des problèmes nés de la divergence d'opinion"], "contenus": "Prévention des problèmes : sens de l'écoute, ouverture d'esprit, respect de l'autre. Gestion des problèmes nés de la divergence d'opinion.", "duree": "2 séances de 45 mn chacune" }
+                ] },
+                { "n": 2, "niveau": "CM1", "enonce": "Intégrer des règles de fonctionnement des organisations, une culture démocratique et la solidarité dans des situations d'explication et de proposition de solutions à des problèmes liés à la gestion des institutions locales.", "oa": [
+                  { "intitule": "Découvrir le mode de fonctionnement de quelques organisations locales", "os": ["Identifier des types d'organisations locales"], "contenus": "Organisations scolaires et parascolaires : coopérative scolaire, parlement et gouvernement scolaire, comité de gestion, association des parents d'élèves (APE), association des mères d'élèves (AME), association d'enseignants. Organisations dans le milieu : conseil de quartier, maison de justice, association sportive et culturelle (ASC), groupement.", "duree": "2 à 4 séances de 45 mn chacune" },
+                  { "intitule": "Découvrir le mode de fonctionnement de quelques institutions locales", "os": ["Découvrir le mode de fonctionnement de quelques institutions locales"] }
+                ] },
+                { "n": 3, "niveau": "CM2", "enonce": "Intégrer des modes d'organisation et des règles de fonctionnement dans des situations de découverte des organisations communautaires, sous-régionales et régionales.", "oa": [
+                  { "intitule": "Découvrir des organisations communautaires", "os": ["Identifier des organisations communautaires", "Décrire le fonctionnement d'organisations communautaires"], "contenus": "Types d'organisations communautaires : à base ethnique (sérères, peulh) ; confrériques (tidjane) ; confessionnelles (musulmans, chrétiens) ; de ressortissants d'une localité ; socioprofessionnelles (enseignants).", "duree": "1 à 4 séances de 45 mn" },
+                  { "intitule": "Découvrir des organisations ouest-africaines et africaines", "os": ["Découvrir des organisations ouest-africaines et africaines"] }
+                ] },
+                { "n": 4, "niveau": "CM2", "enonce": "Intégrer des modes d'organisation et des règles de fonctionnement dans des situations de découverte des institutions nationales et internationales.", "oa": [
+                  { "intitule": "Découvrir les attributs de la souveraineté de notre pays", "os": ["Découvrir les attributs de souveraineté"], "contenus": "L'État et la Nation. La République et la Constitution. Les symboles de la Nation : le drapeau ; le sceau (face 1 : le lion passant et l'étoile ; face 2 : le baobab et la devise) ; la devise ; l'hymne national. Les emblèmes de la Nation : le lion et le baobab.", "duree": "4 séances de 45 mn chacune" },
+                  { "intitule": "Découvrir les institutions nationales et internationales", "os": ["Découvrir les institutions nationales", "Découvrir les institutions internationales"], "contenus": "Le Président de la République et le gouvernement ; l'Assemblée nationale ; les autres institutions.", "duree": "5 séances de 45 mn chacune" }
+                ] }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+
+    {
+      "code": "EPSA",
+      "nom": "Éducation Physique, Sportive et Artistique",
+      "note": "Dans chaque activité, la compétence est subdivisée en quatre paliers : les deux premiers au niveau 1 (CM1), les deux autres au niveau 2 (CM2).",
+      "sous_domaines": [
+        {
+          "code": "EPS",
+          "nom": "Éducation physique et sportive",
+          "activites": [{
+            "code": "EPS",
+            "nom": "Activités physiques et sportives",
+            "competence_base": "Intégrer des activités motrices, des règles de base, des techniques simples et des systèmes de jeu dans des situations de compétitions sportives.",
+            "criteres": [
+              { "nom": "Respect des règles", "definition": "Les règles de jeu et de fair-play sont respectées." },
+              { "nom": "Maîtrise des règles", "definition": "Les règles de jeu et de fair-play sont citées." },
+              { "nom": "Habileté", "definition": "Les stratégies de jeu et les gestes techniques sont appropriés." },
+              { "nom": "Combativité", "definition": "L'engagement dans le jeu est sans réserve." }
+            ],
+            "sens_competence": "Donner à l'enfant l'occasion de s'adonner à des COMPÉTITIONS sportives. La compétence se manifeste dans des situations où l'enfant applique des règles de base, des activités motrices, des techniques simples et des systèmes de jeu dans des tournois interclasses ou inter-écoles.",
+            "rappel_constant": "Toute activité sportive doit commencer par des exercices d'échauffement : petites foulées ponctuées de brèves accélérations, suivies de sautillements sur place, d'élévation de genoux, de talons aux fesses ; moment de récupération avec inspiration et expiration posées.",
+            "horaire_seance": "45 mn",
+            "paliers": [
+              { "n": 1, "niveau": "CM1", "dominante": "sport individuel", "enonce": "Intégrer des activités motrices, des règles de base et des techniques simples dans des situations de compétitions en sport individuel.", "os": ["Participer à une compétition de course d'endurance", "Participer à une compétition de course de vitesse"], "contenus": "Course d'endurance : bonne répartition de l'effort sur l'ensemble du parcours ; foulées à amplitude large ; bonne coordination corporelle ; ne pas ralentir à la vue de la ligne d'arrivée (si possible accélérer) ; ne pas courir en zigzag au risque d'allonger la distance ; fair-play.", "duree": "4 séances de 45 mn chacune" },
+              { "n": 2, "niveau": "CM1", "dominante": "sports collectifs", "enonce": "Intégrer des activités motrices, des règles de base, des techniques simples et des systèmes de jeu dans des situations de compétitions en sports collectifs.", "os": ["Jouer un match de football dans le respect des consignes de l'entraîneur", "Organiser une compétition de football"], "contenus": "Gestes techniques : passe, réception / contrôle, marquage / démarquage, dribble / défense, tir / parade. Système de jeu : dispositif et stratégie d'attaque pour marquer ; dispositif et stratégie pour enrayer une attaque adverse. Activités préparatoires : délimitation et matérialisation du terrain, choix des officiels.", "duree": "3 séances de 45 mn chacune" },
+              { "n": 3, "niveau": "CM2", "dominante": "sports individuels", "enonce": "Intégrer des activités motrices, des règles de base et des techniques simples dans des situations de compétition en sports individuels.", "os": ["Participer à un concours de lancer de précision (ou d'adresse)", "Participer à un concours de service"] },
+              { "n": 4, "niveau": "CM2", "dominante": "relais, basketball", "enonce": "Intégrer des règles de base, des activités motrices, des techniques simples et des systèmes de jeu dans des situations de compétitions en sports collectifs, avec comme dominantes le relais et le basketball." }
+            ]
+          }]
+        },
+        {
+          "code": "ART",
+          "nom": "Éducation artistique",
+          "activites": [
+            {
+              "code": "AP",
+              "nom": "Arts plastiques",
+              "competence_base": "Intégrer des formes, des couleurs et des techniques élémentaires de reproduction et d'expression artistique dans des situations de production de dessins, de décors et de modelage d'objets courants.",
+              "notions_cles": {
+                "couleurs_primaires": "Bleu, jaune, rouge — teintes qui ne peuvent être obtenues par mélange.",
+                "couleurs_secondaires": "Vert = bleu + jaune ; violet = rouge + bleu ; orangé = jaune + rouge ; noir = bleu + jaune + rouge.",
+                "symbolique": "Bleu (mer, ciel) = calme, paix, légèreté. Rouge (feu) = chaleur, dynamisme, passion, danger. Jaune (soleil) = gaieté, puissance, attention. Vert (nature) = fraîcheur, calme, sans danger."
+              },
+              "paliers": [
+                { "n": 1, "niveau": "CM1", "enonce": "Intégrer des formes, des couleurs et des techniques élémentaires dans des situations de dessin d'objets ou d'animaux familiers.", "oa": [{ "intitule": "Reproduire le dessin d'un objet ou d'un animal familiers", "os": ["Reproduire le dessin d'un objet familier", "Reproduire le dessin d'un animal familier"], "contenus": "Dessins de figures géométriques à reproduire par imitation : carré, rectangle, rond, triangle. Dessins d'objets : ustensiles de cuisine, outils d'artisan, vêtements. Dessin du drapeau national par imitation. Dessins d'animaux familiers : mouton, chat, chien, poule, âne.", "duree": "2 à 4 séances de 45 mn chacune" }, { "intitule": "Dessiner de mémoire", "os": ["Dessiner de mémoire un objet"], "contenus": "Dessins d'objets à reproduire de mémoire.", "duree": "4 séances de 45 mn chacune" }] },
+                { "n": 2, "niveau": "CM1", "enonce": "Intégrer des formes, des couleurs et des techniques élémentaires de reproduction et d'expression artistique dans des situations de réalisation de rangements décoratifs et de décoration de dessins d'objets familiers.", "os_reperes": ["Colorier une frise"] },
+                { "n": 3, "niveau": "CM2", "enonce": "Intégrer des formes, des couleurs et des techniques élémentaires dans des situations de dessin d'objets ou d'animaux familiers et d'illustration de textes ou de thèmes." },
+                { "n": 4, "niveau": "CM2", "enonce": "Intégrer des formes, des couleurs et des techniques élémentaires dans des situations de réalisation de dessins décoratifs.", "os_reperes": ["Colorier une rosace"] }
+              ]
+            },
+            {
+              "code": "EM",
+              "nom": "Éducation musicale",
+              "competence_base": "Intégrer des mélodies, des rythmes divers, une gestuelle simple et la coordination des mouvements dans des situations d'interprétation et de création de chants.",
+              "criteres": [
+                { "nom": "Tenue du corps", "definition": "Le chant est exécuté sans crispation, avec une posture et une gestuelle appropriées." },
+                { "nom": "Conformité", "definition": "Les paroles du texte sont rendues fidèlement." },
+                { "nom": "Mélodie", "definition": "Le chant est juste, exécuté assez fort, sans cri, avec une respiration aux bons moments ; les nuances sont rendues, l'émotion et l'expression sont mises dans le chant." },
+                { "nom": "Soutien instrumental", "definition": "Le rythme de l'instrument d'accompagnement est approprié à la mélodie du chant." }
+              ],
+              "note": "Le répertoire s'élargit : local à l'étape 2, il devient « local et national » ici. La progression suit les familles d'instruments : percussion → cordes → vent → instruments divers. L'élève est tour à tour chanteur et instrumentiste.",
+              "horaire_seance": "30 mn",
+              "paliers": [
+                { "n": 1, "niveau": "CM1", "famille_instrument": "percussion", "enonce": "Intégrer des paroles, des mélodies d'instruments à percussion, des techniques vocales, une gestuelle simple et la coordination des mouvements dans des situations d'interprétation de chants tirés du répertoire local et national.", "oa": [{ "intitule": "Reproduire des sons d'instruments", "os": ["Identifier des sons d'instruments à percussion", "Imiter des sons d'instruments à percussion"], "contenus": "Instruments à percussion : balafon, maracas, tambour, tam-tam, tama, tabala. NB : imitation par les ressources de la voix et des autres parties du corps.", "duree": "2 à 3 séances de 30 mn chacune" }, { "intitule": "Interpréter un chant avec un accompagnement", "os": ["Exécuter un chant avec l'accompagnement d'un instrument à percussion"], "contenus": "Chants à interpréter : chants tirés du milieu, hymne national, hymne de la jeunesse, chants de marche.", "duree": "4 séances de 30 mn chacune" }] },
+                { "n": 2, "niveau": "CM1", "famille_instrument": "cordes", "enonce": "Intégrer des paroles, des mélodies d'instruments à cordes, des techniques vocales, une gestuelle simple et la coordination des mouvements dans des situations d'interprétation de chants tirés du patrimoine local et national.", "os_reperes": ["Identifier des sons d'instruments à cordes", "Imiter des sons d'instruments à cordes"] },
+                { "n": 3, "niveau": "CM2", "famille_instrument": "vent", "enonce": "Intégrer des paroles, des mélodies d'instruments à vent, des techniques vocales, une gestuelle simple et la coordination des mouvements dans des situations d'interprétation de chants." },
+                { "n": 4, "niveau": "CM2", "famille_instrument": "instruments divers", "enonce": "Intégrer des paroles, des mélodies d'instruments divers, des techniques vocales, une gestuelle appropriée et la coordination des mouvements dans des situations d'interprétation de chants.", "os_reperes": ["Fredonner la mélodie d'un chant", "Exécuter un chant"] }
+              ]
+            },
+            {
+              "code": "AS",
+              "nom": "Arts scéniques",
+              "competence_base": "Intégrer les registres de la voix, des gestes, le jeu de rôles, la mise en scène et le déguisement dans des situations de représentation de sketchs vus.",
+              "criteres": [
+                { "nom": "Présence sur scène", "definition": "L'élève s'exprime avec aisance avec son visage et tout son corps ; les gestes, les déplacements et les attitudes sont appropriés ; l'élève est dans la peau du personnage du début à la fin." },
+                { "nom": "Maîtrise du texte", "definition": "Le texte, dans son esprit, est rendu de façon fidèle, audible, cohérente et expressive ; les intentions sont exprimées par des intonations appropriées." },
+                { "nom": "Originalité", "definition": "La prestation est personnalisée ; elle comporte des moments de surprise pour le spectateur." }
+              ],
+              "note": "L'unité de travail devient le SKETCH (et non plus l'imitation ponctuelle) : on ajoute successivement le décor, puis la mise en scène. Le répertoire est celui des dramatiques sénégalaises.",
+              "horaire_seance": "30 mn",
+              "paliers": [
+                { "n": 1, "niveau": "CM1", "enonce": "Intégrer les registres de la voix, des gestes, le jeu de rôles et le déguisement dans des situations de représentation de sketchs vus.", "oa": [{ "intitule": "Imiter un comédien vu dans une dramatique", "os": ["Imiter un comédien dans un rôle gai", "Imiter un comédien dans un rôle triste"], "contenus": "Exemples de dramatiques : Ndogou-li, Keur-gui, Mayacine ak Dial, Goorgoorlou (rôle gai) ; Coumba am ndèye ak Coumba amoul ndèye, Laye Sangara (rôle triste). Comédiens à imiter : Toni, Sanekh, Mayacine, Dial, Seune, Goorgoorlou ; Coumba Ciré, Laye. Déguisement en fonction du comédien. Traits à traduire : tous les signes que le comédien affiche pour laisser apparaître sa gaieté ou sa tristesse (la mine, le regard, le ton, la gestuelle, le déguisement).", "duree": "2 séances de 30 mn chacune par OS" }] },
+                { "n": 2, "niveau": "CM1", "enonce": "Intégrer les registres de la voix, des gestes, le jeu de rôles, le déguisement et l'organisation des décors dans des situations de représentation de sketchs." },
+                { "n": 3, "niveau": "CM2", "enonce": "Intégrer les registres de la voix, des gestes, le jeu de rôles, le déguisement et la mise en scène dans des situations de représentation de sketchs.", "os_reperes": ["Imiter un personnage d'une histoire racontée", "Imiter un personnage d'un texte"] },
+                { "n": 4, "niveau": "CM2", "enonce": "Intégrer les registres de la voix, des gestes, le jeu de rôles, le déguisement et la mise en scène dans des situations de représentation de sketchs inspirés de l'imaginaire des enfants." }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

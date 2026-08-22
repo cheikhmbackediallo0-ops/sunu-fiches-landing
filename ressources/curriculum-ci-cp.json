@@ -1,0 +1,686 @@
+{
+  "meta": {
+    "source": "Guide pédagogique — Enseignement élémentaire, 1ère étape CI-CP, Ministère de l'Éducation nationale du Sénégal, nouvelle édition juin 2016 (STP du curriculum, appui du Canada).",
+    "fichier_source": "ressources/guides/elementaire/etape-1.txt",
+    "approche": "APC — Approche par les compétences / Pédagogie de l'intégration",
+    "etape": 1,
+    "niveaux": ["CI", "CP"],
+    "version": "2.0",
+    "profondeur": "Complète : compétences d'étape, compétences de base, critères, démarches, paliers avec OA / objectifs spécifiques / contenus / durées, situations d'intégration et situations d'évaluation avec barèmes.",
+    "specificite_etape_1": "En Langue et Communication, la communication orale ne comporte qu'une seule activité (LANGAGE) : la compétence du sous-domaine se confond avec la compétence de base. La communication écrite comporte Lecture et Communication écrite (production). Huit paliers par activité : 4 au CI, 4 au CP — contre 6 à l'étape 2. En EPSA les quatre paliers se répartissent 2 au niveau 1 (CI) et 2 au niveau 2 (CP).",
+    "regle_integration": "Chaque palier se termine par un apprentissage de l'intégration exigeant AU MOINS 3 SSI, puis des activités de remédiation. Une situation d'évaluation critériée clôt les paliers 4 (fin CI) et 8 (fin CP).",
+    "ecoles_franco_arabes": "Le guide porte des « Recommandations aux EFA / CFA » à presque chaque palier : regroupement d'OS, réduction du nombre de séances, activité d'intégration ramenée de 90 à 60 mn."
+  },
+
+  "competences_etape": {
+    "langue_communication": "À la fin de l'étape, l'élève doit intégrer le lexique de base, des structures et des règles de fonctionnement de la langue dans des situations de compréhension et de production de messages oraux et écrits simples de types narratifs, descriptifs et injonctifs.",
+    "mathematiques": "À la fin de la première étape, l'élève doit intégrer des outils mathématiques simples (numération décimale de 0 à 100, opérations arithmétiques, topologie élémentaire, solides et figures planes familiers, mesurage de grandeurs et raisonnement) dans des situations familières de résolution de problèmes."
+  },
+
+  "competences_sous_domaines": {
+    "communication_orale": "À la fin de l'étape, l'élève doit intégrer le vocabulaire adéquat, les comportements non verbaux, le schéma intonatif, des structures et des règles syntaxiques simples dans des situations de compréhension et de production d'énoncés oraux relatifs au contact social, à la narration, à la description et à l'injonction.",
+    "communication_ecrite": "À la fin de l'étape, l'élève doit intégrer les mécanismes d'identification des mots, du vocabulaire et des structures syntaxiques, des stratégies de compréhension, dans des situations de lecture et de production de textes simples de types narratif, descriptif et injonctif."
+  },
+
+  "typologie_criteres": {
+    "note": "Typologie commune aux trois guides de l'élémentaire. Trois critères au maximum, indépendants les uns des autres ; le poids des critères non indispensables reste minoritaire.",
+    "langue_communication": [
+      { "code": "C1", "nom": "Pertinence de la production", "definition": "La production de l'élève est en adéquation avec la situation d'évaluation et avec la consigne. L'élève a fait ce qu'on lui a demandé de faire." },
+      { "code": "C2", "nom": "Cohérence de la production", "definition": "Les différents éléments de la production s'enchaînent de manière logique. La progression de la production obéit à une cohérence interne." },
+      { "code": "C3", "nom": "Correction de la langue", "definition": "Les outils de la discipline sont correctement utilisés : règles grammaticales, syntaxiques, orthographiques et lexicales." },
+      { "code": "C4", "nom": "Présentation de la production", "definition": "La production de l'élève est soignée." }
+    ],
+    "mathematiques": [
+      { "code": "C1", "nom": "Pertinence des solutions", "definition": "L'outil, l'opération ou la stratégie utilisés pour résoudre le problème sont appropriés à la situation proposée." },
+      { "code": "C2", "nom": "Justesse des opérations", "definition": "Les résultats des opérations sont exacts. L'élève témoigne de la maîtrise des outils de la discipline." },
+      { "code": "C3", "nom": "Autonomie", "definition": "La tâche est exécutée sans aide." }
+    ],
+    "esvs": [
+      { "code": "C1", "nom": "Pertinence de la solution", "definition": "Les techniques, les démarches et les solutions proposées par l'élève sont en adéquation avec la situation." },
+      { "code": "C2", "nom": "Justesse des faits ou des résultats", "definition": "Les faits historiques ou géographiques, les résultats de l'analyse ou les solutions proposés sont exacts." },
+      { "code": "C3", "nom": "Exhaustivité des réponses", "definition": "La réponse fournie par l'élève est complète." },
+      { "code": "C4", "nom": "Faisabilité des solutions", "definition": "La solution proposée est réaliste au regard du contexte et des ressources disponibles." }
+    ]
+  },
+
+  "domaines": [
+    {
+      "code": "LC",
+      "nom": "Langue et Communication",
+      "sous_domaines": [
+        {
+          "code": "CO",
+          "nom": "Communication orale",
+          "activites": [{
+            "code": "LANG",
+            "nom": "Langage",
+            "note": "Seule activité de la communication orale : la compétence du sous-domaine tient lieu de compétence de base. La RÉCITATION accompagne chaque palier — 2 textes (poème et comptine) tout au long du palier, avec l'intonation et les gestes qui conviennent.",
+            "competence_base": "À la fin de l'étape, l'élève doit intégrer le vocabulaire adéquat, les comportements non verbaux, le schéma intonatif, des structures et des règles syntaxiques simples dans des situations de compréhension et de production d'énoncés oraux relatifs au contact social, à la narration, à la description et à l'injonction.",
+            "criteres": [
+              { "nom": "Pertinence", "note_max": 22, "bareme": "Tous les éléments attendus sont présents 22 · 3 éléments 17 · 2 éléments 12 · 1 élément 7 · aucun 0" },
+              { "nom": "Cohérence", "note_max": 17, "bareme": "Toutes les phrases sont en lien 17 · les 2 tiers 13 · la moitié 9 · le tiers 5 · aucun lien 0" },
+              { "nom": "Correction de la langue", "note_max": 16, "bareme": "Aucune erreur 16 · 1 à 4 erreurs 11 · 5 à 7 erreurs 6 · 8 à 10 erreurs 1 · plus de 10 erreurs 0" },
+              { "nom": "Comportement non verbal", "note_max": 5, "bareme": "Gestes, posture et regard corrects 5 · une déficience notoire 2 · deux déficiences 1 · plus de deux 0" }
+            ],
+            "total": 60,
+            "progression": "Un OS par semaine. La semaine 1 du palier 1 est consacrée aux bonnes habitudes. Les trois moments « présentation/acquisition », « consolidation/fixation », « exploitation/transfert » restent d'actualité même avec deux séances par jour.",
+            "paliers": [
+              {
+                "n": 1, "niveau": "CI", "duree_semaines": 8, "acte_langage": "prise de contact et prise de congé",
+                "enonce": "Intégrer le vocabulaire adéquat, les comportements non verbaux, le schéma intonatif, des structures et des règles syntaxiques simples dans des situations de production d'énoncés oraux relatifs à la prise de contact et à la prise de congé.",
+                "oa": [
+                  { "intitule": "Saluer une personne / réagir", "os": ["Saluer une personne / réagir à une salutation"], "contenus": "Salutations : Bonjour Farma, bonsoir Ngor, salut Alfred… Demande de nouvelles : Comment ça va ? Comment tu vas ? Comment vas-tu ? ça va (bien, très bien, mal)." },
+                  { "intitule": "Se présenter et demander à quelqu'un de se présenter", "os": ["Se présenter et demander à son interlocuteur (trice) de se présenter"], "contenus": "Verbe être au présent + prénom. Moi, mon nom, mon prénom, c'est… Verbe s'appeler au présent + prénom : je m'appelle. Comment tu t'appelles ? Comment t'appelles-tu ? Quel est ton nom ? Quel est ton prénom ? Je suis… Et toi ? J'habite… Tu habites où ? Mon âge, c'est… J'ai … ans. Tu as quel âge ?" },
+                  { "intitule": "Présenter quelqu'un", "os": ["Présenter quelqu'un(e)"], "contenus": "Je te présente… Il / Elle s'appelle… C'est / Voici / Voilà. Formules appelant une présentation : Qui est-ce ? C'est qui ? Les présentatifs : c'est lui, c'est elle, c'est… Il habite, elle habite…" },
+                  { "intitule": "Saluer un groupe / réagir", "os": ["Saluer un groupe, réagir à une salutation"], "contenus": "Comment vous allez ? Comment allez-vous ? Vous allez bien ? Oui, ça va… Oui, nous allons bien." },
+                  { "intitule": "Prendre congé / réagir", "os": ["Prendre congé"], "contenus": "Au revoir, à demain, à bientôt, à tout à l'heure. Quitter quelqu'un(e) : je te quitte Anna. Merci. Je te remercie." },
+                  { "intitule": "Restituer des comptines et des poèmes (RÉCITATION)", "os": ["Mémoriser et restituer une comptine", "Mémoriser et restituer un poème"], "contenus": "Poèmes, comptines. Intonation et gestes qui conviennent.", "duree": "2 textes tout au long du palier" }
+                ],
+                "situation_integration": { "contexte": "Un(e) nouvel(le) élève vient d'arriver dans ta classe et partage la même table que toi. Vous faites connaissance. À la fin de la classe, avant de te quitter pour rentrer à la maison, il / elle te demande de le / la présenter à ton frère / ta sœur qui est dans une autre classe.", "consigne": "Joue la scène.", "production_attendue": "Dans la classe, l'élève salue, se présente et demande au / à la nouvel(le) élève d'en faire autant. Dans la cour, il fait les présentations et prend congé.", "indications": "Mise en place de la situation : d'abord sur un table-banc un élève joue l'ancien, un autre le nouveau ; ensuite devant la porte, la rencontre avec le frère / la sœur." }
+              },
+              {
+                "n": 2, "niveau": "CI", "duree_semaines": 5, "acte_langage": "recherche d'informations",
+                "enonce": "Intégrer le vocabulaire adéquat, les comportements non verbaux, le schéma intonatif, des structures et des règles syntaxiques simples dans des situations de production d'énoncés oraux relatifs à la recherche d'informations.",
+                "oa": [
+                  { "intitule": "Demander un renseignement / réagir", "os": ["Demander / donner un renseignement sur un lieu", "Demander / donner un renseignement sur la manière de faire", "Demander un renseignement sur l'auteur d'une action, sur une action", "Demander un renseignement sur le prix, le nombre"], "contenus": "Où + verbe + sujet ? (Où se trouve le livre ?) · Comment + verbe + sujet + complément ? (Comment allume-t-on la télé ?) · Quand + verbe + sujet + complément ? (Quand pars-tu à l'école ?) · Qui est-ce qui + verbe ? (Qui est-ce qui a pris mon crayon ?) · Qu'est-ce que + verbe + sujet ? · Que + verbe + sujet ? (Que manges-tu ?) · Combien ça coûte ? Combien de… ?" },
+                  { "intitule": "Restituer des comptines et des poèmes (RÉCITATION)", "os": ["Mémoriser et restituer une comptine", "Mémoriser et restituer un poème"], "duree": "2 textes tout au long du palier" }
+                ],
+                "situation_integration": { "contexte": "Un dimanche, tu décides de rendre visite à ton nouvel ami Moustapha Tine / ta nouvelle amie Ngoné Camara. Tu passes d'abord au marché pour acheter des fruits. Tu demandes les prix pour choisir ce qu'il faut apporter à la famille de ton ami(e). Arrivé(e) dans le quartier, tu rencontres un groupe de personnes à qui tu demandes de t'indiquer la maison.", "consigne": "Joue la scène.", "production_attendue": "Pour acheter, l'élève demande le prix des fruits. Ensuite, il salue le groupe, demande un renseignement pour retrouver la maison et prend congé.", "indications": "Mise en place des situations de communication : scène de marché, scène de rencontre. Explicitation de la consigne." }
+              },
+              {
+                "n": 3, "niveau": "CI", "duree_semaines": 4, "acte_langage": "expression de besoins, de goûts et de préférences",
+                "enonce": "Intégrer le vocabulaire adéquat, les comportements non verbaux, le schéma intonatif, des structures et des règles syntaxiques simples dans des situations de production d'énoncés oraux relatifs à l'expression de besoins, de goûts et de préférences.",
+                "oa": [
+                  { "intitule": "Exprimer ses besoins, ses sentiments, ses sensations / réagir", "os": ["Exprimer ses besoins, ses sentiments", "Exprimer ses sensations"], "contenus": "Avoir faim, avoir soif au présent (formes affirmative et négative). Verbe être au présent + adjectif : je suis content(e). Phrases exclamatives : C'est beau ! C'est magnifique ! Négation : Ce n'est pas joli. Avoir mal, avoir chaud, avoir froid au présent." },
+                  { "intitule": "Exprimer ses préférences / réagir", "os": ["Exprimer son avis", "Exprimer ses préférences"], "contenus": "Verbe être au présent + d'accord (affirmative et négative). C'est vrai. C'est faux. Verbe préférer au présent + complément : je préfère la robe bleue. Verbe aimer au présent + complément : J'aime le riz au poisson. Je n'aime pas les mangues vertes." },
+                  { "intitule": "Restituer des comptines et des poèmes (RÉCITATION)", "os": ["Mémoriser et restituer une comptine", "Mémoriser et restituer un poème"], "duree": "2 textes tout au long du palier" }
+                ],
+                "situation_integration": { "contexte": "À la bibliothèque, ton ami Moustapha Tine / ton amie Ngoné Camara exprime le besoin de voir d'autres albums et BD. Le / la bibliothécaire vous montre beaucoup d'ouvrages. Vous discutez pour dire vos préférences respectives. À la fin de la visite, chacun(e) d'entre vous exprime ses sentiments.", "consigne": "Joue la scène.", "production_attendue": "L'élève exprime ses besoins, dit ce qu'il / elle préfère et exprime ses sentiments par rapport à la visite." }
+              },
+              {
+                "n": 4, "niveau": "CI", "duree_semaines": 4, "acte_langage": "demande de permission et de services",
+                "enonce": "Intégrer le vocabulaire adéquat, les comportements non verbaux, le schéma intonatif, des structures et des règles syntaxiques simples dans des situations de production d'énoncés oraux relatifs à la demande de permission et de services.",
+                "oa": [
+                  { "intitule": "Demander une permission / réagir", "os": ["Demander une permission"], "contenus": "Vouloir au présent + verbes usuels + complément + s'il vous plaît / merci : je veux sortir s'il vous plaît. Est-ce que + je/nous + pouvoir au présent + verbe à l'infinitif + s'il vous plaît : est-ce que je peux sortir, s'il vous plaît ? Est-ce que je peux prendre ton livre ?" },
+                  { "intitule": "Demander un service / réagir", "os": ["Demander un service"], "contenus": "Prêter à l'impératif + pronom + COD : prête-moi ton bic… Oui, bien sûr… Merci… je vous remercie. Non, je ne peux pas… Veux-tu ou peux-tu + me/nous + verbe + complément + s'il te plaît : Veux-tu me donner une feuille s'il te plaît ? Tu peux + me/nous + verbe + complément + s'il te plaît." },
+                  { "intitule": "Restituer des comptines et des poèmes (RÉCITATION)", "os": ["Mémoriser et restituer une comptine", "Mémoriser et restituer un poème"], "duree": "2 textes tout au long du palier" }
+                ],
+                "situation_integration": { "contexte": "Un après-midi, tu veux amener ton ami Moustapha Tine / ton amie Ngoné Camara à la bibliothèque de ton quartier pour lui montrer un bon album d'images que tu as aimé. Tu demandes la permission à tes parents pour quitter la maison. Arrivé à la bibliothèque, tu t'adresses au / à la bibliothécaire pour t'aider à retrouver le livre.", "consigne": "Joue la scène.", "production_attendue": "L'élève demande la permission à ses parents puis demande service au bibliothécaire.", "indications": "NB : ne pas oublier les salutations et la prise de congé." },
+                "situation_evaluation": { "contexte": "Tu veux faire un jardin chez toi, mais tu ne sais pas comment t'y prendre. Tu désires visiter le jardin de Madame Ndao pour voir comment il est réalisé.", "consigne": "Joue la scène.", "production_attendue": "L'élève salue Madame Ndao, lui demande l'autorisation de visiter son jardin, la remercie après la visite avant de prendre congé.", "indications": "Faire passer les élèves par petits groupes, en plusieurs séances, avec des variantes pour éviter la duplication. En rapport avec la CB, au moins 4 phrases sont attendues.", "total": 60 }
+              },
+              {
+                "n": 5, "niveau": "CP", "duree_semaines": 5, "acte_langage": "invitation et recommandation",
+                "enonce": "Intégrer le vocabulaire adéquat, les comportements non verbaux, le schéma intonatif, des structures et des règles syntaxiques simples dans des situations de production d'énoncés oraux relatifs à l'invitation et à la recommandation.",
+                "oa": [
+                  { "intitule": "Inviter quelqu'un(e) / réagir", "os": ["Inviter quelqu'un(e) / réagir"], "contenus": "Je (nous) t'(vous) invite + compléments : Je t'invite à mon anniversaire. Je t'invite à manger. — d'accord ; merci. Je (nous) te demande de + verbe : Je te demande de venir à mon anniversaire. Tu veux / viens + verbes d'action usuels : tu viens jouer avec moi. Tu viens avec moi + CCL : tu viens avec moi au cinéma. Tu m'accompagnes + CCL." },
+                  { "intitule": "Faire des recommandations / réagir", "os": ["Recommander quelque chose / réagir"], "contenus": "Tu dois… : tu dois faire attention aux voitures. Il faut… : il faut arroser avant de balayer." },
+                  { "intitule": "Restituer des comptines et des poèmes (RÉCITATION)", "os": ["Mémoriser et restituer une comptine", "Mémoriser et restituer un poème"], "duree": "2 textes tout au long du palier" }
+                ],
+                "situation_integration": { "contexte": "Tu veux inviter ton / ta camarade de classe à venir assister à ton anniversaire. Il / elle ne connaît pas le chemin.", "consigne": "Par téléphone, invite-le/la et donne-lui des recommandations concernant l'itinéraire à prendre (les repères, les dangers de circulation à éviter…).", "indications": "Mise en place de la situation de communication : téléphone, portable, à défaut simuler." }
+              },
+              {
+                "n": 6, "niveau": "CP", "duree_semaines": 7, "acte_langage": "narration",
+                "enonce": "Intégrer le vocabulaire adéquat, les comportements non verbaux, le schéma intonatif, des structures et des règles syntaxiques simples dans des situations de production d'énoncés oraux relatifs à la narration.",
+                "oa": [
+                  { "intitule": "Relater un événement", "os": ["Relater ce qu'on a fait", "Relater ce qu'a fait un(e) autre"] },
+                  { "intitule": "Raconter un conte", "os": ["Dire un conte entendu", "Dire un conte lu"] },
+                  { "intitule": "Raconter une histoire", "os": ["Reconstituer une histoire à partir d'une BD", "Terminer une histoire entendue", "Raconter une petite histoire imaginée"] },
+                  { "intitule": "Restituer des comptines et des poèmes (RÉCITATION)", "os": ["Mémoriser et restituer une comptine", "Mémoriser et restituer un poème"], "duree": "2 textes tout au long du palier" }
+                ],
+                "contenus": "Gestion des temps utilisés dans la narration (présent et passé). Verbes d'action usuels : aller, jouer, manger, fermer, ouvrir, au présent et au passé composé. Connecteurs : autrefois, hier, aujourd'hui, demain ; pendant, au même moment ; d'abord, ensuite, enfin, avant, après, et, puis ; mais, donc, alors.",
+                "situation_integration": { "contexte": "Le concours du « meilleur narrateur » est organisé en classe. Ton tour arrive.", "consigne": "Raconte une histoire vécue ou imaginée.", "production_attendue": "Une histoire cohérente et complète d'au moins quatre phrases, avec des verbes d'action au présent et au passé composé et des connecteurs.", "indications": "Préciser que c'est une action passée pour permettre l'utilisation du passé composé. Mise en situation en classe, dans la cour ou ailleurs. Organiser plusieurs séances." }
+              },
+              {
+                "n": 7, "niveau": "CP", "duree_semaines": 4, "acte_langage": "description",
+                "enonce": "Intégrer le vocabulaire adéquat, les comportements non verbaux, le schéma intonatif, des structures et des règles syntaxiques simples dans des situations de production d'énoncés oraux relatifs à la description.",
+                "oa": [
+                  { "intitule": "Décrire un objet, un lieu, un animal, une personne", "os": ["Décrire un objet ou un lieu", "Décrire un animal", "Décrire une personne", "Comparer des objets, des personnes, des lieux, des animaux"], "contenus": "Auxiliaire être au présent, emploi des adjectifs qualificatifs usuels (forme, couleur, dimension, taille). Indicateurs de lieu : ici, là-bas, sur, sous, à côté, près de. Comparatifs : comme, plus que, moins que, aussi que. Exemples : Ton petit frère est plus rapide que toi. Mon sac est plus gros que ton sac." },
+                  { "intitule": "Restituer des comptines et des poèmes (RÉCITATION)", "os": ["Mémoriser et restituer une comptine", "Mémoriser et restituer un poème"], "duree": "2 textes tout au long du palier" }
+                ],
+                "situation_integration": { "contexte": "Tu as perdu un objet (cartable, jouet…). Tu veux que tes camarades t'aident à le retrouver.", "consigne": "Décris-le en quatre phrases pour qu'ils le reconnaissent.", "production_attendue": "L'élève donne des précisions sur la couleur, la forme et la taille de l'objet perdu.", "indications": "Créer la situation de communication : simulation de recherche d'objets perdus, en instaurant un dialogue au départ." }
+              },
+              {
+                "n": 8, "niveau": "CP", "duree_semaines": 4, "acte_langage": "injonction",
+                "enonce": "Intégrer le vocabulaire adéquat, les comportements non verbaux, le schéma intonatif, des structures et des règles syntaxiques simples dans des situations de production d'énoncés oraux à caractère injonctif.",
+                "oa": [
+                  { "intitule": "Donner des ordres", "os": ["Donner des ordres"], "contenus": "Verbes à l'impératif : Dépêchez-vous ! Taisez-vous ! Arrêtez ! Rends-moi mon livre ! Il faut + infinitif : il faut arroser avant de balayer. Porte un vêtement chaud, il fait froid." },
+                  { "intitule": "Interdire quelque chose", "os": ["Interdire quelque chose"], "contenus": "Il ne faut pas + infinitif : il ne faut pas monter sur la table. Verbes à l'impératif, forme négative : Ne jette pas les ordures par terre." },
+                  { "intitule": "Restituer des comptines et des poèmes (RÉCITATION)", "os": ["Mémoriser et restituer une comptine", "Mémoriser et restituer un poème"], "duree": "2 textes tout au long du palier" }
+                ],
+                "situation_integration": { "contexte": "Tu es désigné par le maître / la maîtresse pour assurer l'ordre dans la classe. Tu trouves Ibou et Rose en train de jeter des papiers par terre, de monter sur les tables et de faire beaucoup de bruit. Tu dois exercer ton rôle de chef.", "consigne": "Joue la scène.", "production_attendue": "L'élève donne des ordres et formule des interdits.", "indications": "Créer la situation : des élèves jouent aux perturbateurs, le préposé à la surveillance les surprend et réagit." },
+                "situation_evaluation": { "contexte": "Tu fais entrer les poules dans le poulailler, un chat arrive et leur fait peur. Une poule s'enfuit et se perd dans le village (ou le quartier). Tu vas trouver ton ami Alfred pour lui demander de t'aider à la retrouver. Tu lui racontes l'événement et tu lui décris la poule.", "consigne": "Joue la scène.", "production_attendue": "L'élève salue son ami, lui raconte l'événement, lui demande de l'aider, décrit la poule pour qu'Alfred la reconnaisse, et le remercie avant de le quitter.", "indications": "L'enseignant peut remplacer la poule par la chèvre, le mouton, etc. Au moins 4 phrases sont attendues.", "total": 60 }
+              }
+            ]
+          }]
+        },
+        {
+          "code": "CE",
+          "nom": "Communication écrite",
+          "activites": [
+            {
+              "code": "LECT",
+              "nom": "Lecture",
+              "competence_base": "Intégrer les mécanismes d'identification des mots et des stratégies de compréhension dans des situations de lecture de petits textes.",
+              "note": "L'existence d'une compétence de base propre à la lecture dès le CI/CP est explicitement justifiée par le guide. Remarque récurrente : l'ordre des OA n'est pas figé ; l'enseignant peut aller du texte au décodage ou l'inverse, mais veillera à ce que la rencontre des textes mobilise le décodage au service de l'élaboration du sens.",
+              "criteres": [
+                { "nom": "Compréhension", "note_max": 25, "bareme": "Toutes les tâches réalisées / toutes les questions 25 · quatre à trois tâches 20 · deux tâches 15 · une tâche 10 · aucune 0" },
+                { "nom": "Fluidité de la lecture", "note_max": 15, "bareme": "Respect des 3 indicateurs (prononciation, vitesse, expression) 15 · 2 indicateurs 10 · 1 indicateur 5 · aucun 0" }
+              ],
+              "total": 40,
+              "domaines_cles_decodage": [
+                "La connaissance des lettres de l'alphabet — les identifier, les nommer et les écrire facilement, non les réciter seulement",
+                "La conscience phonologique — reconnaître un son (phonème) parmi les autres dans le mot",
+                "Les correspondances graphophonologiques — décoder des mots non familiers",
+                "La reconnaissance automatique de mots fréquents"
+              ],
+              "demarche_acquisition_son": [
+                "Choisir une phrase comportant la graphie du son à étudier",
+                "Extraire le mot comportant la graphie du son",
+                "Extraire les syllabes",
+                "Isoler le son et ses différentes graphies",
+                "Écrire le son",
+                "Rechercher des mots contenant le son (reconnaissance auditive)",
+                "Écrire les mots trouvés au tableau et y entourer le son (reconnaissance visuelle)",
+                "Former des syllabes sur l'ardoise, puis les lire",
+                "Associer des syllabes pour former des mots",
+                "Dictée de syllabes, de non-mots, de mots, de phrases simples"
+              ],
+              "paliers": [
+                {
+                  "n": 1, "niveau": "CI", "duree_semaines": 8,
+                  "enonce": "Intégrer les mécanismes d'identification des mots et des stratégies de compréhension dans des situations de lecture de mots fréquents et usuels.",
+                  "remarque": "Il ne s'agit pas de faire les OS l'un après l'autre : ils se font simultanément et alternativement au cours du palier.",
+                  "oa": [
+                    { "intitule": "Maîtriser les graphismes de base", "os": ["Tenir correctement l'outil scripteur et les supports", "Tracer des ronds, des points, des lignes horizontales, verticales, obliques, des courbes, des boucles, des cannes"], "contenus": "Techniques de préhension des outils, caractéristiques des supports. Ronds, points, lignes horizontales, verticales, obliques, courbes, boucles, cannes." },
+                    { "intitule": "Effectuer des combinaisons à partir des tracés", "os": ["Tracer des combinaisons : ronds / ligne horizontale", "Tracer des combinaisons : ronds / ligne verticale", "Tracer des lignes brisées", "Tracer des vagues"] },
+                    { "intitule": "Identifier les composantes sonores du langage", "os": ["Dire des comptines et des formulettes", "Identifier à l'oral des mots qui riment", "Distinguer des mots dans un énoncé", "Scander des syllabes", "Repérer des syllabes identiques", "Dénombrer les syllabes d'un mot", "Remplacer, supprimer, ajouter une syllabe ou un son dans un mot donné"], "contenus": "Développement de la conscience phonologique : petites comptines et formulettes ; répétition articulée de mots de 3 à 4 syllabes (ca-na-ri / A-mi-na-ta) ; identification du nombre de mots dans un énoncé ; dénombrement et repérage de syllabes et de sons (identiques, au début, au milieu, à la fin) ; manipulation de syllabes et de sons (ajout, suppression, remplacement)." },
+                    { "intitule": "Se familiariser avec le monde de l'écrit", "os": ["Découvrir le monde de l'écrit", "Repérer les conventions nécessaires pour lire des textes"], "contenus": "Observation des écrits de l'environnement, classement de supports écrits. Nombreuses histoires lues par l'enseignant avec vérification de la compréhension. Connecteurs spatio-temporels à l'oral : en haut, en bas, au-dessus, en dessous. L'organisation d'un livre : couverture, succession des pages. Le sens de la lecture d'une page. Jeux de repérage : identification des mots séparés par des blancs, premier et dernier mot. Propriétés de l'écrit : permanence, linéarité." },
+                    { "intitule": "Acquérir globalement les lettres de l'alphabet ainsi que des mots usuels et fréquents", "os": ["Identifier toutes les lettres de l'alphabet (plusieurs séances)", "Associer chaque lettre au son qu'elle représente", "Reconnaître globalement et transcrire des mots (plusieurs séances)", "Lire des phrases à partir de mots acquis globalement"], "contenus": "Connaissance des lettres dans l'ordre alphabétique (comptine) ; majuscules et minuscules dans des contextes variés ; abécédaires ; épellation ; identification de lettres et de mots semblables aux modèles ; le « bruit » que font les lettres. Liste de mots à acquérir au 1er trimestre à raison de 4 mots par semaine : prénoms et noms des élèves de la classe ; mots usuels (bonjour, bonsoir, nom, mon, voici, voilà, c'est, habite, merci, mon école, cour, classe, le tableau, la porte, la table, un livre, ardoise, craie, papa, maman, monsieur, madame, élève, frère, sœur, garçon, fille) ; mots fréquents (le/la/les, de, un/une, être, et, à, il, avoir)." }
+                  ],
+                  "situation_integration": { "contexte": "Trois images te sont proposées : 1. la cour d'une école ; 2. l'intérieur d'une classe avec un enseignant, une table devant le tableau avec un livre dessus ; 3. l'intérieur d'une classe avec une table devant le tableau, un livre et une ardoise dessus.", "consigne": "Retrouve l'image correspondant au texte ci-dessous et écris le nom de la personne.", "texte": "Dans la classe de Madame… (ou de Monsieur…), la table est devant le tableau. Sur la table, il y a un livre et une ardoise.", "production_attendue": "L'élève lit, observe les dessins, écrit sur son ardoise le numéro du dessin correspondant et recopie le nom de l'enseignant." }
+                },
+                {
+                  "n": 2, "niveau": "CI", "duree_semaines": 5,
+                  "enonce": "Intégrer les mécanismes d'identification des mots et des stratégies de compréhension dans des situations de lecture de petits textes.",
+                  "oa": [
+                    { "intitule": "Lire et comprendre de petits textes", "os": ["Dégager l'idée générale d'un petit texte lu par l'enseignant(e)", "Reformuler avec ses propres mots un petit texte lu par l'enseignant(e)", "Donner son avis sur un petit texte lu par l'enseignant(e)", "Dégager l'idée générale d'un texte lu par soi-même", "Reformuler avec ses propres mots un petit texte lu par soi-même", "Donner son avis sur un petit texte lu par soi-même"], "contenus": "Construction de sens sur de petits textes : précision de ses intentions de lecture, activation de ses connaissances sur le texte, anticipation du contenu, recherche d'indices, traitement du texte, vérification de sa compréhension, reformulation, résumé." },
+                    { "intitule": "Maîtriser des correspondances graphophonologiques", "os": ["Lire / écrire des sons, des syllabes, des mots", "Former des syllabes et des mots", "Maîtriser la graphie des lettres étudiées"], "contenus": "Maîtrise de la combinatoire des sons : a, i, t, o, l. Lecture et dictée de syllabes et de mots." },
+                    { "intitule": "Acquérir globalement des mots fréquents", "os": ["Reconnaître instantanément et transcrire des mots (plusieurs séances)"], "contenus": "Mots fréquents : ne, je, son, que, se, qui, ce, dans, en, du, elle." },
+                    { "intitule": "Expliquer le sens de mots", "os": ["S'appuyer sur la structure de mots pour en dégager le sens", "Identifier le sens d'un mot à partir de relations de sens associées"], "contenus": "Mots de la même famille. Classement de noms par catégorie (personnes, animaux, choses, fruits)." },
+                    { "intitule": "Développer la fluidité de la lecture", "os": ["Lire à voix haute un petit texte (plusieurs séances)"], "contenus": "Lecture expressive de petits textes." }
+                  ],
+                  "situation_integration": { "contexte": "Lors d'une séance de lecture, l'enseignant te demande de lire ce texte.", "texte": "Ali est dans la classe. Il a son livre sur la table.", "consigne": "Lis le texte à voix haute, puis réponds à la question en recopiant la réponse juste : Où se trouve le livre d'Ali ? — Le livre d'Ali est sur la table à la maison. / Le livre d'Ali est sur la table à l'école." }
+                },
+                {
+                  "n": 3, "niveau": "CI", "duree_semaines": 4,
+                  "enonce": "Intégrer les mécanismes d'identification des mots et des stratégies de compréhension dans des situations de lecture de petits textes.",
+                  "oa_identiques_a": "palier 2",
+                  "contenus_specifiques": {
+                    "sons": "Maîtrise de la combinatoire des sons n, e, p, d, m, b. Les 2 premières semaines, un son par semaine ; les semaines suivantes, 2 sons par semaine.",
+                    "mots_frequents": "au, de/des, ce, le, pour, pas, que, vous, par, sur, faire.",
+                    "vocabulaire": "Le sens de quelques affixes (préfixes ou suffixes) courants. Recherche de mots sur un thème, un domaine donné (champ lexical)."
+                  },
+                  "situation_integration": { "contexte": "Pour voir si vous savez lire comme des grands, je vous propose le texte suivant.", "texte": "Aminata donne une banane et des dattes à sa petite sœur Daba. Daba dit merci à Aminata.", "consigne": "Lis le texte et réponds à la question en relevant le numéro de la bonne réponse. Puis recopie le nom des fruits dont parle le texte. Enfin, lis le texte à voix haute. — Aminata est la petite sœur de Daba : vrai / faux." }
+                },
+                {
+                  "n": 4, "niveau": "CI", "duree_semaines": 4,
+                  "enonce": "Intégrer les mécanismes d'identification des mots et des stratégies de compréhension dans des situations de lecture de petits textes.",
+                  "oa_identiques_a": "palier 2",
+                  "contenus_specifiques": {
+                    "sons": "f, u, ou, é = et, è = ê = ai = ei, s, r, au = eau = o, on = om. Lecture et dictée de syllabes, de mots, de phrases simples.",
+                    "mots_frequents": "plus, dire, me, on, mon, lui, nous, comme, mais, pouvoir, avec, tout, y, aller, voir.",
+                    "vocabulaire": "Le sens de quelques affixes courants. Recherche de mots de sens opposés."
+                  },
+                  "situation_integration": { "contexte": "L'enseignant te propose ce texte écrit par un élève à l'occasion d'un concours qu'il a gagné.", "texte": "Le mouton blanc de papa est gros. Sa tête est ronde et ses pattes sont solides. Il est beau. Il saute et bêle dès que papa arrive à la maison. Tout le monde l'aime.", "consigne": "Lis le texte et réponds aux questions. Ensuite, tu liras le texte à voix haute. — Relève les mots qui montrent comment est le mouton de papa. — Quelles sont les parties du mouton décrites dans le texte ?" },
+                  "situation_evaluation": { "contexte": "Dans la classe, l'enseignant vous demande de jouer au « dessin téléguidé ». Tu dois dessiner exactement ce que te dit ton camarade.", "consigne": "Lis ce que dit ton camarade et réalise le dessin : Dessine au centre de la page une maison. À côté de la maison, à droite, place un grand arbre. À gauche de la maison, dessine une voiture. Au-dessus de la maison, dessine le ciel avec 5 nuages et un grand soleil.", "indications": "L'enseignant copie le texte au tableau, explicite la consigne, fait exécuter le travail sur une page de cahier sans aider à la lecture individuelle. Le contrôle de la lecture à voix haute peut être étalé sur plusieurs séances.", "total": 40 }
+                },
+                {
+                  "n": 5, "niveau": "CP", "duree_semaines": 5,
+                  "enonce": "Intégrer les mécanismes d'identification des mots et des stratégies de compréhension dans des situations de lecture de petits textes.",
+                  "oa_identiques_a": "palier 2",
+                  "contenus_specifiques": {
+                    "sons": "Renforcement de la maîtrise de la combinatoire des sons appris au CI.",
+                    "echelons_dubois_buyse": "Échelons 2 et 3",
+                    "mots_invariables": "alors, après, assez, beaucoup",
+                    "vocabulaire": "Mots de la même famille. Mots de sens opposés (antonymes)."
+                  },
+                  "situation_integration": { "contexte": "À l'occasion d'une fête à l'école, les meilleurs textes écrits par les élèves de CE ont été choisis.", "texte": "Je m'appelle Arona. J'ai neuf ans. Je suis au CE1. J'ai une petite sœur. Elle s'appelle Gnilane. Aujourd'hui, maman est malade. Je surveille ma sœur. C'est très difficile. Elle pleure, elle crie et se jette par terre pour rien. Elle casse ses jouets et les pots de fleurs. Elle renverse de l'eau partout, elle salit sa robe. À la fin de la journée, je suis très fatigué. Je m'endors dans un fauteuil sans manger.", "consigne": "Lis le texte à voix haute et réponds aux questions : — Gnilane est plus âgée qu'Arona. Vrai / Faux. — Pourquoi Arona surveille-t-il sa sœur ? — Trouve un mot de la même famille que salir." }
+                },
+                {
+                  "n": 6, "niveau": "CP", "duree_semaines": 6, "type_texte": "narratifs",
+                  "enonce": "Intégrer les mécanismes d'identification des mots et des stratégies de compréhension dans des situations de lecture de petits textes narratifs.",
+                  "contenus_specifiques": {
+                    "sons": "v-w ; oi ; ch ; é, es, er, ez ; f-ph ; eu-œu (/ø/ comme jeu, des œufs ; /œ/ comme fleur, sœur) ; s = ss = c = ç ; s = z ; g = gu ; g = j ; gn ; in = ain = ein ; an = en = em = am.",
+                    "echelons_dubois_buyse": "Échelons 4 et 5",
+                    "mots_invariables": "combien, comment, déjà, depuis",
+                    "vocabulaire": "Le sens de quelques affixes. Mots de sens similaires (synonymes)."
+                  },
+                  "situation_integration": { "contexte": "C'est aujourd'hui une séance de lecture récréative.", "texte": "C'est la récréation. Les enfants jouent dans la cour. Les maîtres et les maîtresses sont assis sous les arbres. Tout à coup, on entend un grand « WOOY ! WOOY ! ». C'est Abdou qui est tombé d'un arbre. Le directeur l'amène au dispensaire, mais ce n'est pas très grave.", "consigne": "Lis le texte et réponds aux questions en relevant le numéro qui convient. Ensuite, tu le liras à voix haute. — L'histoire se déroule à la maison / à l'école. — Les enfants et les grandes personnes sont ensemble : OUI / NON. — Un enfant a un accident : OUI / NON. — Écris une phrase pour dire ce que tu penses d'Abdou." }
+                },
+                {
+                  "n": 7, "niveau": "CP", "type_texte": "descriptifs",
+                  "enonce": "Intégrer les mécanismes d'identification des mots et des stratégies de compréhension dans des situations de lecture de petits textes descriptifs.",
+                  "contenus_specifiques": {
+                    "sons": "tr, pr, dr, br, cr, fr, gr ; ac ; oir, eur ; fl, pl, gl, bl, cl ; el, ec, es ; ette, erre, esse, elle, enne ; il, ill, ail, aill, euil, euill ; eil, eill, ouil, ouill.",
+                    "echelons_dubois_buyse": "Échelon 6",
+                    "mots_invariables": "derrière, dessus, devant, enfin",
+                    "vocabulaire": "Le sens de quelques affixes. Classement de mots par degré d'intensité (congelé, froid, tiède, chaud, brûlant…)."
+                  },
+                  "situation_integration": { "contexte": "Lors d'une séance de lecture en classe, le maître te demande de lire ce texte.", "titre": "Grand-père", "texte": "Grand-père est un homme mince et courbé. Il est très vieux. Il a les cheveux blancs, toujours bien peignés. Il s'appuie sur une canne et marche en traînant les pieds. Il est sage, gentil et joyeux avec tout le monde. La famille lui demande souvent conseil. La nuit, il me prend dans ses bras et me raconte des histoires.", "consigne": "Lis le texte et réponds aux questions. — Relève ce qui indique que grand-père est vieux. — Pourquoi la famille lui demande-t-elle conseil ? — Remplace dans le texte le mot histoire par un autre mot de même sens." }
+                },
+                {
+                  "n": 8, "niveau": "CP", "duree_semaines": 4, "type_texte": "injonctifs",
+                  "enonce": "Intégrer les mécanismes d'identification des mots et des stratégies de compréhension dans des situations de lecture de petits textes injonctifs.",
+                  "contenus_specifiques": {
+                    "sons": "oy, ay, uy (y = 2 i) ; ier, ié, ied, iez ; iau, ieu, ien ; ui ; oin, ion ; sc, st, sp ; h, x.",
+                    "echelons_dubois_buyse": "Échelon 7",
+                    "mots_invariables": "jamais, pourquoi, pendant",
+                    "vocabulaire": "Le sens de quelques affixes. Compréhension de quelques métaphores (avoir une faim de loup)."
+                  },
+                  "situation_integration": { "contexte": "Maman est allée en voyage. Son fils Abou tombe malade et se met à pleurer. Son grand frère Mamadou lui donne son médicament en utilisant la notice suivante.", "texte": "Notice : Prendre un demi-verre d'eau. Mettre trois gouttes de sirop. Remuer avec une petite cuillère. Boire à petites gorgées.", "consigne": "Lis le texte et joue la scène avec les membres de ton groupe.", "indications": "Répartir les élèves en petits groupes. Prévoir le matériel : eau dans un flacon vide pour simuler le médicament, un verre, une cuillère. Variantes : d'autres instructions pour une tâche domestique." },
+                  "situation_evaluation": { "contexte": "Aujourd'hui, c'est le concours du meilleur lecteur. Chaque lecteur tire au hasard le texte qu'il va lire.", "textes": ["Comment téléphoner ? — soulève le combiné, écoute la tonalité, compose le numéro, salue la personne, dis-lui le message, salue pour quitter, raccroche bien le combiné.", "Un marché hebdomadaire — Tôt le matin, les manœuvres installent les tentes. Ils déchargent les marchandises et les rangent sur les étals. Aussitôt, les vendeurs et les vendeuses se placent des deux côtés de la grande avenue. Les appels, les cris et les sons des tam-tams animent la place. Les acheteurs circulent pour trouver les meilleurs produits. Au crépuscule, la place du marché retrouve son calme.", "La belle villa — Amina a une belle villa dans le quartier de Some. C'est une maison en terrasse peinte avec finesse. De jolies fleurs recouvrent le mur. La cour est pavée de carreaux multicolores. La maison compte quatre chambres, un salon, une cuisine et des toilettes. Le salon est bien meublé avec des fauteuils, un téléviseur, une table à manger, une bibliothèque. La maison d'Amina est accueillante."], "consigne": "Prends un numéro et lis le texte à voix haute. Ensuite, je te poserai des questions de compréhension.", "total": 40 }
+                }
+              ]
+            },
+            {
+              "code": "CECR",
+              "nom": "Communication écrite (production)",
+              "competence_base": "Intégrer le vocabulaire adéquat, des structures et des règles syntaxiques simples dans des situations de production d'énoncés écrits adaptés à la situation de communication.",
+              "criteres": [
+                { "nom": "Pertinence", "note_max": 22, "bareme": "Les deux phrases sont adaptées à la situation 22 · une phrase adaptée 17 · aucune 0" },
+                { "nom": "Cohérence", "note_max": 17, "bareme": "Toutes les phrases sont en lien 17 · les 2 phrases ne sont pas en lien 0" },
+                { "nom": "Correction de la langue", "note_max": 16, "bareme": "Aucune erreur 16 · 1 à 4 erreurs 11 · 5 à 7 erreurs 6 · 8 à 10 erreurs 1 · plus de 10 erreurs 0" },
+                { "nom": "Présentation", "note_max": 5, "bareme": "Pas de rature ni de surcharge, bien lisible, mise en page correcte et aérée 5 · présence de rature 4 · rature et surcharge 3 · + manque de lisibilité 2 · + mise en page insuffisante 0" }
+              ],
+              "total": 60,
+              "trois_strategies": [
+                "LA DICTÉE À L'ADULTE — les élèves produisent oralement un court texte que l'enseignant écrit sous leur dictée. Accessible aux pré-lecteurs/scripteurs. Permet d'élaborer une histoire à l'oral, d'énoncer un oral susceptible d'être écrit, de découvrir les fonctions de l'écrit.",
+                "L'ÉCRITURE INTERACTIVE — collaboration élèves / enseignant : les élèves participent à l'élaboration du texte ET à son écriture au tableau. Étapes : définir l'objet, expliquer le déroulement, faire raconter les enfants, mise en texte, relecture.",
+                "LA PRODUCTION ÉCRITE PERSONNELLE — écriture autonome avec les outils de la classe (étiquettes-mots, dictionnaires illustrés, textes de référence, béquilles). Chaque séance se termine par un partage des textes produits."
+              ],
+              "stades_developpement": "Les productions personnelles révèlent où en est l'élève : (1) pas de relation avec l'oral — dessin, gribouillis, pseudo-lettres, combinaisons de lettres sans lien ; (2) début du lien écrit/oral — les syllabes représentées par une ou deux lettres ; (3) principe alphabétique compris mais oublis ou confusions de sons ; (4) tous les phonèmes transcrits, erreurs orthographiques ; (5) écriture alphabétique avec application des règles orthographiques. Les traces des élèves doivent se lire avec bienveillance : les erreurs sont révélatrices de l'évolution des conceptualisations.",
+              "note_ecriture": "Au palier 1, les activités préparatoires à l'écriture (graphisme de base et combinaisons) sont conduites. À partir du palier 4, l'écriture cursive est introduite en travaillant les familles de tracés : les boucles vers le haut et le bas (f), les boucles combinées (s, r, z, x), les autres formes (v, w). Les activités d'autodictée et de dictée sont transversales et régulières à travers tous les paliers.",
+              "structure_oa_constante": [
+                "Produire oralement un énoncé pour le dicter à l'enseignant(e) — dictée à l'adulte",
+                "Participer à la production d'un énoncé — écriture interactive",
+                "Rédiger un énoncé adapté à la situation de communication — production écrite personnelle"
+              ],
+              "paliers": [
+                { "n": 1, "niveau": "CI", "duree_semaines": 7, "enonce": "Intégrer le vocabulaire adéquat, des structures et des règles syntaxiques simples dans des situations de production d'énoncés écrits d'une à deux phrases relatifs au contact social.", "contenus": "Dictée à l'adulte (2 sem.), écriture interactive (2 sem.), production personnelle (3 sem.) — énoncés d'une à deux phrases traduisant une intention de communication dans le contact social. Utilisation des mots acquis globalement.", "situation_integration": { "contexte": "Trois vignettes au tableau : une personne qui salue ; une personne qui en présente une autre ; une personne qui dit au revoir. Variante : faire jouer la scène — tu amènes ton amie Anna à la maison où tu trouves ton père qui ne la connaît pas.", "consigne": "Choisis des étiquettes pour écrire ce que disent les personnages sur les images.", "indications": "Mettre le corpus d'étiquettes en place. Faire faire le travail sur les tables et vérifier les productions." } },
+                { "n": 2, "niveau": "CI", "duree_semaines": 5, "enonce": "Intégrer le vocabulaire adéquat, des structures et des règles syntaxiques simples dans des situations de production d'énoncés écrits d'une à deux phrases adaptées à la situation de communication.", "contenus": "Dictée à l'adulte (1 sem.), écriture interactive (2 sem.), production personnelle (2 sem.).", "situation_integration": { "contexte": "L'enseignant dessine une scène muette au tableau ou affiche un support.", "consigne": "Regarde la scène et rédige deux phrases pour dire ce qui se passe.", "indications": "Il est possible de donner quelques mots pour aider : « tu peux t'aider des mots suivants… »" } },
+                { "n": 3, "niveau": "CI", "duree_semaines": 4, "enonce": "Intégrer le vocabulaire adéquat, des structures et des règles syntaxiques simples dans des situations de production d'énoncés écrits d'une à deux phrases adaptées à la situation de communication.", "contenus": "Dictée à l'adulte (1 sem.), écriture interactive (1 sem.), production personnelle (2 sem.).", "situation_integration": { "contexte": "L'enseignant place sur son bureau un objet susceptible d'intéresser les élèves.", "consigne": "Regarde cet objet et rédige deux phrases pour dire ce que tu en penses." } },
+                { "n": 4, "niveau": "CI", "duree_semaines": 4, "enonce": "Intégrer le vocabulaire adéquat, des structures et des règles syntaxiques simples dans des situations de production d'énoncés écrits de 1 à 2 phrases adaptées à la situation de communication.", "contenus": "Dictée à l'adulte (1 sem.), écriture interactive (1 sem.), production personnelle (2 sem.).", "situation_integration": { "contexte": "L'enseignant dessine au tableau ou affiche un support (images, photos).", "consigne": "Regarde la scène et rédige deux phrases pour l'expliquer à ton petit frère." }, "situation_evaluation": { "contexte": "Tu observes au tableau une scène que tu souhaiterais partager avec ta mère.", "consigne": "Rédige deux phrases adaptées à la scène que tu liras à ta mère à la maison.", "total": 60 } },
+                { "n": 5, "niveau": "CP", "duree_semaines": 3, "enonce": "Intégrer le vocabulaire adéquat, des structures et des règles syntaxiques simples dans des situations de production d'énoncés écrits de 2 phrases adaptées à la situation de communication.", "nb": "Il ne s'agit pas de reprendre à l'identique le dernier palier du CI, mais de varier les situations de production écrite, avec rédaction effective des élèves, pour procéder à des remédiations différenciées.", "situation_integration": { "contexte": "L'enseignant dessine une scène muette au tableau ou affiche un support.", "consigne": "Regarde la scène et rédige deux phrases pour dire ce qui se passe." } },
+                { "n": 6, "niveau": "CP", "duree_semaines": 6, "type_texte": "narratif", "enonce": "Intégrer le vocabulaire adéquat, des structures et des règles syntaxiques simples, le présent de l'indicatif dans des situations de production d'énoncés écrits d'au moins 2 phrases relatifs à la narration.", "oa": [{ "intitule": "Relater par écrit des actions accomplies", "os": ["Relater par écrit des actions accomplies par soi", "Relater par écrit des actions accomplies par quelqu'un"] }, { "intitule": "Relater par écrit un conte, un récit, une bande dessinée", "os": ["Terminer par écrit un conte lu (plusieurs séances)", "Relater par écrit l'histoire racontée par une BD muette", "Terminer par écrit un récit lu", "Rédiger une petite histoire imaginée"] }], "contenus": "Verbes d'action usuels au présent de l'indicatif. Succession des actions. Emploi des pronoms : je, il, elle, nous, ils, elles. Connecteurs : et, puis, avant, après ; d'abord, ensuite, enfin ; mais, car. Phrase simple : sujet + verbe + complément.", "situation_integration": { "contexte": "Une BD vous est offerte mais elle n'a pas de légende.", "consigne": "Écris une phrase sous chaque vignette pour permettre à ton petit frère de comprendre l'histoire.", "production_attendue": "Un texte d'au moins 2 phrases cohérentes qui racontent l'histoire." } },
+                { "n": 7, "niveau": "CP", "duree_semaines": 7, "type_texte": "descriptif", "enonce": "Intégrer le vocabulaire adéquat, des structures et des règles syntaxiques simples, le présent de l'indicatif dans des situations de production d'énoncés écrits d'au moins 2 phrases relatifs à la description.", "oa": [{ "intitule": "Décrire par écrit à partir d'un support", "os": ["Rédiger une petite description d'un objet", "Rédiger une petite description d'un lieu", "Rédiger une petite description d'un animal", "Rédiger une petite description d'une personne"] }], "contenus": "Emploi des adjectifs relatifs à la forme, à la couleur, à la taille. Indicateurs de lieu : ici, là-bas, à côté, sous, sur. Phrase simple : sujet + verbe d'état (être au présent) + attribut.", "situation_integration": { "contexte": "Votre oncle a perdu le bélier qui est sur cette photo.", "consigne": "Décris-le en deux phrases au moins. Cette description sera ensuite affichée sur le mur pour aider à le retrouver." }, "situation_integration_2": { "contexte": "Pendant la récréation, tu as perdu un objet dans un endroit précis.", "consigne": "Décris le lieu en une phrase et l'objet en une phrase pour aider tes camarades à retrouver cet objet." } },
+                { "n": 8, "niveau": "CP", "duree_semaines": 4, "type_texte": "injonctif", "enonce": "Intégrer le vocabulaire adéquat, des structures et des règles syntaxiques simples, le présent de l'indicatif et de l'impératif dans des situations de production d'énoncés écrits d'au moins 2 phrases relatifs à l'injonction.", "oa": [{ "intitule": "Produire des énoncés pour faire agir", "os": ["Écrire des consignes pour faire exécuter des tâches (plusieurs séances)", "Écrire des énoncés pour faire réaliser quelque chose"] }, { "intitule": "Produire des énoncés pour interdire quelque chose", "os": ["Écrire des énoncés pour interdire quelque chose"] }], "contenus": "Emploi des pronoms : tu, vous. Impératif de verbes d'action usuels : Recopie l'exercice. Corrige les erreurs. Emploi de « il faut » : Il faut respecter les arbres. Il faut saluer. Emploi de la négation : ne pas, ne plus, ne jamais — il ne faut pas bavarder ; Ne salis pas tes habits.", "situation_integration": { "contexte": "Une image montrant des toilettes et un garçon qui urine à côté.", "consigne": "Écris deux phrases que tu afficheras sur le mur pour que cette situation ne se reproduise plus." }, "situation_integration_2": { "contexte": "Tu t'occupes d'une tâche à la maison ou à l'école (laver le mouton, effacer le tableau, fermer la classe, déposer les cahiers chez le maître), tu dois t'absenter et tu demandes à ton frère / ta sœur de te remplacer.", "consigne": "Écris au moins 2 phrases pour lui dire ce qu'il faut faire." }, "situation_evaluation": { "contexte": "Une image : un grand garçon frappe une petite fille. Un adulte arrive. Mettre une bulle vide au-dessus de l'adulte.", "consigne": "Rédige une phrase pour raconter ce qui se passe. Écris ce que dit l'adulte dans la bulle.", "total": 60 } }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+
+    {
+      "code": "MATH",
+      "nom": "Mathématiques",
+      "note": "Pas de sous-domaine : quatre activités de rang égal.",
+      "activites": [
+        {
+          "code": "AN",
+          "nom": "Activités numériques",
+          "competence_base": "Intégrer des notions ensemblistes élémentaires et des opérations portant sur les nombres entiers de 0 à 100 dans des situations de résolution de problèmes de calculs numériques.",
+          "criteres": [
+            { "nom": "Pertinence des solutions", "definition": "L'opération (outil) sélectionnée pour résoudre le problème est appropriée à la situation." },
+            { "nom": "Justesse des opérations", "definition": "Les résultats des opérations sont exacts." },
+            { "nom": "Autonomie", "definition": "La tâche est exécutée sans aide." }
+          ],
+          "bareme_type": "Pertinence 4 (4 opérations appropriées 4 · 3 → 3 · 2 → 2 · 1 → 1 · aucune 0) · Justesse 4 ou 5 · Autonomie 2 (sans aide 2, avec aide 0). Total 10.",
+          "sens_competence": {
+            "le_nombre": "Le nombre est la caractéristique commune à tous les ensembles qui ont le même cardinal. Sa maîtrise exige l'étude de 5 aspects : cardinal (nombre d'éléments), ordinal (rang dans une série), symbolique (écriture en chiffres), lecture, et groupement / base de numération (système décimal).",
+            "l_operation": "Trois aspects essentiels : l'aspect mathématique de l'opération et la prise de conscience de ses propriétés ; l'aspect technique opératoire ; l'étude du sens de l'opération, c'est-à-dire son application à diverses situations."
+          },
+          "demarche": [
+            "Appropriation du matériel — présentation et essai d'utilisation ; familiarisation, manipulation effective, démonstration du mode d'utilisation au besoin",
+            "Activités libres — observation, manipulation, schématisation et verbalisation, individuellement et/ou en groupes, avec compte rendu au tableau",
+            "Activités dirigées — analyse des procédures et des résultats, renforcement, synthèse sous la conduite de l'enseignant",
+            "Évaluation — réinvestissement immédiat des acquis puis transfert dans des situations nouvelles"
+          ],
+          "activites_types": {
+            "denombrement": "Appel des élèves, constitution d'équipes, jeux de cartes, jeux de dés, comptines orales, jeux de doigts.",
+            "rangement": "Situations de mise en ordre croissant ou décroissant, d'identification de positions.",
+            "codage": "Lecture / écriture de nombres : numéros de l'équipe nationale ou locale de foot, lecture de calendrier, usage de la bande numérique.",
+            "organisation": "Mise en évidence du rôle des groupements par 10 : jeux d'échanges, scores de jeux, utilisation de l'abaque."
+          },
+          "paliers": [
+            {
+              "n": 1, "niveau": "CI", "champ": "notions ensemblistes",
+              "enonce": "Intégrer les notions ensemblistes élémentaires dans des situations de résolution de problèmes concrets de classification et de sériation.",
+              "oa": [
+                { "intitule": "Former et représenter des ensembles", "os": ["Former et représenter graphiquement un ensemble", "Former et représenter graphiquement des sous-ensembles"], "contenus": "Notion de sous-ensemble, de réunion. Diagramme de Venn. Peu, beaucoup, rien.", "duree": "2 leçons de 2 séances chacune" },
+                { "intitule": "Classifier des ensembles", "os": ["Classifier des ensembles suivant des critères de quantité", "Classifier des ensembles suivant des critères de qualité (forme, couleur…)"], "contenus": "Peu, beaucoup, rien. Ensemble, sous-ensemble.", "duree": "1 leçon de 2 séances" },
+                { "intitule": "Comparer des ensembles", "os": ["Comparer des ensembles"], "contenus": "Sous-ensemble / inclusion, partition. Plus que / autant que / moins que." }
+              ],
+              "situation_integration": { "contexte": "Après la kermesse de l'école tu aides Rama et Sidi à comparer ce qu'ils ont gagné : des bonbons et des crayons pour chacun.", "consigne": "1. Représente l'ensemble des bonbons puis l'ensemble des crayons de Sidi. 2. Fais de même pour Rama. 3. Complète par le dessin : Sidi a plus de… que de… ; Rama a moins de… que de… ; Sidi a plus de… que Rama ; Rama a plus de… que Sidi." }
+            },
+            {
+              "n": 2, "niveau": "CI", "champ": "0 à 10",
+              "enonce": "Intégrer des opérations arithmétiques portant sur les nombres entiers de 0 à 10 dans des situations de résolution de problèmes concrets de construction et de calculs numériques.",
+              "oa": [
+                { "intitule": "Maîtriser les nombres de 0 à 6", "os": ["Découvrir les nombres 1, 2 et 3", "Découvrir les nombres 4 et 5", "Découvrir le nombre 0 (à partir de l'ensemble vide)", "Découvrir le nombre 6", "Composer et décomposer le nombre 6", "Découvrir le sens de l'addition"], "contenus": "Les nombres, la notion d'ordre (<, >), les écritures additives." },
+                { "intitule": "Maîtriser les nombres de 7 à 10 / utiliser l'addition et la soustraction", "os": ["Découvrir le nombre 7 puis le composer / décomposer", "Découvrir le nombre 8 puis le composer / décomposer", "Découvrir le sens de la soustraction", "Découvrir la notion de double ou de moitié d'un nombre", "Découvrir le nombre 9 puis le composer / décomposer", "Découvrir le nombre 10 puis le composer / décomposer", "Découvrir la dizaine"], "contenus": "Unité / dizaine ; groupement et échange. Écritures additives." },
+                { "intitule": "Calcul rapide (transversal)", "os": ["Ajouter 2 à un nombre", "Trouver le double ou la moitié d'un nombre"] }
+              ],
+              "duree_par_os": "1 leçon de 2 séances par OS",
+              "recommandation_cfa": "Étudier en même temps les nombres 7 et 8.",
+              "situation_integration": { "contexte": "À la fin de la kermesse de l'école tu aides Rama et Sidi à comparer ce qu'ils ont gagné.", "consigne": "1. Remplis les étiquettes. 2. Complète : Sidi a … crayons de plus que Rama ; Sidi a … bonbons de moins que Rama." }
+            },
+            {
+              "n": 3, "niveau": "CI", "champ": "0 à 20",
+              "enonce": "Intégrer des opérations arithmétiques portant sur les nombres entiers de 0 à 20 dans des situations de résolution de problèmes concrets de construction et de calculs numériques.",
+              "oa": [
+                { "intitule": "Maîtriser les nombres de 11 à 20 / utiliser l'addition et la soustraction", "os": ["Découvrir chacun des nombres 11, 12, 13, 14, 15, 16, puis 17-18-19, puis 20", "Composer et décomposer chacun de ces nombres", "Effectuer des opérations portant sur les nombres de 0 à 13, puis 0 à 19, puis 0 à 20"], "contenus": "La notion d'ordre (<, >), les écritures additives, unité et dizaine, addition et soustraction." },
+                { "intitule": "Calcul mental (transversal)", "os": ["Ajouter ou retrancher 2, 3 ou 5 à un nombre", "Ajouter 10 à un nombre qui lui est inférieur", "Trouver le double ou la moitié d'un nombre"] }
+              ],
+              "recommandation_cfa": "Étudier les nombres par deux : 11 & 12 ; 13 & 14 ; 15 & 16.",
+              "situation_evaluation": { "contexte": "Awa, Moussa et Astou ont apporté des fournitures scolaires à ton ami Mangary, un orphelin. Lot d'Awa : 5 cahiers, 6 crayons, 3 livres. Lot de Moussa : 6 cahiers, 4 crayons, 5 livres. Lot d'Astou : 9 crayons, 4 cahiers, 2 livres. Mangary a besoin de 19 cahiers pour toute l'année.", "consigne": "Aide-le en calculant la quantité reçue pour chaque fourniture et le nombre de cahiers qui lui manquent.", "bareme": "Pertinence 4 · Justesse 4 · Autonomie 2 — total 10" }
+            },
+            {
+              "n": 4, "niveau": "CP", "champ": "0 à 50",
+              "enonce": "Intégrer des opérations arithmétiques portant sur les nombres de 0 à 50 dans des situations de résolution de problèmes concrets de construction et de calculs numériques.",
+              "oa": [
+                { "intitule": "Réviser les nombres de 0 à 20", "os": ["Utiliser les nombres de 0 à 20"], "contenus": "Écriture des nombres de 0 à 20 ; opérations sur ces nombres.", "duree": "4 leçons de 2 séances chacune" },
+                { "intitule": "Maîtriser les nombres de 21 à 50", "os": ["Découvrir les nombres 21, 22 puis les suivants", "Composer et décomposer ces nombres"], "contenus": "Les signes <, =, > ; unité, dizaine, base de numération (jeux d'échange). Écritures additives et multiplicatives, écritures du partage. Addition avec et sans retenue, soustraction avec et sans emprunt." }
+              ]
+            },
+            {
+              "n": 5, "niveau": "CP", "champ": "0 à 79",
+              "enonce": "Intégrer des opérations arithmétiques portant sur les nombres entiers de 0 à 79 dans des situations de résolution de problèmes concrets de construction et de calculs numériques.",
+              "oa": [
+                { "intitule": "Maîtriser les nombres de 51 à 79 / utiliser les quatre opérations", "os": ["Découvrir les nombres de 51 à 59", "Utiliser les nombres de 0 à 59", "Effectuer des opérations portant sur les nombres de 0 à 59", "Découvrir les nombres de 60 à 69", "Utiliser les nombres de 0 à 69", "Découvrir les nombres de 70 à 79", "Identifier l'opération"], "contenus": "Les signes, la numération (jeux d'échanges). Écritures additives. Unité, dizaine, base de numération. Addition avec retenue, soustraction avec emprunt. Le sens de la division (partage)." },
+                { "intitule": "Calcul mental (transversal)", "os": ["Ajouter ou retrancher 2, 3, 5 ou 10", "Trouver le double ou la moitié d'un nombre", "Construire et mémoriser les tables de multiplication par 2 et par 3"] }
+              ],
+              "recommandation_cfa": "Réaliser les OS « utiliser les nombres de 0 à 59 » et « effectuer des opérations sur ces nombres » en 3 leçons de 2 séances chacune.",
+              "situation_integration": { "contexte": "Notre classe qui compte 20 garçons et 32 filles a reçu 55 cahiers de 32 pages, 52 gommes et 70 crayons. Pour distribuer le matériel, la maîtresse te demande de l'aider.", "consigne": "Propose deux opérations différentes pour trouver le nombre de cahiers ; remplis le tableau (nature du matériel, quantité reçue, effectif filles, effectif garçons, total distribué, quantité restante).", "indications": "Attirer l'attention des élèves sur les données inutiles qui n'ont pas fait partie des apprentissages (le nombre de pages)." }
+            },
+            {
+              "n": 6, "niveau": "CP", "champ": "0 à 100",
+              "enonce": "Intégrer des notions ensemblistes élémentaires et des opérations portant sur les nombres entiers de 0 à 100 dans des situations de résolution de problèmes de calculs numériques.",
+              "oa": [
+                { "intitule": "Maîtriser les nombres de 81 à 100 / utiliser les quatre opérations", "os": ["Découvrir les nombres de 80 à 89 puis de 90 à 100", "Composer et décomposer ces nombres"], "contenus": "Les signes <, =, > ; unité, dizaine, base de numération (jeux d'échange). Écritures multiplicatives et écritures du partage des nombres de 0 à 100. Addition avec et sans retenue, soustraction avec et sans emprunt." },
+                { "intitule": "Calcul mental (transversal)", "os": ["Ajouter ou retrancher 2, 3, 5 ou 10", "Trouver le double ou la moitié d'un nombre", "Mémoriser les tables de multiplication par 2 et par 3"] }
+              ],
+              "recommandation_cfa": "L'étude de la numération se poursuivra en abordant dans la même leçon les nombres de 80 à 99 ; l'OS « Découvrir les nombres de 80 à 99 » prendra 3 leçons de 2 séances chacune.",
+              "situation_integration": { "contexte": "Aujourd'hui, le 25 avril, c'est l'anniversaire de la maîtresse. Elle a 50 ans, le double de l'âge de la maîtresse du CI. Pour fêter l'anniversaire, elle demande aux élèves de jouer avec des nombres et des opérations comprenant 25 et 50.", "consigne": "Propose une écriture du nombre 100 en utilisant seulement le nombre 25, puis en utilisant seulement le nombre 50. Calcule l'âge de la maîtresse du CI. Calcule l'âge que la maîtresse aura dans 25 ans." },
+              "situation_evaluation": { "contexte": "Notre école vient de recevoir 68 livres, 45 cahiers et 53 crayons. Les livres sont pour le CM qui compte 35 filles et 23 garçons ; les cahiers pour les 22 garçons et 21 filles du CE1 ; les crayons pour les 40 élèves de la classe de CI.", "consigne": "1. Trouve le nombre d'élèves du CM et le nombre d'élèves du CE1. 2. Trouve le nombre de livres, de cahiers et de crayons qui restent après distribution.", "bareme": "Pertinence 4 · Justesse 5 · Autonomie 1 — total 10" }
+            }
+          ]
+        },
+        {
+          "code": "AG",
+          "nom": "Activités géométriques",
+          "competence_base": "Intégrer des notions de structuration de l'espace, les formes de figures planes et de solides familiers ainsi que les techniques d'utilisation d'instruments de traçage dans des situations de résolution de problèmes de reproduction d'objets géométriques.",
+          "criteres": [
+            { "nom": "Pertinence", "definition": "L'opération sélectionnée pour résoudre le problème est appropriée à la situation." },
+            { "nom": "Justesse", "definition": "Les résultats des opérations sont exacts." },
+            { "nom": "Autonomie", "definition": "La tâche est exécutée sans aide." }
+          ],
+          "sens_competence": "Structuration de l'espace : l'enfant découvre et construit des relations spatiales, saisit sa propre position, perçoit et représente la position d'un objet par rapport à d'autres, appréhende, nomme et représente un itinéraire. L'étude formalisée des formes ne débute qu'à la deuxième étape ; à l'étape 1, de nombreuses manipulations préparatoires permettent de passer d'une approche physique (tactile) à une approche réfléchie.",
+          "paliers": [
+            { "n": 1, "niveau": "CI", "enonce": "Intégrer des notions de structuration de l'espace dans des situations de résolution de problèmes concrets de repérage de positions.", "oa": [{ "intitule": "Se repérer par rapport à son corps", "os": ["Utiliser les notions indiquées en se référant aux parties de son corps"], "contenus": "droite / gauche ; devant / derrière" }, { "intitule": "Se situer dans un espace réel ou représenté", "os": ["Se situer dans un espace réel ou représenté en utilisant les notions indiquées"], "contenus": "droite / gauche ; devant / derrière ; près de / loin de ; sur / sous ; en haut / en bas ; avant / au même niveau / après" }, { "intitule": "Situer des objets", "os": ["Situer des objets dans un espace réel ou représenté"], "contenus": "mêmes notions" }], "situation_integration": { "contexte": "Ton maître veut se rendre à un lieu qu'il ne connaît pas et que tu connais. Il te demande de lui expliquer le chemin.", "consigne": "Trace-lui sur une feuille le chemin pour s'y rendre en indiquant quelques repères." } },
+            { "n": 2, "niveau": "CI", "enonce": "Intégrer les formes de solides familiers et de figures planes dans des situations de résolution de problèmes concrets de classification, de reconnaissance, de reproduction et de dessin d'objets géométriques.", "oa": [{ "intitule": "Travailler les solides familiers", "os": ["Classifier des solides familiers", "Dessiner des solides familiers", "Décrire des solides (description sommaire)"], "contenus": "Cylindre, parallélépipède rectangle (pavé droit), cube" }, { "intitule": "Travailler les figures planes", "os": ["Classifier des figures planes selon la forme", "Dessiner des figures planes", "Décrire des figures planes simples"], "contenus": "carré, rectangle, triangle, rond" }, { "intitule": "Décomposer et recomposer", "os": ["Décomposer et recomposer un solide familier"], "contenus": "Cylindre, pavé droit, cube" }], "situation_integration": { "contexte": "Nous avons besoin de boîtes de rangement pour assurer la propreté et mettre de l'ordre dans notre classe.", "consigne": "À l'aide des pièces données, confectionne une boîte." } },
+            { "n": 3, "niveau": "CI", "enonce": "Intégrer des formes de lignes et des notions de structuration de l'espace dans des situations de résolution de problèmes de représentation graphique d'itinéraires.", "oa": [{ "intitule": "Tracer et nommer des lignes", "os": ["Tracer des lignes ouvertes et des lignes fermées", "Utiliser en situation le vocabulaire adéquat"], "contenus": "Lignes ouvertes / fermées ; rythmes graphiques ; intérieur / extérieur / frontière ; quadrillage / case / nœud ; point de départ / point d'arrivée / parcours" }, { "intitule": "Représenter des itinéraires", "os": ["Représenter graphiquement des itinéraires"], "contenus": "Notion d'itinéraire ; point de départ / point d'arrivée / parcours" }], "situation_integration": { "contexte": "Tu vas passer une journée de fête chez des amis ; une de tes camarades doit te rejoindre mais elle ne connaît pas le chemin.", "consigne": "Trace-lui sur une feuille l'itinéraire à suivre en indiquant 4 repères.", "bareme": "Justesse 4 (4 repères justes) · Pertinence 4 (emplacement des 4 repères respecté) · Autonomie 2 — total 10" } },
+            { "n": 4, "niveau": "CP", "libelle_guide": "Palier 4 (3 bis)", "enonce": "Intégrer des formes de lignes et des notions de structuration de l'espace dans des situations de résolution de problèmes de représentation graphique d'itinéraires.", "oa": [{ "intitule": "Tracer des lignes", "os": ["Tracer des lignes ouvertes et fermées"], "contenus": "Ligne fermée / ligne ouverte ; intérieur / extérieur / frontière ; rythmes graphiques" }, { "intitule": "Utiliser le vocabulaire spatial", "os": ["Utiliser en situation le vocabulaire adéquat"], "contenus": "Lignes, nœuds, quadrillage, case, point de départ, point d'arrivée" }, { "intitule": "Représenter des itinéraires", "os": ["Représenter graphiquement des itinéraires"], "contenus": "Notion d'itinéraire, point de départ / point d'arrivée, parcours" }], "situation_integration": { "contexte": "Tu viens avec tes camarades de classe d'une excursion. Les élèves du CI veulent aller à la même place en suivant le même chemin.", "consigne": "Représente sur une feuille l'itinéraire que vous avez suivi en indiquant les repères.", "indications": "Une phase de verbalisation précisant un itinéraire connu de tous précède la représentation graphique." } },
+            { "n": 5, "niveau": "CP", "fin_etape": true, "enonce": "Intégrer des notions de structuration de l'espace, les formes de figures planes et de solides familiers ainsi que les techniques d'utilisation d'instruments de traçage dans des situations de résolution de problèmes de reproduction d'objets géométriques.", "oa": [{ "intitule": "Utiliser les instruments de traçage", "os": ["Utiliser la règle, le double décimètre, le crayon"], "contenus": "Techniques de traçage", "duree": "3 leçons de 2 séances" }, { "intitule": "Construire des lignes", "os": ["Construire des lignes"], "contenus": "Lignes droites, courbes ; frises" }, { "intitule": "Reproduire des figures planes", "os": ["Reproduire et découper des figures planes simples"], "contenus": "Carré, rectangle, triangle, rond (sans le compas)", "duree": "2 leçons de 2 séances par figure" }], "situation_integration": { "contexte": "Nous devons expliquer par un dessin le jeu de la marelle à des correspondants qui l'ignorent.", "consigne": "Trace-leur le cadre du jeu (un modèle est fourni)." }, "situation_evaluation": { "contexte": "L'école doit recevoir des visiteurs. On décide d'embellir la classe mais les moyens manquent pour acheter des frises et des guirlandes.", "consigne": "Fabrique une guirlande et 3 frises à partir des pièces données.", "indications": "Fournir un modèle. Pour la guirlande, donner des pièces parmi lesquelles figurent des distracteurs (figures non étudiées).", "bareme": "Pertinence 4 (4 figures utilisées) · Justesse 4 (caractéristiques respectées pour les 4 figures) · Autonomie 2 — total 10" } }
+          ]
+        },
+        {
+          "code": "AM",
+          "nom": "Activités de mesure",
+          "competence_base": "Intégrer les notions de longueurs, de capacités, de masses, de durées et de monnaie ainsi que les techniques d'utilisation des instruments non conventionnels, conventionnels et usuels dans des situations de résolution de problèmes concrets de mesure.",
+          "criteres": [
+            { "nom": "Pertinence", "definition": "L'opération (outil) sélectionnée pour résoudre le problème est appropriée à la situation." },
+            { "nom": "Justesse", "definition": "Les résultats des opérations sont exacts." },
+            { "nom": "Autonomie", "definition": "La tâche est exécutée sans aide." }
+          ],
+          "sens_competence": "Une grandeur physique est toute quantité mesurable ou repérable à l'aide d'un instrument arbitraire (mesurage) ou conventionnel (mesure). La notion suppose : considérer des objets sous le rapport d'une grandeur particulière ; l'invariance de cette grandeur ; comparer deux objets, ou les comparer à un troisième intermédiaire ; démultiplier ou reporter cet intermédiaire (unité) ; associer un nombre qui sera la mesure.",
+          "demarche": [
+            "Mise en situation fonctionnelle amenant l'élève à éprouver le besoin de mesurer",
+            "Recherche conduisant les élèves à faire des mesurages à l'aide d'unités arbitraires",
+            "Communication mettant en évidence la difficulté résultant de l'emploi d'étalons variables",
+            "Découverte et analyse (description et caractérisation) de l'unité conventionnelle retenue",
+            "Évaluation"
+          ],
+          "progression_grandeurs": ["longueurs", "capacité", "masse", "durée", "monnaie (prix)"],
+          "paliers": [
+            { "n": 1, "niveau": "CI", "grandeurs": ["longueur", "capacité"], "enonce": "Intégrer les notions de longueurs et de capacités ainsi que la notion d'instruments non conventionnels dans des situations de résolution de problèmes concrets de mesurage.", "oa": [{ "intitule": "Travailler les longueurs et les distances", "os": ["Estimer des longueurs", "Comparer des longueurs", "Estimer des distances", "Comparer des distances"], "contenus": "court / long, grand / petit ; plus long / plus court ; près de / loin de ; plus près de / plus loin de" }, { "intitule": "Comparer des capacités", "os": ["Comparer des capacités"], "contenus": "beaucoup / peu ; plus de… que de ; moins de… que de ; autant de… que de" }], "situation_integration": { "contexte": "Pendant la fête de l'école, les élèves jouent au relais-bouteilles. Tu es désigné(e) pour donner les résultats.", "consigne": "Trouve l'équipe qui a gagné. Trace un trait de même longueur que la distance qui sépare le seau des bouteilles." } },
+            { "n": 2, "niveau": "CI", "grandeurs": ["longueur", "capacité", "masse"], "enonce": "Intégrer les notions de longueurs, de capacités et de masses ainsi que la notion d'instruments non conventionnels dans des situations de résolution de problèmes concrets de mesurage.", "oa": [{ "intitule": "Travailler les masses", "os": ["Estimer des masses", "Comparer des masses"], "contenus": "lourd / léger ; plus lourd / plus léger que ; moins lourd / moins léger que ; aussi lourd / aussi léger que" }], "situation_integration": { "contexte": "Trois de tes amis, Pierre, Moussa et Fatou, comparent leurs poids et te demandent d'arbitrer, à partir d'une balançoire.", "consigne": "Complète : … est plus lourd que … ; … est plus léger que … ; Fatou est plus … que …", "production_attendue": "Pierre est plus lourd que Moussa ; Pierre est plus léger que Fatou ; Fatou est plus lourde que Moussa." } },
+            { "n": 3, "niveau": "CI", "grandeurs": ["longueur", "capacité", "masse", "durée"], "enonce": "Intégrer les notions de longueurs, de capacités, de masses, de durées ainsi que la notion d'instruments non conventionnels dans des situations de résolution de problèmes concrets de mesurage.", "oa": [{ "intitule": "Travailler les durées", "os": ["Estimer une durée", "Comparer des durées"], "contenus": "long / court ; lent / rapide ; plus (long/court/rapide) que ; moins que ; aussi que" }, { "intitule": "Se repérer dans le temps", "os": ["Repérer des moments dans la journée", "Se repérer dans la semaine"], "contenus": "Matin, midi, soir, rythmes scolaires. Les jours de la semaine." }], "situation_integration": { "contexte": "Pour la fête de l'école, les élèves préparent un repas et organisent des compétitions sportives (lancer de poids, saut, course). Ils ne disposent pas d'instrument de mesure.", "consigne": "Mesure la longueur de la piste de course. Trouve l'élève le plus rapide à la course. Confectionne trois poids de catégories différentes. Mesure la quantité d'huile achetée pour le repas.", "bareme": "Pertinence 4 (instruments appropriés pour les 4 grandeurs) · Justesse 4 · Autonomie 2 — total 10" } },
+            { "n": 4, "niveau": "CP", "grandeurs": ["longueur", "capacité"], "enonce": "Intégrer les notions de longueurs et de capacités ainsi que les techniques d'utilisation d'instruments non conventionnels, conventionnels et usuels dans des situations de résolution de problèmes concrets de mesure.", "oa": [{ "intitule": "Mesurer des longueurs", "os": ["Comparer des longueurs à l'aide d'instruments non conventionnels", "Utiliser des instruments conventionnels et usuels de mesure de longueur"], "contenus": "plus court / plus long ; plus loin / plus près ; plus… que / moins… que / aussi… que. Instruments non conventionnels : pas, pied, empan, coudée, bâton, ficelle. Instruments conventionnels : mètre, double-décimètre." }, { "intitule": "Mesurer des capacités", "os": ["Comparer des capacités à l'aide d'instruments non conventionnels", "Utiliser des instruments conventionnels et usuels de mesure de capacité"], "contenus": "beaucoup / peu ; plus… que / moins… que / aussi… que. Bouteille, tasse. Litre, quart de litre, demi-litre." }], "situation_integration": { "contexte": "Pendant la fête de l'école, les élèves jouent au relais-bouteilles.", "consigne": "Mesure la quantité d'eau contenue dans chacune des bouteilles. Mesure la distance parcourue par chaque élève (des instruments conventionnels sont mis à disposition)." } },
+            { "n": 5, "niveau": "CP", "grandeurs": ["longueur", "capacité", "masse"], "enonce": "Intégrer les notions de longueurs, de capacités et de masses ainsi que des techniques d'utilisation d'instruments non conventionnels, conventionnels et usuels dans des situations de résolution de problèmes concrets de mesure.", "oa": [{ "intitule": "Mesurer des masses", "os": ["Comparer des masses à l'aide d'instruments non conventionnels", "Utiliser des instruments conventionnels et usuels de mesure de masses"], "contenus": "lourd / léger ; plus… que / moins… que / aussi… que. Instruments non conventionnels : cailloux, pot. Kilogramme, demi-kilogramme, quart de kilogramme." }], "situation_integration": { "contexte": "Tu vas contrôler la masse et la quantité des denrées achetées pour la fête de la classe : farine 5 kg (masses marquées de 1 kg, 2 kg et demi-kg) ; sucre 2 kg (masses de 1 kg et demi-kg) ; lait 2 litres et demi (bouteilles de 1 L, demi-litre et quart de litre).", "consigne": "Propose deux solutions différentes pour chaque mesure en complétant les dessins." } },
+            { "n": 6, "niveau": "CP", "grandeurs": ["longueur", "capacité", "masse", "durée", "monnaie"], "enonce": "Intégrer les notions de longueurs, de capacités, de masses, de durées et de monnaie ainsi que les techniques d'utilisation des instruments non conventionnels, conventionnels et usuels dans des situations de résolution de problèmes concrets de mesure.", "oa": [{ "intitule": "Mesurer des durées", "os": ["Comparer des durées à l'aide d'instruments non étalonnés"], "contenus": "long / court ; lent / rapide ; longtemps / peu de temps. Le sablier, le comptage." }, { "intitule": "Se repérer dans le temps", "os": ["Se repérer dans la semaine, dans le mois, dans l'année", "Lire l'heure"], "contenus": "Jour, semaine, mois, emploi du temps de la classe, calendrier, saisons. Heure, minute." }, { "intitule": "Utiliser la monnaie", "os": ["Utiliser la monnaie courante"], "contenus": "5 F, 10 F, 25 F, 50 F, 100 F" }], "situation_integration": { "contexte": "Un tournoi de football se termine le mardi, sixième jour de la compétition. Tu dois récompenser les joueurs des trois premières équipes : 100 F par joueur de l'équipe gagnante, 50 F pour la deuxième, 25 F pour la troisième. Tu as seulement des pièces de 5 F et de 10 F.", "consigne": "1. Trouve le jour de démarrage du tournoi. 2. Donne à Moussa, de l'équipe gagnante, sa récompense en n'utilisant que les pièces de 5 F et de 10 F." }, "situation_evaluation": { "contexte": "L'école organise une fête avec des compétitions sportives : course de vitesse, football, saut en longueur et en hauteur. Les élèves achètent des denrées pour faire des gâteaux (farine, huile, lait en poudre, sucre) et préparent le terrain.", "consigne": "1. Propose un calendrier de déroulement des compétitions sur 2 jours. 2. Effectue des mesures pour contrôler la quantité de chaque catégorie de denrée. 3. Vérifie une dimension du terrain de compétition.", "bareme": "Pertinence 5 (instruments appropriés pour 4 grandeurs) · Justesse 5 — total 10" } }
+          ]
+        },
+        {
+          "code": "RP",
+          "nom": "Activités de résolution de problèmes",
+          "competence_base": "Intégrer des données et des consignes / questions d'un énoncé mathématique ainsi que les démarches de raisonnement dans des situations de recherche de solutions appropriées.",
+          "criteres": [
+            { "nom": "Pertinence", "definition": "L'opération sélectionnée pour résoudre le problème est appropriée à la situation." },
+            { "nom": "Justesse", "definition": "Les résultats des opérations sont exacts." }
+          ],
+          "sens_competence": "L'objet des activités de résolution de problème est le raisonnement, avec ses deux facettes : la conscience du problème (compréhension) et les stratégies de résolution. Trois aspects de la compréhension d'un énoncé : l'appréhension globale du texte ; le prélèvement ponctuel d'informations ; la compréhension fine (regrouper ou reformuler des informations pour en déduire une information non explicitement donnée). En mathématique, la réponse à la question n'est ni dans le texte ni dans la mémoire de l'enfant : elle s'obtient par un raisonnement et des calculs.",
+          "travail_sur_le_questionnement": [
+            "Libération de la parole — les élèves posent leurs propres questions, parce qu'elles ont un sens pour eux",
+            "Sériation des questions / hypothèses et reconnaissance de celles qui ont un sens mathématique",
+            "Recherche de réponses à des questions que pose l'élève au travers des énoncés habituels"
+          ],
+          "paliers": [
+            { "n": 1, "niveau": "CI", "enonce": "Intégrer les techniques d'observation et de recherche d'indices dans la résolution de situations problèmes de mise en relation et d'application de règles logiques.", "note": "Palier consacré aux activités logiques, préparatoires à la résolution de problème. En raison de la non-maîtrise du code écrit, l'accent est mis sur la recherche et le traitement d'informations à partir d'IMAGES.", "oa": [{ "intitule": "Rechercher des informations sur une image", "os": ["Chercher des indices", "Identifier l'intrus sur une image", "Retrouver ce qui manque sur une image"], "contenus": "Informations utiles, informations inutiles, informations manquantes" }, { "intitule": "Traiter les informations sur une image", "os": ["Remettre de l'ordre dans une série d'images", "Lier un indice à une image", "Reproduire un modèle", "Reconnaître et appliquer un algorithme", "Construire et utiliser un tableau"], "contenus": "Règles logiques. Rythme ; algorithme répétitif (le même motif revient périodiquement) et algorithme récursif (une règle permet d'obtenir le suivant d'un élément). Tableau à double entrée." }], "situation_integration": { "contexte": "C'est l'anniversaire de ta sœur. Tu lui donnes un cadeau.", "consigne": "Regarde les perles choisies dans le tableau et confectionne le collier." }, "situation_integration_2": { "contexte": "Dans le cadre du « défi mathématique », tu reçois une page du cahier de Sidi. Il y a des erreurs et tu dois corriger les exercices.", "consigne": "Retrouve les erreurs de Sidi et fais le bon coloriage ; puis remplis correctement le tableau à double entrée." } },
+            { "n": 2, "niveau": "CI", "enonce": "Intégrer les notions de donnée et de question dans des situations de résolution de problèmes concrets d'analyse d'énoncés mathématiques.", "oa": [{ "intitule": "Identifier un problème mathématique", "os": ["Identifier un problème mathématique parmi plusieurs situations comprenant des énoncés oraux mathématiques et non mathématiques", "Dramatiser un problème mathématique"], "contenus": "Le problème mathématique" }, { "intitule": "Analyser un énoncé", "os": ["Identifier les données d'un énoncé mathématique", "Identifier les questions / consignes d'un énoncé"], "contenus": "Les données d'un problème, les informations non numériques, les questions / consignes" }] },
+            { "n": 3, "niveau": "CI", "enonce": "Intégrer les données et les consignes / questions dans des situations de résolution de problèmes concrets d'analyse d'énoncés mathématiques.", "os_reperes": ["Identifier les données utiles", "Identifier les données inutiles", "Identifier la question finale"] },
+            { "n": 4, "niveau": "CP", "enonce": "Intégrer les données et les consignes / questions dans des situations de résolution de problèmes concrets d'analyse d'énoncés mathématiques." },
+            { "n": 5, "niveau": "CP", "enonce": "Intégrer des données et des consignes / questions d'un énoncé mathématique ainsi que les démarches de raisonnement dans des situations de recherche de solutions appropriées." }
+          ]
+        }
+      ]
+    },
+
+    {
+      "code": "ESVS",
+      "nom": "Éducation à la Science et à la Vie Sociale",
+      "horaire": "Séances de 30 mn. Activités d'intégration : 90 mn (60 mn dans les écoles franco-arabes).",
+      "sous_domaines": [
+        {
+          "code": "DM",
+          "nom": "Découverte du monde",
+          "activites": [
+            {
+              "code": "HIST",
+              "nom": "Histoire",
+              "note": "À l'étape 1, l'histoire est d'abord la CONSTRUCTION DE LA NOTION DE TEMPS à partir du vécu personnel. Le guide distingue : le temps vécu, le temps perçu, le temps conçu (de 8 à 11 ans — c'est alors seulement qu'on peut aborder l'histoire) ; le temps affectif (doté de durées différentes selon qu'il est agréable ou non), le temps social (celui des groupes qui rythme la vie collective) et le temps historique (« un temps mort qui ne reviendra pas mais auquel on redonne les couleurs du présent »).",
+              "paliers": [
+                { "n": 1, "niveau": "CI", "enonce": "Intégrer des faits quotidiens de sa vie personnelle dans des situations de construction de la notion de durée.", "oa": [
+                  { "intitule": "Découvrir la notion de rythme", "os": ["Repérer des activités et des faits quotidiens selon des moments de la journée ou de la semaine", "Regrouper des faits quotidiens en fonction de leur fréquence", "Reproduire un rythme"], "contenus": "Matin, midi, soir ; jour, nuit ; jours de la semaine (4 séances de 30 mn). Plus fréquent / moins fréquent (2 séances). Notion de rythme (2 séances) — battements des mains, marche à pas cadencés, pas de danse, comptines, rythmes sonores. Activités à repérer : préparation du petit déjeuner, retour du travail, repas familial, repos, jeux, aller à l'école." },
+                  { "intitule": "Découvrir la notion d'ordre", "os": ["Ordonner des événements en employant des indicateurs de temps", "Classer des événements vécus selon leur ordre de succession"], "contenus": "Avant, après ; aujourd'hui, hier, demain ; en même temps, durant, pendant (3 séances puis 2 séances)." },
+                  { "intitule": "Construire la notion de durée", "os": ["Apprécier la durée de quelques activités ou faits", "Comparer des activités selon la durée"], "contenus": "Lent / rapide ; long / court (2 séances). Plus lent que, moins lent que, plus rapide que, moins rapide que ; plus long que, moins long que, plus court que, moins court que ; plus longtemps, moins longtemps (3 séances). Activités à comparer : préparation du repas, balayage de la chambre, repas familial, sieste, jeux, aller à l'école." }
+                ], "situation_integration": { "contexte": "Tu as devant toi des images qui décrivent quatre activités d'un élève sur une journée : le repas de midi, le réveil du matin, le petit déjeuner, une matinée à l'école.", "consigne": "Relie par une flèche chaque image à la durée correspondante représentée par l'une des bandes à droite ; numérote-les de façon chronologique." } },
+                { "n": 2, "niveau": "CI", "enonce": "Intégrer des faits quotidiens de sa vie personnelle, des phénomènes naturels de son milieu immédiat et des moyens non conventionnels dans des situations de mesure du temps personnel.", "oa": [
+                  { "intitule": "Apprécier une durée", "os": ["Estimer une durée", "Comparer des durées"], "contenus": "C'est long / c'est court ; c'est lent / c'est rapide ; c'est nouveau / c'est ancien (3 séances). Plus longtemps que ; plus jeune / plus vieux que ; plus ancien / plus âgé que (3 séances). Supports : récréation, séance de lecture, objets de la classe usagés ou neufs, personnes (grand-père, mère, enfant)." },
+                  { "intitule": "Mesurer une durée", "os": ["Mesurer une durée avec des moyens non conventionnels", "Représenter des durées par des lignes"], "contenus": "Battements de mains, comptage ; sablier, clepsydre (3 séances). Lignes de longueurs différentes (2 séances). Durées à mesurer : aller de sa place au tableau, copier une courte phrase, effectuer une opération, réaliser un dessin, aller chercher de l'eau." }
+                ], "situation_integration": { "contexte": "À la fin de la leçon d'EPS, la maîtresse organise un concours de jonglage. Tu es désigné(e) pour mesurer le temps que la balle reste en équilibre sur la tête de trois concurrents.", "consigne": "Mesure le temps durant lequel la balle reste sur la tête de chaque concurrent." }, "situation_evaluation": { "contexte": "À la kermesse de fin d'année, un stand est réservé aux jeux de jonglage avec les deux pieds. Quatre élèves sont en compétition pour la récompense.", "consigne": "Désigne le vainqueur : mesure la durée du jonglage de chacun des quatre concurrents ; représente par une ligne chacune des durées." } },
+                { "n": 3, "niveau": "CP", "enonce": "Intégrer des notions de base, des indicateurs de temps dans des situations d'agencement d'événements sociaux et de phénomènes naturels de son milieu immédiat.", "oa": [
+                  { "intitule": "Utiliser et ordonner avec des indicateurs temporels", "os": ["Utiliser des indicateurs temporels", "Classer des faits, des événements et des phénomènes selon un ordre de succession", "Ordonner des faits, des événements et des phénomènes"], "contenus": "Aujourd'hui, hier, demain ; pendant, en même temps que (3 séances). Avant, après ; pendant que, en même temps que (3 séances). Supports : le temps qu'il fait, anniversaire, venir à l'école, jouer à la maison, heure de rendez-vous, repas, film, la pluie, le coucher du soleil, prière." },
+                  { "intitule": "Indiquer la fréquence d'un fait, d'un événement ou d'un phénomène", "os": ["Déterminer des fréquences", "Comparer des fréquences"], "contenus": "Chaque…, tous les… ; parfois, souvent ; tant de fois, par… (3 séances). Plus souvent que, moins souvent que ; plus fréquent que, moins fréquent que (3 séances). Supports : repas, la douche, la prière, lever ou coucher du soleil, réveil." }
+                ] },
+                { "n": 4, "niveau": "CP", "enonce": "Intégrer des indicateurs de temps et l'utilisation de moyens variés dans des situations de structuration et de mesure du temps personnel et social.", "oa": [
+                  { "intitule": "Déterminer une durée", "os": ["Estimer une durée", "Comparer des durées"], "contenus": "De… à… ; depuis ; à partir de… jusqu'à… ; entre le… et le… (3 séances). Plus… que ; moins… que ; autant que (2 séances). Durées à estimer : la récréation, la matinée de classe, les vacances, fête de Noël." },
+                  { "intitule": "Mesurer le temps", "os": ["Utiliser des instruments de découpage du temps"], "contenus": "Emploi du temps (2 séances) ; calendrier (2 séances). Contenus supports à placer ou repérer : activités d'une journée de classe, d'une journée de repos, événements dans le temps (anniversaire, baptême, fêtes)." }
+                ] }
+              ]
+            },
+            {
+              "code": "GEO",
+              "nom": "Géographie",
+              "paliers": [
+                { "n": 1, "niveau": "CI", "enonce": "Intégrer des repères physiques et des indicateurs spatiaux dans des situations de structuration de son milieu immédiat.", "oa": [
+                  { "intitule": "Identifier des repères", "os": ["Identifier des repères fixes dans son environnement immédiat", "Identifier des repères mobiles dans son environnement immédiat"], "contenus": "Repères fixes : à l'école (arbres, bâtiments, points d'eau) ; aux alentours (puits, arbres, places publiques, bornes-fontaines, maison d'un tel). Repères mobiles : le jour — mouvement apparent du soleil (matin, midi, soir, apparition, zénith, disparition) ; la nuit — positions successives de la lune." },
+                  { "intitule": "Situer / se situer", "os": ["Utiliser des notions de latéralisation et de topologie pour se situer", "Utiliser des notions de latéralisation et de topologie pour situer une position"], "contenus": "Latéralisation : gauche / droite ; devant / derrière. Topologie : à côté de, près de, loin de, ici, là-bas ; en face de, derrière, en haut, en bas, avant, après ; sous, sur, entre, à l'intérieur, au milieu." },
+                  { "intitule": "Se déplacer à partir d'indications", "os": ["Suivre un itinéraire à l'aide d'indications données", "Indiquer à quelqu'un un itinéraire à suivre à l'aide de repères, de notions de latéralisation et de topologie"], "contenus": "À gauche, à droite, devant, derrière ; puis à côté de, près de, après, entre, avant. Exemples d'itinéraires : d'un point de la classe à un autre, de la classe aux toilettes, d'un point de la cour à un autre." }
+                ], "situation_integration": { "contexte": "Ton ami(e) doit venir dans cette école à la rentrée prochaine. À la maison, il / elle te demande l'itinéraire qui mène de sa classe aux toilettes.", "consigne": "Indique-lui l'itinéraire." } },
+                { "n": 2, "niveau": "CI", "enonce": "Intégrer des indicateurs spatiaux et des techniques d'observation dans des situations de localisation d'éléments de son milieu immédiat." },
+                { "n": 3, "niveau": "CP", "enonce": "Intégrer des techniques de repérage, de localisation et de rangement dans des situations d'organisation du milieu immédiat.", "oa": [
+                  { "intitule": "Repérer un élément dans un ensemble", "os": ["Montrer des éléments dans un ensemble", "Situer un élément dans un ensemble"], "contenus": "Voici, voilà. À côté de, près de, ici, là-bas, loin de ; entre, derrière, devant, au-dessus de. Éléments : crayon, craie, cahier, livre, stylo, ballon, chaussure." },
+                  { "intitule": "Disposer des éléments", "os": ["Trouver un élément selon un critère donné", "Ordonner des éléments selon un critère", "Trier des éléments selon des critères"], "contenus": "Critères : couleur, matière, usage, taille, poids. Rangement : du plus grand au plus petit, du plus lourd au plus léger, du plus épais au plus mince, du plus gros au plus maigre. Supports : objets de différentes couleurs ; en plastique, fer, bois, papier, tissu ; carrés, ronds, rectangulaires, triangulaires, longs, courts ; pour écrire, lire, couper, transporter l'eau." }
+                ] },
+                { "n": 4, "niveau": "CP", "enonce": "Intégrer des indicateurs, des repères spatiaux et l'utilisation de moyens variés dans des situations de structuration et de mesure de l'espace vécu." }
+              ]
+            },
+            {
+              "code": "IST",
+              "nom": "Initiation scientifique et technologique",
+              "paliers": [
+                { "n": 1, "niveau": "CI", "enonce": "Intégrer des notions de base et des techniques d'observation dans des situations d'exploration du monde physique et technique dans son milieu immédiat.", "oa": [
+                  { "intitule": "Découvrir des éléments du monde physique et technique", "os": ["Identifier des éléments du monde physique et technique", "Décrire sommairement des éléments du monde physique et technique"], "contenus": "Éléments naturels : pierres, sable, argile, eau, air, oxygène (identification puis description : propriétés de l'eau, de l'argile). Éléments techniques : lampe, fer à repasser, mobilier, ventilateur, jouets, téléphone.", "duree": "4 séances de 30 mn" },
+                  { "intitule": "Découvrir les différents états de la matière", "os": ["Identifier les différents états de la matière", "Classer des éléments selon l'état de la matière"], "contenus": "Solide (sucre, pierre), liquide (eau, huile), gazeux (air, gaz butane).", "duree": "3 séances de 30 mn" }
+                ], "situation_integration": { "contexte": "Dans une boutique, beaucoup de produits sont en désordre sur les étagères : paquet de sucre en morceaux, bouteille d'huile, bonbonne de gaz, sachet de biscuits, bâtons de craie, flacon d'eau de Cologne.", "consigne": "Range les produits selon l'état de la matière." } },
+                { "n": 2, "niveau": "CI", "enonce": "Intégrer des notions de base et des procédés d'expérimentation dans des situations d'exploration du monde biologique dans son milieu immédiat." },
+                { "n": 3, "niveau": "CP", "enonce": "Intégrer des notions de base et des savoir-faire pratiques dans des situations d'utilisation d'objets techniques de son milieu immédiat.", "oa": [
+                  { "intitule": "Choisir des outils en fonction d'une tâche donnée", "os": ["Identifier des outils", "Indiquer les outils nécessaires à l'exécution d'une tâche"], "contenus": "Outils : marteau, pelle, truelle, stylo, lame, ciseaux, couteau, tournevis, pince. Tâches supports : enfoncer un clou, couper une feuille, creuser un trou, écrire un mot." },
+                  { "intitule": "Utiliser un objet technique", "os": ["Identifier des objets techniques", "Manipuler des objets techniques"], "contenus": "Jouets, fer à repasser, moulinet, tournevis, clé à mollette, entonnoir, récipients, montre, téléphone. Manipulations : serrer et desserrer un écrou, visser et dévisser une vis, couper un fil de fer, transvaser ou transporter un liquide." },
+                  { "intitule": "Entretenir un objet technique", "os": ["Identifier des techniques d'entretien", "Appliquer des techniques d'entretien"], "contenus": "Nettoyage (dépoussiérage, lavage), graissage, lubrification, sauvegarde du matériel." }
+                ] },
+                { "n": 4, "niveau": "CP", "enonce": "Intégrer des notions de base, des techniques d'observation et des savoir-faire pratiques dans des situations de réalisation d'objets techniques de son milieu immédiat." }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "EDD",
+          "nom": "Éducation au développement durable",
+          "activites": [
+            {
+              "code": "VDSM",
+              "nom": "Vivre dans son milieu",
+              "paliers": [
+                { "n": 1, "niveau": "CI", "enonce": "Intégrer des notions de base, des techniques d'observation et des mesures préventives dans des situations de proposition de solutions à des problèmes de maladies et d'hygiène nés de l'interaction entre l'homme et son milieu immédiat.", "oa": [
+                  { "intitule": "Proposer des solutions à des problèmes de maladies du milieu immédiat", "os": ["Identifier des maladies dans son milieu immédiat", "Proposer des solutions contre les maladies"], "contenus": "Maladies du milieu : paludisme ; IST/VIH et SIDA ; bilharzioses ; choléra ; parasitoses intestinales. Classification sommaire : endémiques, épidémiques, pandémiques. Moyens de lutte préventive : paludisme (moustiquaires imprégnées, destruction des sites larvaires) ; IST/VIH-SIDA (ne pas partager d'objets pointus ou tranchants) ; bilharzioses (éviter les baignades en eaux stagnantes) ; choléra et parasitoses (se laver les mains aux moments critiques).", "nb": "Épuiser l'étude d'une maladie avant une autre : description, causes, conséquences et moyens de lutte.", "duree": "3 séances puis 3 séances de 30 mn" },
+                  { "intitule": "Proposer des solutions à des problèmes d'hygiène du milieu immédiat", "os": ["Proposer des solutions au manque d'hygiène individuelle et du milieu"], "contenus": "Hygiène individuelle : corporelle, vestimentaire et alimentaire. Hygiène du milieu.", "duree": "5 séances de 30 mn" }
+                ] },
+                { "n": 2, "niveau": "CI", "enonce": "Intégrer des notions de base, des techniques d'observation et des mesures préventives dans des situations de proposition de solutions à des problèmes de gaspillage ou de dégradation des ressources nés de l'interaction entre l'homme et son milieu immédiat." },
+                { "n": 3, "niveau": "CP", "enonce": "Intégrer des notions de base, des techniques d'observation et des mesures préventives dans des situations de proposition de solutions à des problèmes de gaspillage ou de dégradation des ressources nés de l'interaction entre l'homme et son milieu immédiat." },
+                { "n": 4, "niveau": "CP", "enonce": "Intégrer des notions de base, des techniques simples d'observation et des mesures préventives dans des situations de proposition de solutions à des problèmes nés de l'interaction entre l'homme et son milieu immédiat." }
+              ]
+            },
+            {
+              "code": "VENS",
+              "nom": "Vivre ensemble",
+              "paliers": [
+                { "n": 1, "niveau": "CI", "enonce": "Intégrer de bons comportements dans des situations de relations humaines au sein du milieu immédiat.", "oa": [
+                  { "intitule": "Se respecter soi-même et respecter les autres", "os": ["Se respecter soi-même", "Respecter les autres"], "contenus": "Formes de respect : soin de son corps, de ses habits, de son matériel de travail ; correction du langage (ne pas insulter, éviter d'être grossier).", "nb": "Partir du vécu en classe, à l'école, dans le milieu immédiat.", "duree": "2 séances de 30 mn chacune" },
+                  { "intitule": "Manifester de bons comportements à l'école et dans la famille", "os": ["Être ponctuel et assidu", "Rendre service", "Dire la vérité"], "contenus": "Régularité, assiduité, ponctualité. Entraide, solidarité, bonté, générosité. Franchise, honnêteté, sincérité.", "duree": "1 séance de 30 mn par OS" }
+                ], "integration": "60 minutes" },
+                { "n": 2, "niveau": "CI", "enonce": "Intégrer des notions de base, des règles de conduite et des valeurs dans des situations de relations humaines au sein du milieu immédiat." },
+                { "n": 3, "niveau": "CP", "enonce": "Intégrer de bons comportements dans des situations de relations humaines au sein de son milieu immédiat." },
+                { "n": 4, "niveau": "CP", "enonce": "Intégrer des notions de base, des règles de conduite et des valeurs dans des situations de relations humaines au sein de son milieu immédiat." }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+
+    {
+      "code": "EPSA",
+      "nom": "Éducation Physique, Sportive et Artistique",
+      "note": "Dans chaque activité, la compétence est subdivisée en quatre paliers : les deux premiers sont traités au niveau 1 (CI), les deux autres au niveau 2 (CP).",
+      "sous_domaines": [
+        {
+          "code": "EPS",
+          "nom": "Éducation physique et sportive",
+          "activites": [{
+            "code": "EPS",
+            "nom": "Activités physiques et sportives",
+            "competence_base": "Intégrer des règles de base et des activités motrices simples dans des situations ludiques et sportives.",
+            "criteres": [
+              { "nom": "Conformité", "definition": "Les caractéristiques des règles sont respectées." },
+              { "nom": "Habileté", "definition": "Les gestes sont exécutés avec adresse." },
+              { "nom": "Autonomie", "definition": "La tâche est exécutée sans aide." }
+            ],
+            "sens_competence": "Donner à l'enfant l'occasion de s'adonner à des activités ludiques et sportives tout en prenant conscience des règles et des principes qui les régissent. La compétence se manifeste dans des situations où l'enfant pratique avec ses camarades des jeux et des activités sportives impliquant des gestes techniques et des règles à respecter.",
+            "composantes": "Les paliers du niveau 1 portent sur les activités motrices fondamentales, les exercices d'ordre, d'assouplissement et de tonification musculaire, la découverte et le respect des règles de jeu et de fair-play. Les paliers du niveau 2 portent sur le renforcement des activités motrices ainsi que sur les règles de jeux et de fair-play.",
+            "notions_cles": {
+              "fair_play": "Conduite honnête dans un jeu et en toutes circonstances : respect de l'adversaire, des règles, des décisions de l'arbitre, du public et de l'esprit du jeu, mais aussi loyauté, maîtrise de soi et dignité dans la victoire comme dans la défaite.",
+              "jeux_fonctionnels": "Jeux qui permettent à l'enfant d'exercer ses sens et ses fonctions en vue de leur développement — simple exploration d'une activité sensorimotrice, sans but utilitaire, pour le plaisir de la répétition."
+            },
+            "paliers": [
+              { "n": 1, "niveau": "CI", "enonce": "Intégrer des activités motrices simples dans des situations de tonification du corps et d'assouplissement musculaire." },
+              { "n": 2, "niveau": "CI", "enonce": "Intégrer des règles de jeu, des activités motrices simples ainsi que des principes élémentaires de fair-play dans des situations ludiques." },
+              { "n": 3, "niveau": "CP", "enonce": "Intégrer des règles de jeu, des activités motrices simples ainsi que des principes élémentaires de fair-play dans des situations ludiques et physiques." },
+              { "n": 4, "niveau": "CP", "enonce": "Intégrer des règles de jeu, des activités motrices simples ainsi que des principes élémentaires de fair-play dans des situations de jeux pré-sportifs." }
+            ]
+          }]
+        },
+        {
+          "code": "ART",
+          "nom": "Éducation artistique",
+          "activites": [
+            {
+              "code": "AP",
+              "nom": "Arts plastiques",
+              "competence_base": "Intégrer des formes, des couleurs ainsi que des techniques élémentaires de reproduction et d'expression artistique dans des situations de réalisation de dessins et de modelage.",
+              "criteres": [
+                { "nom": "Conformité", "definition": "Les caractéristiques du modèle sont respectées." },
+                { "nom": "Beauté", "definition": "Le produit suscite un regard admiratif." },
+                { "nom": "Autonomie", "definition": "La tâche est exécutée sans aide." }
+              ],
+              "donnees_psychopedagogiques": "Le dessin de l'enfant est d'abord l'expression d'une subjectivité ; sa pensée reste dominée par le réalisme intellectuel. Ce n'est que graduellement, vers neuf ans, qu'il passera du réalisme intellectuel au réalisme visuel.",
+              "notions_cles": "Couleurs primaires (bleu, jaune, rouge) : teintes qui ne peuvent être obtenues par mélange. Couleurs secondaires (vert, violet, orangé) : obtenues par mélange à parts égales de deux primaires. Couleurs intermédiaires : mélange de primaires et de secondaires.",
+              "paliers": [
+                { "n": 1, "niveau": "CI", "enonce": "Intégrer des techniques d'observation simples dans des situations de discrimination de formes et de couleurs." },
+                { "n": 2, "niveau": "CI", "enonce": "Intégrer des techniques simples d'observation ainsi que des techniques élémentaires de reproduction et d'expression artistique dans des situations de représentation d'objets." },
+                { "n": 3, "niveau": "CP", "enonce": "Intégrer des formes, des matériaux et des techniques élémentaires de reproduction et d'expression artistique dans des situations de décoration d'objets." },
+                { "n": 4, "niveau": "CP", "enonce": "Intégrer des formes, des couleurs et des techniques élémentaires de reproduction et d'expression artistique dans des situations de réalisation d'objets décoratifs." }
+              ]
+            },
+            {
+              "code": "EM",
+              "nom": "Éducation musicale",
+              "competence_base": "Intégrer des mélodies, des rythmes divers, une gestuelle simple et la coordination des mouvements dans des situations d'interprétation de chants tirés du répertoire local.",
+              "criteres": [
+                { "nom": "Conformité", "definition": "Les caractéristiques du modèle sont respectées." },
+                { "nom": "Beauté", "definition": "L'interprétation est agréable à l'oreille." },
+                { "nom": "Assurance", "definition": "La tâche est exécutée sans crispation." }
+              ],
+              "notions_cles": "En solo : interprétation par un(e) seul(e) chanteur/euse. En chœur : interprétation par un groupe. Chanter d'une voix douce : sans donner de la voix ni articuler exagérément les mots.",
+              "paliers": [
+                { "n": 1, "niveau": "CI", "enonce": "Intégrer la discrimination de sons variés et la vocalise dans des situations d'exécution de mélodies simples." },
+                { "n": 2, "niveau": "CI", "enonce": "Intégrer des mélodies et des rythmes divers dans des situations d'exécution de chants simples." },
+                { "n": 3, "niveau": "CP", "enonce": "Intégrer la reproduction de mélodies, de rythmes divers et la gestuelle simple dans des situations d'interprétation individuelle ou en chœur de chants tirés du répertoire local." },
+                { "n": 4, "niveau": "CP", "enonce": "Intégrer la reproduction de mélodies, de rythmes divers, la gestuelle simple et la coordination des mouvements dans des situations d'interprétation individuelle ou en chœur de chants tirés du répertoire local." }
+              ]
+            },
+            {
+              "code": "AS",
+              "nom": "Arts scéniques",
+              "competence_base": "Intégrer des techniques simples d'imitation, de jeux de rôles, de mise en scène et de déguisement dans des situations de dramatisation de scènes de la vie courante ou imaginaires.",
+              "criteres": [
+                { "nom": "Pertinence", "definition": "La production est en adéquation avec la situation et la consigne." },
+                { "nom": "Justesse", "definition": "Les résultats des prestations sont satisfaisants." },
+                { "nom": "Assurance", "definition": "La dramatisation est faite sans crispation." }
+              ],
+              "donnees_psychopedagogiques": "De façon spontanée, l'enfant chante, danse et parodie les personnages atypiques de son milieu immédiat. La dramatisation est une activité quasi naturelle : tout n'est pas un don de l'école. Lorsque l'enfant s'exprime par son corps, ses gestes, son mouvement, il extériorise ses sentiments, ses émotions, sa vie affective aussi bien que son intelligence.",
+              "notions_cles": "Jeu de rôle : technique par laquelle une personne interprète le rôle d'un personnage (réel ou imaginaire) dans un environnement fictif. Registre de la voix (ou tessiture) : les différents « étages » de la voix — grave, moyen, haut ou aigu — séparés par des notes dites « de passage ».",
+              "paliers": [
+                { "n": 1, "niveau": "CI", "enonce": "Intégrer des techniques simples d'imitation dans des situations de parodie de personnages." },
+                { "n": 2, "niveau": "CI", "enonce": "Intégrer des techniques simples de jeu de rôles et de déguisement dans des situations de dramatisation de scènes de la vie courante." },
+                { "n": 3, "niveau": "CP", "enonce": "Intégrer des techniques simples de jeu de rôles, de déguisement et de mise en scène dans des situations de dramatisation de scènes de la vie courante." },
+                { "n": 4, "niveau": "CP", "enonce": "Intégrer des techniques simples d'imitation, de jeu de rôles, de mise en scène et de déguisement dans des situations de dramatisation relatives à des scènes de vie courante ou imaginaires." }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,880 @@
+{
+  "meta": {
+    "source": "Planifications des apprentissages — Petite Section, Moyenne Section, Grande Section. 45 documents (15 activités × 3 sections), Ministère de l'Éducation nationale du Sénégal.",
+    "fichiers_source": "ressources/guides/prescolaire/{PS,MS,GS}/*.txt (texte extrait des PDF d'origine, dossier Documents/CTP)",
+    "couverture": "TROISIÈME TRIMESTRE UNIQUEMENT (avril, mai, juin) — 11 semaines. Les planifications des 1er et 2e trimestres ne figurent pas dans les documents fournis.",
+    "sections": ["PS", "MS", "GS"],
+    "structure_semaine": "11 semaines par trimestre. Les dernières semaines sont réservées à l'apprentissage de l'intégration (SAI) puis à l'évaluation de l'intégration (SEI) suivie de la remédiation.",
+    "specificite_prescolaire": "L'objectif spécifique est très souvent porté par un JEU NOMMÉ (« Nom du jeu »). Ce nom est une donnée pédagogique à part entière : la fiche doit le reprendre tel quel, car c'est par ce jeu que l'apprentissage se fait.",
+    "version": "1.0"
+  },
+
+  "domaines": [
+    {
+      "code": "D1",
+      "nom": "Langue et Communication",
+      "sous_domaines": [
+        {
+          "code": "SD1",
+          "nom": "Activités langagières orales",
+          "activites": [
+            {
+              "code": "LANG",
+              "nom": "Langage",
+              "competence_base": "Intégrer le vocabulaire usuel, des comportements non verbaux et des règles simples de fonctionnement de la langue (ordre des mots, articulation, prononciation) dans des situations de production de messages oraux de types informatif, narratif, descriptif et injonctif.",
+              "sections": {
+                "PS": {
+                  "oa": [{
+                    "intitule": "Communiquer avec les autres et se faire comprendre",
+                    "os": [
+                      { "n": 1, "intitule": "Présenter quelqu'un", "contenus": "Nom de la personne + est mon frère / ma sœur. Ex. : Sidi est mon frère ; Nafi est ma sœur.", "semaines": [1] },
+                      { "n": 2, "intitule": "Présenter quelqu'un", "contenus": "Voici + GN + pronom personnel + s'appeler au présent de l'indicatif + nom. Ex. : Voici ma sœur, elle s'appelle Nafi.", "semaines": [2] },
+                      { "n": 3, "intitule": "Présenter quelqu'un", "contenus": "Citer le nombre de frères / sœurs : « il a + chiffre + frères / sœurs ». Ex. : Il a 2 grands frères, 2 petites sœurs.", "semaines": [3] },
+                      { "n": 4, "intitule": "Présenter quelqu'un", "contenus": "Dire son âge : « il / elle a + chiffre + ans ». Ex. : Il a 3 ans.", "semaines": [4] },
+                      { "n": 5, "intitule": "Présenter quelqu'un", "contenus": "Dire où il / elle habite : « il habite à… / elle habite à… ».", "semaines": [5] },
+                      { "n": 6, "intitule": "Présenter quelqu'un", "contenus": "Dire son école : « son école s'appelle + nom de l'école ».", "semaines": [6] },
+                      { "n": 7, "intitule": "Présenter quelqu'un", "contenus": "Dire sa classe : « il ou elle est en PS ».", "semaines": [7] },
+                      { "n": 8, "intitule": "Présenter quelqu'un", "contenus": "Présenter des frères / sœurs, ses amis, ses parents : « Ce sont mes frères / mes sœurs ».", "semaines": [8] }
+                    ]
+                  }],
+                  "integration": { "sai": [9], "sei_remediation": [10, 11] }
+                },
+                "MS": {
+                  "oa": [
+                    {
+                      "intitule": "Communiquer avec les autres et se faire comprendre",
+                      "os": [
+                        { "n": 1, "intitule": "Présenter quelqu'un", "contenus": "Nom de personne + est mon frère / ma sœur. Ex. : Sidi est mon frère.", "semaines": [1] },
+                        { "n": 2, "intitule": "Présenter quelqu'un", "contenus": "Voici + GN + pronom personnel + s'appeler au présent + nom. Ex. : Voici ma sœur, elle s'appelle Nafi.", "semaines": [2] },
+                        { "n": 3, "intitule": "Présenter quelqu'un", "contenus": "Dire son âge : « il / elle a + chiffre + ans ». Ex. : Il a 4 ans.", "semaines": [3] },
+                        { "n": 4, "intitule": "Présenter quelqu'un", "contenus": "Dire où il / elle habite : « il habite à… / elle habite à… ».", "semaines": [4] },
+                        { "n": 5, "intitule": "Présenter quelqu'un", "contenus": "Dire son école, sa section : « son école / sa section s'appelle + nom ».", "semaines": [5] },
+                        { "n": 6, "intitule": "Présenter quelqu'un", "contenus": "Présenter des frères / sœurs, ses amis, ses parents : « Ce sont mes frères / mes sœurs ».", "semaines": [6] },
+                        { "n": 7, "intitule": "Dire la date d'un événement", "contenus": "Nom de l'événement + date.", "semaines": [7] },
+                        { "n": 8, "intitule": "Dire le lieu d'un événement", "contenus": "Nom de l'événement + nom de lieu.", "semaines": [8] }
+                      ]
+                    },
+                    {
+                      "intitule": "Communiquer avec les autres et se faire comprendre (suite)",
+                      "os": [
+                        { "n": 9, "intitule": "Expliquer les règles d'un jeu", "contenus": "Les règles à respecter : « Pour jouer à + nom du jeu + on doit… ».", "semaines": [9] },
+                        { "n": 10, "intitule": "Expliquer les règles d'un jeu", "contenus": "Les restrictions au jeu : « Pour jouer à + nom du jeu + on ne doit pas… ».", "semaines": [10] }
+                      ]
+                    }
+                  ]
+                },
+                "GS": {
+                  "oa": [{
+                    "intitule": "Communiquer avec les autres et se faire comprendre",
+                    "os": [
+                      { "n": 1, "intitule": "Expliquer les règles d'un jeu", "contenus": "« Pour jouer à / au + nom du jeu + il faut… ».", "semaines": [1] },
+                      { "n": 2, "intitule": "Expliquer les règles d'un jeu", "contenus": "« Pour jouer à / au + nom du jeu + il ne faut pas… ».", "semaines": [2] },
+                      { "n": 3, "intitule": "Emprunter un objet", "contenus": "« Prête-moi + nom de l'objet + s'il te plaît ».", "semaines": [3] },
+                      { "n": 4, "intitule": "Réclamer un objet", "contenus": "« Rends-moi + nom de l'objet + s'il te plaît ».", "semaines": [4] },
+                      { "n": 5, "intitule": "Réclamer un objet", "contenus": "« Donne-moi + nom de l'objet + s'il te plaît ».", "semaines": [5] },
+                      { "n": 6, "intitule": "Réclamer un objet", "contenus": "« Remets-moi + nom de l'objet + s'il te plaît ».", "semaines": [6] },
+                      { "n": 7, "intitule": "Donner une consigne orale", "contenus": "Verbe à l'impératif.", "semaines": [7] },
+                      { "n": 8, "intitule": "Donner une consigne orale", "contenus": "Verbe à l'impératif + nom propre + complément.", "semaines": [8] },
+                      { "n": 9, "intitule": "Donner une consigne orale", "contenus": "Verbe à l'impératif + adverbe.", "semaines": [9] }
+                    ]
+                  }],
+                  "integration": { "sai": [10], "sei_remediation": [11] }
+                }
+              }
+            },
+            {
+              "code": "VOC",
+              "nom": "Vocabulaire",
+              "competence_base": "Intégrer le lexique et le vocabulaire usuel dans des situations de compréhension et de production d'énoncés oraux.",
+              "sections": {
+                "PS": {
+                  "oa": [{
+                    "intitule": "Enrichir le vocabulaire",
+                    "os": [
+                      { "n": 1, "intitule": "Exprimer des émotions positives", "contenus": "La joie, l'enthousiasme.", "semaines": [1] },
+                      { "n": 2, "intitule": "Exprimer des émotions positives", "contenus": "Le bonheur, l'amour.", "semaines": [2] },
+                      { "n": 3, "intitule": "Exprimer des émotions positives", "contenus": "L'amitié, la tendresse.", "semaines": [3] },
+                      { "n": 4, "intitule": "Exprimer des émotions positives", "contenus": "La jubilation, la satisfaction.", "semaines": [4] },
+                      { "n": 5, "intitule": "Exprimer des émotions positives", "contenus": "La surprise, la fierté.", "semaines": [5] },
+                      { "n": 6, "intitule": "Exprimer des émotions négatives", "contenus": "Le malheur, la haine.", "semaines": [6] },
+                      { "n": 7, "intitule": "Exprimer des émotions négatives", "contenus": "La peur, la crainte.", "semaines": [7] },
+                      { "n": 8, "intitule": "Exprimer des émotions négatives", "contenus": "La colère, la tristesse ; puis la déception, le mépris.", "semaines": [8, 9] }
+                    ]
+                  }],
+                  "integration": { "sai": [10], "sei_remediation": [11] }
+                },
+                "MS": {
+                  "oa": [{
+                    "intitule": "Enrichir le vocabulaire",
+                    "os": [
+                      { "n": 1, "intitule": "Exprimer des émotions positives", "contenus": "La joie, l'enthousiasme.", "semaines": [1] },
+                      { "n": 2, "intitule": "Exprimer des émotions positives", "contenus": "Le bonheur, l'amour.", "semaines": [2] },
+                      { "n": 3, "intitule": "Exprimer des émotions positives", "contenus": "L'amitié, la tendresse.", "semaines": [3] },
+                      { "n": 4, "intitule": "Exprimer des émotions positives", "contenus": "La jubilation, la satisfaction.", "semaines": [4] },
+                      { "n": 5, "intitule": "Exprimer des émotions positives", "contenus": "La surprise, la fierté.", "semaines": [5] },
+                      { "n": 6, "intitule": "Exprimer des émotions négatives", "contenus": "Le malheur, la haine.", "semaines": [6] },
+                      { "n": 7, "intitule": "Exprimer des émotions négatives", "contenus": "La peur, la crainte.", "semaines": [7] },
+                      { "n": 8, "intitule": "Exprimer des émotions négatives", "contenus": "La colère, la tristesse.", "semaines": [8] },
+                      { "n": 9, "intitule": "Acquérir des mots à partir d'un livre de contes", "contenus": "Noms, adjectifs, verbes.", "semaines": [9, 10] }
+                    ]
+                  }]
+                },
+                "GS": {
+                  "oa": [{
+                    "intitule": "Enrichir le vocabulaire",
+                    "os": [
+                      { "n": 1, "intitule": "Réinvestir et élargir le lexique des émotions positives", "contenus": "La joie, l'enthousiasme.", "semaines": [1] },
+                      { "n": 2, "intitule": "Réinvestir et élargir le lexique des émotions positives", "contenus": "La surprise, la fierté.", "semaines": [2] },
+                      { "n": 3, "intitule": "Réinvestir et élargir le lexique des émotions positives", "contenus": "Le bonheur, l'amour.", "semaines": [3] },
+                      { "n": 4, "intitule": "Réinvestir et élargir le lexique des émotions positives", "contenus": "L'amitié, la tendresse.", "semaines": [4] },
+                      { "n": 5, "intitule": "Réinvestir et élargir le lexique des émotions positives", "contenus": "La jubilation, la satisfaction.", "semaines": [5] },
+                      { "n": 6, "intitule": "Réinvestir et élargir le lexique des émotions négatives", "contenus": "La peur, la crainte.", "semaines": [6] },
+                      { "n": 7, "intitule": "Réinvestir et élargir le lexique des émotions négatives", "contenus": "La colère, la tristesse.", "semaines": [7] },
+                      { "n": 8, "intitule": "Réinvestir et élargir le lexique des émotions négatives", "contenus": "Le malheur, la haine.", "semaines": [8] },
+                      { "n": 9, "intitule": "Acquérir des mots à partir d'un livre de contes", "contenus": "Noms, adjectifs, verbes.", "semaines": [9, 10] }
+                    ]
+                  }]
+                }
+              }
+            },
+            {
+              "code": "CONTE",
+              "nom": "Conte",
+              "competence_base": "Intégrer le vocabulaire usuel, des comportements non verbaux et des règles simples de fonctionnement de la langue (ordre des mots, articulation, prononciation) dans des situations de production de messages oraux de types informatif, narratif et descriptif.",
+              "sections": {
+                "PS": {
+                  "oa": [
+                    {
+                      "intitule": "Restituer un événement vécu, une histoire, un conte",
+                      "os": [
+                        { "n": 1, "intitule": "Raconter un conte entendu", "contenus": "Contes et récits tirés du milieu. Formules d'appel, formules de prise de congé.", "semaines": [1] },
+                        { "n": 2, "intitule": "Raconter un conte entendu", "contenus": "Utilisation du passé et des connecteurs logiques (d'abord, ensuite, après, et, enfin…).", "semaines": [2, 3] },
+                        { "n": 3, "intitule": "Raconter un conte entendu", "contenus": "Intonation de la voix ; mimes et gestes.", "semaines": [4] },
+                        { "n": 4, "intitule": "Raconter un conte entendu", "contenus": "Les enfants racontent un conte en utilisant des images, photos, dessins comme illustration, en s'appuyant éventuellement sur un répertoire de contes existant.", "semaines": [5] }
+                      ]
+                    },
+                    {
+                      "intitule": "Décrire les personnages d'un conte",
+                      "os": [
+                        { "n": 5, "intitule": "Décrire un personnage (animal) d'un conte à partir d'une image", "contenus": "Nom de l'animal + verbe être ou tout autre verbe d'état + adjectif. Ex. : L'hyène est vilaine ; Le lion est fort.", "semaines": [6, 7] },
+                        { "n": 6, "intitule": "Décrire un personnage (animal) d'un conte à partir d'une image", "contenus": "Nom de l'animal + verbe avoir + substantif. Ex. : Le lièvre a de longues oreilles ; L'éléphant a de grosses pattes.", "semaines": [8, 9] }
+                      ]
+                    }
+                  ],
+                  "integration": { "sai": [10], "sei_remediation": [11] }
+                },
+                "MS": {
+                  "oa": [{
+                    "intitule": "Raconter un événement",
+                    "os": [
+                      { "n": 1, "intitule": "Raconter un événement vécu", "contenus": "Verbes d'action usuels.", "semaines": [1, 2] },
+                      { "n": 2, "intitule": "Raconter un événement suivi sur des supports audiovisuels ou numériques", "contenus": "Supports : télévision, radio, tablette, smartphone. Connecteurs logiques (d'abord, ensuite, après, enfin…).", "semaines": [3, 4] },
+                      { "n": 3, "intitule": "Raconter un événement suivi sur des supports audiovisuels ou numériques", "contenus": "Connecteurs temporels (aujourd'hui, demain, hier…).", "semaines": [5, 6] },
+                      { "n": 4, "intitule": "Raconter un événement imaginé", "contenus": "Temps passé.", "semaines": [7, 8] }
+                    ]
+                  }],
+                  "integration": { "sai": [9], "sei_remediation": [10] }
+                },
+                "GS": {
+                  "oa": [{
+                    "intitule": "Raconter un événement",
+                    "os": [
+                      { "n": 1, "intitule": "Raconter un événement vécu", "contenus": "Verbes d'action usuels.", "semaines": [1, 2] },
+                      { "n": 2, "intitule": "Raconter un événement vécu", "contenus": "Connecteurs logiques (d'abord, ensuite, après, enfin…).", "semaines": [3, 4] },
+                      { "n": 3, "intitule": "Raconter un événement suivi sur des supports audiovisuels ou numériques", "contenus": "Supports : télévision, radio, tablette, smartphone. Connecteurs logiques.", "semaines": [5, 6] },
+                      { "n": 4, "intitule": "Raconter un événement suivi sur des supports audiovisuels ou numériques", "contenus": "Connecteurs temporels (aujourd'hui, demain, hier…).", "semaines": [7, 8] },
+                      { "n": 5, "intitule": "Raconter un événement vécu", "contenus": "Utilisation du temps passé.", "semaines": [9] },
+                      { "n": 6, "intitule": "Raconter un événement imaginé", "contenus": "Événement imaginé.", "semaines": [10] }
+                    ]
+                  }]
+                }
+              }
+            }
+          ]
+        },
+        {
+          "code": "SD2",
+          "nom": "Activités langagières écrites",
+          "activites": [
+            {
+              "code": "LECT",
+              "nom": "Lecture",
+              "competence_base": "Intégrer des notions liées à la découverte de la fonction et du fonctionnement de l'écrit, ainsi que le principe alphabétique, dans des situations de compréhension de textes écrits entendus et de productions d'un écrit simple.",
+              "sections": {
+                "PS": {
+                  "oa": [
+                    { "intitule": "Identifier les composantes sonores du langage", "os": [
+                      { "n": 1, "intitule": "Identifier à l'oral des mots qui riment", "contenus": "Repérage de mots qui riment dans un énoncé oral.", "jeu": "La pêche aux rimes", "semaines": [1, 2] }
+                    ]},
+                    { "intitule": "Écouter et comprendre de l'écrit", "os": [
+                      { "n": 2, "intitule": "Reconstituer chronologiquement une histoire entendue à partir d'images", "contenus": "Chronologie des images et pictogrammes.", "jeu": "Histoires en images", "semaines": [3, 4] }
+                    ]},
+                    { "intitule": "Découvrir la fonction de l'écrit", "os": [
+                      { "n": 3, "intitule": "Ranger les livres en retrouvant leur place grâce aux couvertures photocopiées", "contenus": "Livres rangés en fonction de leur couverture photocopiée ; critères de rangement des livres.", "semaines": [5] },
+                      { "n": 4, "intitule": "Identifier des livres", "contenus": "Les différents types de livres : album, contes, bande dessinée…", "semaines": [6] }
+                    ]},
+                    { "intitule": "Faire produire des écrits et en découvrir le fonctionnement", "os": [
+                      { "n": 5, "intitule": "Raconter une histoire ou un événement vécu en classe", "contenus": "Dictée à l'adulte.", "semaines": [7] }
+                    ]},
+                    { "intitule": "Découvrir le principe alphabétique", "os": [
+                      { "n": 6, "intitule": "Nommer quelques lettres capitales", "contenus": "Des lettres de l'alphabet en lettres capitales.", "jeu": "Bingo", "semaines": [8] },
+                      { "n": 7, "intitule": "Reconstituer son prénom avec des lettres mobiles (capitales)", "contenus": "Jeux de reconstitution de son prénom avec des lettres mobiles.", "jeu": "Énigme de prénom", "semaines": [9] },
+                      { "n": 8, "intitule": "Nommer toutes les lettres de son prénom", "contenus": "Les lettres du prénom de l'enfant.", "jeu": "Les lettres de mon prénom", "semaines": [10] }
+                    ]}
+                  ]
+                },
+                "MS": {
+                  "oa": [
+                    { "intitule": "Identifier les composantes sonores du langage", "os": [
+                      { "n": 1, "intitule": "Localiser un son dans un mot : début, milieu, fin", "contenus": "Jeux de localisation d'un son dans un mot.", "jeu": "Où suis-je ?", "semaines": [1] },
+                      { "n": 2, "intitule": "Ajouter une syllabe, un son pour compléter un mot donné", "contenus": "Syllabes, son pour compléter un mot donné.", "jeu": "Jeu du mot secret", "semaines": [2] }
+                    ]},
+                    { "intitule": "Écouter et comprendre de l'écrit", "os": [
+                      { "n": 3, "intitule": "Nommer les différents lieux d'une histoire", "contenus": "Les différents lieux d'une histoire.", "semaines": [3] },
+                      { "n": 4, "intitule": "Reconstituer chronologiquement une histoire à partir d'images", "contenus": "Utilisation d'images séquentielles d'une histoire.", "jeu": "Histoire en images", "semaines": [4] }
+                    ]},
+                    { "intitule": "Découvrir la fonction de l'écrit et en découvrir le fonctionnement", "os": [
+                      { "n": 5, "intitule": "Identifier des livres", "contenus": "Les différents types de livres : album, contes, bande dessinée…", "semaines": [5] },
+                      { "n": 6, "intitule": "Renseigner le tableau de présences avec l'étiquette du prénom", "contenus": "Jeu d'identification de son étiquette prénom en capitales et en script, sans la photographie au verso.", "semaines": [6] }
+                    ]},
+                    { "intitule": "Faire produire des écrits", "os": [
+                      { "n": 7, "intitule": "Raconter une histoire ou un événement vécu en classe", "contenus": "Dictée à l'adulte.", "semaines": [7] }
+                    ]},
+                    { "intitule": "Découvrir le principe alphabétique", "os": [
+                      { "n": 8, "intitule": "Nommer toutes les lettres de son prénom", "contenus": "Les lettres du prénom de l'enfant.", "jeu": "Les lettres de mon prénom", "semaines": [8] },
+                      { "n": 9, "intitule": "Reconstituer quelques mots simples avec des lettres mobiles (capitales) ou au traitement de texte / clavier", "contenus": "Jeux de reconstitution de mots simples avec des lettres mobiles capitales.", "jeu": "Énigme de prénom", "semaines": [9] },
+                      { "n": 10, "intitule": "Nommer des lettres capitales", "contenus": "Les lettres de l'alphabet.", "jeu": "Jeu de Kim des lettres", "semaines": [9] },
+                      { "n": 11, "intitule": "Faire la correspondance entre l'écriture capitale et le script minuscule", "contenus": "Jeux de correspondance entre lettres capitales et lettres script en minuscule.", "jeu": "Jeu de mémoire de l'alphabet", "semaines": [10] },
+                      { "n": 12, "intitule": "Écrire le jour au tableau et sur sa fiche de travail (lettres capitales)", "contenus": "Les jours de la semaine.", "jeu": "Le nom du jour", "semaines": [10] }
+                    ]}
+                  ]
+                },
+                "GS": {
+                  "oa": [
+                    { "intitule": "Identifier les composantes sonores du langage", "os": [
+                      { "n": 1, "intitule": "Localiser un son dans un mot : début, milieu, fin", "contenus": "Jeux de localisation d'un son dans un mot.", "jeu": "Où suis-je ?", "semaines": [1] },
+                      { "n": 2, "intitule": "Ajouter une syllabe, un son pour compléter un mot donné", "contenus": "Syllabes, son pour compléter un mot donné.", "jeu": "Jeu du mot secret", "semaines": [2] },
+                      { "n": 3, "intitule": "Supprimer une syllabe, un son dans un mot donné", "contenus": "Suppression de syllabes / son.", "jeu": "Jeu de l'aspirateur 1", "semaines": [3] }
+                    ]},
+                    { "intitule": "Écouter et comprendre de l'écrit", "os": [
+                      { "n": 4, "intitule": "Exécuter une consigne plus complexe", "contenus": "Consignes complexes.", "jeu": "Sonam Dit", "semaines": [4] },
+                      { "n": 5, "intitule": "En cours de lecture, anticiper le déroulement des actions", "contenus": "Énonciation de la suite logique des actions.", "jeu": "Et après", "semaines": [5] },
+                      { "n": 6, "intitule": "Identifier les éléments qui composent un livre d'images", "contenus": "Identification du titre, de l'auteur, de l'illustrateur, du lieu d'édition.", "semaines": [6] }
+                    ]},
+                    { "intitule": "Découvrir la fonction de l'écrit / Faire produire des écrits", "os": [
+                      { "n": 7, "intitule": "Produire un album collectif avec des images illustrant la trame du conte entendu", "contenus": "Personnages, paysages…", "semaines": [7] },
+                      { "n": 8, "intitule": "Participer à l'écriture de certains mots", "contenus": "Des mots familiers : prénom, jour, mois…", "semaines": [8] }
+                    ]},
+                    { "intitule": "Découvrir le principe alphabétique", "os": [
+                      { "n": 9, "intitule": "Retrouver des lettres dans une liste", "contenus": "Liste de lettres.", "jeu": "Touché", "semaines": [9] },
+                      { "n": 10, "intitule": "Retrouver des mots dans une liste", "contenus": "Liste de mots.", "semaines": [9] },
+                      { "n": 11, "intitule": "Reconstituer des mots et phrases", "contenus": "Jeu de reconstitution de mots et phrases avec support.", "jeu": "Énigme de PHRASES", "semaines": [10] },
+                      { "n": 12, "intitule": "Reconstituer des mots et phrases", "contenus": "Jeu de reconstitution de mots et phrases sans support.", "jeu": "Énigme de MOTS", "semaines": [10] }
+                    ]}
+                  ]
+                }
+              }
+            },
+            {
+              "code": "GRAPH",
+              "nom": "Graphisme / Écriture",
+              "competence_base": "Intégrer les notions perceptives et des conduites motrices dans des situations de productions de signes graphiques, de lettres et de mots.",
+              "sections": {
+                "PS": {
+                  "oa": [{
+                    "intitule": "Commencer à écrire tout seul",
+                    "os": [
+                      { "n": 1, "intitule": "Tracer des combinaisons", "contenus": "Tracé de combinaisons de boucles à l'endroit.", "semaines": [1, 2] },
+                      { "n": 2, "intitule": "Tracer des combinaisons", "contenus": "Tracé de combinaisons de boucles à l'envers.", "semaines": [3, 4] },
+                      { "n": 3, "intitule": "Tracer des spirales", "contenus": "Les coquilles.", "semaines": [5, 6] },
+                      { "n": 4, "intitule": "Tracer des ronds", "contenus": "Des ronds.", "semaines": [7, 8] },
+                      { "n": 5, "intitule": "Tracer des combinaisons", "contenus": "Tracé de combinaisons : le rond, le trait vertical et le trait horizontal.", "semaines": [9, 10] }
+                    ]
+                  }]
+                },
+                "MS": {
+                  "oa": [{
+                    "intitule": "Commencer à écrire tout seul",
+                    "os": [
+                      { "n": 1, "intitule": "Écrire des lettres capitales", "contenus": "A B C", "semaines": [1] },
+                      { "n": 2, "intitule": "Écrire des lettres capitales", "contenus": "D E F", "semaines": [2] },
+                      { "n": 3, "intitule": "Écrire des lettres capitales", "contenus": "G H I", "semaines": [3] },
+                      { "n": 4, "intitule": "Écrire des lettres capitales", "contenus": "J K L", "semaines": [4] },
+                      { "n": 5, "intitule": "Écrire des lettres capitales", "contenus": "M N O", "semaines": [5] },
+                      { "n": 6, "intitule": "Écrire des lettres capitales", "contenus": "P Q R", "semaines": [6] },
+                      { "n": 7, "intitule": "Écrire des lettres capitales", "contenus": "S T U V", "semaines": [7] },
+                      { "n": 8, "intitule": "Écrire des lettres capitales", "contenus": "W X Y Z", "semaines": [8] },
+                      { "n": 9, "intitule": "Écrire son prénom", "contenus": "Le prénom de l'enfant.", "semaines": [9, 10] }
+                    ]
+                  }]
+                },
+                "GS": {
+                  "oa": [{
+                    "intitule": "Commencer à écrire tout seul",
+                    "os": [
+                      { "n": 1, "intitule": "Écrire des lettres", "contenus": "Lettres en cursive avec modèle : a, b, c, d", "semaines": [1] },
+                      { "n": 2, "intitule": "Écrire des lettres", "contenus": "Lettres en cursive avec modèle : e, f, g, h", "semaines": [2] },
+                      { "n": 3, "intitule": "Écrire des lettres", "contenus": "Lettres en cursive avec modèle : i, j, k, l", "semaines": [3] },
+                      { "n": 4, "intitule": "Écrire des lettres", "contenus": "Lettres en cursive avec modèle : m, n, o, p", "semaines": [4] },
+                      { "n": 5, "intitule": "Écrire des lettres", "contenus": "Lettres en cursive avec modèle : q, r, s, t", "semaines": [5] },
+                      { "n": 6, "intitule": "Écrire des lettres", "contenus": "Lettres en cursive avec modèle : u, v, w", "semaines": [6] },
+                      { "n": 7, "intitule": "Écrire des lettres", "contenus": "Lettres en cursive avec modèle : x, y, z", "semaines": [7] },
+                      { "n": 8, "intitule": "Écrire son prénom", "contenus": "Le prénom de l'enfant en cursive, sans modèle.", "semaines": [8] },
+                      { "n": 9, "intitule": "Écrire des mots simples avec modèle", "contenus": "Des mots simples avec modèle.", "semaines": [9] },
+                      { "n": 10, "intitule": "Écrire la date", "contenus": "Le jour en capitales ; jour + quantième en lettres capitales.", "semaines": [10] }
+                    ]
+                  }]
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+
+    {
+      "code": "D2",
+      "nom": "Mathématiques",
+      "activites": [
+        {
+          "code": "NUM",
+          "nom": "Activités numériques",
+          "competence_base": {
+            "PS": "Intégrer la connaissance des petits nombres et la réalisation de collections dans des situations de résolution de problèmes mathématiques.",
+            "MS": "Intégrer la connaissance des petits nombres et la réalisation de collections dans des situations de résolution de problèmes mathématiques.",
+            "GS": "Intégrer des notions numériques dans des situations de résolution de problèmes mathématiques."
+          },
+          "sections": {
+            "PS": {
+              "oa": [
+                { "intitule": "Explorer des suites organisées", "os": [
+                  { "n": 1, "intitule": "Réaliser un algorithme 1/2 (forme et couleurs)", "contenus": "Alternance d'objets (1/2) selon la forme et la couleur.", "jeu": "Confection de collier", "semaines": [1] },
+                  { "n": 2, "intitule": "Réaliser un algorithme 1/2 (taille et couleur)", "contenus": "Alternance d'objets (1/2) selon la taille et la couleur.", "jeu": "Copier le modèle", "semaines": [2] }
+                ]},
+                { "intitule": "Utiliser les nombres", "os": [
+                  { "n": 3, "intitule": "Dénombrer jusqu'à 5", "contenus": "Dénombrement des quantités jusqu'à 5 objets.", "semaines": [3] },
+                  { "n": 4, "intitule": "Réaliser une petite collection (< 5)", "contenus": "Réalisation de petites collections inférieures à 5.", "jeu": "Mettre ce qu'il faut", "semaines": [4] },
+                  { "n": 5, "intitule": "Résoudre des problèmes de quantités", "contenus": "Ajout pour obtenir une collection donnée. NB : utilisation des nombres connus, sans recourir aux opérations.", "semaines": [5] },
+                  { "n": 6, "intitule": "Résoudre des problèmes de quantités", "contenus": "Retrait pour obtenir une collection donnée.", "semaines": [6] },
+                  { "n": 7, "intitule": "Résoudre des problèmes de quantités", "contenus": "Ajout ou retrait pour obtenir une collection donnée.", "semaines": [7] },
+                  { "n": 8, "intitule": "Repérer le deuxième et le troisième", "contenus": "Placer un élément en connaissant sa position et en respectant le sens du parcours. Lexique de position : devant, derrière, deuxième, troisième. Correspondance entre la suite des nombres et le rang.", "semaines": [8] }
+                ]},
+                { "intitule": "Étudier les nombres", "os": [
+                  { "n": 9, "intitule": "Mémoriser la comptine numérique orale jusqu'à 3", "contenus": "Comptine numérique orale jusqu'à 3.", "semaines": [9] },
+                  { "n": 10, "intitule": "Lire les nombres jusqu'à 2", "contenus": "Identification et lecture des nombres jusqu'à 2.", "jeu": "Mémoriser les nombres", "semaines": [10] },
+                  { "n": 11, "intitule": "Lire les nombres jusqu'à 3", "contenus": "Identification et lecture des nombres jusqu'à 3.", "jeu": "Mémoriser les nombres", "semaines": [10] }
+                ]}
+              ]
+            },
+            "MS": {
+              "oa": [
+                { "intitule": "Explorer des suites organisées", "os": [
+                  { "n": 1, "intitule": "Réaliser un algorithme plus complexe (couleurs et formes)", "contenus": "Alternance d'objets selon la couleur et la forme.", "jeu": "Confection de collier", "semaines": [1] },
+                  { "n": 2, "intitule": "Réaliser un algorithme plus complexe (forme et taille)", "contenus": "Alternance d'objets selon la forme et la taille.", "jeu": "Confection de collier", "semaines": [2] }
+                ]},
+                { "intitule": "Utiliser les nombres", "os": [
+                  { "n": 3, "intitule": "Dénombrer une quantité jusqu'à 7", "contenus": "Dénombrement d'une quantité de 7 objets.", "jeu": "Nous allons trouver une chaise", "semaines": [3] },
+                  { "n": 4, "intitule": "Exprimer le résultat d'une comparaison avec « plus que » et « moins que »", "contenus": "Comparaison avec « plus que » et « moins que ».", "semaines": [4] },
+                  { "n": 5, "intitule": "Dénombrer une quantité jusqu'à 8", "contenus": "Dénombrement d'une quantité de 8 objets.", "jeu": "Nous allons trouver une chaise", "semaines": [5] },
+                  { "n": 6, "intitule": "Dénombrer une quantité jusqu'à 9", "contenus": "Dénombrement d'une quantité de 9 objets.", "jeu": "Nous allons trouver une chaise", "semaines": [6] },
+                  { "n": 7, "intitule": "Résoudre des problèmes de quantités et de partage", "contenus": "Ajout, retrait, ajout ou retrait pour obtenir une collection donnée ; distribution, partage. NB : utilisation des nombres connus, sans recourir aux opérations.", "jeu": "Trouver la même quantité", "semaines": [7] }
+                ]},
+                { "intitule": "Étudier les nombres", "os": [
+                  { "n": 8, "intitule": "Lire les nombres jusqu'à 7", "contenus": "Lecture de nombres jusqu'à 7.", "semaines": [8] },
+                  { "n": 9, "intitule": "Décomposer et recomposer jusqu'à 8", "contenus": "Décomposition, recomposition des nombres jusqu'à 8.", "semaines": [8] },
+                  { "n": 10, "intitule": "Lire les nombres jusqu'à 8", "contenus": "Lecture de nombres jusqu'à 8.", "semaines": [9] },
+                  { "n": 11, "intitule": "Décomposer et recomposer jusqu'à 9", "contenus": "Décomposition, recomposition des nombres jusqu'à 9.", "semaines": [9] },
+                  { "n": 12, "intitule": "Mémoriser la comptine numérique orale jusqu'à 10", "contenus": "Comptine numérique orale jusqu'à 10.", "semaines": [10] },
+                  { "n": 13, "intitule": "Lire les nombres jusqu'à 10", "contenus": "Lecture de nombres jusqu'à 10.", "semaines": [10] }
+                ]}
+              ]
+            },
+            "GS": {
+              "oa": [
+                { "intitule": "Construire le nombre pour exprimer les quantités", "os": [
+                  { "n": 1, "intitule": "Résoudre des problèmes de quantité (comparaison)", "contenus": "Utilisation de « plus que ; moins que ; autant que ».", "jeu": "Trouver la même quantité", "semaines": [1] },
+                  { "n": 2, "intitule": "Résoudre un problème d'ajout, de retrait ou de partage pour obtenir une collection donnée", "contenus": "NB : utilisation des nombres connus, sans recourir aux opérations.", "semaines": [2] }
+                ]},
+                { "intitule": "Connaître de petits nombres", "os": [
+                  { "n": 3, "intitule": "Décomposer les nombres 6 et 7", "contenus": "Décomposition des nombres 6 et 7.", "semaines": [3] },
+                  { "n": 4, "intitule": "Reconnaître différentes représentations d'un nombre (1 à 5)", "contenus": "Schématisation et écriture des nombres de 1 à 5.", "semaines": [3] },
+                  { "n": 5, "intitule": "Décomposer les nombres 8, 9 et 10", "contenus": "Décompositions additives des nombres jusqu'à 8, 9 et 10 ; résolution de problèmes par décomposition mentale.", "semaines": [4] }
+                ]},
+                { "intitule": "Dénombrer", "os": [
+                  { "n": 6, "intitule": "Compléter des collections pour atteindre un nombre donné (jusqu'à 10)", "contenus": "Collections d'objets supérieures ou égales à 10.", "semaines": [5] },
+                  { "n": 7, "intitule": "Surcompter, décompter (compter à rebours)", "contenus": "Comptage sans partir de 1 mais à partir d'un autre nombre ; reculer d'un chiffre à partir d'un nombre donné.", "semaines": [5] },
+                  { "n": 8, "intitule": "Trouver le résultat d'un ajout, d'un retrait", "contenus": "Ajout pour trouver un résultat donné ; retrait pour trouver un résultat donné.", "semaines": [6] }
+                ]},
+                { "intitule": "Utiliser le nombre pour désigner un rang, une position", "os": [
+                  { "n": 9, "intitule": "Donner la position d'un objet sur un rang (collection inférieure à 10)", "contenus": "Utilisation des termes 1er, 2ème, 3ème…", "jeu": "Troisième de l'avant, trois de l'avant", "semaines": [7] }
+                ]},
+                { "intitule": "Étudier les nombres", "os": [
+                  { "n": 10, "intitule": "Réciter la suite orale des nombres avec des ruptures", "contenus": "Suite orale des nombres avec des perturbations.", "semaines": [8] },
+                  { "n": 11, "intitule": "Reconnaître et écrire les nombres jusqu'à 10", "contenus": "Écriture des nombres jusqu'à 10.", "semaines": [8] },
+                  { "n": 12, "intitule": "Mémoriser la suite des nombres jusqu'à 20", "contenus": "Suite des nombres jusqu'à 20.", "semaines": [9] },
+                  { "n": 13, "intitule": "Retrouver l'écriture chiffrée d'un nombre sur la bande numérique", "contenus": "Écriture en chiffres d'un nombre sur la bande numérique.", "semaines": [9] },
+                  { "n": 14, "intitule": "Lire les nombres jusqu'à 20 avec support", "contenus": "Les nombres jusqu'à 20 avec support.", "jeu": "Mémoriser les nombres", "semaines": [10] },
+                  { "n": 15, "intitule": "Écrire les nombres jusqu'à 10 sans modèle", "contenus": "Écrire des nombres jusqu'à 10 sans modèle.", "semaines": [10] }
+                ]}
+              ]
+            }
+          }
+        },
+        {
+          "code": "GEO",
+          "nom": "Activités géométriques",
+          "competence_base": {
+            "PS": "Intégrer des notions liées à l'espace, à la reconnaissance, à l'assemblage et à la reproduction de formes simples dans des situations de résolution de problèmes géométriques.",
+            "MS": "Intégrer des notions liées à l'espace, à la reconnaissance, à l'assemblage et à la reproduction de formes simples et plus complexes dans des situations de résolution de problèmes géométriques.",
+            "GS": "Intégrer des notions liées aux caractéristiques des formes géométriques dans des situations d'identification, de classement et de reproduction."
+          },
+          "sections": {
+            "PS": {
+              "oa": [{ "intitule": "Explorer des formes", "os": [
+                { "n": 1, "intitule": "Réaliser des pavages", "contenus": "Les pavages ; techniques de réalisation de pavage.", "semaines": [1, 3] },
+                { "n": 2, "intitule": "Reproduire un assemblage de formes simple à partir d'un modèle", "contenus": "Assemblage de formes simples.", "jeu": "Formes à l'intérieur des formes", "semaines": [5, 7] },
+                { "n": 3, "intitule": "Reproduire des « ronds » à l'aide d'un gabarit", "contenus": "Les ronds.", "semaines": [9] }
+              ]}],
+              "integration": { "sai": [11], "sei_remediation": [11] }
+            },
+            "MS": {
+              "oa": [{ "intitule": "Explorer des formes", "os": [
+                { "n": 1, "intitule": "Reproduire un assemblage de formes simples à partir d'un modèle", "contenus": "Découpage de formes : le carré.", "semaines": [1] },
+                { "n": 2, "intitule": "Reproduire un assemblage de formes simples à partir d'un modèle", "contenus": "Découpage de formes : le rectangle.", "semaines": [3] },
+                { "n": 3, "intitule": "Reproduire un assemblage de formes simples à partir d'un modèle", "contenus": "Découpage de formes : le triangle.", "semaines": [5] },
+                { "n": 4, "intitule": "Reproduire un assemblage de formes simples à partir d'un modèle", "contenus": "Découpage de formes : le cercle.", "semaines": [7] },
+                { "n": 5, "intitule": "Reproduire des formes simples à l'aide d'un gabarit", "contenus": "Reproduction de formes simples.", "semaines": [9] }
+              ]}],
+              "integration": { "sai": [10], "sei_remediation": [11] }
+            },
+            "GS": {
+              "oa": [{ "intitule": "Explorer des formes", "os": [
+                { "n": 1, "intitule": "Différencier des formes simples : cube, cylindre", "contenus": "Cube, cylindre.", "jeu": "Formes dans l'environnement", "semaines": [1] },
+                { "n": 2, "intitule": "Dessiner des formes simples (cube, cylindre) à partir d'un modèle en pointillés", "contenus": "Cube, cylindre.", "jeu": "Formes de bâtons", "semaines": [2] },
+                { "n": 3, "intitule": "Assembler librement des solides", "contenus": "Solides.", "jeu": "Jouons avec les formes", "semaines": [4] },
+                { "n": 4, "intitule": "Réaliser des puzzles plus complexes (plusieurs pièces)", "contenus": "Puzzles.", "jeu": "Réalise ton puzzle", "semaines": [5] },
+                { "n": 5, "intitule": "Tracer avec une règle", "contenus": "Utilisation de la règle.", "semaines": [6] },
+                { "n": 6, "intitule": "Reproduire une construction à partir d'un modèle", "contenus": "Reproduction de construction.", "semaines": [6] },
+                { "n": 7, "intitule": "Différencier des formes simples : cube, cylindre, pyramide", "contenus": "Cube, cylindre, pyramide.", "semaines": [8] },
+                { "n": 8, "intitule": "Reproduire un assemblage de solides", "contenus": "Assemblage de solides.", "semaines": [10] }
+              ]}]
+            }
+          }
+        },
+        {
+          "code": "MES",
+          "nom": "Activités de mesure",
+          "competence_base": "Intégrer des notions de mesurage dans des situations de résolution de problèmes mathématiques.",
+          "sections": {
+            "PS": {
+              "oa": [{ "intitule": "Explorer des durées", "os": [
+                { "n": 1, "intitule": "Utiliser les notions lent / rapide", "contenus": "Lent / rapide.", "semaines": [2] },
+                { "n": 2, "intitule": "Comparer des durées en utilisant les notions plus lent / plus rapide", "contenus": "Plus lent / plus rapide.", "semaines": [4] },
+                { "n": 3, "intitule": "Comparer des durées en utilisant les notions plus long / plus court", "contenus": "Plus long / plus court.", "semaines": [5, 7] }
+              ]}],
+              "integration": { "sai": [10], "sei_remediation": [11] }
+            },
+            "MS": {
+              "oa": [{ "intitule": "Explorer des durées", "os": [
+                { "n": 1, "intitule": "Utiliser les notions lent / rapide", "contenus": "Lent / rapide.", "semaines": [1] },
+                { "n": 2, "intitule": "Comparer des durées en utilisant les notions plus lent / plus rapide", "contenus": "Plus lent / plus rapide.", "semaines": [3] },
+                { "n": 3, "intitule": "Comparer des durées en utilisant les notions plus long / plus court", "contenus": "Plus long / plus court.", "semaines": [5, 7] }
+              ]}],
+              "integration": { "sai": [10], "sei_remediation": [11] }
+            },
+            "GS": {
+              "oa": [
+                { "intitule": "Explorer les grandeurs", "os": [
+                  { "n": 1, "intitule": "Ranger dans l'ordre croissant / décroissant selon la capacité", "contenus": "Rangement selon la capacité.", "semaines": [5] }
+                ]},
+                { "intitule": "Explorer des durées", "os": [
+                  { "n": 2, "intitule": "Comparer des événements selon la durée", "contenus": "Plus long, plus court.", "semaines": [6] },
+                  { "n": 3, "intitule": "Comparer des sons selon la durée", "contenus": "Bref, long.", "semaines": [9] }
+                ]}
+              ]
+            }
+          }
+        }
+      ]
+    },
+
+    {
+      "code": "D3",
+      "nom": "Découverte du monde",
+      "activites": [
+        {
+          "code": "IST",
+          "nom": "Initiation scientifique et technologique",
+          "competence_base": {
+            "PS": "Intégrer des notions d'espace, de temps, d'hygiène et des notions perceptives dans des situations de découverte du milieu et de préservation de la santé et du bien-être.",
+            "MS": "Intégrer des techniques d'observation, des notions perceptives et d'utilisation d'outils et de matériaux adaptés, dans des situations de découverte du milieu et d'exploration de la matière.",
+            "GS": "Intégrer des techniques d'observation, des notions perceptives et d'utilisation d'outils et de matériaux adaptés, dans des situations de découverte du milieu et d'exploration de la matière."
+          },
+          "sections": {
+            "PS": {
+              "oa": [
+                { "intitule": "Découvrir le monde vivant", "os": [
+                  { "n": 1, "intitule": "Identifier quelques animaux du milieu immédiat", "contenus": "Les animaux domestiques.", "semaines": [1] },
+                  { "n": 2, "intitule": "Identifier les étapes de croissance d'animaux familiers : la poule", "contenus": "Étapes de la croissance de la poule : œuf → poussin → poule.", "semaines": [2] },
+                  { "n": 3, "intitule": "Identifier les étapes de croissance d'animaux familiers : le mouton", "contenus": "Étapes de la croissance du mouton : agneau → mouton.", "semaines": [4] }
+                ]},
+                { "intitule": "Se repérer dans le temps", "os": [
+                  { "n": 4, "intitule": "Utiliser les termes « avant » et « après »", "contenus": "Avant ; après.", "semaines": [5] },
+                  { "n": 5, "intitule": "Retrouver le jour de la semaine", "contenus": "Jours de la semaine : lundi, mardi, mercredi…", "semaines": [7] }
+                ]},
+                { "intitule": "Se repérer dans l'espace", "os": [
+                  { "n": 6, "intitule": "Se situer et situer les objets", "contenus": "Sur / sous.", "semaines": [8] },
+                  { "n": 7, "intitule": "Se situer et situer les objets", "contenus": "En haut / en bas.", "semaines": [9] },
+                  { "n": 8, "intitule": "Se situer et situer les objets", "contenus": "Dedans / dehors.", "semaines": [11] }
+                ]}
+              ]
+            },
+            "MS": {
+              "oa": [
+                { "intitule": "Découvrir le monde vivant", "os": [
+                  { "n": 1, "intitule": "Observer des insectes du milieu", "contenus": "Fourmis, criquets, papillons, mouches, escargots… Morphologie, mode de déplacement, mode d'alimentation.", "semaines": [1] },
+                  { "n": 2, "intitule": "Observer le cycle de vie d'une plante", "contenus": "Germination, croissance, floraison, fructification (haricots, arachides…).", "semaines": [2] }
+                ]},
+                { "intitule": "Se repérer dans le temps", "os": [
+                  { "n": 3, "intitule": "Repérer des événements simultanés à l'école (en classe, dans la cour)", "contenus": "Occupation du terrain de sport par une section pendant qu'une autre est en activité d'apprentissage : simultanéité des activités.", "semaines": [3] },
+                  { "n": 4, "intitule": "Ranger quelques moments de la journée / de la semaine dans l'ordre chronologique", "contenus": "Suites chronologiques, cartes séquentielles (ex. : du réveil à l'arrivée à l'école).", "semaines": [5] }
+                ]},
+                { "intitule": "Se repérer dans l'espace", "os": [
+                  { "n": 5, "intitule": "Se repérer dans l'école", "contenus": "Situer les différentes classes, le bureau du directeur, les toilettes… Repères fixes dans l'école.", "semaines": [7] },
+                  { "n": 6, "intitule": "Décrire la position des objets dans un espace plan", "contenus": "Dans, à l'intérieur, à l'extérieur, devant, derrière.", "semaines": [8] }
+                ]},
+                { "intitule": "Explorer la matière — utiliser, fabriquer, manipuler des objets", "os": [
+                  { "n": 7, "intitule": "Différencier les objets au toucher", "contenus": "Dur, mou, doux, rugueux…", "semaines": [9] },
+                  { "n": 8, "intitule": "Reproduire un assemblage à partir d'un modèle", "contenus": "Assemblages de jouets ou d'objets simples : poupées, voiturettes, jeux de construction, puzzles…", "semaines": [11] }
+                ]}
+              ],
+              "nb": "L'OA « Utiliser des outils numériques » n'est pas planifié au troisième trimestre."
+            },
+            "GS": {
+              "oa": [
+                { "intitule": "Découvrir le monde vivant", "os": [
+                  { "n": 1, "intitule": "Différencier les animaux domestiques des animaux sauvages", "contenus": "Animaux domestiques et sauvages.", "semaines": [1] },
+                  { "n": 2, "intitule": "Découvrir le mode de vie d'un animal domestique (mouton, poule) et d'un animal sauvage", "contenus": "Mode de vie, locomotion, reproduction, alimentation ; familles d'animaux sauvages.", "semaines": [1] },
+                  { "n": 3, "intitule": "Découvrir les différentes parties de la plante", "contenus": "Racines, tige, feuille, fleur.", "semaines": [3] },
+                  { "n": 4, "intitule": "Découvrir l'utilité des plantes", "contenus": "Ombrage, chauffage, alimentation, médicamentation…", "semaines": [3] },
+                  { "n": 5, "intitule": "Identifier les techniques d'entretien des plantes", "contenus": "Arrosage, désherbage, élagage, pose de tuteur…", "semaines": [4] }
+                ]},
+                { "intitule": "Se repérer dans le temps", "os": [
+                  { "n": 6, "intitule": "Utiliser les calendriers pour vérifier la date complète d'aujourd'hui, d'hier et de demain", "contenus": "Les dates d'aujourd'hui, d'hier et de demain sur le calendrier.", "semaines": [5] }
+                ]},
+                { "intitule": "Se repérer dans l'espace", "os": [
+                  { "n": 7, "intitule": "Situer un objet", "contenus": "Près de / loin de.", "semaines": [7] },
+                  { "n": 8, "intitule": "Situer un objet", "contenus": "Sur / sous.", "semaines": [7] },
+                  { "n": 9, "intitule": "Situer un objet", "contenus": "À côté de.", "semaines": [8] },
+                  { "n": 10, "intitule": "Dicter l'organisation spatiale d'une image pour la faire reproduire par un autre élève", "contenus": "Vocabulaire spatial : en haut / en bas / à gauche / à droite / milieu / devant / derrière / à côté de…", "semaines": [8] }
+                ]},
+                { "intitule": "Utiliser des outils numériques", "os": [
+                  { "n": 11, "intitule": "Prendre des photos avec une tablette", "contenus": "Ateliers d'apprentissage avec des tablettes ; prise de photos.", "semaines": [10] },
+                  { "n": 12, "intitule": "Écrire des mots / phrases à partir d'un modèle avec l'ordinateur", "contenus": "Atelier d'apprentissage avec des ordinateurs ; écriture de mots et de phrases à partir de modèles.", "semaines": [10] }
+                ]}
+              ],
+              "nb": "L'OA « Explorer la matière » n'est pas planifié au troisième trimestre."
+            }
+          }
+        },
+        {
+          "code": "HBE",
+          "nom": "Hygiène et bien-être",
+          "competence_base": "Intégrer des règles d'hygiène corporelle, vestimentaire et alimentaire dans des situations de préservation de la santé et du bien-être.",
+          "sections": {
+            "PS": {
+              "oa": [{ "intitule": "Appliquer les règles d'hygiène alimentaire", "os": [
+                { "n": 1, "intitule": "Reconnaître les caractéristiques d'une eau potable", "contenus": "Caractéristiques d'une eau potable : inodore, sans impuretés.", "semaines": [4] },
+                { "n": 2, "intitule": "Laver les fruits avant de les manger", "contenus": "Utilisation d'une eau potable pour le lavage ; technique de lavage.", "semaines": [6] },
+                { "n": 3, "intitule": "Reconnaître des aliments impropres à la consommation", "contenus": "Odeur des aliments, couleur normale des aliments, pots de conserve gondolés.", "semaines": [10] }
+              ]}]
+            },
+            "MS": {
+              "oa": [{ "intitule": "Appliquer les règles d'hygiène alimentaire", "os": [
+                { "n": 1, "intitule": "Laver les fruits avant de les manger", "contenus": "Utilisation d'une eau potable pour le lavage ; technique de lavage.", "semaines": [4] },
+                { "n": 2, "intitule": "Identifier les aliments souillés ou altérés", "contenus": "Odeur des aliments, couleur normale des aliments, pots de conserve gondolés.", "semaines": [6] },
+                { "n": 3, "intitule": "Identifier une eau potable", "contenus": "Les propriétés / caractéristiques d'une eau potable : couleur, odeur, saveur.", "semaines": [10] },
+                { "n": 4, "intitule": "Protéger les aliments", "contenus": "Situations concrètes : protection contre les mouches, blattes, poussières ; congélation, séchage, lavage, fumage…", "semaines": [10] }
+              ]}]
+            },
+            "GS": {
+              "oa": [{ "intitule": "Appliquer des règles d'hygiène alimentaire", "os": [
+                { "n": 1, "intitule": "Laver les fruits avant de les manger", "contenus": "Odeur des aliments, couleur normale des aliments, pots de conserve gondolés.", "semaines": [4] },
+                { "n": 2, "intitule": "Identifier une eau potable", "contenus": "Les propriétés / caractéristiques d'une eau potable : couleur, odeur, saveur.", "semaines": [6] },
+                { "n": 3, "intitule": "Protéger les aliments", "contenus": "Présentation de situations concrètes : boîtes et assiettes bien couvertes ; protection contre les mouches, blattes, poussières…", "semaines": [10] }
+              ]}]
+            }
+          }
+        }
+      ]
+    },
+
+    {
+      "code": "D4",
+      "nom": "Développement socio-affectif et bien-être global",
+      "sous_domaines": [
+        {
+          "code": "SD1",
+          "nom": "Vivre ensemble",
+          "activites": [{
+            "code": "EVMC",
+            "nom": "Éducation aux valeurs morales et civiques",
+            "competence_base": "Intégrer des valeurs morales et civiques dans des situations relatives au bon voisinage et à la protection des biens collectifs.",
+            "sections": {
+              "PS": {
+                "oa": [
+                  { "intitule": "Respecter les règles civiques et morales de vie en groupe", "os": [
+                    { "n": 1, "intitule": "Ranger le matériel collectif après usage sans le détériorer", "contenus": "Techniques d'entretien et de rangement du matériel de la classe / de l'école.", "semaines": [1, 3] }
+                  ]},
+                  { "intitule": "Respecter les règles civiques et morales de vie en groupe (suite)", "os": [
+                    { "n": 2, "intitule": "Adopter une bonne attitude devant le drapeau national", "contenus": "Les bonnes attitudes face au drapeau national : se tenir debout correctement, écouter, être attentif.", "semaines": [5, 7] }
+                  ]}
+                ],
+                "integration": { "sai": [9], "sei_remediation": [11] }
+              },
+              "MS": {
+                "oa": [
+                  { "intitule": "Se construire comme personne", "os": [
+                    { "n": 1, "intitule": "Être autonome", "contenus": "La prudence / la vigilance.", "semaines": [1] },
+                    { "n": 2, "intitule": "Être autonome", "contenus": "L'importance des numéros de téléphone et de l'adresse des parents / tuteurs.", "semaines": [3] },
+                    { "n": 3, "intitule": "Respecter les usages", "contenus": "Bonjour, merci, au revoir, bonne nuit, bonsoir, bienvenue, à demain…", "semaines": [5] }
+                  ]},
+                  { "intitule": "Adopter un comportement citoyen", "os": [
+                    { "n": 4, "intitule": "Reconnaître le drapeau national", "contenus": "Le drapeau national ; la composition du drapeau national.", "semaines": [7] },
+                    { "n": 5, "intitule": "Respecter les symboles de la nation", "contenus": "Attitude à adopter devant la montée des couleurs nationales et l'exécution de l'hymne national.", "semaines": [9] }
+                  ]}
+                ],
+                "nb": "Pour une meilleure lisibilité, les OS ont été éclatés."
+              },
+              "GS": {
+                "oa": [{ "intitule": "Adopter un comportement citoyen", "os": [
+                  { "n": 1, "intitule": "Identifier le drapeau national", "contenus": "Le drapeau national et les drapeaux voisins : agencement des couleurs.", "semaines": [1, 4] },
+                  { "n": 2, "intitule": "Respecter les symboles de la nation", "contenus": "Attitude à adopter devant la montée des couleurs nationales et l'exécution de l'hymne national.", "semaines": [6, 7, 9] }
+                ]}]
+              }
+            }
+          }]
+        },
+        {
+          "code": "SD2",
+          "nom": "Vivre dans son milieu",
+          "activites": [{
+            "code": "EENV",
+            "nom": "Éducation environnementale",
+            "competence_base": "Intégrer des valeurs morales et civiques dans des situations de protection de soi, des autres, de l'environnement et des biens collectifs.",
+            "sections": {
+              "PS": {
+                "oa": [{ "intitule": "Maintenir propre son environnement", "os": [
+                  { "n": 1, "intitule": "Éviter de salir son environnement", "contenus": "Utilisation de la poubelle, tri des ordures.", "semaines": [2, 4] },
+                  { "n": 2, "intitule": "Rendre propre sa classe", "contenus": "Techniques simples d'assainissement : balayage, ramassage des ordures, nettoyage.", "semaines": [6, 8] }
+                ]}],
+                "integration": { "sai": [9], "sei_remediation": [10] }
+              },
+              "MS": {
+                "oa": [{ "intitule": "Rendre propre son environnement immédiat (classe, cour, maison)", "os": [
+                  { "n": 1, "intitule": "Identifier le matériel de nettoyage", "contenus": "Le matériel de nettoyage.", "semaines": [2] },
+                  { "n": 2, "intitule": "Identifier les produits désinfectants", "contenus": "Les produits désinfectants.", "semaines": [4] },
+                  { "n": 3, "intitule": "Appliquer les techniques de nettoyage", "contenus": "Lavage, balayage, ramassage.", "semaines": [6] },
+                  { "n": 4, "intitule": "Appliquer les techniques de nettoyage", "contenus": "Désherbage, dépoussiérage, désinfection.", "semaines": [8] },
+                  { "n": 5, "intitule": "Appliquer les techniques de nettoyage", "contenus": "Recyclage / tri des déchets.", "semaines": [10] }
+                ]}]
+              },
+              "GS": {
+                "oa": [
+                  { "intitule": "Identifier les règles d'utilisation de l'eau et de l'énergie", "os": [
+                    { "n": 1, "intitule": "Économiser l'eau, l'énergie", "contenus": "Situations ou images illustrant le gaspillage de l'eau et de l'électricité.", "semaines": [1] }
+                  ]},
+                  { "intitule": "Appliquer les règles d'utilisation de l'eau et de l'énergie", "os": [
+                    { "n": 2, "intitule": "Appliquer les règles d'économie de l'eau", "contenus": "Les actions illustrant l'économie de l'eau.", "semaines": [3] },
+                    { "n": 3, "intitule": "Appliquer les règles d'économie d'énergie", "contenus": "Les actions illustrant l'économie d'énergie.", "semaines": [6] }
+                  ]},
+                  { "intitule": "Participer à la sauvegarde de l'environnement", "os": [
+                    { "n": 4, "intitule": "Reboiser son environnement", "contenus": "Plantation d'arbres et de fleurs ; arrosage des fleurs ; participation à la journée de l'arbre.", "semaines": [8, 10] }
+                  ]}
+                ]
+              }
+            }
+          }]
+        }
+      ]
+    },
+
+    {
+      "code": "D5",
+      "nom": "Éducation psychomotrice et artistique",
+      "activites": [
+        {
+          "code": "PSY",
+          "nom": "Psychomotricité",
+          "competence_base": "Agir, s'exprimer et prendre conscience de ses habiletés corporelles.",
+          "sections": {
+            "PS": {
+              "oa": [{ "intitule": "Coordonner ses gestes et déplacements avec ceux des autres", "os": [
+                { "n": 1, "intitule": "Coopérer avec les autres en jeux individuels, collectifs, d'équipe", "contenus": "Marche au pas, manœuvrer des rames dans des pirogues.", "semaines": [1] },
+                { "n": 2, "intitule": "Coopérer avec les autres en jeux individuels, collectifs, d'équipe", "contenus": "Jeux individuels, collectifs, d'équipe.", "jeu": "Jeux de mains", "semaines": [2] },
+                { "n": 3, "intitule": "Coopérer avec les autres en jeux individuels, collectifs, d'équipe", "contenus": "Jeux individuels, collectifs, d'équipe.", "jeu": "Jeux de balles", "semaines": [3] },
+                { "n": 4, "intitule": "Coopérer avec les autres en jeux individuels, collectifs, d'équipe", "contenus": "Jeux individuels, collectifs, d'équipe.", "jeu": "Jeux de billes", "semaines": [4] },
+                { "n": 5, "intitule": "Coopérer avec les autres en jeux individuels, collectifs, d'équipe", "contenus": "Jeux individuels, collectifs, d'équipe.", "jeu": "Jeux de cachette", "semaines": [5] },
+                { "n": 6, "intitule": "Coopérer avec les autres en jeux individuels, collectifs, d'équipe", "contenus": "Jeux individuels, collectifs, d'équipe.", "jeu": "Jeux de poursuite", "semaines": [6] },
+                { "n": 7, "intitule": "Coopérer avec les autres en jeux individuels, collectifs, d'équipe", "contenus": "Jeux individuels, collectifs, d'équipe.", "jeu": "Le furet", "semaines": [7] },
+                { "n": 8, "intitule": "Coopérer avec les autres en jeux individuels, collectifs, d'équipe", "contenus": "Jeux individuels, collectifs, d'équipe.", "jeu": "Parcours d'adresse et d'équilibre", "semaines": [8] },
+                { "n": 9, "intitule": "Coopérer avec les autres en jeux individuels, collectifs, d'équipe", "contenus": "Jeux individuels, collectifs, d'équipe.", "jeu": "Parcours d'activités motrices", "semaines": [9] },
+                { "n": 10, "intitule": "S'opposer aux autres en jeux individuels, collectifs", "contenus": "Jeux individuels, collectifs, d'équipe.", "jeu": "Jeu du bras de fer", "semaines": [10] }
+              ]}]
+            },
+            "MS": {
+              "oa": [{ "intitule": "Coordonner ses gestes et déplacements avec ceux des autres", "os": [
+                { "n": 1, "intitule": "Coopérer avec les autres en jeux individuels, collectifs, d'équipe", "contenus": "Marche au pas, manœuvrer des rames dans des pirogues.", "semaines": [1] },
+                { "n": 2, "intitule": "Coopérer avec les autres en jeux individuels, collectifs, d'équipe", "contenus": "Jeux individuels, collectifs, d'équipe.", "jeu": "Jeux de mains", "semaines": [2] },
+                { "n": 3, "intitule": "Coopérer avec les autres en jeux individuels, collectifs, d'équipe", "contenus": "Jeux individuels, collectifs, d'équipe.", "jeu": "Jeux de balles", "semaines": [3] },
+                { "n": 4, "intitule": "Coopérer avec les autres en jeux individuels, collectifs, d'équipe", "contenus": "Jeux individuels, collectifs, d'équipe.", "jeu": "Jeux de billes", "semaines": [4] },
+                { "n": 5, "intitule": "Coopérer avec les autres en jeux individuels, collectifs, d'équipe", "contenus": "Jeux individuels, collectifs, d'équipe.", "jeu": "Jeux de cachette", "semaines": [5] },
+                { "n": 6, "intitule": "Coopérer avec les autres en jeux individuels, collectifs, d'équipe", "contenus": "Jeux individuels, collectifs, d'équipe.", "jeu": "Jeux de poursuite", "semaines": [6] },
+                { "n": 7, "intitule": "Coopérer avec les autres en jeux individuels, collectifs, d'équipe", "contenus": "Jeux individuels, collectifs, d'équipe.", "jeu": "Le furet", "semaines": [7] },
+                { "n": 8, "intitule": "Coopérer avec les autres en jeux individuels, collectifs, d'équipe", "contenus": "Jeux individuels, collectifs, d'équipe.", "jeu": "Parcours d'adresse et d'équilibre", "semaines": [8] },
+                { "n": 9, "intitule": "Coopérer avec les autres en jeux individuels, collectifs, d'équipe", "contenus": "Jeux individuels, collectifs, d'équipe.", "jeu": "Parcours d'activités motrices", "semaines": [9] },
+                { "n": 10, "intitule": "S'opposer aux autres en jeux individuels, collectifs, d'équipe", "contenus": "Jeux individuels, collectifs, d'équipe.", "jeu": "Jeu du bras de fer", "semaines": [10] }
+              ]}]
+            },
+            "GS": {
+              "oa": [
+                { "intitule": "Développer des habiletés d'équilibre", "os": [
+                  { "n": 1, "intitule": "Balancer / se balancer", "contenus": "Balançoire, hamac, trottinette, tricycle, vélo, toboggan.", "semaines": [1] },
+                  { "n": 2, "intitule": "Balancer / se balancer / chuter / rouler", "contenus": "Trottinette, tricycle, vélo, toboggan.", "semaines": [2] },
+                  { "n": 3, "intitule": "Courber / pivoter / s'élancer", "contenus": "Séances de danses, tourniquet.", "semaines": [3, 4] },
+                  { "n": 4, "intitule": "Garder l'équilibre", "contenus": "Vélo, banc, table, chaises espacées, plan incliné, jeux de la marelle, saut d'obstacles.", "semaines": [5, 6] }
+                ]},
+                { "intitule": "Coordonner ses gestes et déplacements avec ceux des autres", "os": [
+                  { "n": 5, "intitule": "Coopérer avec les autres", "contenus": "Jeux individuels, collectifs, d'équipe (marche au pas, manœuvrer des rames dans des pirogues).", "semaines": [7, 8] },
+                  { "n": 6, "intitule": "S'opposer aux autres", "contenus": "Jeux individuels, collectifs, d'équipe.", "jeu": "Jeu du bras de fer", "semaines": [9, 10] }
+                ]}
+              ]
+            }
+          }
+        },
+        {
+          "code": "AMAS",
+          "nom": "Arts musicaux et arts scéniques",
+          "competence_base": "Intégrer des sons et des rythmes dans des situations de création de poèmes, comptines et de chants ; d'exécution de danses et d'expression corporelle.",
+          "sections": {
+            "PS": {
+              "oa": [
+                { "intitule": "Produire des sons et des rythmes", "os": [
+                  { "n": 1, "intitule": "Rythmer un chant", "contenus": "Variété d'objets sonores : tam-tam, guitare, piano, pots…", "semaines": [1, 2] }
+                ]},
+                { "intitule": "Restituer et / ou produire un chant", "os": [
+                  { "n": 2, "intitule": "Restituer les phrases musicales apprises", "contenus": "Répertoire de chants locaux ; hymne national.", "semaines": [3, 4] },
+                  { "n": 3, "intitule": "Créer un chant en réadaptant la mélodie d'un chant", "contenus": "Répertoire de chants locaux ; hymne national.", "semaines": [5] },
+                  { "n": 4, "intitule": "Créer un chant ou une pièce instrumentale", "contenus": "Variétés de chants ; variétés d'objets sonores (tam-tam, guitare, piano, pots…).", "semaines": [6] }
+                ]},
+                { "intitule": "Réciter une comptine / un poème", "os": [
+                  { "n": 5, "intitule": "Restituer des phrases apprises de la comptine", "contenus": "Variété de comptines.", "semaines": [7] },
+                  { "n": 6, "intitule": "Restituer les vers appris du poème", "contenus": "Variété de poèmes.", "semaines": [8] }
+                ]},
+                { "intitule": "Réaliser des prestations artistiques", "os": [
+                  { "n": 7, "intitule": "Dramatiser, interpréter un rôle", "contenus": "Des scènes et des spectacles divers ; l'interprétation du rôle d'un artiste / star / lutteur / comédien ; rôles d'acteurs et de spectateurs.", "semaines": [9, 10] }
+                ]}
+              ]
+            },
+            "MS": {
+              "oa": [
+                { "intitule": "Produire des sons et des rythmes", "os": [
+                  { "n": 1, "intitule": "Découvrir quelques objets sonores", "contenus": "Variété d'objets sonores : tam-tam, guitare, piano, pots…", "semaines": [1, 2] }
+                ]},
+                { "intitule": "Restituer et / ou produire un chant", "os": [
+                  { "n": 2, "intitule": "Restituer les phrases musicales apprises", "contenus": "Répertoire de chants locaux ; hymne national.", "semaines": [3, 4] },
+                  { "n": 3, "intitule": "Créer un chant ou une pièce instrumentale", "contenus": "Variétés de chants ; variétés d'objets sonores.", "semaines": [5] },
+                  { "n": 4, "intitule": "Créer un chant en réadaptant la mélodie d'une chanson", "contenus": "Répertoire de chants locaux ; hymne national.", "semaines": [6] }
+                ]},
+                { "intitule": "Réciter une comptine / un poème", "os": [
+                  { "n": 5, "intitule": "Restituer des phrases apprises de la comptine", "contenus": "Variété de comptines.", "semaines": [7] },
+                  { "n": 6, "intitule": "Restituer les vers appris du poème", "contenus": "Variété de poèmes.", "semaines": [8] }
+                ]},
+                { "intitule": "Réaliser des prestations artistiques", "os": [
+                  { "n": 7, "intitule": "Jouer un rôle avec des déguisements", "contenus": "Jeux de rôle, imitations, déguisements.", "semaines": [9, 10] }
+                ]}
+              ]
+            },
+            "GS": {
+              "oa": [
+                { "intitule": "Restituer et / ou produire un chant", "os": [
+                  { "n": 1, "intitule": "Restituer les phrases musicales apprises", "contenus": "Répertoire de chants locaux ; hymne national.", "semaines": [1] },
+                  { "n": 2, "intitule": "Créer un chant ou une pièce instrumentale", "contenus": "Répertoire de chants locaux ; hymne national.", "semaines": [2, 3] },
+                  { "n": 3, "intitule": "Créer un chant en réadaptant la mélodie d'un chant", "contenus": "Répertoire de chants locaux ; hymne national.", "semaines": [4, 5] },
+                  { "n": 4, "intitule": "Restituer des phrases apprises de la comptine", "contenus": "Variété de comptines.", "semaines": [6] }
+                ]},
+                { "intitule": "Explorer une comptine / un poème, une danse", "os": [
+                  { "n": 5, "intitule": "Restituer les vers appris du poème", "contenus": "Variété de poèmes.", "semaines": [7] },
+                  { "n": 6, "intitule": "Danser suivant différents rythmes traditionnels locaux ou modernes", "contenus": "Variétés de danses : wango, rippo, yéla, diambadon, maagn, ndawrabine, mbalax, zouk, salsa…", "semaines": [8] },
+                  { "n": 7, "intitule": "Danser suivant différents rythmes traditionnels locaux ou modernes", "contenus": "Variétés de danses et de rythmes traditionnels : sabar, goumbé. Rôles d'acteurs et de spectateurs.", "semaines": [9] }
+                ]},
+                { "intitule": "Dramatiser ou interpréter un rôle", "os": [
+                  { "n": 8, "intitule": "Dramatiser ou interpréter un rôle", "contenus": "Séances et spectacles divers ; interprétation du rôle d'un artiste / star / lutteur / comédien.", "semaines": [10] }
+                ]}
+              ]
+            }
+          }
+        },
+        {
+          "code": "APLA",
+          "nom": "Arts plastiques",
+          "competence_base": "Intégrer des techniques, des savoir-faire et des notions simples de collage, de pliage, de coloriage et de peinture dans des situations de réalisation d'objets divers.",
+          "sections": {
+            "PS": {
+              "oa": [
+                { "intitule": "Confectionner des objets simples", "os": [
+                  { "n": 1, "intitule": "Réaliser des objets par collage", "contenus": "Tableaux individuels ou collectifs par collage : collage de formes.", "semaines": [1] },
+                  { "n": 2, "intitule": "Réaliser des objets par collage", "contenus": "Activités de collages avec des boutons.", "semaines": [2] },
+                  { "n": 3, "intitule": "Réaliser des objets par collage", "contenus": "Collage de la poule ou du coq.", "semaines": [3] },
+                  { "n": 4, "intitule": "Réaliser des objets par collage", "contenus": "Activités de collages de photos.", "semaines": [4] },
+                  { "n": 5, "intitule": "Réaliser des objets par collage", "contenus": "Activités de collages avec des mosaïques.", "semaines": [5] }
+                ]},
+                { "intitule": "Réaliser des activités artistiques", "os": [
+                  { "n": 6, "intitule": "Peindre librement sur des supports variés", "contenus": "Peinture libre ; réalisation d'empreintes de mains.", "semaines": [6] },
+                  { "n": 7, "intitule": "Peindre librement sur des supports variés", "contenus": "Peinture libre ; réalisation d'empreintes d'orteils.", "semaines": [7] },
+                  { "n": 8, "intitule": "Peindre librement sur des supports variés", "contenus": "Technique de peinture « empreinte digitale ».", "semaines": [8] },
+                  { "n": 9, "intitule": "Peindre librement sur des supports variés", "contenus": "Technique de peinture de dessin avec un pinceau.", "semaines": [9] },
+                  { "n": 10, "intitule": "Peindre librement sur des supports variés", "contenus": "Jeu d'art de peinture aux doigts.", "semaines": [10] }
+                ]}
+              ]
+            },
+            "MS": {
+              "oa": [
+                { "intitule": "Confectionner des objets simples", "os": [
+                  { "n": 1, "intitule": "Confectionner des poupées", "contenus": "Confection d'objets familiers : poupées.", "semaines": [1, 2] },
+                  { "n": 2, "intitule": "Confectionner des marionnettes", "contenus": "Confection d'objets familiers : marionnettes, peluches…", "semaines": [3, 4] }
+                ]},
+                { "intitule": "Réaliser des activités artistiques", "os": [
+                  { "n": 3, "intitule": "Réaliser des tableaux de peinture", "contenus": "Peinture libre.", "semaines": [5] },
+                  { "n": 4, "intitule": "Réaliser des tableaux de peinture", "contenus": "Empreintes.", "semaines": [6] },
+                  { "n": 5, "intitule": "Réaliser des tableaux de peinture", "contenus": "Technique de peinture de dessin avec un pinceau.", "semaines": [7] },
+                  { "n": 6, "intitule": "Réaliser des tableaux de peinture", "contenus": "Sablage.", "semaines": [8] },
+                  { "n": 7, "intitule": "Colorier des surfaces", "contenus": "Activités de coloriage de surfaces.", "semaines": [9] },
+                  { "n": 8, "intitule": "Colorier des surfaces", "contenus": "Activités de coloriage d'objets divers.", "semaines": [10] }
+                ]}
+              ]
+            },
+            "GS": {
+              "oa": [
+                { "intitule": "Réaliser des activités artistiques", "os": [
+                  { "n": 1, "intitule": "Dessiner un objet", "contenus": "Exploitation de dessin, d'objet.", "semaines": [1] },
+                  { "n": 2, "intitule": "Dessiner un animal", "contenus": "Exploitation de dessin, de bande dessinée, de portrait, de tableau…", "semaines": [2] },
+                  { "n": 3, "intitule": "Dessiner un paysage", "contenus": "Exploitation de dessin, de bande dessinée, de portrait, de tableau…", "semaines": [3] },
+                  { "n": 4, "intitule": "Dessiner un objet / animal / paysage", "contenus": "Situation de dessin libre.", "semaines": [4] },
+                  { "n": 5, "intitule": "Modeler une matière", "contenus": "Atelier de modelage de pâte à papier / argile.", "semaines": [5] },
+                  { "n": 6, "intitule": "Réaliser un tableau collectif par collage", "contenus": "Technique de réalisation de tableaux collectifs par collage et découpage.", "semaines": [6] }
+                ]},
+                { "intitule": "Développer le sens de la créativité et de l'imagination", "os": [
+                  { "n": 7, "intitule": "Utiliser du matériel de récupération", "contenus": "Production artistique : décoration / animation de surface.", "semaines": [7] },
+                  { "n": 8, "intitule": "Utiliser du matériel de récupération", "contenus": "Production artistique : coloriage de dessin.", "semaines": [8] },
+                  { "n": 9, "intitule": "Utiliser du matériel de récupération", "contenus": "Production artistique : découpage / pliage / collage.", "semaines": [9] },
+                  { "n": 10, "intitule": "Utiliser du matériel de récupération", "contenus": "Production artistique : récupération / création.", "semaines": [10] }
+                ]}
+              ]
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
