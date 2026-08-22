@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>SUÑU FICHES — Le Générateur N°1 de Fiches Pédagogiques au Sénégal</title>
-<meta name="description" content="Plateforme de préparation de fiches pédagogiques pour le préscolaire et l'élémentaire sénégalais (PS à CM2). 100% conforme aux guides curriculaires du Ministère. Export PDF & paiement Wave / Orange Money.">
+<meta name="description" content="Plateforme de préparation de fiches pédagogiques pour le préscolaire (5 domaines) et l'élémentaire sénégalais (PS à CM2). 100% conforme aux guides curriculaires du Ministère. Export PDF & paiement Wave / Orange Money.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Karla:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
@@ -149,6 +149,17 @@ button { cursor: pointer; border: none; background: none; }
 .badge--vert { background: var(--vert-light); color: var(--vert); }
 .badge--ink { background: #E2E8F0; color: var(--ink); }
 
+/* Cycle Switcher Tabs */
+.cycle-toggle-bar {
+  display: flex; justify-content: center; gap: 12px; margin-bottom: 24px;
+}
+.cycle-btn {
+  padding: 12px 24px; border-radius: 12px; font-family: var(--f-body); font-weight: 700; font-size: 16px;
+  border: 2px solid var(--hairline); background: var(--paper-card); color: var(--ink-soft); transition: all .2s;
+}
+.cycle-btn.active-pre { background: var(--vert); color: #fff; border-color: var(--vert); box-shadow: 0 4px 12px rgba(5, 150, 105, 0.3); }
+.cycle-btn.active-elem { background: var(--ink); color: #fff; border-color: var(--ink); box-shadow: 0 4px 12px rgba(15, 23, 42, 0.3); }
+
 /* Hero Section */
 .hero { padding: 60px 0 80px; position: relative; overflow: hidden; }
 .hero__switcher {
@@ -290,8 +301,8 @@ button { cursor: pointer; border: none; background: none; }
 .step-card h3 { font-family: var(--f-display); font-size: 21px; font-weight: 700; margin-bottom: 10px; }
 .step-card p { color: var(--graphite); font-size: 15px; line-height: 1.6; }
 
-/* Curriculum */
-.curric-box { background: var(--paper-card); border: 1px solid var(--hairline); border-radius: var(--r); padding: 36px; margin-bottom: 30px; }
+/* Curriculum Coverage */
+.curric-box { background: var(--paper-card); border: 1px solid var(--hairline); border-radius: var(--r); padding: 36px; margin-bottom: 34px; }
 .curric-box__head { display: flex; align-items: baseline; justify-content: space-between; flex-wrap: wrap; gap: 16px; margin-bottom: 28px; border-bottom: 1px solid var(--hairline); padding-bottom: 16px; }
 .curric-box__title { font-family: var(--f-display); font-size: 26px; font-weight: 700; }
 
@@ -307,6 +318,7 @@ button { cursor: pointer; border: none; background: none; }
 .domain-chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
 .chip { font-family: var(--f-mono); font-size: 12px; padding: 6px 14px; border-radius: 20px; background: var(--accent-bg); color: var(--ink-soft); border: 1px solid var(--hairline); font-weight: 600; }
 .chip--highlight { background: #EFF6FF; border-color: #BFDBFE; color: #1E40AF; }
+.chip--pre { background: #ECFDF5; border-color: #A7F3D0; color: #047857; }
 
 /* Stats Bar */
 .stats-bar { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; background: var(--ink); color: #fff; padding: 40px; border-radius: 20px; margin: 50px 0; text-align: center; }
@@ -398,8 +410,8 @@ button { cursor: pointer; border: none; background: none; }
   <nav>
     <a href="#hero" class="mobile-link">Accueil</a>
     <a href="#generateur" class="mobile-link">Générateur de Fiche</a>
-    <a href="#comment" class="mobile-link">Comment ça marche</a>
-    <a href="#niveaux" class="mobile-link">Niveaux &amp; Référentiels</a>
+    <a href="#niveaux-prescolaire" class="mobile-link">Préscolaire (5 Domaines)</a>
+    <a href="#niveaux-elementaire" class="mobile-link">Élémentaire (3 Étapes)</a>
     <a href="#tarifs" class="mobile-link">Tarifs &amp; Mobile Money</a>
     <a href="#faq" class="mobile-link">Questions fréquentes</a>
   </nav>
@@ -421,8 +433,8 @@ button { cursor: pointer; border: none; background: none; }
 
     <nav class="nav" aria-label="Navigation principale">
       <a href="#generateur">Générateur APC</a>
-      <a href="#comment">Comment ça marche</a>
-      <a href="#niveaux">Niveaux</a>
+      <a href="#niveaux-prescolaire">Préscolaire</a>
+      <a href="#niveaux-elementaire">Élémentaire</a>
       <a href="#tarifs">Tarifs</a>
       <a href="#faq">FAQ</a>
     </nav>
@@ -459,11 +471,11 @@ button { cursor: pointer; border: none; background: none; }
       <div>
         <span class="eyebrow" id="heroEyebrow">Préscolaire &amp; Élémentaire · Sénégal</span>
         <h1 class="display" id="heroTitle">Votre cahier de préparation <em>se remplit en 2 minutes.</em></h1>
-        <p class="hero__lede" id="heroLede">Sélectionnez la classe, la discipline et le thème du jour. SUÑU FICHES rédige automatiquement votre fiche de préparation conforme aux guides curriculaires officiels du Sénégal.</p>
+        <p class="hero__lede" id="heroLede">Sélectionnez la classe, le domaine et le thème du jour. SUÑU FICHES rédige automatiquement votre fiche de préparation conforme aux guides curriculaires officiels du Sénégal.</p>
         
         <div class="hero__cta">
           <a class="btn btn--primary btn--lg" href="#generateur">Générer ma fiche maintenant</a>
-          <a class="btn btn--ghost btn--lg" href="#comment">Voir la démo</a>
+          <a class="btn btn--ghost btn--lg" href="#niveaux-prescolaire">Découvrir les 5 Domaines</a>
         </div>
 
         <div class="hero__trust">
@@ -481,7 +493,7 @@ button { cursor: pointer; border: none; background: none; }
         </div>
 
         <div class="picker-bar" role="tablist" aria-label="Sélection du niveau">
-          <button class="picker-btn active" data-level="gs">GS</button>
+          <button class="picker-btn active" data-level="gs">GS (Pré)</button>
           <button class="picker-btn" data-level="ci">CI</button>
           <button class="picker-btn" data-level="cp">CP</button>
           <button class="picker-btn" data-level="ce1">CE1</button>
@@ -497,80 +509,73 @@ button { cursor: pointer; border: none; background: none; }
   </div>
 </section>
 
-<!-- REAL INTERACTIVE FICHE GENERATOR SECTION -->
+<!-- REAL INTERACTIVE FICHE GENERATOR SECTION WITH CYCLE SELECTOR -->
 <section class="section" id="generateur" style="background: #F8FAFC; border-block: 1px solid var(--hairline);">
   <div class="wrap">
-    <div class="sec-head up" style="margin: 0 auto 32px; text-align: center;">
+    <div class="sec-head up" style="margin: 0 auto 28px; text-align: center;">
       <span class="eyebrow">Générateur Pédagogique Actif</span>
-      <h2 class="display">Remplissez vos critères &amp; générez votre fiche complète</h2>
-      <p>Conforme aux démarches d'apprentissage APC du Ministère de l'Éducation Nationale (Juillet 2016).</p>
+      <h2 class="display">Sélectionnez votre Cycle &amp; Générez votre Fiche APC</h2>
+      <p>Conforme aux planifications officielles du Ministère de l'Éducation Nationale du Sénégal (juillet 2016).</p>
+    </div>
+
+    <!-- Cycle Selector Switcher -->
+    <div class="cycle-toggle-bar">
+      <button class="cycle-btn active-pre" id="btnCyclePre" onclick="switchGenCycle('pre')">
+        🧸 Cycle PRÉSCOLAIRE (3 à 6 ans)
+      </button>
+      <button class="cycle-btn" id="btnCycleElem" onclick="switchGenCycle('elem')">
+        🎒 Cycle ÉLÉMENTAIRE (6 à 12 ans)
+      </button>
     </div>
 
     <div class="generator-box up">
       <form id="ficheGeneratorForm">
         <div class="form-grid">
           <div class="form-group">
-            <label for="genLevel">Niveau / Classe</label>
+            <label for="genLevel">Niveau / Section</label>
             <select id="genLevel" class="form-control">
-              <option value="PS">Petite Section (PS) — Préscolaire</option>
-              <option value="MS">Moyenne Section (MS) — Préscolaire</option>
-              <option value="GS">Grande Section (GS) — Préscolaire</option>
-              <option value="CI">Cours d'Initiation (CI) — Étape 1</option>
-              <option value="CP">Cours Préparatoire (CP) — Étape 1</option>
-              <option value="CE1">Cours Élémentaire 1 (CE1) — Étape 2</option>
-              <option value="CE2" selected>Cours Élémentaire 2 (CE2) — Étape 2</option>
-              <option value="CM1">Cours Moyen 1 (CM1) — Étape 3</option>
-              <option value="CM2">Cours Moyen 2 (CM2) — Étape 3 / CFEE</option>
+              <!-- Dynamically populated based on Cycle -->
             </select>
           </div>
 
           <div class="form-group">
-            <label for="genDiscipline">Discipline / Domaine</label>
+            <label for="genDiscipline">Domaine d'Activités Officiel</label>
             <select id="genDiscipline" class="form-control">
-              <option value="Mathématiques — Opérations">Mathématiques — Opérations</option>
-              <option value="Mathématiques — Géométrie">Mathématiques — Géométrie</option>
-              <option value="Mathématiques — Résolution de Problèmes">Mathématiques — Problèmes</option>
-              <option value="Langue — Lecture" selected>Langue &amp; Comm. — Lecture</option>
-              <option value="Langue — Grammaire">Langue &amp; Comm. — Grammaire</option>
-              <option value="Langue — Production d'écrits">Langue &amp; Comm. — Production d'écrits</option>
-              <option value="ESVS — Sciences d'Observation">ESVS — Sciences d'Observation</option>
-              <option value="ESVS — Géographie du Sénégal">ESVS — Géographie</option>
-              <option value="ESVS — Histoire du Sénégal">ESVS — Histoire</option>
-              <option value="Activités Artistiques & Plastiques">Activités Artistiques</option>
+              <!-- Dynamically populated based on Cycle -->
             </select>
           </div>
 
           <div class="form-group">
-            <label for="genTopic">Sujet de la leçon / Thème</label>
-            <input type="text" id="genTopic" class="form-control" placeholder="ex: Le complément d'objet direct (COD)" value="Le complément d'objet direct (COD)">
+            <label for="genTopic">Sujet de la leçon / Nom du Jeu</label>
+            <input type="text" id="genTopic" class="form-control" placeholder="ex: Nommer les membres de la famille" value="Nommer les membres de la famille">
           </div>
         </div>
 
         <div class="form-grid">
           <div class="form-group">
-            <label for="genTeacher">Enseignant(e)</label>
+            <label for="genTeacher">Enseignant(e) / Éducateur(trice)</label>
             <input type="text" id="genTeacher" class="form-control" value="M. Cheikh Mbacké Diallo">
           </div>
 
           <div class="form-group">
-            <label for="genSchool">École &amp; IEF</label>
-            <input type="text" id="genSchool" class="form-control" value="École Élémentaire Mbour / IEF Mbour">
+            <label for="genSchool">Établissement / École &amp; IEF</label>
+            <input type="text" id="genSchool" class="form-control" value="École / Case des Tout-Petits · IEF Mbour">
           </div>
 
           <div class="form-group">
             <label for="genDuration">Durée de la séance</label>
             <select id="genDuration" class="form-control">
-              <option value="30 minutes">30 minutes (Préscolaire)</option>
-              <option value="45 minutes" selected>45 minutes (Élémentaire Étape 1 & 2)</option>
+              <option value="20 minutes">20 minutes (PS - Préscolaire)</option>
+              <option value="25 minutes" selected>25 minutes (MS/GS - Préscolaire)</option>
+              <option value="45 minutes">45 minutes (Élémentaire Étape 1 & 2)</option>
               <option value="50 minutes">50 minutes (Élémentaire Étape 3)</option>
-              <option value="60 minutes">60 minutes (Séance d'Intégration)</option>
             </select>
           </div>
         </div>
 
         <div style="text-align: center; margin-top: 10px;">
           <button type="submit" class="btn btn--vert btn--lg">
-            ⚡ Générer la Fiche de Préparation APC
+            ⚡ Générer la Fiche de Préparation Conforme
           </button>
         </div>
       </form>
@@ -593,6 +598,94 @@ button { cursor: pointer; border: none; background: none; }
   </div>
 </section>
 
+<!-- SEPARATED CURRICULUM COVERAGE: PRE-SCHOOL & ELEMENTARY -->
+<section class="section" id="niveaux-prescolaire">
+  <div class="wrap">
+
+    <!-- 1. PRÉSCOLAIRE (5 DOMAINES OFFICIELS) -->
+    <div class="curric-box up" style="border-left: 6px solid var(--vert);">
+      <div class="curric-box__head">
+        <div>
+          <span class="badge badge--vert">Référentiel Officiel Préscolaire</span>
+          <h3 class="curric-box__title" style="margin-top: 8px;">1. Cycle Préscolaire (3 à 6 ans)</h3>
+        </div>
+        <span style="font-family: var(--f-mono); font-size: 13px; color: var(--vert); font-weight: 700;">
+          3 Sections · 5 Domaines d'Activités Officiels
+        </span>
+      </div>
+
+      <div class="level-grid-3">
+        <div class="level-badge-card" style="border-top: 3px solid var(--vert);">
+          <strong>PS</strong>
+          <span>Petite Section (3 – 4 ans)</span>
+        </div>
+        <div class="level-badge-card" style="border-top: 3px solid var(--vert);">
+          <strong>MS</strong>
+          <span>Moyenne Section (4 – 5 ans)</span>
+        </div>
+        <div class="level-badge-card" style="border-top: 3px solid var(--vert);">
+          <strong>GS</strong>
+          <span>Grande Section (5 – 6 ans)</span>
+        </div>
+      </div>
+
+      <p style="font-size: 15px; font-weight: 700; color: var(--ink); margin-bottom: 12px;">
+        Les 5 Domaines d'Activités du Préscolaire Sénégalais (APC) :
+      </p>
+
+      <div class="domain-chips">
+        <span class="chip chip--pre">1. Langue et Communication (Langage, Conte, Lecture, Graphisme)</span>
+        <span class="chip chip--pre">2. Mathématiques (Activités numériques, Géométriques, Mesure)</span>
+        <span class="chip chip--pre">3. Découverte du monde (IST, Hygiène &amp; Bien-être)</span>
+        <span class="chip chip--pre">4. Développement socio-affectif et bien-être global (Vivre ensemble &amp; Environnement)</span>
+        <span class="chip chip--pre">5. Éducation psychomotrice et artistique (Psychomotricité &amp; Arts plastiques/scéniques)</span>
+      </div>
+    </div>
+
+    <!-- 2. ÉLÉMENTAIRE (6 CLASSES / 3 ÉTAPES) -->
+    <div class="curric-box up" id="niveaux-elementaire" style="border-left: 6px solid var(--rouge);">
+      <div class="curric-box__head">
+        <div>
+          <span class="badge badge--rouge">Référentiel Officiel Élémentaire</span>
+          <h3 class="curric-box__title" style="margin-top: 8px;">2. Cycle Élémentaire (6 à 12 ans)</h3>
+        </div>
+        <span style="font-family: var(--f-mono); font-size: 13px; color: var(--rouge); font-weight: 700;">
+          6 Classes · 3 Étapes de Progression APC
+        </span>
+      </div>
+
+      <div class="level-grid-3">
+        <div class="level-badge-card">
+          <strong>Étape 1 (CI - CP)</strong>
+          <span>Initiation &amp; Graphophonologie</span>
+        </div>
+        <div class="level-badge-card">
+          <strong>Étape 2 (CE1 - CE2)</strong>
+          <span>Consolidation &amp; Trames APC</span>
+        </div>
+        <div class="level-badge-card">
+          <strong>Étape 3 (CM1 - CM2)</strong>
+          <span>Approfondissement &amp; Examen CFEE</span>
+        </div>
+      </div>
+
+      <p style="font-size: 15px; font-weight: 700; color: var(--ink); margin-bottom: 12px;">
+        Les 5 Domaines d'Enseignement Élémentaire :
+      </p>
+
+      <div class="domain-chips">
+        <span class="chip chip--highlight">1. Langue et Communication (Lecture, Grammaire, Conjugaison, Production d'écrits)</span>
+        <span class="chip chip--highlight">2. Mathématiques (Numération, Opérations, Mesures, Géométrie, Problèmes)</span>
+        <span class="chip">3. Sciences et Vie Sociale - ESVS (Histoire, Géographie, Sciences d'observation)</span>
+        <span class="chip">4. Éducation au Développement Durable - EDD (Environnement, Hygiène, Citoyenneté)</span>
+        <span class="chip">5. EPSA (Dessin, Chant, EPS, Travail manuel)</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- COMPARISON SECTION -->
 <section class="section section--tight" style="background: #F1F5F9;">
   <div class="wrap">
     <div class="sec-head up" style="margin: 0 auto 36px; text-align: center;">
@@ -657,7 +750,7 @@ button { cursor: pointer; border: none; background: none; }
       <div class="step-card up">
         <div class="step-card__num">1</div>
         <h3>Choisissez le niveau</h3>
-        <p>Sélectionnez votre classe (Petite Section au CM2), le domaine d'apprentissage (Mathématiques, Lecture, ESVS...) et le sujet de votre leçon.</p>
+        <p>Sélectionnez votre classe (Petite Section au CM2), le domaine d'apprentissage et le sujet de votre leçon.</p>
       </div>
 
       <div class="step-card up">
@@ -675,86 +768,7 @@ button { cursor: pointer; border: none; background: none; }
   </div>
 </section>
 
-<section class="section" id="niveaux" style="background: var(--paper-card); border-block: 1px solid var(--hairline);">
-  <div class="wrap">
-    <div class="sec-head up">
-      <span class="eyebrow">Référentiel Officiel</span>
-      <h2 class="display">Tous les cycles de l'école sénégalaise</h2>
-      <p>Des tuteurs curriculaires spécifiques pour chaque étape de l'enseignement fondamental.</p>
-    </div>
-
-    <div class="curric-box up">
-      <div class="curric-box__head">
-        <div>
-          <span class="badge badge--vert">Cycle Préscolaire</span>
-          <h3 class="curric-box__title" style="margin-top: 8px;">Préscolaire (3 à 6 ans)</h3>
-        </div>
-        <span style="font-family: var(--f-mono); font-size: 13px; color: var(--graphite);">3 Sections · 7 Domaines d'Activités</span>
-      </div>
-
-      <div class="level-grid-3">
-        <div class="level-badge-card">
-          <strong>PS</strong>
-          <span>Petite Section (3 – 4 ans)</span>
-        </div>
-        <div class="level-badge-card">
-          <strong>MS</strong>
-          <span>Moyenne Section (4 – 5 ans)</span>
-        </div>
-        <div class="level-badge-card">
-          <strong>GS</strong>
-          <span>Grande Section (5 – 6 ans)</span>
-        </div>
-      </div>
-
-      <div class="domain-chips">
-        <span class="chip chip--highlight">Langage &amp; Communication</span>
-        <span class="chip chip--highlight">Activités Mathématiques</span>
-        <span class="chip">Découverte du Monde</span>
-        <span class="chip">Activités Artistiques</span>
-        <span class="chip">Motricité &amp; EPS</span>
-        <span class="chip">Éducation à la Vie en Société</span>
-        <span class="chip">Langues Nationales (Wolof, etc.)</span>
-      </div>
-    </div>
-
-    <div class="curric-box up">
-      <div class="curric-box__head">
-        <div>
-          <span class="badge badge--rouge">Cycle Élémentaire</span>
-          <h3 class="curric-box__title" style="margin-top: 8px;">Élémentaire (6 à 12 ans)</h3>
-        </div>
-        <span style="font-family: var(--f-mono); font-size: 13px; color: var(--graphite);">6 Classes · 3 Étapes APC</span>
-      </div>
-
-      <div class="level-grid-3">
-        <div class="level-badge-card">
-          <strong>Étape 1 (CI - CP)</strong>
-          <span>Initiation &amp; Graphophonologie</span>
-        </div>
-        <div class="level-badge-card">
-          <strong>Étape 2 (CE1 - CE2)</strong>
-          <span>Consolidation &amp; Trames APC</span>
-        </div>
-        <div class="level-badge-card">
-          <strong>Étape 3 (CM1 - CM2)</strong>
-          <span>Approfondissement &amp; CFEE</span>
-        </div>
-      </div>
-
-      <div class="domain-chips">
-        <span class="chip chip--highlight">Lecture &amp; Production d'écrits</span>
-        <span class="chip chip--highlight">Mathématiques (Géométrie, Problèmes)</span>
-        <span class="chip">ESVS (Histoire, Géographie, Sciences)</span>
-        <span class="chip">Éducation au Développement Durable</span>
-        <span class="chip">EPSA (Dessin, Chant, EPS)</span>
-        <span class="chip">Vivres ensemble &amp; Morale</span>
-      </div>
-    </div>
-
-  </div>
-</section>
-
+<!-- TESTIMONIALS SECTION -->
 <section class="section">
   <div class="wrap">
     <div class="sec-head up">
@@ -799,6 +813,7 @@ button { cursor: pointer; border: none; background: none; }
   </div>
 </section>
 
+<!-- PRICING SECTION -->
 <section class="section" id="tarifs" style="background: #F8FAFC; border-top: 1px solid var(--hairline);">
   <div class="wrap">
     <div class="sec-head up" style="text-align: center; margin: 0 auto 40px;">
@@ -864,6 +879,7 @@ button { cursor: pointer; border: none; background: none; }
   </div>
 </section>
 
+<!-- FAQ SECTION -->
 <section class="section" id="faq">
   <div class="wrap">
     <div class="sec-head up" style="text-align: center; margin: 0 auto 40px;">
@@ -875,7 +891,14 @@ button { cursor: pointer; border: none; background: none; }
       <div class="faq-item is-open">
         <button class="faq-question">Les fiches sont-elles 100% conformes au programme sénégalais ?</button>
         <div class="faq-answer">
-          Oui, nos modèles respectent scrupuleusement le guide curriculaire de l'enseignement élémentaire et du préscolaire édité par le Ministère de l'Éducation Nationale (juillet 2016). Les compétences de base, paliers, OA, OS et déroulements à 3 colonnes sont strictement alignés.
+          Oui, nos modèles respectent scrupuleusement le guide curriculaire de l'enseignement élémentaire et les planifications des 5 domaines du préscolaire édités par le Ministère de l'Éducation Nationale (juillet 2016).
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">Quels sont les 5 domaines officiels du Préscolaire ?</button>
+        <div class="faq-answer">
+          Les 5 domaines du préscolaire sont : 1. Langue et Communication · 2. Mathématiques · 3. Découverte du Monde · 4. Développement socio-affectif et bien-être global · 5. Éducation psychomotrice et artistique.
         </div>
       </div>
 
@@ -890,13 +913,6 @@ button { cursor: pointer; border: none; background: none; }
         <button class="faq-question">Comment télécharger mes fiches en format PDF ?</button>
         <div class="faq-answer">
           Dès qu'une fiche est générée ou personnalisée, un bouton "Exporter en PDF" vous permet d'obtenir immédiatement un fichier document propre, prêt à l'impression au format A4.
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-question">Comment régler mon abonnement par Wave ou Orange Money ?</button>
-        <div class="faq-answer">
-          Lors du choix de votre formule, vous sélectionnez votre mode de paiement mobile local (Wave ou Orange Money). Vous recevez une notification de confirmation sur votre téléphone et votre compte Pro est activé instantanément.
         </div>
       </div>
     </div>
@@ -934,20 +950,20 @@ button { cursor: pointer; border: none; background: none; }
 // DEMO DATABASE FOR PREVIEW CARD
 const DEMO_DATABASE = {
   gs: {
-    titre: "Reconnaître les formes géométriques",
+    titre: "Nommer les membres de la famille (Jeu d'Album)",
     stamp: "Guide Préscolaire",
     rows: [
       ["Niveau", "Grande Section (GS) — 5 à 6 ans"],
-      ["Domaine", "Activités Mathématiques & Logiques"],
-      ["Durée", "30 minutes"],
-      ["Objectif (OS)", "Identifier et nommer le cercle, le carré et le triangle dans son environnement."],
-      ["Matériel", "Formes en carton, objets de la classe, ardoises."]
+      ["Domaine", "D1 — Langue & Communication"],
+      ["Durée", "25 minutes"],
+      ["Objectif (OS)", "Présenter un membre de sa famille en disant son nom et son âge."],
+      ["Matériel", "Album photo de classe, étiquettes-images, marionnettes."]
     ],
     steps: [
-      ["1", "Motivation — Présentation de la boîte magique aux formes (5 min)"],
-      ["2", "Découverte — Manipulation libre par groupes (10 min)"],
-      ["3", "Synthèse — Verbalisation et nomination des formes (8 min)"],
-      ["4", "Évaluation — Chasse aux formes dans la classe (7 min)"]
+      ["1", "Motivation — Jeu de regroupement et comptine 'Ma Famille' (5 min)"],
+      ["2", "Découverte — Présentation de l'album imagé (8 min)"],
+      ["3", "Expression — Chaque enfant présente sa marionnette (7 min)"],
+      ["4", "Évaluation — Associer l'image au mot entendu (5 min)"]
     ]
   },
   ci: {
@@ -1068,7 +1084,7 @@ const PERSPECTIVES = {
   inspection: {
     eyebrow: "Conformité Inspection & Curriculum",
     title: "Des fiches 100% conformes <em>aux exigences de l'APC.</em>",
-    lede: "Trames officielles (juillet 2016), respect des démarches par activité, intégration des situations d'évaluation critériées et barèmes 3/4."
+    lede: "Trames officielles (juillet 2016), respect des 5 domaines du préscolaire et des démarches par activité en élémentaire."
   }
 };
 
@@ -1175,6 +1191,74 @@ window.addEventListener('scroll', () => {
   }
 });
 
+// DYNAMIC CYCLE SWITCHER FOR GENERATOR (PRESCHOOL vs ELEMENTARY)
+const genLevel = document.getElementById('genLevel');
+const genDiscipline = document.getElementById('genDiscipline');
+const genTopic = document.getElementById('genTopic');
+const btnCyclePre = document.getElementById('btnCyclePre');
+const btnCycleElem = document.getElementById('btnCycleElem');
+
+let currentCycle = 'pre'; // 'pre' or 'elem'
+
+const PRE_OPTIONS = {
+  levels: [
+    { value: 'PS', label: 'Petite Section (PS) — 3 à 4 ans' },
+    { value: 'MS', label: 'Moyenne Section (MS) — 4 à 5 ans' },
+    { value: 'GS', label: 'Grande Section (GS) — 5 à 6 ans' }
+  ],
+  disciplines: [
+    { value: 'D1 — Langue & Communication', label: 'D1 — Langue & Communication (Langage, Conte, Graphisme)' },
+    { value: 'D2 — Mathématiques', label: 'D2 — Mathématiques (Activités numériques, Géométrie, Mesures)' },
+    { value: 'D3 — Découverte du monde', label: 'D3 — Découverte du monde (IST, Temps/Espace, Hygiène)' },
+    { value: 'D4 — Développement socio-affectif', label: 'D4 — Développement socio-affectif (Vivre ensemble & Environnement)' },
+    { value: 'D5 — Éducation psychomotrice & artistique', label: 'D5 — Éducation psychomotrice & artistique (Motricité & Arts)' }
+  ],
+  defaultTopic: "Nommer les membres de sa famille (Jeu d'album)"
+};
+
+const ELEM_OPTIONS = {
+  levels: [
+    { value: 'CI', label: "Cours d'Initiation (CI) — Étape 1" },
+    { value: 'CP', label: "Cours Préparatoire (CP) — Étape 1" },
+    { value: 'CE1', label: "Cours Élémentaire 1 (CE1) — Étape 2" },
+    { value: 'CE2', label: "Cours Élémentaire 2 (CE2) — Étape 2" },
+    { value: 'CM1', label: "Cours Moyen 1 (CM1) — Étape 3" },
+    { value: 'CM2', label: "Cours Moyen 2 (CM2) — Étape 3 / CFEE" }
+  ],
+  disciplines: [
+    { value: "Langue & Comm. — Lecture", label: "Langue & Comm. — Lecture" },
+    { value: "Langue & Comm. — Grammaire", label: "Langue & Comm. — Grammaire" },
+    { value: "Langue & Comm. — Production d'écrits", label: "Langue & Comm. — Production d'écrits" },
+    { value: "Mathématiques — Opérations", label: "Mathématiques — Opérations" },
+    { value: "Mathématiques — Géométrie", label: "Mathématiques — Géométrie" },
+    { value: "Mathématiques — Problèmes", label: "Mathématiques — Résolution de Problèmes" },
+    { value: "ESVS — Sciences d'observation", label: "ESVS — Sciences d'observation" },
+    { value: "ESVS — Géographie du Sénégal", label: "ESVS — Géographie du Sénégal" },
+    { value: "ESVS — Histoire du Sénégal", label: "ESVS — Histoire du Sénégal" },
+    { value: "EPSA — Dessin & Travail Manuel", label: "EPSA — Dessin & Travail Manuel" }
+  ],
+  defaultTopic: "Le complément d'objet direct (COD)"
+};
+
+function switchGenCycle(cycle) {
+  currentCycle = cycle;
+  if (cycle === 'pre') {
+    btnCyclePre.className = 'cycle-btn active-pre';
+    btnCycleElem.className = 'cycle-btn';
+    
+    genLevel.innerHTML = PRE_OPTIONS.levels.map(l => `<option value="${l.value}">${l.label}</option>`).join('');
+    genDiscipline.innerHTML = PRE_OPTIONS.disciplines.map(d => `<option value="${d.value}">${d.label}</option>`).join('');
+    genTopic.value = PRE_OPTIONS.defaultTopic;
+  } else {
+    btnCyclePre.className = 'cycle-btn';
+    btnCycleElem.className = 'cycle-btn active-elem';
+    
+    genLevel.innerHTML = ELEM_OPTIONS.levels.map(l => `<option value="${l.value}">${l.label}</option>`).join('');
+    genDiscipline.innerHTML = ELEM_OPTIONS.disciplines.map(d => `<option value="${d.value}">${d.label}</option>`).join('');
+    genTopic.value = ELEM_OPTIONS.defaultTopic;
+  }
+}
+
 // REAL APC FICHE GENERATOR ENGINE LOGIC
 const ficheGeneratorForm = document.getElementById('ficheGeneratorForm');
 const generatedFicheContainer = document.getElementById('generatedFicheContainer');
@@ -1183,60 +1267,80 @@ const printableFiche = document.getElementById('printableFiche');
 ficheGeneratorForm.addEventListener('submit', (e) => {
   e.preventDefault();
 
-  const level = document.getElementById('genLevel').value;
-  const discipline = document.getElementById('genDiscipline').value;
-  const topic = document.getElementById('genTopic').value || "Leçon du jour";
+  const level = genLevel.value;
+  const discipline = genDiscipline.value;
+  const topic = genTopic.value || "Activité du jour";
   const teacher = document.getElementById('genTeacher').value || "Enseignant(e)";
-  const school = document.getElementById('genSchool').value || "École Élémentaire";
+  const school = document.getElementById('genSchool').value || "Établissement Pédagogique";
   const duration = document.getElementById('genDuration').value;
 
   const todayStr = new Date().toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' });
+  const isPreschool = currentCycle === 'pre' || ['PS', 'MS', 'GS'].includes(level);
 
-  // Generate APC details based on topic & discipline
-  let domainCode = "Langue & Communication";
-  let competenceBase = "Intégrer les structures et règles d'utilisation de la langue dans des situations de communication orale et écrite.";
-  let palierText = "Palier 2 : Utiliser les règles fondamentales de fonctionnement de la langue.";
-  let oaText = "OA 1 : Identifier et employer les constituants de la phrase.";
-  let osText = `À la fin de la séance, l'élève doit être capable d'identifier et d'employer correctement ${topic} dans 3 exercices d'application.`;
-  let materielText = "Tableau, ardoises, corpus de phrases rédigées sur bande-papier, manuel de l'élève, cahiers d'exercices.";
+  // Generate APC details based on Preschool (5 domains) vs Elementary
+  let domainCode = isPreschool ? "Cycle Préscolaire (5 Domaines)" : "Cycle Élémentaire (APC)";
+  let competenceBase = isPreschool
+    ? "Intégrer le vocabulaire usuel, la manipulation concrète et l'expression par le jeu dans des situations de découverte du milieu."
+    : "Intégrer les structures et règles d'utilisation de la discipline dans des situations de résolution de problèmes.";
 
-  if (discipline.includes("Mathématiques")) {
-    domainCode = "Mathématiques";
-    competenceBase = "Intégrer des outils mathématiques et des démarches de raisonnement dans des situations de résolution de problèmes de la vie courante.";
-    palierText = "Palier 3 : Effectuer des opérations arithmétiques et résoudre des problèmes concrets.";
-    oaText = "OA 2 : Maîtriser la technique opératoire et le raisonnement mathématique.";
-    osText = `À la fin de la séance, l'élève doit être capable de résoudre avec précision 3 situations relatives à : ${topic}.`;
-    materielText = "Bâtonnets, bouliers, ardoises graduées, énoncés de problèmes sur affiches, manuel de mathématiques.";
-  } else if (discipline.includes("ESVS")) {
-    domainCode = "Sciences & Vie Sociale (ESVS)";
-    competenceBase = "Intégrer des démarches d'investigation, d'observation directe et de localisation dans son environnement proche.";
-    palierText = "Palier 1 : Découvrir et analyser des phénomènes naturels et sociaux du milieu.";
-    oaText = "OA 1 : Découvrir et expliquer les éléments fondamentaux du milieu.";
-    osText = `À la fin de la séance, l'élève doit être capable de décrire et d'expliquer ${topic} à partir d'observations directes et de schémas.`;
-    materielText = "Cartes murales, spécimens réels, loupes, schémas sur affiches, cahier d'expériences.";
-  }
+  let palierText = isPreschool
+    ? "Palier Préscolaire : Mobiliser les sens, le langage et la motricité à travers des jeux guidés."
+    : "Palier 2 : Utiliser les règles fondamentales de fonctionnement de la discipline.";
+
+  let oaText = isPreschool
+    ? "OA : Communiquer avec les autres, explorer l'environnement et exprimer ses émotions."
+    : "OA 1 : Identifier et employer les constituants clés du programme.";
+
+  let osText = isPreschool
+    ? `À la fin de l'activité, l'enfant doit être capable de participer au jeu nommé « ${topic} » et de verbaliser son action.`
+    : `À la fin de la séance, l'élève doit être capable d'identifier et d'employer correctement ${topic} dans 3 exercices d'application.`;
+
+  let materielText = isPreschool
+    ? "Pâte à modeler, images d'albums, objets réels de la classe, marionnettes, ardoises magiques, planchettes."
+    : "Tableau, ardoises, corpus rédigés sur bande-papier, manuel de l'élève, cahiers d'exercices.";
 
   // Construct 3-Column Deroulement Table Rows
-  const stepsData = [
+  const stepsData = isPreschool ? [
+    {
+      etape: "1. Regroupement & Motivation (4-5 min)",
+      enseignant: `Rassemble les enfants au coin regroupement. Entonne la comptine d'introduction. Présente le matériel attractif du jeu relatif à "${topic}".`,
+      eleves: "S'installent en cercle, chantent la comptine, touchent le matériel et écoutent l'histoire du jeu."
+    },
+    {
+      etape: "2. Manipulation Libre & Exploration (8-10 min)",
+      enseignant: `Laisse les enfants manipuler librement les objets. Pose des questions ouvertes ("Qu'est-ce que vous voyez ? Comment faire ?").`,
+      eleves: "Manipulent, trient, touchent, nomment les objets et essaient les règles du jeu spontanément."
+    },
+    {
+      etape: "3. Jeu Dirigé & Structuration (7-8 min)",
+      enseignant: `Fixe la règle du jeu nommé "${topic}". Guide l'action de chaque enfant à son tour. Valorise les réussites et corrige gentiment.`,
+      eleves: "Exécutent la tâche du jeu (nommer, placer, rouler, trier), répètent les mots nouveaux."
+    },
+    {
+      etape: "4. Évaluation & Rangement (3-4 min)",
+      enseignant: `Vérifie la réalisation individuelle ("Montre-moi ta création / dis le mot"). Invite les enfants au lavage des mains et au rangement.`,
+      eleves: "Montrent leur travail au groupe, puis rangent le matériel dans les bacs de la classe."
+    }
+  ] : [
     {
       etape: "1. Phase de Révision / Motivation (5-7 min)",
-      enseignant: `Demande de rappeler les notions pré-requises. Présente la situation-problème ou le prétexte relatif à "${topic}". Pose des questions d'orientation.`,
-      eleves: "Rappellent les connaissances antérieures. Observent le support présenté et émettent des hypothèses de travail."
+      enseignant: `Demande de rappeler les pré-requis. Présente la situation-problème ou le prétexte relatif à "${topic}". Pose des questions d'orientation.`,
+      eleves: "Rappellent les connaissances antérieures. Observent le support présenté et émettent des hypothèses."
     },
     {
       etape: "2. Phase de Découverte & Recherche (12-15 min)",
-      enseignant: `Organise les élèves en groupes de travail. Distribue le matériel et la consigne d'investigation sur "${topic}". Circule et apporte un étayage si besoin.`,
-      eleves: "Travaillent en petits groupes. Manipulent le matériel, analysent le corpus et notent leurs conclusions sur les ardoises ou feuilles de recherche."
+      enseignant: `Organise les élèves en groupes. Distribue le matériel et la consigne d'investigation sur "${topic}". Circule et étaye si besoin.`,
+      eleves: "Travaillent en petits groupes. Manipulent le matériel, analysent le corpus et notent leurs conclusions sur les ardoises."
     },
     {
-      etape: "3. Phase de Mise en commun & Synthèse (12-15 min)",
-      enseignant: `Fait passer un rapporteur par groupe. Anime la confrontation des résultats au tableau. Guide la formulation de la règle / trace écrite institutionnelle.`,
-      eleves: "Présentent leurs travaux. Comparent leurs réponses, corrigent leurs erreurs et recopient la synthèse validée dans leur cahier."
+      etape: "3. Phase de Synthèse & Trace Écrite (12-15 min)",
+      enseignant: `Fait passer un rapporteur par groupe. Anime la confrontation des résultats au tableau. Guide la formulation de la règle.`,
+      eleves: "Présentent leurs travaux, comparent leurs réponses et recopient la synthèse validée dans leur cahier."
     },
     {
       etape: "4. Phase d'Évaluation Spécifique (8-10 min)",
       enseignant: `Propose 2 à 3 exercices d'application individuelle sur ardoise ou cahier pour vérifier l'acquisition de l'OS (${topic}).`,
-      eleves: "Effectuent le travail individuel sans aide externe. Présentent leurs résultats pour contrôle immédiat."
+      eleves: "Effectuent le travail individuel sans aide externe. Présentent leurs résultats."
     }
   ];
 
@@ -1253,37 +1357,41 @@ ficheGeneratorForm.addEventListener('submit', (e) => {
     <div style="border-bottom: 2px solid var(--rouge); padding-bottom: 12px; margin-bottom: 20px; display: flex; justify-content: space-between; align-items: center;">
       <div>
         <h2 style="font-family: var(--f-display); font-size: 26px; font-weight: 700; color: var(--ink);">${topic}</h2>
-        <span style="font-family: var(--f-mono); font-size: 12px; color: var(--graphite); text-transform: uppercase;">Fiche de Préparation Pédagogique Offiicielle — APC Sénégal</span>
+        <span style="font-family: var(--f-mono); font-size: 12px; color: var(--graphite); text-transform: uppercase;">
+          Fiche de Préparation ${isPreschool ? 'PRÉSCOLAIRE (5 Domaines)' : 'ÉLÉMENTAIRE (APC)'} — Sénégal
+        </span>
       </div>
       <span class="fiche__stamp" style="font-size: 11px; padding: 6px 12px;">Guide Curriculaire<br>Conforme MEN</span>
     </div>
 
     <div class="apc-admin-grid">
-      <div><strong>RÉGION / IEF :</strong> ${school}</div>
-      <div><strong>CLASSE :</strong> ${level}</div>
-      <div><strong>EFFECTIF :</strong> 44 Élèves (22F / 22G)</div>
+      <div><strong>ÉTABLISSEMENT / IEF :</strong> ${school}</div>
+      <div><strong>SECTION / NIVEAU :</strong> ${level}</div>
+      <div><strong>EFFECTIF :</strong> 32 Enfants / Élèves</div>
       <div><strong>DATE &amp; DURÉE :</strong> ${todayStr} (${duration})</div>
-      <div><strong>ENSEIGNANT(E) :</strong> ${teacher}</div>
-      <div><strong>DISCIPLINE :</strong> ${discipline}</div>
-      <div><strong>DOMAINE :</strong> ${domainCode}</div>
-      <div><strong>STAGE :</strong> Étape ${level.includes('C') ? 'Élémentaire' : 'Préscolaire'}</div>
+      <div><strong>ÉDUCATEUR / ENSEIGNANT :</strong> ${teacher}</div>
+      <div><strong>DOMAINE OFFICIEL :</strong> ${discipline}</div>
+      <div><strong>CYCLE :</strong> ${isPreschool ? 'PRÉSCOLAIRE (3-6 ans)' : 'ÉLÉMENTAIRE (6-12 ans)'}</div>
+      <div><strong>STATUT :</strong> Validé Conforme</div>
     </div>
 
     <div style="margin-bottom: 20px; line-height: 1.5; font-size: 14.5px;">
       <p style="margin-bottom: 6px;"><strong>Compétence de base :</strong> ${competenceBase}</p>
       <p style="margin-bottom: 6px;"><strong>Palier :</strong> ${palierText}</p>
       <p style="margin-bottom: 6px;"><strong>Objective d'Apprentissage (OA) :</strong> ${oaText}</p>
-      <p style="margin-bottom: 6px; color: var(--rouge);"><strong>Objectif Spécifique (OS) :</strong> ${osText}</p>
-      <p style="margin-bottom: 6px;"><strong>Moyens &amp; Matériel :</strong> ${materielText}</p>
+      <p style="margin-bottom: 6px; color: var(--rouge);"><strong>Objectif Spécifique / Nom du Jeu (OS) :</strong> ${osText}</p>
+      <p style="margin-bottom: 6px;"><strong>Moyens &amp; Matériel Didactique :</strong> ${materielText}</p>
     </div>
 
-    <h3 style="font-family: var(--f-display); font-size: 18px; margin-top: 24px; color: var(--ink);">DÉROULEMENT DE LA SÉANCE (Démarche APC en 3 Colonnes)</h3>
+    <h3 style="font-family: var(--f-display); font-size: 18px; margin-top: 24px; color: var(--ink);">
+      DÉROULEMENT DE L'ACTIVITÉ (${isPreschool ? 'Démarche du Préscolaire' : 'Tableau APC 3 Colonnes'})
+    </h3>
     <table class="apc-table">
       <thead>
         <tr>
           <th style="width: 25%;">Étapes &amp; Durée</th>
-          <th style="width: 38%;">Activités de l'Enseignant(e)</th>
-          <th style="width: 37%;">Activités des Élèves</th>
+          <th style="width: 38%;">Activités de l'Enseignant(e) / Éducateur</th>
+          <th style="width: 37%;">Activités des Enfants / Élèves</th>
         </tr>
       </thead>
       <tbody>
@@ -1292,10 +1400,10 @@ ficheGeneratorForm.addEventListener('submit', (e) => {
     </table>
 
     <div class="apc-eval-box">
-      <h4>Évaluation Critériée &amp; Remédiation (Règle des 3/4)</h4>
-      <p><strong>Consigne :</strong> Réponds individuellement aux 3 consignes proposées au tableau sur ton cahier de devoir.</p>
-      <p style="margin-top: 6px;"><strong>Critères d'évaluation :</strong> 1. Pertinence (adéquation à la consigne : 50%) · 2. Cohérence (logique de la démarche : 30%) · 3. Correction de la langue (20%).</p>
-      <p style="margin-top: 6px; color: var(--graphite); font-style: italic;"><strong>Remédiation anticipée :</strong> En cas de confusion, regrouper les élèves en atelier guidé au tableau avec réutilisation du matériel concret.</p>
+      <h4>Évaluation &amp; Remédiation Pédagogique</h4>
+      <p><strong>Consigne :</strong> ${isPreschool ? "Vérification individuelle par observation directe du geste et de la verbalisation." : "Répondre aux consignes proposées au tableau sur le cahier."}</p>
+      <p style="margin-top: 6px;"><strong>Critères d'évaluation :</strong> 1. Réalisation de la tâche (50%) · 2. Autonomie &amp; Posture (30%) · 3. Verbalisation / Correction (20%).</p>
+      <p style="margin-top: 6px; color: var(--graphite); font-style: italic;"><strong>Remédiation anticipée :</strong> En cas de difficulté, étayage individualisé et reprise au coin jeu avec matériel adapté.</p>
     </div>
   `;
 
@@ -1310,7 +1418,8 @@ function copyFicheToClipboard() {
   });
 }
 
-// Initial preview render
+// Initial setup
+switchGenCycle('pre');
 renderFiche('gs');
 </script>
 </body>
