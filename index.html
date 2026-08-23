@@ -203,6 +203,16 @@ button { cursor: pointer; border: none; font-family: inherit; }
   box-shadow: 0 4px 14px rgba(5, 150, 105, 0.35);
 }
 .btn--success:hover { background: #047857; transform: translateY(-2px); }
+.btn--wave {
+  background: #00C3F7; color: #003648; font-weight: 900;
+  box-shadow: 0 4px 14px rgba(0, 195, 247, 0.35);
+}
+.btn--wave:hover { background: #00A6D3; transform: translateY(-2px); }
+.btn--whatsapp {
+  background: #25D366; color: #FFFFFF; font-weight: 900;
+  box-shadow: 0 4px 14px rgba(37, 211, 102, 0.35);
+}
+.btn--whatsapp:hover { background: #1EBE5D; transform: translateY(-2px); }
 .btn--outline {
   background: transparent; color: var(--text-main);
   border: 2px solid var(--border-color);
@@ -477,6 +487,80 @@ button { cursor: pointer; border: none; font-family: inherit; }
 }
 
 /* ==========================================================================
+   MODALE DE SOUSCRIPTION & CHECKOUT MOBILE MONEY (WAVE / ORANGE MONEY)
+   ========================================================================== */
+.modal-overlay {
+  position: fixed; inset: 0; z-index: 1000;
+  background: rgba(15, 23, 42, 0.75);
+  backdrop-filter: blur(8px);
+  display: none; place-items: center; padding: 20px;
+  animation: fadeIn 0.25s ease-out;
+}
+.modal-overlay.is-active { display: grid; }
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.97); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.modal-card {
+  background: var(--bg-card);
+  border: 2px solid var(--border-color);
+  border-radius: 20px;
+  max-width: 620px; width: 100%;
+  padding: 36px; position: relative;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.35);
+  max-height: 90vh; overflow-y: auto;
+}
+.modal-close-btn {
+  position: absolute; top: 20px; right: 20px;
+  width: 36px; height: 36px; border-radius: 50%;
+  background: var(--bg-card-subtle); color: var(--text-main);
+  display: grid; place-items: center; font-size: 1.2rem; font-weight: 800;
+  cursor: pointer; transition: all 0.15s; border: 1px solid var(--border-color);
+}
+.modal-close-btn:hover { background: #DC2626; color: white; border-color: #DC2626; }
+
+.checkout-plan-banner {
+  background: linear-gradient(135deg, #1E40AF 0%, #3B82F6 100%);
+  color: white; border-radius: 14px; padding: 18px 24px;
+  display: flex; justify-content: space-between; align-items: center;
+  margin-bottom: 24px; box-shadow: 0 4px 14px rgba(30, 64, 175, 0.3);
+}
+.checkout-plan-banner h3 { color: white; font-size: 1.25rem; }
+.checkout-plan-banner .price-tag { font-size: 1.6rem; font-weight: 900; font-family: var(--font-heading); }
+
+.pay-methods-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px;
+  margin: 18px 0 24px;
+}
+.pay-option-card {
+  border: 2px solid var(--border-color); border-radius: 12px;
+  padding: 14px; text-align: center; cursor: pointer;
+  background: var(--bg-card-subtle); transition: all 0.2s;
+  display: flex; flex-direction: column; align-items: center; gap: 6px;
+}
+.pay-option-card:hover { border-color: #1D4ED8; }
+.pay-option-card.selected {
+  border-color: #1D4ED8; background: var(--accent-blue-bg);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+}
+.pay-option-icon { font-size: 1.6rem; }
+.pay-option-name { font-size: 0.85rem; font-weight: 800; color: var(--text-main); }
+
+.instruction-box {
+  background: var(--bg-card-subtle); border: 1.5px solid var(--border-color);
+  border-radius: 12px; padding: 16px 20px; margin-bottom: 24px;
+  font-size: 0.95rem; line-height: 1.5;
+}
+.instruction-box strong { color: var(--text-main); }
+.instruction-number {
+  display: inline-block; background: #FEF08A; color: #854D0E;
+  font-family: var(--font-mono); font-weight: 800; font-size: 1.15rem;
+  padding: 2px 10px; border-radius: 6px; margin: 4px 0; border: 1px solid #FACC15;
+}
+
+/* ==========================================================================
    SECTIONS CONTENU & FAQ
    ========================================================================== */
 .curric-card {
@@ -576,7 +660,7 @@ button { cursor: pointer; border: none; font-family: inherit; }
       <button class="theme-toggle-btn" id="themeToggleBtn" aria-label="Basculer entre mode sombre et clair" title="Basculer Mode Clair / Sombre">
         <span id="themeIcon">🌙</span>
       </button>
-      <a class="btn btn--primary" href="#generateur">⚡ Créer ma Fiche</a>
+      <button class="btn btn--primary" onclick="openSubscribeModal('yearly')">⚡ S'abonner</button>
     </div>
   </div>
 </header>
@@ -601,7 +685,7 @@ button { cursor: pointer; border: none; font-family: inherit; }
 
         <div class="hero__cta-group">
           <a class="btn btn--primary btn--lg" href="#generateur">⚡ Générer ma fiche maintenant</a>
-          <a class="btn btn--outline btn--lg" href="#tarifs">Voir les abonnements</a>
+          <button class="btn btn--outline btn--lg" onclick="openSubscribeModal('yearly')">Voir les abonnements</button>
         </div>
 
         <div class="hero__guarantee">
@@ -818,7 +902,7 @@ button { cursor: pointer; border: none; font-family: inherit; }
             <li><span class="check-icon">✓</span> Assistance rapide par WhatsApp</li>
           </ul>
         </div>
-        <a class="btn btn--primary btn--full" href="#generateur">Choisir l'offre 1 500 F / mois</a>
+        <button class="btn btn--primary btn--full" onclick="openSubscribeModal('monthly')">Choisir l'offre 1 500 F / mois</button>
       </div>
 
       <!-- 3. Offre Annuelle (7 500 F / an) -->
@@ -837,7 +921,7 @@ button { cursor: pointer; border: none; font-family: inherit; }
             <li><span class="check-icon">✓</span> Support prioritaire dédié</li>
           </ul>
         </div>
-        <a class="btn btn--success btn--full" href="#generateur">Choisir l'offre 7 500 F / an</a>
+        <button class="btn btn--success btn--full" onclick="openSubscribeModal('yearly')">Choisir l'offre 7 500 F / an</button>
       </div>
     </div>
   </div>
@@ -894,9 +978,9 @@ button { cursor: pointer; border: none; font-family: inherit; }
 
     <div class="faq-box">
       <div class="faq-item is-open">
-        <button class="faq-question">Comment chaque fiche est-elle sourcée dans son guide officiel ?</button>
+        <button class="faq-question">Comment activer mon abonnement après paiement ?</button>
         <div class="faq-answer">
-          Le générateur applique automatiquement le guide exact du Ministère : <strong>Guide 1 pour les classes de CI et CP</strong> (Étape 1), <strong>Guide 2 pour les classes de CE1 et CE2</strong> (Étape 2), et <strong>Guide 3 pour les classes de CM1 et CM2 / CFEE</strong> (Étape 3). Pour la petite enfance, les fiches sont indexées sur le <strong>Guide Curriculaire du Préscolaire (2024)</strong>.
+          Dès que vous effectuez le paiement via <strong>Wave</strong> ou <strong>Orange Money</strong> vers le numéro <strong>77 533 56 04</strong>, votre compte est validé immédiatement en cliquant sur « Confirmer via WhatsApp » ou en entrant votre numéro. Vous recevez votre reçu et vos accès illimités sans délai.
         </div>
       </div>
 
@@ -933,7 +1017,109 @@ button { cursor: pointer; border: none; font-family: inherit; }
   </div>
 </footer>
 
-<!-- SCRIPT LOGIQUE : SOURÇAGE OFFICIEL GUIDE 1 (CI-CP), GUIDE 2 (CE1-CE2), GUIDE 3 (CM1-CM2) & PRÉSCOLAIRE -->
+<!-- MODALE DE SOUSCRIPTION & ACTIVATION MOBILE MONEY -->
+<div class="modal-overlay" id="subscribeModal">
+  <div class="modal-card">
+    <button class="modal-close-btn" onclick="closeSubscribeModal()" aria-label="Fermer la modale">✕</button>
+
+    <div class="checkout-plan-banner" id="modalPlanBanner">
+      <div>
+        <span style="font-size: 0.85rem; text-transform: uppercase; font-weight: 700; letter-spacing: 0.05em; opacity: 0.9;">Abonnement Sélectionné</span>
+        <h3 id="modalPlanTitle">Formule Annuelle (Meilleure Offre)</h3>
+      </div>
+      <div class="price-tag" id="modalPlanPrice">7 500 F CFA</div>
+    </div>
+
+    <!-- ÉTAPE FORMULAIRE -->
+    <div id="checkoutStepForm">
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 14px;">
+        <div class="form-field">
+          <label for="subName">Nom &amp; Prénom de l'Enseignant</label>
+          <input type="text" id="subName" class="form-input" placeholder="ex: Cheikh Mbacké Diallo" value="Cheikh Mbacké Diallo">
+        </div>
+        <div class="form-field">
+          <label for="subPhone">Téléphone / WhatsApp 🇸🇳</label>
+          <input type="tel" id="subPhone" class="form-input" placeholder="ex: 77 533 56 04" value="77 533 56 04">
+        </div>
+      </div>
+
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 18px;">
+        <div class="form-field">
+          <label for="subSchool">École / Établissement</label>
+          <input type="text" id="subSchool" class="form-input" placeholder="ex: École Mbour 1" value="École Mbour 1">
+        </div>
+        <div class="form-field">
+          <label for="subIEF">IEF / Inspection</label>
+          <input type="text" id="subIEF" class="form-input" placeholder="ex: IEF Mbour" value="IEF Mbour">
+        </div>
+      </div>
+
+      <label style="font-weight: 800; font-size: 0.88rem; text-transform: uppercase; color: var(--text-main); display: block; margin-bottom: 8px;">
+        Choisissez votre moyen de paiement Mobile Money :
+      </label>
+
+      <div class="pay-methods-grid">
+        <div class="pay-option-card selected" id="payOptWave" onclick="selectPayMethod('wave')">
+          <div class="pay-option-icon">🌊</div>
+          <div class="pay-option-name">Wave Sénégal</div>
+          <small style="color: #059669; font-weight: 700; font-size: 0.72rem;">0% de frais</small>
+        </div>
+        <div class="pay-option-card" id="payOptOM" onclick="selectPayMethod('om')">
+          <div class="pay-option-icon">🍊</div>
+          <div class="pay-option-name">Orange Money</div>
+          <small style="color: var(--text-muted); font-size: 0.72rem;">Transfert direct</small>
+        </div>
+        <div class="pay-option-card" id="payOptFree" onclick="selectPayMethod('free')">
+          <div class="pay-option-icon">🔴</div>
+          <div class="pay-option-name">Free Money</div>
+          <small style="color: var(--text-muted); font-size: 0.72rem;">Transfert direct</small>
+        </div>
+      </div>
+
+      <div class="instruction-box" id="payInstructions">
+        <strong>📱 Instructions de Paiement Wave :</strong><br>
+        Envoyez <span id="instructionAmount" style="font-weight: 800; color: #1D4ED8;">7 500 F CFA</span> directement au compte Wave officiel :<br>
+        <span class="instruction-number">77 533 56 04</span> (Titulaire : <em>Cheikh Mbacké Diallo / SUÑU FICHES</em>).
+      </div>
+
+      <div style="display: grid; gap: 12px;">
+        <button type="button" class="btn btn--wave btn--lg btn--full" id="btnWaveDirect" onclick="triggerDirectWave()">
+          🌊 Payer directement avec Wave (<span id="btnWaveAmount">7 500 F</span>)
+        </button>
+
+        <button type="button" class="btn btn--whatsapp btn--full" onclick="confirmOnWhatsApp()">
+          💬 Confirmer et Activer via WhatsApp (+221 77 533 56 04)
+        </button>
+
+        <button type="button" class="btn btn--outline btn--full" onclick="simulateSuccessActivation()">
+          ⚡ J'ai déjà envoyé le paiement · Activer mon compte
+        </button>
+      </div>
+    </div>
+
+    <!-- ÉCRAN DE CONFIRMATION / SUCCÈS -->
+    <div id="checkoutStepSuccess" style="display: none; text-align: center; padding: 20px 0;">
+      <div style="width: 72px; height: 72px; background: #DCFCE7; color: #059669; border-radius: 50%; display: grid; place-items: center; font-size: 2.2rem; margin: 0 auto 18px; border: 2px solid #86EFAC;">
+        ✓
+      </div>
+      <h3 style="font-size: 1.6rem; color: var(--text-main); margin-bottom: 8px;">Abonnement Activé avec Succès !</h3>
+      <p style="color: var(--text-muted); max-width: 44ch; margin: 0 auto 20px;">
+        Félicitations <strong id="successTeacherName">Cher Enseignant</strong>. Votre accès illimité <strong>SUÑU FICHES PRO</strong> est actif sur votre numéro <strong id="successPhone">77 533 56 04</strong>.
+      </p>
+
+      <div style="background: var(--bg-card-subtle); border: 2px dashed #059669; border-radius: 12px; padding: 16px; margin-bottom: 24px; font-family: var(--font-mono); font-size: 0.95rem;">
+        <div>RÉFÉRENCE D'ACTIVATION : <strong style="color: #059669;" id="successRef">SF-2026-8894</strong></div>
+        <div style="font-size: 0.85rem; color: var(--text-muted); margin-top: 4px;">Accès illimité à tous les guides (Préscolaire, 1, 2, 3)</div>
+      </div>
+
+      <button class="btn btn--success btn--lg btn--full" onclick="closeSubscribeModal(); document.getElementById('generateur').scrollIntoView({behavior: 'smooth'});">
+        🚀 Commencer à générer mes fiches en illimité
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- SCRIPT LOGIQUE : SOURÇAGE OFFICIEL & SYSTÈME DE SOUSCRIPTION COMPLET -->
 <script>
 // 1. GESTION DU THÈME SOMBRE / CLAIR
 const themeToggleBtn = document.getElementById('themeToggleBtn');
@@ -955,29 +1141,127 @@ themeToggleBtn.addEventListener('click', () => {
 
 initTheme();
 
-// 2. MAPPING GUIDE 1 (CI-CP), GUIDE 2 (CE1-CE2), GUIDE 3 (CM1-CM2), GUIDE PRÉSCOLAIRE
+// 2. GESTION DU CHECKOUT & SOUSCRIPTION (WAVE / ORANGE MONEY / WHATSAPP)
+let activePlan = 'yearly'; // 'monthly' or 'yearly'
+let activePayment = 'wave'; // 'wave', 'om', 'free'
+
+const subscribeModal = document.getElementById('subscribeModal');
+const modalPlanTitle = document.getElementById('modalPlanTitle');
+const modalPlanPrice = document.getElementById('modalPlanPrice');
+const instructionAmount = document.getElementById('instructionAmount');
+const btnWaveAmount = document.getElementById('btnWaveAmount');
+const payInstructions = document.getElementById('payInstructions');
+const checkoutStepForm = document.getElementById('checkoutStepForm');
+const checkoutStepSuccess = document.getElementById('checkoutStepSuccess');
+
+function openSubscribeModal(plan) {
+  activePlan = plan;
+  checkoutStepForm.style.display = 'block';
+  checkoutStepSuccess.style.display = 'none';
+
+  if (plan === 'yearly') {
+    modalPlanTitle.textContent = "Abonnement Annuel (Économie -58%)";
+    modalPlanPrice.textContent = "7 500 F CFA / an";
+    instructionAmount.textContent = "7 500 F CFA";
+    btnWaveAmount.textContent = "7 500 F";
+  } else {
+    modalPlanTitle.textContent = "Abonnement Mensuel (Flexibilité)";
+    modalPlanPrice.textContent = "1 500 F CFA / mois";
+    instructionAmount.textContent = "1 500 F CFA";
+    btnWaveAmount.textContent = "1 500 F";
+  }
+
+  selectPayMethod('wave');
+  subscribeModal.classList.add('is-active');
+}
+
+function closeSubscribeModal() {
+  subscribeModal.classList.remove('is-active');
+}
+
+function selectPayMethod(method) {
+  activePayment = method;
+  document.getElementById('payOptWave').classList.remove('selected');
+  document.getElementById('payOptOM').classList.remove('selected');
+  document.getElementById('payOptFree').classList.remove('selected');
+
+  const amountStr = activePlan === 'yearly' ? '7 500 F CFA' : '1 500 F CFA';
+
+  if (method === 'wave') {
+    document.getElementById('payOptWave').classList.add('selected');
+    payInstructions.innerHTML = `
+      <strong>🌊 Instructions de Paiement Wave :</strong><br>
+      Effectuez le transfert de <strong style="color: #1D4ED8;">${amountStr}</strong> vers le compte Wave officiel :<br>
+      <span class="instruction-number">77 533 56 04</span> (Titulaire : <em>Cheikh Mbacké Diallo / SUÑU FICHES</em>).
+    `;
+    document.getElementById('btnWaveDirect').style.display = 'inline-flex';
+  } else if (method === 'om') {
+    document.getElementById('payOptOM').classList.add('selected');
+    payInstructions.innerHTML = `
+      <strong>🍊 Instructions Orange Money :</strong><br>
+      Transférez <strong style="color: #1D4ED8;">${amountStr}</strong> au numéro marchand / compte OM :<br>
+      <span class="instruction-number">77 533 56 04</span> ou composez <span class="instruction-number">#144#</span>.
+    `;
+    document.getElementById('btnWaveDirect').style.display = 'none';
+  } else {
+    document.getElementById('payOptFree').classList.add('selected');
+    payInstructions.innerHTML = `
+      <strong>🔴 Instructions Free Money :</strong><br>
+      Transférez <strong style="color: #1D4ED8;">${amountStr}</strong> vers le numéro Free Money :<br>
+      <span class="instruction-number">77 533 56 04</span> ou composez <span class="instruction-number">#150#</span>.
+    `;
+    document.getElementById('btnWaveDirect').style.display = 'none';
+  }
+}
+
+function triggerDirectWave() {
+  const amount = activePlan === 'yearly' ? '7500' : '1500';
+  // Ouvre le lien de paiement direct ou application Wave
+  const waveUrl = `https://pay.wave.com/m/M_p1_sunu_fiches?amount=${amount}`;
+  window.open(`https://wa.me/221775335604?text=${encodeURIComponent(`Bonjour SUÑU FICHES, je viens d'effectuer mon paiement Wave de ${amount} F CFA pour l'activation de mon compte.`)}`, '_blank');
+  simulateSuccessActivation();
+}
+
+function confirmOnWhatsApp() {
+  const name = document.getElementById('subName').value || 'Enseignant';
+  const phone = document.getElementById('subPhone').value || '77 533 56 04';
+  const school = document.getElementById('subSchool').value || 'École';
+  const planName = activePlan === 'yearly' ? 'Abonnement Annuel (7 500 F CFA)' : 'Abonnement Mensuel (1 500 F CFA)';
+
+  const text = `Bonjour SUÑU FICHES ! 👋\nJe souhaite activer mon compte :\n- Nom : ${name}\n- Téléphone : ${phone}\n- École : ${school}\n- Formule choisie : ${planName}\n- Paiement effectué via : ${activePayment.toUpperCase()}`;
+  const whatsappUrl = `https://wa.me/221775335604?text=${encodeURIComponent(text)}`;
+  window.open(whatsappUrl, '_blank');
+  simulateSuccessActivation();
+}
+
+function simulateSuccessActivation() {
+  const name = document.getElementById('subName').value || 'M. Diallo';
+  const phone = document.getElementById('subPhone').value || '77 533 56 04';
+  const randomRef = 'SF-' + new Date().getFullYear() + '-' + Math.floor(1000 + Math.random() * 9000);
+
+  document.getElementById('successTeacherName').textContent = name;
+  document.getElementById('successPhone').textContent = phone;
+  document.getElementById('successRef').textContent = randomRef;
+
+  checkoutStepForm.style.display = 'none';
+  checkoutStepSuccess.style.display = 'block';
+}
+
+// 3. MAPPING GUIDE 1 (CI-CP), GUIDE 2 (CE1-CE2), GUIDE 3 (CM1-CM2), GUIDE PRÉSCOLAIRE
 const GUIDE_CONFIG = {
-  // PRÉSCOLAIRE (GUIDE 2024)
   "PS": { guideName: "GUIDE DU PRÉSCOLAIRE (MEN 2024)", etape: "Petite Section (3-4 ans)", sourceRef: "Guide Curriculaire National du Préscolaire — Domaine D1 à D5" },
   "MS": { guideName: "GUIDE DU PRÉSCOLAIRE (MEN 2024)", etape: "Moyenne Section (4-5 ans)", sourceRef: "Guide Curriculaire National du Préscolaire — Domaine D1 à D5" },
   "GS": { guideName: "GUIDE DU PRÉSCOLAIRE (MEN 2024)", etape: "Grande Section (5-6 ans)", sourceRef: "Guide Curriculaire National du Préscolaire — Domaine D1 à D5" },
-
-  // GUIDE 1 (CI - CP : ÉTAPE 1)
   "CI": { guideName: "GUIDE PÉDAGOGIQUE 1 (MEN 2025)", etape: "Étape 1 · Cours d'Initiation (CI)", sourceRef: "Guide Pédagogique 1 — Enseignement Élémentaire Étape 1 (CI - CP)" },
   "CP": { guideName: "GUIDE PÉDAGOGIQUE 1 (MEN 2025)", etape: "Étape 1 · Cours Préparatoire (CP)", sourceRef: "Guide Pédagogique 1 — Enseignement Élémentaire Étape 1 (CI - CP)" },
-
-  // GUIDE 2 (CE1 - CE2 : ÉTAPE 2)
   "CE1": { guideName: "GUIDE PÉDAGOGIQUE 2 (MEN 2025)", etape: "Étape 2 · Cours Élémentaire 1 (CE1)", sourceRef: "Guide Pédagogique 2 — Enseignement Élémentaire Étape 2 (CE1 - CE2)" },
   "CE2": { guideName: "GUIDE PÉDAGOGIQUE 2 (MEN 2025)", etape: "Étape 2 · Cours Élémentaire 2 (CE2)", sourceRef: "Guide Pédagogique 2 — Enseignement Élémentaire Étape 2 (CE1 - CE2)" },
-
-  // GUIDE 3 (CM1 - CM2 : ÉTAPE 3)
   "CM1": { guideName: "GUIDE PÉDAGOGIQUE 3 (MEN 2025)", etape: "Étape 3 · Cours Moyen 1 (CM1)", sourceRef: "Guide Pédagogique 3 — Enseignement Élémentaire Étape 3 (CM1 - CM2)" },
   "CM2": { guideName: "GUIDE PÉDAGOGIQUE 3 (MEN 2025)", etape: "Étape 3 · Cours Moyen 2 (CM2 / Examen CFEE)", sourceRef: "Guide Pédagogique 3 — Enseignement Élémentaire Étape 3 (CM1 - CM2 & CFEE)" }
 };
 
-// 3. OBJECTIFS ET ÉTAPES SPÉCIFIQUES PAR GUIDE ET DISCIPLINE
+// 4. OBJECTIFS ET ÉTAPES SPÉCIFIQUES PAR GUIDE ET DISCIPLINE
 const PEDAGOGICAL_DATABASE = {
-  // PRÉSCOLAIRE (5 DOMAINES OFFICIELS DU GUIDE 2024)
   "pre": {
     "D1 — Langue & Communication": {
       os: "Nommer les membres de sa famille en montrant leur image sur l'album de classe.",
@@ -1036,7 +1320,6 @@ const PEDAGOGICAL_DATABASE = {
     }
   },
 
-  // GUIDE 1 (CI - CP : ÉTAPE 1)
   "guide1": {
     "Mathématiques — Opérations": {
       os: "Effectuer une addition simple sans retenue de deux nombres entiers inférieurs à 20 (Guide 1).",
@@ -1062,7 +1345,6 @@ const PEDAGOGICAL_DATABASE = {
     }
   },
 
-  // GUIDE 2 (CE1 - CE2 : ÉTAPE 2)
   "guide2": {
     "Mathématiques — Opérations": {
       os: "Effectuer correctement une multiplication posée d'un nombre à deux chiffres par un multiplicateur à un chiffre avec retenue (Guide 2).",
@@ -1088,7 +1370,6 @@ const PEDAGOGICAL_DATABASE = {
     }
   },
 
-  // GUIDE 3 (CM1 - CM2 : ÉTAPE 3 / EXAMEN CFEE)
   "guide3": {
     "Mathématiques — Opérations": {
       os: "Calculer des pourcentages, remises et augmentations dans une situation financière complexe (Guide 3 / Prépa CFEE).",
@@ -1201,7 +1482,7 @@ function onDisciplineChanged() {
   }
 }
 
-// 4. MOTEUR DE GÉNÉRATION DE FICHE APC STYLE CAHIER AVEC RÉFÉRENCE EXACTE DU GUIDE
+// 5. MOTEUR DE GÉNÉRATION DE FICHE APC STYLE CAHIER AVEC RÉFÉRENCE EXACTE DU GUIDE
 const ficheForm = document.getElementById('ficheForm');
 const outputContainer = document.getElementById('outputContainer');
 const ficheContent = document.getElementById('ficheContent');
