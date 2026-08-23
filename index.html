@@ -1,570 +1,699 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" data-theme="light">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>SUÑU FICHES — Le Générateur N°1 de Fiches Pédagogiques au Sénégal</title>
-<meta name="description" content="Plateforme de préparation de fiches pédagogiques pour le préscolaire (Guides 2024) et l'élémentaire sénégalais (Guides 2025). 100% conforme aux programmes du Ministère. Export PDF & paiement Wave / Orange Money.">
+<title>SUÑU FICHES — Plateforme N°1 de Fiches Pédagogiques au Sénégal</title>
+<meta name="description" content="Générateur professionnel de fiches pédagogiques APC conformes aux guides officiels du MEN sénégalais (Préscolaire 2024 & Élémentaire 2025). Cahier de préparation en encre bleu et rouge, export PDF, mode sombre/clair.">
+
+<!-- Google Fonts: Inter pour l'interface pro + Kalam & Caveat pour l'écriture stylo plume/bille authentique -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Karla:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Inter:wght@400;500;600;700;800&family=Kalam:wght@400;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+
 <style>
+/* ==========================================================================
+   DESIGN SYSTEM & CSS VARIABLES (LIGHT / DARK THEMES)
+   ========================================================================== */
 :root {
-  --ink: #0F172A;
-  --ink-soft: #334155;
-  --paper: #FAF8F5;
-  --paper-card: #FFFFFF;
-  --seyes: #CBD3EC;
-  --rouge: #E11D48;
-  --rouge-dark: #BE123C;
-  --vert: #059669;
-  --vert-light: #D1FAE5;
-  --gold: #D97706;
-  --graphite: #64748B;
-  --hairline: #E2E8F0;
-  --accent-bg: #F1F5F9;
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-heading: 'Plus Jakarta Sans', var(--font-sans);
+  --font-hand: 'Kalam', 'Caveat', cursive, sans-serif;
+  --font-mono: 'Space Mono', monospace;
 
-  --f-display: "Fraunces", Georgia, serif;
-  --f-body: "Karla", system-ui, -apple-system, sans-serif;
-  --f-mono: "Space Mono", ui-monospace, monospace;
+  /* Couleurs Principales Mode Clair */
+  --bg-body: #F8FAFC;
+  --bg-card: #FFFFFF;
+  --bg-card-subtle: #F1F5F9;
+  --bg-nav: rgba(255, 255, 255, 0.92);
+  --border-color: #E2E8F0;
+  --border-focus: #2563EB;
 
-  --wrap: 1200px;
-  --r: 16px;
-  --shadow-sm: 0 2px 4px rgba(15, 23, 42, 0.05);
-  --shadow-md: 0 10px 25px -5px rgba(15, 23, 42, 0.08);
-  --shadow-lg: 0 20px 35px -10px rgba(15, 23, 42, 0.12);
+  --text-main: #0F172A;
+  --text-muted: #475569;
+  --text-light: #64748B;
+
+  --primary: #1E40AF;
+  --primary-hover: #1D4ED8;
+  --accent-red: #DC2626;
+  --accent-green: #059669;
+  --accent-green-bg: #ECFDF5;
+  --accent-red-bg: #FEF2F2;
+
+  /* Cahier de Préparation / Fiche (Papier Blanc Réglé) */
+  --cahier-bg: #FFFFFF;
+  --cahier-line: #E2E8F0;
+  --cahier-margin: #EF4444;
+  --stylo-bleu: #172554;      /* Encre bleu Bic authentique */
+  --stylo-rouge: #B91C1C;     /* Encre rouge correction/titre */
+  --cahier-shadow: 0 12px 32px -4px rgba(15, 23, 42, 0.12), 0 4px 12px -2px rgba(15, 23, 42, 0.08);
+
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.06);
+  --shadow-md: 0 4px 14px rgba(0,0,0,0.07);
+  --shadow-lg: 0 10px 30px rgba(0,0,0,0.1);
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+  --max-w: 1200px;
 }
 
+[data-theme="dark"] {
+  --bg-body: #0B0F19;
+  --bg-card: #131B2E;
+  --bg-card-subtle: #1E293B;
+  --bg-nav: rgba(11, 15, 25, 0.94);
+  --border-color: #232F47;
+  --border-focus: #3B82F6;
+
+  --text-main: #F8FAFC;
+  --text-muted: #94A3B8;
+  --text-light: #64748B;
+
+  --primary: #3B82F6;
+  --primary-hover: #60A5FA;
+  --accent-red: #F87171;
+  --accent-green: #10B981;
+  --accent-green-bg: #064E3B;
+  --accent-red-bg: #450A0A;
+
+  /* Le cahier reste une feuille blanche authentique de haute lisibilité */
+  --cahier-bg: #FFFFFF;
+  --cahier-line: #E2E8F0;
+  --cahier-margin: #EF4444;
+  --stylo-bleu: #172554;
+  --stylo-rouge: #B91C1C;
+  --cahier-shadow: 0 14px 40px rgba(0, 0, 0, 0.6);
+
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.3);
+  --shadow-md: 0 4px 16px rgba(0,0,0,0.4);
+  --shadow-lg: 0 12px 32px rgba(0,0,0,0.5);
+}
+
+/* ==========================================================================
+   RESET & TYPOGRAPHY
+   ========================================================================== */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+html { scroll-behavior: smooth; font-size: 16px; -webkit-text-size-adjust: 100%; }
 body {
-  font-family: var(--f-body);
-  background: var(--paper);
-  color: var(--ink);
-  line-height: 1.6;
-  font-size: 16.5px;
+  font-family: var(--font-sans);
+  background-color: var(--bg-body);
+  color: var(--text-main);
+  line-height: 1.65;
+  transition: background-color 0.25s ease, color 0.25s ease;
   overflow-x: hidden;
 }
 
-img, svg { display: block; max-width: 100%; }
+.container { max-width: var(--max-w); margin: 0 auto; padding: 0 24px; }
+.section { padding: 80px 0; }
+.section--tight { padding: 48px 0; }
+
+h1, h2, h3, h4 {
+  font-family: var(--font-heading);
+  color: var(--text-main);
+  line-height: 1.25;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+p { color: var(--text-muted); font-size: 1.05rem; }
 a { color: inherit; text-decoration: none; }
-button, select, input, textarea { font: inherit; }
-button { cursor: pointer; border: none; background: none; }
-:focus-visible { outline: 3px solid var(--rouge); outline-offset: 3px; border-radius: 6px; }
+button { cursor: pointer; border: none; font-family: inherit; }
 
-.wrap { width: 100%; max-width: var(--wrap); margin: 0 auto; padding: 0 24px; }
-.section { padding: 90px 0; }
-.section--tight { padding: 60px 0; }
-
-/* Typography Helpers */
-.display {
-  font-family: var(--f-display);
-  font-variation-settings: "SOFT" 0, "WONK" 1;
-  font-weight: 700;
-  line-height: 1.1;
-  letter-spacing: -.02em;
+/* Badge & Étiquettes */
+.badge {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-size: 0.8rem; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.06em; padding: 6px 14px; border-radius: 999px;
 }
-.eyebrow {
-  font-family: var(--f-mono);
-  font-size: 12px;
-  letter-spacing: .15em;
-  text-transform: uppercase;
-  color: var(--rouge);
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  font-weight: 700;
-}
-.eyebrow::after { content: ""; width: 40px; height: 1.5px; background: var(--rouge); opacity: .4; }
+.badge--primary { background: #DBEAFE; color: #1D4ED8; }
+.badge--green { background: var(--accent-green-bg); color: var(--accent-green); }
+.badge--red { background: var(--accent-red-bg); color: var(--accent-red); }
 
-/* Ruled paper texture */
-.ruled {
-  background-color: var(--paper-card);
-  background-image: repeating-linear-gradient(
-    to bottom,
-    transparent 0,
-    transparent 27px,
-    var(--seyes) 27px,
-    var(--seyes) 28px
-  );
-  background-position: 0 8px;
-}
-
-/* Header & Mobile Navigation */
-.hdr {
+/* ==========================================================================
+   HEADER & NAVIGATION PRO
+   ========================================================================== */
+.header {
   position: sticky; top: 0; z-index: 100;
-  background: rgba(250, 248, 245, 0.94);
-  backdrop-filter: blur(14px);
-  border-bottom: 1px solid var(--hairline);
-  transition: box-shadow .3s;
+  background: var(--bg-nav);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border-color);
+  transition: all 0.2s;
 }
-.hdr.is-scrolled { box-shadow: var(--shadow-sm); }
-.hdr__in { display: flex; align-items: center; justify-content: space-between; gap: 20px; height: 74px; }
-.logo { display: flex; align-items: center; gap: 12px; font-family: var(--f-display); font-weight: 700; font-size: 20px; letter-spacing: -.01em; color: var(--ink); }
-.logo small { font-family: var(--f-mono); font-size: 10px; letter-spacing: .14em; color: var(--rouge); font-weight: 700; display: block; margin-top: -2px; }
-
-.nav { display: flex; align-items: center; gap: 32px; font-size: 15px; font-weight: 600; }
-.nav a { color: var(--ink-soft); transition: color .2s; position: relative; }
-.nav a:hover { color: var(--rouge); }
-
-.hdr__actions { display: flex; align-items: center; gap: 14px; }
-.hamburger { display: none; flex-direction: column; justify-content: space-between; width: 28px; height: 20px; padding: 0; cursor: pointer; z-index: 110; }
-.hamburger span { width: 100%; height: 2.5px; background: var(--ink); border-radius: 2px; transition: transform .3s, opacity .3s; }
-.hamburger.is-active span:nth-child(1) { transform: translateY(8.5px) rotate(45deg); }
-.hamburger.is-active span:nth-child(2) { opacity: 0; }
-.hamburger.is-active span:nth-child(3) { transform: translateY(-8.5px) rotate(-45deg); }
-
-.mobile-drawer {
-  position: fixed; inset: 0; background: var(--paper); z-index: 99;
-  display: flex; flex-direction: column; padding: 100px 30px 40px;
-  transform: translateX(100%); transition: transform .35s cubic-bezier(0.16, 1, 0.3, 1);
+.header__inner {
+  display: flex; align-items: center; justify-content: space-between;
+  height: 72px; gap: 20px;
 }
-.mobile-drawer.is-open { transform: translateX(0); }
-.mobile-drawer nav { display: flex; flex-direction: column; gap: 24px; font-size: 20px; font-weight: 700; }
-.mobile-drawer nav a { color: var(--ink); border-bottom: 1px solid var(--hairline); padding-bottom: 12px; }
+.logo {
+  display: flex; align-items: center; gap: 12px;
+  font-family: var(--font-heading); font-weight: 800; font-size: 1.25rem;
+  color: var(--text-main);
+}
+.logo-icon {
+  width: 36px; height: 36px; border-radius: 10px;
+  background: linear-gradient(135deg, #1E40AF 0%, #3B82F6 100%);
+  display: grid; place-items: center; color: white; font-weight: 800; font-size: 1.1rem;
+}
 
-/* Buttons */
+.nav { display: flex; align-items: center; gap: 28px; }
+.nav a {
+  font-weight: 600; font-size: 0.95rem; color: var(--text-muted);
+  transition: color 0.15s;
+}
+.nav a:hover { color: var(--primary); }
+
+.header__actions { display: flex; align-items: center; gap: 14px; }
+
+/* Bouton Thème Sombre/Clair */
+.theme-toggle-btn {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 42px; height: 42px; border-radius: 10px;
+  background: var(--bg-card-subtle); color: var(--text-main);
+  border: 1px solid var(--border-color); font-size: 1.2rem;
+  transition: all 0.2s;
+}
+.theme-toggle-btn:hover { background: var(--border-color); transform: scale(1.05); }
+
+/* Boutons CTA */
 .btn {
-  display: inline-flex; align-items: center; justify-content: center; gap: 10px;
-  font-family: var(--f-body); font-weight: 700; font-size: 15px;
-  padding: 13px 24px; border-radius: 12px; border: 1.5px solid transparent;
-  cursor: pointer; transition: all .2s ease; text-align: center; white-space: nowrap;
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  font-weight: 700; font-size: 0.95rem; padding: 12px 22px; border-radius: 10px;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1); white-space: nowrap;
 }
-.btn--primary { background: var(--rouge); color: #fff; box-shadow: 0 4px 14px rgba(225, 29, 72, 0.3); }
-.btn--primary:hover { background: var(--rouge-dark); transform: translateY(-2px); box-shadow: 0 6px 20px rgba(225, 29, 72, 0.4); }
-.btn--primary:active { transform: translateY(0); }
-.btn--secondary { background: var(--ink); color: #fff; box-shadow: var(--shadow-sm); }
-.btn--secondary:hover { background: #1E293B; transform: translateY(-2px); }
-.btn--ghost { border-color: var(--ink); color: var(--ink); background: transparent; }
-.btn--ghost:hover { background: var(--ink); color: #fff; }
-.btn--vert { background: var(--vert); color: #fff; box-shadow: 0 4px 14px rgba(5, 150, 105, 0.3); }
-.btn--vert:hover { background: #047857; transform: translateY(-2px); }
-.btn--sm { padding: 9px 18px; font-size: 14px; border-radius: 10px; }
-.btn--lg { padding: 16px 32px; font-size: 17px; border-radius: 14px; }
+.btn--primary {
+  background: #1D4ED8; color: #FFFFFF;
+  box-shadow: 0 4px 14px rgba(29, 78, 216, 0.3);
+}
+.btn--primary:hover { background: #1E40AF; transform: translateY(-2px); box-shadow: 0 6px 20px rgba(29, 78, 216, 0.4); }
+.btn--success {
+  background: var(--accent-green); color: #FFFFFF;
+  box-shadow: 0 4px 14px rgba(5, 150, 105, 0.3);
+}
+.btn--success:hover { background: #047857; transform: translateY(-2px); }
+.btn--outline {
+  background: transparent; color: var(--text-main);
+  border: 1.5px solid var(--border-color);
+}
+.btn--outline:hover { background: var(--bg-card-subtle); border-color: var(--text-muted); }
+.btn--lg { padding: 16px 28px; font-size: 1.05rem; border-radius: 12px; }
 .btn--full { width: 100%; }
 
-/* Badge & Pills */
-.badge { display: inline-flex; align-items: center; gap: 6px; font-family: var(--f-mono); font-size: 11px; padding: 4px 10px; border-radius: 20px; font-weight: 700; text-transform: uppercase; }
-.badge--rouge { background: #FFE4E6; color: var(--rouge); }
-.badge--vert { background: var(--vert-light); color: var(--vert); }
-.badge--ink { background: #E2E8F0; color: var(--ink); }
+/* ==========================================================================
+   HERO SECTION
+   ========================================================================== */
+.hero {
+  padding: 60px 0 80px;
+  background: radial-gradient(circle at top right, rgba(37, 99, 235, 0.06) 0%, transparent 60%);
+}
+.hero__grid {
+  display: grid; grid-template-columns: 1fr 1.05fr; gap: 48px; align-items: center;
+}
+.hero__badge-row { margin-bottom: 20px; display: flex; flex-wrap: wrap; gap: 10px; }
+.hero h1 {
+  font-size: clamp(2.3rem, 4vw, 3.4rem);
+  line-height: 1.15; margin-bottom: 20px;
+}
+.hero h1 em {
+  font-style: normal; color: #1D4ED8;
+  background: linear-gradient(120deg, rgba(37, 99, 235, 0.12) 0%, rgba(37, 99, 235, 0.25) 100%);
+  padding: 2px 8px; border-radius: 6px;
+}
+.hero__desc {
+  font-size: 1.15rem; line-height: 1.65; margin-bottom: 32px;
+  max-width: 54ch; color: var(--text-muted);
+}
+.hero__cta-group { display: flex; flex-wrap: wrap; gap: 14px; margin-bottom: 36px; }
+.hero__guarantee {
+  display: flex; align-items: center; gap: 16px; font-size: 0.9rem;
+  color: var(--text-light); font-weight: 600;
+}
+.hero__guarantee-dot {
+  width: 10px; height: 10px; border-radius: 50%;
+  background: #10B981; box-shadow: 0 0 10px #10B981;
+}
 
-/* Cycle Switcher Tabs */
-.cycle-toggle-bar {
-  display: flex; justify-content: center; gap: 12px; margin-bottom: 24px;
+/* ==========================================================================
+   LE CAHIER DE PRÉPARATION AUTHENTIQUE (STYLO BLEU & ROUGE SUR PAPIER RÉGLÉ)
+   ========================================================================== */
+.cahier-preview {
+  background: var(--cahier-bg);
+  color: var(--stylo-bleu);
+  border-radius: var(--radius-md);
+  box-shadow: var(--cahier-shadow);
+  border: 1px solid #CBD5E1;
+  position: relative;
+  overflow: hidden;
 }
-.cycle-btn {
-  padding: 12px 24px; border-radius: 12px; font-family: var(--f-body); font-weight: 700; font-size: 16px;
-  border: 2px solid var(--hairline); background: var(--paper-card); color: var(--ink-soft); transition: all .2s;
-}
-.cycle-btn.active-pre { background: var(--vert); color: #fff; border-color: var(--vert); box-shadow: 0 4px 12px rgba(5, 150, 105, 0.3); }
-.cycle-btn.active-elem { background: var(--ink); color: #fff; border-color: var(--ink); box-shadow: 0 4px 12px rgba(15, 23, 42, 0.3); }
 
-/* Hero Section */
-.hero { padding: 60px 0 80px; position: relative; overflow: hidden; }
-.hero__switcher {
-  display: inline-flex; background: var(--paper-card); border: 1px solid var(--hairline);
-  padding: 5px; border-radius: 40px; margin-bottom: 24px; box-shadow: var(--shadow-sm);
+/* Lignes horizontales d'écriture Séyès / cahier d'écolier */
+.cahier-paper {
+  padding: 32px 32px 32px 64px;
+  position: relative;
+  background-color: #FFFFFF;
+  background-image: repeating-linear-gradient(
+    to bottom,
+    transparent 0px,
+    transparent 27px,
+    var(--cahier-line) 27px,
+    var(--cahier-line) 28px
+  );
+  background-position: 0 12px;
+  line-height: 28px;
 }
-.hero-tab {
-  padding: 8px 18px; border-radius: 30px; font-size: 13.5px; font-weight: 700; color: var(--graphite);
-  transition: all .2s; cursor: pointer; display: flex; align-items: center; gap: 7px;
-}
-.hero-tab.active { background: var(--ink); color: #fff; box-shadow: var(--shadow-sm); }
 
-.hero__grid { display: grid; grid-template-columns: 1fr 1.05fr; gap: 48px; align-items: center; }
-.hero h1 { font-size: clamp(38px, 4.8vw, 58px); margin: 16px 0 22px; color: var(--ink); }
-.hero h1 em { font-style: normal; color: var(--rouge); position: relative; display: inline-block; }
-.hero h1 em::after {
-  content: ""; position: absolute; left: 0; right: 0; bottom: 4px; height: 10px;
-  background: rgba(225, 29, 72, 0.18); border-radius: 3px; z-index: -1;
+/* Marge rouge verticale à gauche */
+.cahier-paper::before {
+  content: "";
+  position: absolute;
+  top: 0; bottom: 0; left: 44px;
+  width: 2px;
+  background-color: var(--cahier-margin);
+  opacity: 0.85;
 }
-.hero__lede { font-size: 18.5px; color: var(--graphite); max-width: 48ch; margin-bottom: 30px; line-height: 1.6; }
-.hero__cta { display: flex; flex-wrap: wrap; gap: 14px; margin-bottom: 24px; }
-.hero__trust { display: flex; align-items: center; gap: 16px; font-size: 13.5px; color: var(--graphite); font-weight: 600; }
-.trust-avatars { display: flex; margin-right: -4px; }
-.trust-avatars span { width: 32px; height: 32px; border-radius: 50%; border: 2px solid #fff; background: var(--seyes); display: grid; place-items: center; font-size: 12px; font-weight: 700; margin-left: -8px; color: var(--ink); }
 
-/* Interactive Fiche Sandbox Demo Card */
-.demo-card {
-  background: var(--paper-card); border: 1px solid var(--hairline); border-radius: var(--r);
-  padding: 24px; box-shadow: var(--shadow-lg); position: relative;
+/* En-tête du cahier */
+.cahier-head {
+  border-bottom: 2px solid var(--stylo-rouge);
+  padding-bottom: 12px; margin-bottom: 18px;
+  display: flex; justify-content: space-between; align-items: flex-start;
 }
-.demo-card__header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px; padding-bottom: 12px; border-bottom: 1px solid var(--hairline); }
-.demo-card__title { font-family: var(--f-mono); font-size: 11px; text-transform: uppercase; color: var(--graphite); letter-spacing: .1em; font-weight: 700; }
+.cahier-titre {
+  font-family: var(--font-heading);
+  font-size: 1.3rem; font-weight: 800;
+  color: var(--stylo-rouge);
+  line-height: 1.3;
+}
+.cahier-tag {
+  font-family: var(--font-mono);
+  font-size: 0.75rem; font-weight: 700;
+  color: var(--stylo-bleu);
+  border: 1.5px solid var(--stylo-bleu);
+  padding: 4px 8px; border-radius: 6px;
+  background: #EFF6FF; text-transform: uppercase;
+}
 
-.picker-bar { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 16px; background: var(--accent-bg); padding: 8px; border-radius: 12px; }
-.picker-btn {
-  font-family: var(--f-mono); font-size: 11.5px; font-weight: 700; padding: 6px 12px; border-radius: 8px;
-  background: transparent; color: var(--ink-soft); transition: all .18s;
+/* Grille de métadonnées du cahier */
+.cahier-meta-grid {
+  display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px 18px;
+  margin-bottom: 20px; font-size: 0.95rem;
 }
-.picker-btn:hover { background: rgba(255, 255, 255, 0.7); }
-.picker-btn.active { background: var(--rouge); color: #fff; box-shadow: 0 2px 6px rgba(225, 29, 72, 0.3); }
+.cahier-meta-item { display: flex; gap: 8px; }
+.cahier-meta-item strong {
+  color: var(--stylo-rouge); font-weight: 700; font-family: var(--font-heading);
+}
+.cahier-meta-item span {
+  color: var(--stylo-bleu); font-family: var(--font-hand); font-size: 1.15rem; font-weight: 700;
+}
 
-/* Simulated Fiche Document */
-.fiche-paper {
-  border: 1px solid var(--hairline); border-radius: 12px; padding: 24px 24px 24px 44px;
-  position: relative; overflow: hidden; font-size: 14.5px;
+/* Tableau 3 Colonnes du Déroulement */
+.cahier-table {
+  width: 100%; border-collapse: collapse; margin: 18px 0;
+  font-size: 0.95rem;
 }
-.fiche-paper::before {
-  content: ""; position: absolute; top: 0; bottom: 0; left: 28px; width: 1.5px;
-  background: var(--rouge); opacity: .45;
+.cahier-table th, .cahier-table td {
+  border: 1.5px solid #CBD5E1; padding: 10px 12px; vertical-align: top;
 }
-.fiche__head { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; margin-bottom: 16px; border-bottom: 1.5px solid var(--ink); padding-bottom: 12px; }
-.fiche__title { font-family: var(--f-display); font-size: 19px; font-weight: 700; color: var(--ink); }
-.fiche__stamp {
-  font-family: var(--f-mono); font-size: 9px; letter-spacing: .08em; text-transform: uppercase;
-  border: 1.2px solid var(--vert); color: var(--vert); padding: 3px 8px; border-radius: 6px;
-  background: #F0FDF4; font-weight: 700; flex: none; text-align: center;
+.cahier-table th {
+  background: #F1F5F9; color: var(--stylo-rouge);
+  font-family: var(--font-heading); font-size: 0.82rem;
+  text-transform: uppercase; letter-spacing: 0.05em; text-align: left;
 }
-.fiche-row { display: grid; grid-template-columns: 110px 1fr; gap: 12px; padding: 6px 0; align-items: baseline; }
-.fiche-row + .fiche-row { border-top: 1px dotted var(--seyes); }
-.fiche-row dt { font-family: var(--f-mono); font-size: 10.5px; text-transform: uppercase; color: var(--graphite); font-weight: 700; }
-.fiche-row dd { color: var(--ink-soft); }
+.cahier-table td.etape-cell {
+  font-weight: 700; color: var(--stylo-rouge); font-family: var(--font-heading);
+  font-size: 0.9rem; width: 26%;
+}
+.cahier-table td.content-cell {
+  font-family: var(--font-hand); font-size: 1.1rem; line-height: 1.45;
+  color: var(--stylo-bleu); font-weight: 600;
+}
 
-.fiche-steps { list-style: none; display: grid; gap: 6px; margin-top: 4px; }
-.fiche-steps li { display: grid; grid-template-columns: 22px 1fr; gap: 8px; font-size: 13.5px; color: var(--ink-soft); }
-.fiche-steps b { font-family: var(--f-mono); color: var(--rouge); font-size: 11px; }
-
-/* Interactive Generator Section */
-.generator-box {
-  background: var(--paper-card); border: 2px solid var(--ink); border-radius: 20px;
-  padding: 36px; box-shadow: var(--shadow-lg); margin-top: 30px;
+/* Zone d'évaluation du cahier */
+.cahier-eval {
+  background: #F8FAFC; border: 1.5px dashed var(--stylo-rouge);
+  border-radius: 8px; padding: 14px 18px; margin-top: 16px;
 }
-.form-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-bottom: 24px; }
-.form-group { display: flex; flex-direction: column; gap: 8px; }
-.form-group label { font-family: var(--f-mono); font-size: 12px; font-weight: 700; text-transform: uppercase; color: var(--ink); letter-spacing: .05em; }
-.form-control {
-  padding: 12px 16px; border-radius: 10px; border: 1.5px solid var(--hairline);
-  background: var(--paper); font-size: 15px; color: var(--ink); transition: border-color .2s;
+.cahier-eval h4 {
+  font-size: 0.9rem; text-transform: uppercase; color: var(--stylo-rouge);
+  margin-bottom: 6px;
 }
-.form-control:focus { border-color: var(--rouge); outline: none; background: #fff; }
-
-/* Generated Full APC Fiche View */
-.apc-card-output {
-  background: #FFFFFF; border: 1.5px solid var(--ink); border-radius: 16px;
-  padding: 36px 36px 36px 56px; margin-top: 32px; position: relative; box-shadow: var(--shadow-lg);
+.cahier-eval p {
+  color: var(--stylo-bleu); font-family: var(--font-hand); font-size: 1.1rem;
+  font-weight: 600; line-height: 1.4;
 }
-.apc-card-output::before {
-  content: ""; position: absolute; top: 0; bottom: 0; left: 36px; width: 2px;
-  background: var(--rouge); opacity: .6;
+
+/* ==========================================================================
+   GÉNÉRATEUR INTERACTIF PROFESSIONNEL
+   ========================================================================== */
+.generator-wrapper {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 40px;
+  box-shadow: var(--shadow-lg);
 }
-.apc-admin-grid {
-  display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; padding: 14px;
-  background: var(--accent-bg); border-radius: 10px; font-size: 13px; font-family: var(--f-mono);
-  margin-bottom: 20px; border: 1px solid var(--hairline);
+
+.cycle-selector {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 14px;
+  margin-bottom: 32px;
 }
-.apc-admin-grid div strong { color: var(--ink); display: block; font-size: 10px; text-transform: uppercase; color: var(--graphite); }
+.cycle-card {
+  display: flex; align-items: center; gap: 14px; padding: 18px 24px;
+  border-radius: var(--radius-md); border: 2px solid var(--border-color);
+  background: var(--bg-card-subtle); color: var(--text-main);
+  cursor: pointer; transition: all 0.2s; font-weight: 700;
+}
+.cycle-card:hover { border-color: var(--primary); }
+.cycle-card.active-pre {
+  border-color: #059669; background: var(--accent-green-bg); color: #065F46;
+}
+.cycle-card.active-elem {
+  border-color: #1D4ED8; background: #EFF6FF; color: #1E40AF;
+}
+.cycle-icon { font-size: 1.8rem; }
+.cycle-info strong { display: block; font-size: 1.05rem; }
+.cycle-info small { font-size: 0.82rem; opacity: 0.85; }
 
-.apc-table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 14px; }
-.apc-table th, .apc-table td { border: 1px solid #CBD5E1; padding: 12px 14px; text-align: left; vertical-align: top; }
-.apc-table th { background: #F1F5F9; font-family: var(--f-mono); font-size: 11px; text-transform: uppercase; letter-spacing: .05em; color: var(--ink); }
+.form-grid-3 {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;
+  margin-bottom: 20px;
+}
+.form-field { display: flex; flex-direction: column; gap: 8px; }
+.form-field label {
+  font-weight: 700; font-size: 0.85rem; text-transform: uppercase;
+  color: var(--text-main); letter-spacing: 0.04em;
+}
+.form-input {
+  padding: 13px 16px; border-radius: 10px; border: 1.5px solid var(--border-color);
+  background: var(--bg-body); color: var(--text-main); font-size: 0.95rem;
+  font-family: inherit; transition: all 0.2s;
+}
+.form-input:focus {
+  outline: none; border-color: var(--border-focus); background: var(--bg-card);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
 
-.apc-eval-box { background: #F8FAFC; border: 1px solid var(--hairline); border-radius: 12px; padding: 20px; margin-top: 20px; font-size: 14px; }
-.apc-eval-box h4 { font-family: var(--f-mono); font-size: 12px; text-transform: uppercase; color: var(--rouge); margin-bottom: 8px; }
+/* ==========================================================================
+   TARIFS & FACTURATION PROFESSIONNELLE (1 500 F / MOIS & 7 500 F / AN)
+   ========================================================================== */
+.pricing-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px;
+  align-items: stretch; margin-top: 40px;
+}
+.price-card {
+  background: var(--bg-card);
+  border: 2px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 36px 30px;
+  display: flex; flex-direction: column; justify-content: space-between;
+  box-shadow: var(--shadow-sm); position: relative; transition: all 0.25s;
+}
+.price-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+.price-card--featured {
+  border-color: #1D4ED8; box-shadow: var(--shadow-lg);
+  background: linear-gradient(180deg, var(--bg-card) 0%, rgba(37, 99, 235, 0.04) 100%);
+}
+.price-badge-top {
+  position: absolute; top: -14px; left: 50%; transform: translateX(-50%);
+  background: #1D4ED8; color: white; font-weight: 800; font-size: 0.75rem;
+  padding: 4px 16px; border-radius: 999px; text-transform: uppercase; letter-spacing: 0.08em;
+}
+.price-title { font-size: 1.25rem; font-weight: 800; margin-bottom: 6px; }
+.price-amount {
+  font-size: 2.7rem; font-weight: 800; font-family: var(--font-heading);
+  color: var(--text-main); margin: 16px 0 6px; line-height: 1;
+}
+.price-amount span { font-size: 1rem; font-weight: 600; color: var(--text-muted); }
+.price-saving {
+  display: inline-block; font-size: 0.82rem; font-weight: 700;
+  color: #059669; background: var(--accent-green-bg);
+  padding: 2px 10px; border-radius: 999px; margin-bottom: 20px;
+}
+.price-features {
+  list-style: none; margin: 24px 0 32px; display: grid; gap: 14px;
+  font-size: 0.95rem; color: var(--text-muted);
+}
+.price-features li { display: flex; align-items: center; gap: 10px; }
+.price-features li strong { color: var(--text-main); }
+.check-icon {
+  width: 20px; height: 20px; border-radius: 50%;
+  background: var(--accent-green-bg); color: var(--accent-green);
+  display: grid; place-items: center; font-size: 0.8rem; font-weight: 800; flex-shrink: 0;
+}
 
-/* Print Styles */
+/* ==========================================================================
+   SECTIONS CONTENU & FAQ
+   ========================================================================== */
+.curric-card {
+  background: var(--bg-card); border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg); padding: 36px; margin-bottom: 32px;
+}
+.domains-list { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
+.domain-tag {
+  background: var(--bg-card-subtle); color: var(--text-main);
+  border: 1px solid var(--border-color); padding: 8px 16px;
+  border-radius: 8px; font-weight: 600; font-size: 0.9rem;
+}
+.domain-tag--pre { background: #ECFDF5; border-color: #A7F3D0; color: #065F46; }
+.domain-tag--elem { background: #EFF6FF; border-color: #BFDBFE; color: #1E40AF; }
+
+.faq-box { max-width: 800px; margin: 0 auto; display: grid; gap: 16px; }
+.faq-item {
+  background: var(--bg-card); border: 1px solid var(--border-color);
+  border-radius: var(--radius-md); overflow: hidden;
+}
+.faq-question {
+  width: 100%; text-align: left; padding: 20px 24px;
+  background: none; font-size: 1.05rem; font-weight: 700; color: var(--text-main);
+  display: flex; justify-content: space-between; align-items: center; cursor: pointer;
+}
+.faq-question::after {
+  content: "+"; font-size: 1.4rem; color: #1D4ED8; font-weight: 700;
+  transition: transform 0.2s;
+}
+.faq-item.is-open .faq-question::after { content: "−"; }
+.faq-answer {
+  display: none; padding: 0 24px 22px; color: var(--text-muted);
+  font-size: 0.95rem; line-height: 1.6;
+}
+.faq-item.is-open .faq-answer { display: block; }
+
+/* ==========================================================================
+   FOOTER
+   ========================================================================== */
+.footer {
+  background: var(--bg-card); border-top: 1px solid var(--border-color);
+  padding: 50px 0 40px; margin-top: 80px;
+}
+.footer__inner {
+  display: flex; justify-content: space-between; align-items: center;
+  flex-wrap: wrap; gap: 20px;
+}
+
+/* ==========================================================================
+   IMPRESSION PDF A4 (STYLE CAHIER PROFESSIONNEL PUR)
+   ========================================================================== */
 @media print {
+  body { background: white !important; color: black !important; }
   body * { visibility: hidden; }
   #printableFiche, #printableFiche * { visibility: visible; }
-  #printableFiche { position: absolute; left: 0; top: 0; width: 100%; padding: 20px; border: none; box-shadow: none; }
+  #printableFiche {
+    position: absolute; left: 0; top: 0; width: 100%;
+    margin: 0; padding: 20px; box-shadow: none; border: none;
+  }
   .no-print { display: none !important; }
 }
 
-/* Comparison */
-.compare-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 40px; }
-.compare-card { padding: 32px; border-radius: var(--r); border: 1px solid var(--hairline); position: relative; }
-.compare-card--before { background: #FFF5F5; border-color: #FECDD3; }
-.compare-card--after { background: #F0FDF4; border-color: #A7F3D0; box-shadow: var(--shadow-md); }
-.compare-card h3 { font-family: var(--f-display); font-size: 22px; font-weight: 700; margin-bottom: 14px; display: flex; align-items: center; gap: 10px; }
-.compare-list { list-style: none; display: grid; gap: 12px; }
-.compare-list li { display: flex; align-items: flex-start; gap: 10px; font-size: 15px; color: var(--ink-soft); }
-.compare-icon { width: 22px; height: 22px; border-radius: 50%; display: grid; place-items: center; font-size: 12px; flex: none; font-weight: 700; margin-top: 2px; }
-.compare-icon--red { background: #FFE4E6; color: var(--rouge); }
-.compare-icon--green { background: var(--vert-light); color: var(--vert); }
-
-/* How It Works */
-.sec-head { max-width: 64ch; margin-bottom: 48px; }
-.sec-head h2 { font-size: clamp(30px, 3.8vw, 42px); margin: 14px 0 12px; }
-.sec-head p { color: var(--graphite); font-size: 17.5px; }
-
-.steps-flow { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
-.step-card {
-  background: var(--paper-card); border: 1px solid var(--hairline); border-radius: var(--r);
-  padding: 32px 28px; transition: transform .25s, box-shadow .25s; position: relative;
-}
-.step-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
-.step-card__num {
-  font-family: var(--f-mono); font-size: 14px; font-weight: 700; color: #fff; background: var(--ink);
-  width: 36px; height: 36px; border-radius: 10px; display: grid; place-items: center; margin-bottom: 20px;
-}
-.step-card h3 { font-family: var(--f-display); font-size: 21px; font-weight: 700; margin-bottom: 10px; }
-.step-card p { color: var(--graphite); font-size: 15px; line-height: 1.6; }
-
-/* Curriculum Coverage */
-.curric-box { background: var(--paper-card); border: 1px solid var(--hairline); border-radius: var(--r); padding: 36px; margin-bottom: 34px; }
-.curric-box__head { display: flex; align-items: baseline; justify-content: space-between; flex-wrap: wrap; gap: 16px; margin-bottom: 28px; border-bottom: 1px solid var(--hairline); padding-bottom: 16px; }
-.curric-box__title { font-family: var(--f-display); font-size: 26px; font-weight: 700; }
-
-.level-grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 28px; }
-.level-badge-card {
-  border: 1px solid var(--hairline); border-radius: 12px; padding: 18px 16px;
-  background: var(--paper); transition: border-color .2s; position: relative;
-}
-.level-badge-card:hover { border-color: var(--rouge); }
-.level-badge-card strong { font-family: var(--f-display); font-size: 24px; color: var(--ink); display: block; line-height: 1; margin-bottom: 6px; }
-.level-badge-card span { font-size: 13.5px; color: var(--graphite); }
-
-.domain-chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
-.chip { font-family: var(--f-mono); font-size: 12px; padding: 6px 14px; border-radius: 20px; background: var(--accent-bg); color: var(--ink-soft); border: 1px solid var(--hairline); font-weight: 600; }
-.chip--highlight { background: #EFF6FF; border-color: #BFDBFE; color: #1E40AF; }
-.chip--pre { background: #ECFDF5; border-color: #A7F3D0; color: #047857; }
-
-/* Stats Bar */
-.stats-bar { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; background: var(--ink); color: #fff; padding: 40px; border-radius: 20px; margin: 50px 0; text-align: center; }
-.stat-item strong { font-family: var(--f-display); font-size: 40px; font-weight: 700; color: #38BDF8; display: block; line-height: 1; margin-bottom: 6px; }
-.stat-item span { font-family: var(--f-mono); font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: #94A3B8; }
-
-/* Testimonials */
-.testi-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
-.testi-card { background: var(--paper-card); border: 1px solid var(--hairline); border-radius: var(--r); padding: 28px; display: flex; flex-direction: column; justify-content: space-between; }
-.testi-quote { font-size: 15.5px; color: var(--ink-soft); font-style: italic; margin-bottom: 20px; line-height: 1.6; }
-.testi-author { display: flex; align-items: center; gap: 12px; }
-.testi-avatar { width: 44px; height: 44px; border-radius: 50%; background: var(--seyes); display: grid; place-items: center; font-weight: 700; color: var(--ink); font-size: 14px; }
-.testi-meta strong { font-size: 15px; color: var(--ink); display: block; }
-.testi-meta span { font-size: 12.5px; color: var(--graphite); }
-
-/* Pricing */
-.pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; align-items: stretch; margin-top: 36px; }
-.price-card {
-  background: var(--paper-card); border: 1.5px solid var(--hairline); border-radius: var(--r);
-  padding: 36px 28px; display: flex; flex-direction: column; justify-content: space-between; position: relative;
-  transition: transform .25s, box-shadow .25s;
-}
-.price-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
-.price-card--featured { border-color: var(--rouge); box-shadow: var(--shadow-lg); }
-.price-card--featured::before {
-  content: "RECOMMANDÉ PAR LES ENSEIGNANTS"; position: absolute; top: -14px; left: 50%; transform: translateX(-50%);
-  background: var(--rouge); color: #fff; font-family: var(--f-mono); font-size: 10px; font-weight: 700; letter-spacing: .08em;
-  padding: 4px 14px; border-radius: 20px; white-space: nowrap;
-}
-.price-tag { font-family: var(--f-mono); font-size: 12px; letter-spacing: .1em; text-transform: uppercase; color: var(--graphite); font-weight: 700; }
-.price-amount { font-family: var(--f-display); font-size: 42px; font-weight: 700; color: var(--ink); margin: 16px 0 6px; }
-.price-amount span { font-family: var(--f-body); font-size: 15px; font-weight: 600; color: var(--graphite); }
-.price-features { list-style: none; display: grid; gap: 12px; margin: 24px 0 32px; font-size: 15px; color: var(--ink-soft); }
-.price-features li { display: flex; align-items: center; gap: 10px; }
-.price-features li::before { content: "✓"; color: var(--vert); font-weight: 700; font-size: 16px; }
-
-.payment-badge-bar { display: flex; align-items: center; justify-content: center; gap: 16px; flex-wrap: wrap; margin-top: 36px; font-family: var(--f-mono); font-size: 13px; color: var(--graphite); }
-.pay-pill { display: inline-flex; align-items: center; gap: 6px; padding: 6px 14px; border-radius: 20px; background: var(--paper-card); border: 1px solid var(--hairline); font-weight: 700; color: var(--ink); }
-
-/* FAQ */
-.faq-wrap { max-width: 820px; margin: 0 auto; }
-.faq-item { border-bottom: 1px solid var(--hairline); }
-.faq-question {
-  width: 100%; text-align: left; padding: 22px 0; font-family: var(--f-display); font-size: 19px; font-weight: 700;
-  color: var(--ink); display: flex; justify-content: space-between; align-items: center; gap: 16px; cursor: pointer;
-}
-.faq-question::after { content: "+"; font-family: var(--f-mono); font-size: 22px; color: var(--rouge); transition: transform .2s; }
-.faq-item.is-open .faq-question::after { content: "−"; transform: rotate(180deg); }
-.faq-answer { display: none; padding-bottom: 24px; color: var(--graphite); font-size: 16px; line-height: 1.65; }
-.faq-item.is-open .faq-answer { display: block; }
-
-/* Final CTA */
-.cta-banner {
-  background: linear-gradient(135deg, #0F172A 0%, #1E293B 100%); color: #fff;
-  border-radius: 24px; padding: 70px 40px; text-align: center; position: relative; overflow: hidden;
-  box-shadow: var(--shadow-lg);
-}
-.cta-banner h2 { font-family: var(--f-display); font-size: clamp(32px, 4vw, 46px); font-weight: 700; margin-bottom: 16px; line-height: 1.15; }
-.cta-banner p { color: #94A3B8; max-width: 52ch; margin: 0 auto 32px; font-size: 18px; }
-
-/* Footer */
-.ftr { border-top: 1px solid var(--hairline); padding: 50px 0 60px; background: var(--paper); margin-top: 90px; }
-.ftr-in { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 24px; }
-.ftr-wolof { font-family: var(--f-display); font-size: 16px; font-weight: 700; color: var(--rouge); margin-top: 4px; }
-
+/* Responsive */
 @media (max-width: 992px) {
   .hero__grid { grid-template-columns: 1fr; gap: 40px; }
-  .form-grid, .compare-grid, .steps-flow, .pricing-grid, .testi-grid { grid-template-columns: 1fr; }
-  .stats-bar { grid-template-columns: 1fr 1fr; }
-  .level-grid-3 { grid-template-columns: 1fr; }
-  .nav { display: none; }
-  .hamburger { display: flex; }
-}
-
-@media (max-width: 640px) {
-  .section { padding: 60px 0; }
-  .stats-bar { grid-template-columns: 1fr; gap: 24px; padding: 30px 20px; }
-  .fiche-paper, .apc-card-output { padding: 18px 18px 18px 34px; }
-  .apc-card-output::before { left: 20px; }
-  .apc-admin-grid { grid-template-columns: 1fr 1fr; }
-  .hero-tab { padding: 6px 12px; font-size: 12px; }
-  .cta-banner { padding: 46px 20px; }
+  .form-grid-3, .pricing-grid { grid-template-columns: 1fr; }
+  .cycle-selector { grid-template-columns: 1fr; }
 }
 </style>
 </head>
 <body>
 
-<div class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
-  <nav>
-    <a href="#hero" class="mobile-link">Accueil</a>
-    <a href="#generateur" class="mobile-link">Générateur de Fiche</a>
-    <a href="#niveaux-prescolaire" class="mobile-link">Préscolaire (Guide 2024)</a>
-    <a href="#niveaux-elementaire" class="mobile-link">Élémentaire (Guide 2025)</a>
-    <a href="#tarifs" class="mobile-link">Tarifs &amp; Mobile Money</a>
-    <a href="#faq" class="mobile-link">Questions fréquentes</a>
-  </nav>
-  <div style="margin-top: auto;">
-    <a href="#generateur" class="btn btn--primary btn--full mobile-link">Créer ma Fiche APC</a>
-  </div>
-</div>
-
-<header class="hdr" id="header">
-  <div class="wrap hdr__in">
-    <a class="logo" href="#top" aria-label="SUÑU FICHES, retour au haut de page">
-      <svg width="28" height="32" viewBox="0 0 26 30" fill="none" aria-hidden="true">
-        <rect x="1" y="1" width="24" height="28" rx="4" fill="#fff" stroke="#0F172A" stroke-width="1.8"/>
-        <path d="M7 1v28" stroke="#E11D48" stroke-width="1.5"/>
-        <path d="M10 9h11M10 14h11M10 19h7" stroke="#CBD3EC" stroke-width="1.8" stroke-linecap="round"/>
-      </svg>
-      <span>SUÑU FICHES<small>CONFORME MEN SÉNÉGAL</small></span>
+<!-- HEADER & NAVIGATION -->
+<header class="header" id="header">
+  <div class="container header__inner">
+    <a class="logo" href="#top" aria-label="SUÑU FICHES Accueil">
+      <div class="logo-icon">SF</div>
+      <span>SUÑU FICHES</span>
     </a>
 
     <nav class="nav" aria-label="Navigation principale">
       <a href="#generateur">Générateur APC</a>
       <a href="#niveaux-prescolaire">Préscolaire (2024)</a>
       <a href="#niveaux-elementaire">Élémentaire (2025)</a>
-      <a href="#tarifs">Tarifs</a>
+      <a href="#tarifs">Tarifs (1500F/7500F)</a>
       <a href="#faq">FAQ</a>
     </nav>
 
-    <div class="hdr__actions">
-      <a class="btn btn--primary btn--sm" href="#generateur">Créer une Fiche</a>
-      <button class="hamburger" id="hamburgerBtn" aria-label="Ouvrir le menu mobile">
-        <span></span><span></span><span></span>
+    <div class="header__actions">
+      <!-- Bouton bascule Mode Clair / Sombre -->
+      <button class="theme-toggle-btn" id="themeToggleBtn" aria-label="Basculer entre mode sombre et clair" title="Basculer Mode Clair / Sombre">
+        <span id="themeIcon">🌙</span>
       </button>
+      <a class="btn btn--primary" href="#generateur">Créer ma Fiche</a>
     </div>
   </div>
 </header>
 
 <main id="top">
 
-<section class="hero" id="hero">
-  <div class="wrap">
-
-    <div style="text-align: center; margin-bottom: 20px;">
-      <div class="hero__switcher" role="tablist" aria-label="Perspective de présentation">
-        <button class="hero-tab active" data-perspective="enseignant" role="tab" aria-selected="true">
-          <span>🎓</span> Pour les Enseignants
-        </button>
-        <button class="hero-tab" data-perspective="directeur" role="tab" aria-selected="false">
-          <span>🏫</span> Pour la Direction d'École
-        </button>
-        <button class="hero-tab" data-perspective="inspection" role="tab" aria-selected="false">
-          <span>📋</span> Conforme APC / MEN
-        </button>
-      </div>
-    </div>
-
+<!-- HERO SECTION AVEC APERÇU DU CAHIER STYLO BLEU/ROUGE -->
+<section class="hero">
+  <div class="container">
     <div class="hero__grid">
       <div>
-        <span class="eyebrow" id="heroEyebrow">Préscolaire (2024) &amp; Élémentaire (2025) · Sénégal</span>
-        <h1 class="display" id="heroTitle">Votre cahier de préparation <em>se remplit en 2 minutes.</em></h1>
-        <p class="hero__lede" id="heroLede">Sélectionnez la classe, le domaine et l'objectif spécifique du jour. SUÑU FICHES rédige automatiquement votre fiche de préparation conforme aux guides curriculaires révisés du Sénégal.</p>
-        
-        <div class="hero__cta">
-          <a class="btn btn--primary btn--lg" href="#generateur">Générer ma fiche maintenant</a>
-          <a class="btn btn--ghost btn--lg" href="#niveaux-prescolaire">Découvrir les 5 Domaines</a>
+        <div class="hero__badge-row">
+          <span class="badge badge--green">Guides Officiels MEN</span>
+          <span class="badge badge--primary">Préscolaire 2024 &amp; Élémentaire 2025</span>
         </div>
 
-        <div class="hero__trust">
-          <div class="trust-avatars">
-            <span>MS</span><span>AD</span><span>KD</span><span>ST</span>
-          </div>
-          <span>Déjà adopté par +1 200 enseignants à Dakar, Thiès, Ziguinchor &amp; Saint-Louis</span>
+        <h1>Le cahier de préparation des enseignants, <em>rédigé en 2 minutes.</em></h1>
+
+        <p class="hero__desc">
+          Générez instantanément des fiches pédagogiques impeccables au format officiel sénégalais. Présentation authentique en <strong>stylo bleu et rouge</strong> sur feuille blanche réglée, conforme APC pour l'inspection.
+        </p>
+
+        <div class="hero__cta-group">
+          <a class="btn btn--primary btn--lg" href="#generateur">⚡ Générer ma fiche maintenant</a>
+          <a class="btn btn--outline btn--lg" href="#tarifs">Voir les abonnements</a>
+        </div>
+
+        <div class="hero__guarantee">
+          <div class="hero__guarantee-dot"></div>
+          <span>Tarif accessible : <strong>1 500 F / mois</strong> ou <strong>7 500 F / an</strong> via Wave &amp; Orange Money.</span>
         </div>
       </div>
 
-      <div class="demo-card">
-        <div class="demo-card__header">
-          <span class="demo-card__title">🔬 Aperçu rapide d'une fiche</span>
-          <span class="badge badge--vert">Guides MEN 2024 / 2025</span>
-        </div>
+      <!-- APERÇU CAHIER DE PRÉPARATION (STYLO BLEU / ROUGE) -->
+      <div class="cahier-preview">
+        <div class="cahier-paper">
+          <div class="cahier-head">
+            <div>
+              <div class="cahier-titre">CAHIER DE PRÉPARATION PÉDAGOGIQUE</div>
+              <small style="color: var(--stylo-bleu); font-weight: 700; font-family: var(--font-heading);">RÉPUBLIQUE DU SÉNÉGAL · MINISTÈRE DE L'ÉDUCATION NATIONALE</small>
+            </div>
+            <div class="cahier-tag">Guide 2024 / 2025</div>
+          </div>
 
-        <div class="picker-bar" role="tablist" aria-label="Sélection du niveau">
-          <button class="picker-btn active" data-level="gs">GS (Pré)</button>
-          <button class="picker-btn" data-level="ci">CI</button>
-          <button class="picker-btn" data-level="cp">CP</button>
-          <button class="picker-btn" data-level="ce1">CE1</button>
-          <button class="picker-btn" data-level="ce2">CE2</button>
-          <button class="picker-btn" data-level="cm1">CM1</button>
-          <button class="picker-btn" data-level="cm2">CM2 (CFEE)</button>
-        </div>
+          <div class="cahier-meta-grid">
+            <div class="cahier-meta-item">
+              <strong>Étape / Classe :</strong> <span>Cours Élémentaire 2 (CE2)</span>
+            </div>
+            <div class="cahier-meta-item">
+              <strong>Durée :</strong> <span>45 mns</span>
+            </div>
+            <div class="cahier-meta-item">
+              <strong>Discipline :</strong> <span>Langue &amp; Communication</span>
+            </div>
+            <div class="cahier-meta-item">
+              <strong>Date :</strong> <span>Séance du jour</span>
+            </div>
+          </div>
 
-        <article class="fiche-paper ruled" id="ficheDisplay">
-        </article>
+          <div style="margin-bottom: 12px;">
+            <span style="color: var(--stylo-rouge); font-weight: 700;">Objectif Spécifique (OS) :</span>
+            <p style="color: var(--stylo-bleu); font-family: var(--font-hand); font-size: 1.2rem; font-weight: 700; line-height: 1.35; margin-top: 2px;">
+              Identifier et employer correctement le Complément d'Objet Direct (COD) dans une phrase simple.
+            </p>
+          </div>
+
+          <table class="cahier-table">
+            <thead>
+              <tr>
+                <th style="width: 25%;">Étapes</th>
+                <th style="width: 38%;">Activités du Maître</th>
+                <th style="width: 37%;">Activités des Élèves</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="etape-cell">1. Motivation</td>
+                <td class="content-cell">Présente le corpus de phrases au tableau et fait lire à haute voix.</td>
+                <td class="content-cell">Lisent le texte et repèrent les verbes d'action.</td>
+              </tr>
+              <tr>
+                <td class="etape-cell">2. Recherche</td>
+                <td class="content-cell">Pose la question : « Moussa mange quoi ? » pour isoler le COD.</td>
+                <td class="content-cell">Répondent « la mangue » et entourent le groupe nominal.</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div class="cahier-eval">
+            <h4>Évaluation &amp; Remédiation (Stylo Rouge)</h4>
+            <p>Consigne : Souligne le COD dans les phrases 1 et 2 sur ton ardoise.</p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- REAL INTERACTIVE FICHE GENERATOR SECTION WITH CYCLE SELECTOR -->
-<section class="section" id="generateur" style="background: #F8FAFC; border-block: 1px solid var(--hairline);">
-  <div class="wrap">
-    <div class="sec-head up" style="margin: 0 auto 28px; text-align: center;">
-      <span class="eyebrow">Générateur Pédagogique Actif</span>
-      <h2 class="display">Sélectionnez votre Cycle &amp; Générez votre Fiche APC</h2>
-      <p>Conforme aux guides curriculaires du Ministère de l'Éducation Nationale (Préscolaire 2024 · Élémentaire 2025).</p>
+<!-- SECTION GÉNÉRATEUR INTERACTIF -->
+<section class="section" id="generateur">
+  <div class="container">
+    <div style="text-align: center; max-width: 650px; margin: 0 auto 36px;">
+      <span class="badge badge--primary">Outil Pédagogique Actif</span>
+      <h2 style="font-size: 2.2rem; margin: 12px 0 8px;">Générez votre Fiche de Préparation</h2>
+      <p>Sélectionnez votre cycle, votre domaine et votre objectif spécifique pour générer votre fiche complète.</p>
     </div>
 
-    <!-- Cycle Selector Switcher -->
-    <div class="cycle-toggle-bar">
-      <button class="cycle-btn active-pre" id="btnCyclePre" onclick="switchGenCycle('pre')">
-        🧸 Cycle PRÉSCOLAIRE (Guides 2024)
-      </button>
-      <button class="cycle-btn" id="btnCycleElem" onclick="switchGenCycle('elem')">
-        🎒 Cycle ÉLÉMENTAIRE (Guides 2025)
-      </button>
-    </div>
-
-    <div class="generator-box up">
-      <form id="ficheGeneratorForm">
-        <div class="form-grid">
-          <div class="form-group">
-            <label for="genLevel">Niveau / Section</label>
-            <select id="genLevel" class="form-control">
-              <!-- Dynamically populated based on Cycle -->
-            </select>
-          </div>
-
-          <div class="form-group">
-            <label for="genDiscipline">Domaine d'Activités Officiel</label>
-            <select id="genDiscipline" class="form-control">
-              <!-- Dynamically populated based on Cycle -->
-            </select>
-          </div>
-
-          <div class="form-group">
-            <label for="genTopic">Objectif Spécifique (OS)</label>
-            <input type="text" id="genTopic" class="form-control" placeholder="ex: Nommer les membres de sa famille" value="Nommer les membres de sa famille">
+    <div class="generator-wrapper">
+      <!-- Choix du Cycle -->
+      <div class="cycle-selector">
+        <div class="cycle-card active-pre" id="cardPre" onclick="setCycle('pre')">
+          <div class="cycle-icon">🧸</div>
+          <div class="cycle-info">
+            <strong>Cycle PRÉSCOLAIRE (Guides 2024)</strong>
+            <small>PS, MS, GS · 5 Domaines d'activités</small>
           </div>
         </div>
 
-        <div class="form-grid">
-          <div class="form-group">
-            <label for="genTeacher">Enseignant(e) / Éducateur(trice)</label>
-            <input type="text" id="genTeacher" class="form-control" value="M. Cheikh Mbacké Diallo">
+        <div class="cycle-card" id="cardElem" onclick="setCycle('elem')">
+          <div class="cycle-icon">🎒</div>
+          <div class="cycle-info">
+            <strong>Cycle ÉLÉMENTAIRE (Guides 2025)</strong>
+            <small>CI, CP, CE1, CE2, CM1, CM2 · 3 Étapes APC</small>
+          </div>
+        </div>
+      </div>
+
+      <!-- Formulaire de saisie -->
+      <form id="ficheForm">
+        <div class="form-grid-3">
+          <div class="form-field">
+            <label for="fLevel">Niveau / Classe</label>
+            <select id="fLevel" class="form-input"></select>
           </div>
 
-          <div class="form-group">
-            <label for="genSchool">Établissement / École &amp; IEF</label>
-            <input type="text" id="genSchool" class="form-control" value="École / Case des Tout-Petits · IEF Mbour">
+          <div class="form-field">
+            <label for="fDiscipline">Domaine d'activités officiel</label>
+            <select id="fDiscipline" class="form-input"></select>
           </div>
 
-          <div class="form-group">
-            <label for="genDuration">Durée de la séance</label>
-            <select id="genDuration" class="form-control">
+          <div class="form-field">
+            <label for="fOS">Objectif Spécifique (OS)</label>
+            <input type="text" id="fOS" class="form-input" value="Nommer les membres de sa famille" placeholder="ex: Nommer les membres de sa famille">
+          </div>
+        </div>
+
+        <div class="form-grid-3">
+          <div class="form-field">
+            <label for="fTeacher">Enseignant(e) / Éducateur(trice)</label>
+            <input type="text" id="fTeacher" class="form-input" value="M. Cheikh Mbacké Diallo">
+          </div>
+
+          <div class="form-field">
+            <label for="fSchool">Établissement / École &amp; IEF</label>
+            <input type="text" id="fSchool" class="form-input" value="École / Case des Tout-Petits · IEF Mbour">
+          </div>
+
+          <div class="form-field">
+            <label for="fDuration">Durée de la séance</label>
+            <select id="fDuration" class="form-input">
               <option value="20 mns">20 mns</option>
               <option value="25 mns" selected>25 mns</option>
               <option value="30 mns">30 mns</option>
@@ -575,239 +704,26 @@ button { cursor: pointer; border: none; background: none; }
           </div>
         </div>
 
-        <div style="text-align: center; margin-top: 10px;">
-          <button type="submit" class="btn btn--vert btn--lg">
-            ⚡ Générer la Fiche de Préparation Conforme
+        <div style="text-align: center; margin-top: 24px;">
+          <button type="submit" class="btn btn--primary btn--lg">
+            ⚡ Générer la Fiche au Format Cahier (Bleu &amp; Rouge)
           </button>
         </div>
       </form>
 
-      <!-- OUTPUT GENERATED CARD -->
-      <div id="generatedFicheContainer" style="display: none;" class="up">
-        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 36px; padding-bottom: 16px; border-bottom: 2px solid var(--ink);" class="no-print">
-          <h3 class="display" style="font-size: 24px;">📄 Fiche Pédagogique Générée</h3>
+      <!-- FICHE GÉNÉRÉE EN SORTIE (STYLE CAHIER AUTHENTIQUE SUR FOND BLANC) -->
+      <div id="outputContainer" style="display: none; margin-top: 40px;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; flex-wrap: gap; gap: 12px;" class="no-print">
+          <h3 style="font-size: 1.4rem; color: var(--text-main);">📄 Votre Fiche Pédagogique Prête</h3>
           <div style="display: flex; gap: 10px;">
-            <button class="btn btn--primary btn--sm" onclick="window.print()">🖨️ Imprimer / Exporter PDF</button>
-            <button class="btn btn--ghost btn--sm" onclick="copyFicheToClipboard()">📋 Copier le texte</button>
+            <button class="btn btn--primary" onclick="window.print()">🖨️ Imprimer / PDF A4</button>
+            <button class="btn btn--outline" onclick="copyFiche()">📋 Copier le texte</button>
           </div>
         </div>
 
-        <article class="apc-card-output ruled printable" id="printableFiche">
-          <!-- Populated by JS -->
-        </article>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- SEPARATED CURRICULUM COVERAGE: PRE-SCHOOL (2024) & ELEMENTARY (2025) -->
-<section class="section" id="niveaux-prescolaire">
-  <div class="wrap">
-
-    <!-- 1. PRÉSCOLAIRE (GUIDE 2024 - 5 DOMAINES OFFICIELS) -->
-    <div class="curric-box up" style="border-left: 6px solid var(--vert);">
-      <div class="curric-box__head">
-        <div>
-          <span class="badge badge--vert">Référentiel Officiel Préscolaire (Révision 2024)</span>
-          <h3 class="curric-box__title" style="margin-top: 8px;">1. Cycle Préscolaire (3 à 6 ans)</h3>
-        </div>
-        <span style="font-family: var(--f-mono); font-size: 13px; color: var(--vert); font-weight: 700;">
-          3 Sections · 5 Domaines d'Activités Officiels
-        </span>
-      </div>
-
-      <div class="level-grid-3">
-        <div class="level-badge-card" style="border-top: 3px solid var(--vert);">
-          <strong>PS</strong>
-          <span>Petite Section (3 – 4 ans)</span>
-        </div>
-        <div class="level-badge-card" style="border-top: 3px solid var(--vert);">
-          <strong>MS</strong>
-          <span>Moyenne Section (4 – 5 ans)</span>
-        </div>
-        <div class="level-badge-card" style="border-top: 3px solid var(--vert);">
-          <strong>GS</strong>
-          <span>Grande Section (5 – 6 ans)</span>
-        </div>
-      </div>
-
-      <p style="font-size: 15px; font-weight: 700; color: var(--ink); margin-bottom: 12px;">
-        Les 5 Domaines d'Activités du Préscolaire Sénégalais (Guide MEN 2024) :
-      </p>
-
-      <div class="domain-chips">
-        <span class="chip chip--pre">1. Langue et Communication (Langage, Conte, Pré-lecture, Graphisme)</span>
-        <span class="chip chip--pre">2. Mathématiques (Activités numériques, Géométriques, Mesure)</span>
-        <span class="chip chip--pre">3. Découverte du monde (IST, Temps/Espace, Hygiène &amp; Bien-être)</span>
-        <span class="chip chip--pre">4. Développement socio-affectif et bien-être global (Vivre ensemble &amp; Environnement)</span>
-        <span class="chip chip--pre">5. Éducation psychomotrice et artistique (Psychomotricité &amp; Arts plastiques/scéniques)</span>
-      </div>
-    </div>
-
-    <!-- 2. ÉLÉMENTAIRE (GUIDE 2025 - 6 CLASSES / 3 ÉTAPES) -->
-    <div class="curric-box up" id="niveaux-elementaire" style="border-left: 6px solid var(--rouge);">
-      <div class="curric-box__head">
-        <div>
-          <span class="badge badge--rouge">Référentiel Officiel Élémentaire (Révision 2025)</span>
-          <h3 class="curric-box__title" style="margin-top: 8px;">2. Cycle Élémentaire (6 à 12 ans)</h3>
-        </div>
-        <span style="font-family: var(--f-mono); font-size: 13px; color: var(--rouge); font-weight: 700;">
-          6 Classes · 3 Étapes de Progression APC
-        </span>
-      </div>
-
-      <div class="level-grid-3">
-        <div class="level-badge-card">
-          <strong>Étape 1 (CI - CP)</strong>
-          <span>Initiation &amp; Graphophonologie</span>
-        </div>
-        <div class="level-badge-card">
-          <strong>Étape 2 (CE1 - CE2)</strong>
-          <span>Consolidation &amp; Trames APC</span>
-        </div>
-        <div class="level-badge-card">
-          <strong>Étape 3 (CM1 - CM2)</strong>
-          <span>Approfondissement &amp; Examen CFEE</span>
-        </div>
-      </div>
-
-      <p style="font-size: 15px; font-weight: 700; color: var(--ink); margin-bottom: 12px;">
-        Les 5 Domaines d'Enseignement Élémentaire (Guide MEN 2025) :
-      </p>
-
-      <div class="domain-chips">
-        <span class="chip chip--highlight">1. Langue et Communication (Lecture, Grammaire, Conjugaison, Production d'écrits)</span>
-        <span class="chip chip--highlight">2. Mathématiques (Numération, Opérations, Mesures, Géométrie, Problèmes)</span>
-        <span class="chip">3. Sciences et Vie Sociale - ESVS (Histoire, Géographie, Sciences d'observation)</span>
-        <span class="chip">4. Éducation au Développement Durable - EDD (Environnement, Hygiène, Citoyenneté)</span>
-        <span class="chip">5. EPSA (Dessin, Chant, EPS, Travail manuel)</span>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<!-- COMPARISON SECTION -->
-<section class="section section--tight" style="background: #F1F5F9;">
-  <div class="wrap">
-    <div class="sec-head up" style="margin: 0 auto 36px; text-align: center;">
-      <span class="eyebrow">Pourquoi changer ?</span>
-      <h2 class="display">Fini la corvée des préparations nocturnes</h2>
-    </div>
-
-    <div class="compare-grid">
-      <div class="compare-card compare-card--before">
-        <h3><span class="compare-icon compare-icon--red">✕</span> Sans SUÑU FICHES</h3>
-        <ul class="compare-list">
-          <li><span class="compare-icon compare-icon--red">✕</span> 2 heures perdues chaque soir à recopier la même trame à la main.</li>
-          <li><span class="compare-icon compare-icon--red">✕</span> Risque d'incohérence avec les exigences de l'inspection académique.</li>
-          <li><span class="compare-icon compare-icon--red">✕</span> Fiches manuscrites égarées d'une année sur l'autre.</li>
-          <li><span class="compare-icon compare-icon--red">✕</span> Stress lors des visites d'inspection imprévues.</li>
-        </ul>
-      </div>
-
-      <div class="compare-card compare-card--after">
-        <h3><span class="compare-icon compare-icon--green">✓</span> Avec SUÑU FICHES</h3>
-        <ul class="compare-list">
-          <li><span class="compare-icon compare-icon--green">✓</span> Une fiche complète rédigée et personnalisée en 2 minutes chrono.</li>
-          <li><span class="compare-icon compare-icon--green">✓</span> 100% conforme aux guides curriculaires du MEN (Préscolaire 2024 &amp; Élémentaire 2025).</li>
-          <li><span class="compare-icon compare-icon--green">✓</span> Bibliothèque numérique sécurisée et réutilisable chaque année.</li>
-          <li><span class="compare-icon compare-icon--green">✓</span> Exportation PDF propre, prête à imprimer ou à partager.</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="wrap">
-  <div class="stats-bar">
-    <div class="stat-item">
-      <strong>2 min</strong>
-      <span>Temps moyen par fiche</span>
-    </div>
-    <div class="stat-item">
-      <strong>100%</strong>
-      <span>Conforme APC Sénégal</span>
-    </div>
-    <div class="stat-item">
-      <strong>9 Niveaux</strong>
-      <span>Du Préscolaire au CM2</span>
-    </div>
-    <div class="stat-item">
-      <strong>Wave &amp; OM</strong>
-      <span>Paiement local sécurisé</span>
-    </div>
-  </div>
-</section>
-
-<section class="section" id="comment">
-  <div class="wrap">
-    <div class="sec-head up">
-      <span class="eyebrow">Simple &amp; Rapide</span>
-      <h2 class="display">Comment ça marche en 3 étapes ?</h2>
-      <p>Aucune compétence informatique requise. Tout se fait depuis votre téléphone portable ou votre ordinateur.</p>
-    </div>
-
-    <div class="steps-flow">
-      <div class="step-card up">
-        <div class="step-card__num">1</div>
-        <h3>Choisissez le niveau</h3>
-        <p>Sélectionnez votre classe (Petite Section au CM2), le domaine d'apprentissage et l'objectif spécifique (OS).</p>
-      </div>
-
-      <div class="step-card up">
-        <div class="step-card__num">2</div>
-        <h3>Ajustez la fiche générée</h3>
-        <p>L'intelligence pédagogique pré-remplit les objectifs (OA, OS), les moyens matériels, le déroulement étape par étape et la grille d'évaluation.</p>
-      </div>
-
-      <div class="step-card up">
-        <div class="step-card__num">3</div>
-        <h3>Téléchargez votre PDF</h3>
-        <p>Exportez en un clic un document PDF au format A4 prêt à imprimer pour votre cahier de préparation physique ou à conserver sur votre mobile.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- TESTIMONIALS SECTION -->
-<section class="section">
-  <div class="wrap">
-    <div class="sec-head up">
-      <span class="eyebrow">Témoignages</span>
-      <h2 class="display">Ce que disent les enseignants sénégalais</h2>
-    </div>
-
-    <div class="testi-grid">
-      <div class="testi-card up">
-        <p class="testi-quote">« SUÑU FICHES a complètement transformé mes dimanches soir. Je génère mes fiches de CE2 en quelques clics, et l'inspecteur a félicité la clarté des objectifs APC. »</p>
-        <div class="testi-author">
-          <div class="testi-avatar">MS</div>
-          <div class="testi-meta">
-            <strong>Mme Sarr</strong>
-            <span>Enseignante CE2 · Dakar</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="testi-card up">
-        <p class="testi-quote">« En tant que directeur d'école, cet outil nous a permis de standardiser la qualité des fiches de préparation pour l'ensemble des 12 classes de notre établissement. »</p>
-        <div class="testi-author">
-          <div class="testi-avatar">ND</div>
-          <div class="testi-meta">
-            <strong>M. Ndiaye</strong>
-            <span>Directeur d'école · Thiès</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="testi-card up">
-        <p class="testi-quote">« La démarche d'exploitation du texte et les barèmes de mathématiques respectent à 100% les révisions curriculaires du MEN (2024/2025). C'est un gain de temps inestimable. »</p>
-        <div class="testi-author">
-          <div class="testi-avatar">BD</div>
-          <div class="testi-meta">
-            <strong>M. Diop</strong>
-            <span>Maître d'application · Ziguinchor</span>
+        <div class="cahier-preview" id="printableFiche">
+          <div class="cahier-paper" id="ficheContent">
+            <!-- Dynamically populated -->
           </div>
         </div>
       </div>
@@ -815,394 +731,187 @@ button { cursor: pointer; border: none; background: none; }
   </div>
 </section>
 
-<!-- PRICING SECTION -->
-<section class="section" id="tarifs" style="background: #F8FAFC; border-top: 1px solid var(--hairline);">
-  <div class="wrap">
-    <div class="sec-head up" style="text-align: center; margin: 0 auto 40px;">
-      <span class="eyebrow">Tarifs Transparents</span>
-      <h2 class="display">Moins cher qu'un cahier papier</h2>
-      <p>Testez gratuitement sans engagement, puis choisissez l'offre adaptée à vos besoins.</p>
+<!-- SECTION TARIFS & FACTURATION (1 500 F / MOIS & 7 500 F / AN) -->
+<section class="section" id="tarifs" style="background: var(--bg-card-subtle);">
+  <div class="container">
+    <div style="text-align: center; max-width: 650px; margin: 0 auto 36px;">
+      <span class="badge badge--green">Facturation Simple &amp; Locale</span>
+      <h2 style="font-size: 2.2rem; margin: 12px 0 8px;">Abonnements Transparents</h2>
+      <p>Payez simplement via Wave ou Orange Money. Sans engagement, résiliable à tout moment.</p>
     </div>
 
     <div class="pricing-grid">
-      <div class="price-card up">
+      <!-- 1. Offre Découverte -->
+      <div class="price-card">
         <div>
-          <span class="price-tag">Découverte</span>
+          <div class="price-title">Essai Gratuit</div>
+          <p style="font-size: 0.9rem; color: var(--text-muted);">Pour découvrir et tester l'outil.</p>
           <div class="price-amount">0 F <span>/ mois</span></div>
-          <p style="font-size: 14px; color: var(--graphite);">Pour tester la plateforme gratuitement.</p>
           <ul class="price-features">
-            <li>5 fiches offertes par mois</li>
-            <li>Accès aux 9 niveaux (PS à CM2)</li>
-            <li>Modèles officiels APC</li>
-            <li>Exportation PDF basique</li>
+            <li><span class="check-icon">✓</span> <strong>5 fiches offertes</strong> chaque mois</li>
+            <li><span class="check-icon">✓</span> Accès Préscolaire &amp; Élémentaire</li>
+            <li><span class="check-icon">✓</span> Trame conforme aux guides MEN</li>
+            <li><span class="check-icon">✓</span> Exportation PDF de base</li>
           </ul>
         </div>
-        <a class="btn btn--ghost btn--full" href="#generateur">Commencer Gratuitement</a>
+        <a class="btn btn--outline btn--full" href="#generateur">Tester Gratuitement</a>
       </div>
 
-      <div class="price-card price-card--featured up">
+      <!-- 2. Offre Mensuelle (1 500 F / mois) -->
+      <div class="price-card price-card--featured">
+        <div class="price-badge-top">Formule Mensuelle</div>
         <div>
-          <span class="price-tag" style="color: var(--rouge);">Enseignant Pro</span>
-          <div class="price-amount">2 000 F <span>/ mois</span></div>
-          <p style="font-size: 14px; color: var(--graphite);">Pour les enseignants exigeants.</p>
+          <div class="price-title">Abonnement Mensuel</div>
+          <p style="font-size: 0.9rem; color: var(--text-muted);">Flexibilité totale au mois le mois.</p>
+          <div class="price-amount">1 500 F <span>/ mois</span></div>
+          <span class="price-saving">Paiement Mobile Money Wave &amp; OM</span>
           <ul class="price-features">
-            <li><strong>Fiches illimitées</strong></li>
-            <li>Bibliothèque numérique personnelle</li>
-            <li>Modification &amp; Duplication en 1 clic</li>
-            <li>Export PDF haute définition sans filigrane</li>
-            <li>Assistance prioritaire WhatsApp</li>
+            <li><span class="check-icon">✓</span> <strong>Génération de fiches illimitées</strong></li>
+            <li><span class="check-icon">✓</span> Cahier encre bleu &amp; rouge officiel</li>
+            <li><span class="check-icon">✓</span> Sauvegarde automatique de vos fiches</li>
+            <li><span class="check-icon">✓</span> Exportation PDF haute définition propre</li>
+            <li><span class="check-icon">✓</span> Assistance rapide par WhatsApp</li>
           </ul>
         </div>
-        <a class="btn btn--primary btn--full" href="#generateur">S'abonner maintenant</a>
+        <a class="btn btn--primary btn--full" href="#generateur">Choisir l'offre 1 500 F / mois</a>
       </div>
 
-      <div class="price-card up">
+      <!-- 3. Offre Annuelle (7 500 F / an) -->
+      <div class="price-card" style="border-color: #059669;">
+        <div class="price-badge-top" style="background: #059669;">Meilleure Économie (-58%)</div>
         <div>
-          <span class="price-tag">Établissement / École</span>
-          <div class="price-amount">15 000 F <span>/ mois</span></div>
-          <p style="font-size: 14px; color: var(--graphite);">Pour toute l'équipe pédagogique.</p>
+          <div class="price-title">Abonnement Annuel</div>
+          <p style="font-size: 0.9rem; color: var(--text-muted);">Toute l'année scolaire en toute sérénité.</p>
+          <div class="price-amount">7 500 F <span>/ an</span></div>
+          <span class="price-saving" style="background: #ECFDF5; color: #047857;">Revient à seulement 625 F / mois</span>
           <ul class="price-features">
-            <li>Jusqu'à 20 comptes enseignants</li>
-            <li>Bibliothèque d'école partagée</li>
-            <li>Tableau de bord pour le Directeur</li>
-            <li>Facturation officielle au nom de l'école</li>
+            <li><span class="check-icon">✓</span> <strong>Accès illimité toute l'année scolaire</strong></li>
+            <li><span class="check-icon">✓</span> <strong>Tous les 9 niveaux</strong> (PS jusqu'au CM2)</li>
+            <li><span class="check-icon">✓</span> Module spécial préparation CFEE</li>
+            <li><span class="check-icon">✓</span> Bibliothèque d'école réutilisable</li>
+            <li><span class="check-icon">✓</span> Support prioritaire dédié</li>
           </ul>
         </div>
-        <a class="btn btn--ghost btn--full" href="#generateur">Contacter l'équipe</a>
+        <a class="btn btn--success btn--full" href="#generateur">Choisir l'offre 7 500 F / an</a>
       </div>
-    </div>
-
-    <div class="payment-badge-bar">
-      <span>Paiement simple et 100% sécurisé via :</span>
-      <span class="pay-pill" style="border-color: #00C3F7; color: #0084B4;">🌊 Wave Sénégal</span>
-      <span class="pay-pill" style="border-color: #FF6600; color: #D65100;">🍊 Orange Money</span>
-      <span class="pay-pill" style="border-color: #E2001A; color: #B30014;">🔴 Free Money</span>
     </div>
   </div>
 </section>
 
-<!-- FAQ SECTION -->
-<section class="section" id="faq">
-  <div class="wrap">
-    <div class="sec-head up" style="text-align: center; margin: 0 auto 40px;">
-      <span class="eyebrow">FAQ</span>
-      <h2 class="display">Questions fréquemment posées</h2>
+<!-- SECTIONS PROGRAMMES PRÉSCOLAIRE & ÉLÉMENTAIRE -->
+<section class="section" id="niveaux-prescolaire">
+  <div class="container">
+    <!-- PRÉSCOLAIRE 2024 -->
+    <div class="curric-card" style="border-left: 6px solid #059669;">
+      <span class="badge badge--green">Guide Curriculaire Préscolaire 2024</span>
+      <h3 style="font-size: 1.6rem; margin: 12px 0 8px;">1. Cycle Préscolaire (3 à 6 ans) — 5 Domaines Officiels</h3>
+      <p>Sections : Petite Section (PS) · Moyenne Section (MS) · Grande Section (GS).</p>
+      <div class="domains-list">
+        <span class="domain-tag domain-tag--pre">1. Langue et Communication (Langage, Conte, Pré-lecture, Graphisme)</span>
+        <span class="domain-tag domain-tag--pre">2. Mathématiques (Activités numériques, Géométrie, Mesure)</span>
+        <span class="domain-tag domain-tag--pre">3. Découverte du monde (IST, Repérage Temps/Espace, Hygiène)</span>
+        <span class="domain-tag domain-tag--pre">4. Développement socio-affectif et bien-être global</span>
+        <span class="domain-tag domain-tag--pre">5. Éducation psychomotrice et artistique</span>
+      </div>
     </div>
 
-    <div class="faq-wrap">
+    <!-- ÉLÉMENTAIRE 2025 -->
+    <div class="curric-card" id="niveaux-elementaire" style="border-left: 6px solid #1D4ED8;">
+      <span class="badge badge--primary">Guide Curriculaire Élémentaire 2025</span>
+      <h3 style="font-size: 1.6rem; margin: 12px 0 8px;">2. Cycle Élémentaire (6 à 12 ans) — 6 Classes / 3 Étapes</h3>
+      <p>Étape 1 (CI-CP) · Étape 2 (CE1-CE2) · Étape 3 (CM1-CM2 &amp; Examen CFEE).</p>
+      <div class="domains-list">
+        <span class="domain-tag domain-tag--elem">1. Langue et Communication (Lecture, Grammaire, Conjugaison, Production d'écrits)</span>
+        <span class="domain-tag domain-tag--elem">2. Mathématiques (Numération, Opérations, Mesures, Géométrie, Problèmes)</span>
+        <span class="domain-tag domain-tag--elem">3. Sciences et Vie Sociale - ESVS (Histoire, Géographie, Sciences)</span>
+        <span class="domain-tag domain-tag--elem">4. Éducation au Développement Durable - EDD</span>
+        <span class="domain-tag domain-tag--elem">5. EPSA (Dessin, Chant, EPS)</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION FAQ -->
+<section class="section" id="faq" style="background: var(--bg-card-subtle);">
+  <div class="container">
+    <div style="text-align: center; max-width: 650px; margin: 0 auto 36px;">
+      <span class="badge badge--primary">Foire Aux Questions</span>
+      <h2 style="font-size: 2.2rem; margin: 12px 0 8px;">Questions Fréquentes</h2>
+    </div>
+
+    <div class="faq-box">
       <div class="faq-item is-open">
-        <button class="faq-question">Les fiches sont-elles 100% conformes au programme sénégalais ?</button>
+        <button class="faq-question">Comment fonctionne la présentation stylo bleu et rouge ?</button>
         <div class="faq-answer">
-          Oui, nos modèles respectent scrupuleusement les révisions officielles des guides curriculaires du Ministère de l'Éducation Nationale du Sénégal (Préscolaire 2024 · Élémentaire 2025).
+          Le document généré imite exactement l'écriture manuelle d'un cahier de préparation physique : les titres, sous-titres, étapes et remarques d'évaluation sont écrits en stylo rouge, tandis que les contenus pédagogiques et activités des élèves sont rédigés en stylo bleu sur une feuille blanche à lignes réglées avec marge.
         </div>
       </div>
 
       <div class="faq-item">
-        <button class="faq-question">Quels sont les 5 domaines officiels du Préscolaire ?</button>
+        <button class="faq-question">Quels sont les tarifs des abonnements ?</button>
         <div class="faq-answer">
-          Les 5 domaines du préscolaire (Guide 2024) sont : 1. Langue et Communication · 2. Mathématiques · 3. Découverte du Monde · 4. Développement socio-affectif et bien-être global · 5. Éducation psychomotrice et artistique.
+          L'accès est de <strong>1 500 F CFA par mois</strong> ou de <strong>7 500 F CFA pour l'année complète</strong> (ce qui équivaut à 625 F/mois seulement). Vous pouvez régler instantanément par Wave ou Orange Money.
         </div>
       </div>
 
       <div class="faq-item">
-        <button class="faq-question">Puis-je utiliser SUÑU FICHES directement depuis mon téléphone ?</button>
+        <button class="faq-question">Les fiches sont-elles conformes aux dernières révisions du Ministère ?</button>
         <div class="faq-answer">
-          Absolument ! La plateforme est conçue responsive pour fonctionner parfaitement sur tous les smartphones (Android et iPhone), sans avoir besoin de télécharger une application lourde.
+          Oui, la plateforme applique scrupuleusement le guide curriculaire révisé de <strong>2024 pour le Préscolaire</strong> (5 domaines) et de <strong>2025 pour l'Élémentaire</strong> (CI à CM2).
         </div>
       </div>
-
-      <div class="faq-item">
-        <button class="faq-question">Comment télécharger mes fiches en format PDF ?</button>
-        <div class="faq-answer">
-          Dès qu'une fiche est générée ou personnalisée, un bouton "Exporter en PDF" vous permet d'obtenir immédiatement un fichier document propre, prêt à l'impression au format A4.
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section" style="padding-top: 0;">
-  <div class="wrap">
-    <div class="cta-banner up">
-      <h2>Prêt à gagner 2 heures sur vos préparations dès ce soir ?</h2>
-      <p>Rejoignez des centaines d'enseignants sénégalais qui ont simplifié leur travail au quotidien.</p>
-      <a class="btn btn--primary btn--lg" href="#generateur">Générer mes fiches maintenant</a>
     </div>
   </div>
 </section>
 
 </main>
 
-<footer class="ftr">
-  <div class="wrap ftr-in">
+<footer class="footer">
+  <div class="container footer__inner">
     <div>
-      <p><strong>SUÑU FICHES</strong> — Une solution éditative CMD ART SN, Mbour, Sénégal.</p>
-      <p class="ftr-wolof">Suñu fiches, suñu xam-xam, suñu njang.</p>
+      <strong>SUÑU FICHES</strong> — Plateforme Pédagogique Nationale du Sénégal.
+      <p style="font-size: 0.85rem; color: var(--text-light); margin-top: 4px;">Édité pour les enseignants et directeurs d'école du Sénégal.</p>
     </div>
-
-    <div style="display: flex; gap: 20px; font-size: 14px; color: var(--graphite);">
-      <a href="#">Mentions Légales</a>
-      <a href="#">Confidentialité</a>
-      <a href="#">Support WhatsApp</a>
+    <div style="display: flex; gap: 20px; font-size: 0.9rem; color: var(--text-muted);">
+      <a href="#tarifs">Tarifs (1 500F / 7 500F)</a>
+      <a href="#generateur">Générateur APC</a>
+      <a href="#top">Haut de page ↑</a>
     </div>
   </div>
 </footer>
 
+<!-- SCRIPT LOGIQUE : MODE SOMBRE / CLAIR & MOTEUR APC -->
 <script>
-// DEMO DATABASE FOR PREVIEW CARD
-const DEMO_DATABASE = {
-  gs: {
-    titre: "Nommer les membres de la famille (Jeu d'Album)",
-    stamp: "Guide Pré 2024",
-    rows: [
-      ["Niveau", "Grande Section (GS) — 5 à 6 ans"],
-      ["Domaine", "D1 — Langue & Communication"],
-      ["Durée", "25 mns"],
-      ["Objectif (OS)", "Présenter un membre de sa famille en disant son nom et son âge."],
-      ["Matériel", "Album photo de classe, étiquettes-images, marionnettes."]
-    ],
-    steps: [
-      ["1", "Motivation — Jeu de regroupement et comptine 'Ma Famille' (5 mns)"],
-      ["2", "Découverte — Présentation de l'album imagé (8 mns)"],
-      ["3", "Expression — Chaque enfant présente sa marionnette (7 mns)"],
-      ["4", "Évaluation — Associer l'image au mot entendu (5 mns)"]
-    ]
-  },
-  ci: {
-    titre: "Lecture — Découverte du son [a]",
-    stamp: "Guide Élem 2025",
-    rows: [
-      ["Niveau", "Cours d'Initiation (CI) — Étape 1"],
-      ["Discipline", "Langue & Communication — Lecture"],
-      ["Durée", "45 mns"],
-      ["Objectif (OS)", "Isoler le son [a] à l'oral et l'associer à la graphie 'a'."],
-      ["Matériel", "Tableau, ardoises, images (ananas, banane, tasse)."]
-    ],
-    steps: [
-      ["1", "Révision — Rappel des voyelles connues (5 mns)"],
-      ["2", "Discrimination auditive — Détection du son dans la comptine (10 mns)"],
-      ["3", "Discrimination visuelle & Écriture — Tracé sur ardoise (18 mns)"],
-      ["4", "Évaluation — Entourer la lettre 'a' dans des mots simples (12 mns)"]
-    ]
-  },
-  cp: {
-    titre: "L'addition sans retenue jusqu'à 20",
-    stamp: "Guide Élem 2025",
-    rows: [
-      ["Niveau", "Cours Préparatoire (CP) — Étape 1"],
-      ["Discipline", "Mathématiques — Opérations"],
-      ["Durée", "45 mns"],
-      ["Objectif (OS)", "Effectuer une addition posée de deux nombres < 20."],
-      ["Matériel", "Bâtonnets, bouliers, ardoises, manuel."]
-    ],
-    steps: [
-      ["1", "Calcul mental — Comptage de 2 en 2 jusqu'à 20 (5 mns)"],
-      ["2", "Situation problème — Vente de mangues au marché (12 mns)"],
-      ["3", "Institutionalisation — Technique opératoire au tableau (15 mns)"],
-      ["4", "Évaluation — 3 additions individuelles sur ardoise (13 mns)"]
-    ]
-  },
-  ce1: {
-    titre: "Les parties de la plante",
-    stamp: "Guide Élem 2025",
-    rows: [
-      ["Niveau", "Cours Élémentaire 1 (CE1) — Étape 2"],
-      ["Discipline", "ESVS — Sciences d'Observation"],
-      ["Durée", "45 mns"],
-      ["Objectif (OS)", "Nommer les 4 parties principales d'une plante à fleurs."],
-      ["Matériel", "Plantes réelles, loupes, cahier d'expériences."]
-    ],
-    steps: [
-      ["1", "Motivation — Observation directe d'une plante déracinée (7 mns)"],
-      ["2", "Investigation — Identification des racines, tige, feuilles (15 mns)"],
-      ["3", "Tracé — Schématisation annotée sur cahier (13 mns)"],
-      ["4", "Évaluation — Légender un schéma muet (10 mns)"]
-    ]
-  },
-  ce2: {
-    titre: "Grammaire — Le COD et le COI",
-    stamp: "Guide Élem 2025",
-    rows: [
-      ["Niveau", "Cours Élémentaire 2 (CE2) — Étape 2"],
-      ["Discipline", "Langue & Communication — Grammaire"],
-      ["Durée", "50 mns"],
-      ["Objectif (OS)", "Distinguer le complément d'objet direct du complément indirect."],
-      ["Matériel", "Corpus de phrases au tableau, étiquettes grammaire."]
-    ],
-    steps: [
-      ["1", "Rappel — Le groupe verbal et le sujet (6 mns)"],
-      ["2", "Observation — Questionnement 'Qui ? Quoi ? À qui ?' (14 mns)"],
-      ["3", "Formalisation — Élaboration de la règle de grammaire (15 mns)"],
-      ["4", "Évaluation — Exercice d'application individuel (15 mns)"]
-    ]
-  },
-  cm1: {
-    titre: "Géographie — Les régions du Sénégal",
-    stamp: "Guide Élem 2025",
-    rows: [
-      ["Niveau", "Cours Moyen 1 (CM1) — Étape 3"],
-      ["Discipline", "ESVS — Géographie du Sénégal"],
-      ["Durée", "50 mns"],
-      ["Objectif (OS)", "Localiser les 14 régions administratives et leurs chefs-lieux."],
-      ["Matériel", "Carte murale du Sénégal, cartes muettes, crayons."]
-    ],
-    steps: [
-      ["1", "Motivation — Découverte de la carte administrative (8 mns)"],
-      ["2", "Analyse — Repérage des régions du Nord, Sud, Est, Ouest (17 mns)"],
-      ["3", "Production — Coloriage et renseignement de la carte muette (15 mns)"],
-      ["4", "Évaluation — Quiz de localisation rapide (10 mns)"]
-    ]
-  },
-  cm2: {
-    titre: "Problèmes de pourcentages (Prépa CFEE)",
-    stamp: "Spécial CFEE",
-    rows: [
-      ["Niveau", "Cours Moyen 2 (CM2) — Étape 3"],
-      ["Discipline", "Mathématiques — Résolution de Problèmes"],
-      ["Durée", "55 mns"],
-      ["Objectif (OS)", "Calculer une remise ou une augmentation en pourcentage."],
-      ["Matériel", "Annales du CFEE, cahiers d'exercices, tableau."]
-    ],
-    steps: [
-      ["1", "Calcul rapide — Fractions simples et décimaux (7 mns)"],
-      ["2", "Situation CFEE — Réduction de 15% sur un achat de fournitures (18 mns)"],
-      ["3", "Méthodologie — Application de la règle de trois (15 mns)"],
-      ["4", "Évaluation — Problème type CFEE en autonomie (12 mns)"]
-    ]
-  }
-};
+// 1. GESTION DU THÈME SOMBRE / CLAIR
+const themeToggleBtn = document.getElementById('themeToggleBtn');
+const themeIcon = document.getElementById('themeIcon');
 
-const PERSPECTIVES = {
-  enseignant: {
-    eyebrow: "Pour les Enseignants du Sénégal",
-    title: "Votre cahier de préparation <em>se remplit en 2 minutes.</em>",
-    lede: "Fini les heures perdues le soir à recopier des trames. SUÑU FICHES génère des fiches de préparation complètes, claires et 100% adaptées à votre classe."
-  },
-  directeur: {
-    eyebrow: "Pour la Direction d'Établissement",
-    title: "Unifiez et élevez <em>la qualité pédagogique de votre école.</em>",
-    lede: "Offrez à toute votre équipe d'enseignants un outil partagé. Suivez l'avancement des préparations et garantissez l'homogénéité des fiches pour toutes les classes."
-  },
-  inspection: {
-    eyebrow: "Conformité Inspection & Curriculum",
-    title: "Des fiches 100% conformes <em>aux exigences du MEN.</em>",
-    lede: "Respect des révisions des guides curriculaires du Ministère de l'Éducation Nationale : Préscolaire (2024) et Élémentaire (2025)."
-  }
-};
-
-// UI DOM ELEMENTS
-const ficheDisplay = document.getElementById('ficheDisplay');
-const pickerBtns = document.querySelectorAll('.picker-btn');
-const heroTabs = document.querySelectorAll('.hero-tab');
-const heroEyebrow = document.getElementById('heroEyebrow');
-const heroTitle = document.getElementById('heroTitle');
-const heroLede = document.getElementById('heroLede');
-
-// RENDER PREVIEW FICHE
-function renderFiche(levelKey) {
-  const data = DEMO_DATABASE[levelKey] || DEMO_DATABASE.gs;
-  
-  const rowsHtml = data.rows.map(([dt, dd]) => `
-    <div class="fiche-row"><dt>${dt}</dt><dd>${dd}</dd></div>
-  `).join('');
-
-  const stepsHtml = data.steps.map(([n, text]) => `
-    <li><b>${n}</b><span>${text}</span></li>
-  `).join('');
-
-  ficheDisplay.innerHTML = `
-    <div class="fiche__head">
-      <h3 class="fiche__title">${data.titre}</h3>
-      <span class="fiche__stamp">${data.stamp}</span>
-    </div>
-    <dl>${rowsHtml}</dl>
-    <div class="fiche-row">
-      <dt>Déroulement</dt>
-      <dd><ul class="fiche-steps">${stepsHtml}</ul></dd>
-    </div>
-  `;
+function initTheme() {
+  const savedTheme = localStorage.getItem('sunu_theme') || 'light';
+  document.documentElement.setAttribute('data-theme', savedTheme);
+  themeIcon.textContent = savedTheme === 'dark' ? '☀️' : '🌙';
 }
 
-pickerBtns.forEach(btn => {
-  btn.addEventListener('click', () => {
-    pickerBtns.forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-    renderFiche(btn.dataset.level);
-  });
+themeToggleBtn.addEventListener('click', () => {
+  const current = document.documentElement.getAttribute('data-theme');
+  const target = current === 'dark' ? 'light' : 'dark';
+  document.documentElement.setAttribute('data-theme', target);
+  localStorage.setItem('sunu_theme', target);
+  themeIcon.textContent = target === 'dark' ? '☀️' : '🌙';
 });
 
-heroTabs.forEach(tab => {
-  tab.addEventListener('click', () => {
-    heroTabs.forEach(t => {
-      t.classList.remove('active');
-      t.setAttribute('aria-selected', 'false');
-    });
-    tab.classList.add('active');
-    tab.setAttribute('aria-selected', 'true');
+initTheme();
 
-    const key = tab.dataset.perspective;
-    const p = PERSPECTIVES[key];
-    if (p) {
-      heroEyebrow.textContent = p.eyebrow;
-      heroTitle.innerHTML = p.title;
-      heroLede.textContent = p.lede;
-    }
-  });
-});
+// 2. CONFIGURATION DES CYCLES (PRÉSCOLAIRE 2024 VS ÉLÉMENTAIRE 2025)
+const cardPre = document.getElementById('cardPre');
+const cardElem = document.getElementById('cardElem');
+const fLevel = document.getElementById('fLevel');
+const fDiscipline = document.getElementById('fDiscipline');
+const fOS = document.getElementById('fOS');
 
-document.querySelectorAll('.faq-question').forEach(btn => {
-  btn.addEventListener('click', () => {
-    const item = btn.closest('.faq-item');
-    const isOpen = item.classList.contains('is-open');
-    
-    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('is-open'));
-    if (!isOpen) {
-      item.classList.add('is-open');
-    }
-  });
-});
+let currentCycle = 'pre';
 
-const hamburgerBtn = document.getElementById('hamburgerBtn');
-const mobileDrawer = document.getElementById('mobileDrawer');
-const mobileLinks = document.querySelectorAll('.mobile-link');
-
-hamburgerBtn.addEventListener('click', () => {
-  const isOpen = mobileDrawer.classList.contains('is-open');
-  if (isOpen) {
-    mobileDrawer.classList.remove('is-open');
-    hamburgerBtn.classList.remove('is-active');
-  } else {
-    mobileDrawer.classList.add('is-open');
-    hamburgerBtn.classList.add('is-active');
-  }
-});
-
-mobileLinks.forEach(link => {
-  link.addEventListener('click', () => {
-    mobileDrawer.classList.remove('is-open');
-    hamburgerBtn.classList.remove('is-active');
-  });
-});
-
-window.addEventListener('scroll', () => {
-  const header = document.getElementById('header');
-  if (window.scrollY > 20) {
-    header.classList.add('is-scrolled');
-  } else {
-    header.classList.remove('is-scrolled');
-  }
-});
-
-// DYNAMIC CYCLE SWITCHER FOR GENERATOR (PRESCHOOL vs ELEMENTARY)
-const genLevel = document.getElementById('genLevel');
-const genDiscipline = document.getElementById('genDiscipline');
-const genTopic = document.getElementById('genTopic');
-const btnCyclePre = document.getElementById('btnCyclePre');
-const btnCycleElem = document.getElementById('btnCycleElem');
-
-let currentCycle = 'pre'; // 'pre' or 'elem'
-
-const PRE_OPTIONS = {
+const PRE_DATA = {
   levels: [
     { value: 'PS', label: 'Petite Section (PS) — 3 à 4 ans' },
     { value: 'MS', label: 'Moyenne Section (MS) — 4 à 5 ans' },
@@ -1210,15 +919,15 @@ const PRE_OPTIONS = {
   ],
   disciplines: [
     { value: 'D1 — Langue & Communication', label: 'D1 — Langue & Communication (Langage, Conte, Graphisme)' },
-    { value: 'D2 — Mathématiques', label: 'D2 — Mathématiques (Activités numériques, Géométrie, Mesures)' },
+    { value: 'D2 — Mathématiques', label: 'D2 — Mathématiques (Activités numériques, Géométrie, Mesure)' },
     { value: 'D3 — Découverte du monde', label: 'D3 — Découverte du monde (IST, Temps/Espace, Hygiène)' },
-    { value: 'D4 — Développement socio-affectif', label: 'D4 — Développement socio-affectif (Vivre ensemble & Environnement)' },
-    { value: 'D5 — Éducation psychomotrice & artistique', label: 'D5 — Éducation psychomotrice & artistique (Motricité & Arts)' }
+    { value: 'D4 — Développement socio-affectif', label: 'D4 — Développement socio-affectif (Vivre ensemble)' },
+    { value: 'D5 — Éducation psychomotrice & artistique', label: 'D5 — Éducation psychomotrice & artistique' }
   ],
-  defaultTopic: "Présenter un membre de sa famille en disant son nom et son âge."
+  defaultOS: "Nommer les membres de sa famille en montrant leur image."
 };
 
-const ELEM_OPTIONS = {
+const ELEM_DATA = {
   levels: [
     { value: 'CI', label: "Cours d'Initiation (CI) — Étape 1" },
     { value: 'CP', label: "Cours Préparatoire (CP) — Étape 1" },
@@ -1228,202 +937,188 @@ const ELEM_OPTIONS = {
     { value: 'CM2', label: "Cours Moyen 2 (CM2) — Étape 3 / CFEE" }
   ],
   disciplines: [
-    { value: "Langue & Comm. — Lecture", label: "Langue & Comm. — Lecture" },
     { value: "Langue & Comm. — Grammaire", label: "Langue & Comm. — Grammaire" },
+    { value: "Langue & Comm. — Lecture", label: "Langue & Comm. — Lecture" },
     { value: "Langue & Comm. — Production d'écrits", label: "Langue & Comm. — Production d'écrits" },
     { value: "Mathématiques — Opérations", label: "Mathématiques — Opérations" },
     { value: "Mathématiques — Géométrie", label: "Mathématiques — Géométrie" },
-    { value: "Mathématiques — Problèmes", label: "Mathématiques — Résolution de Problèmes" },
+    { value: "Mathématiques — Résolution de Problèmes", label: "Mathématiques — Résolution de Problèmes" },
     { value: "ESVS — Sciences d'observation", label: "ESVS — Sciences d'observation" },
     { value: "ESVS — Géographie du Sénégal", label: "ESVS — Géographie du Sénégal" },
     { value: "ESVS — Histoire du Sénégal", label: "ESVS — Histoire du Sénégal" },
     { value: "EPSA — Dessin & Travail Manuel", label: "EPSA — Dessin & Travail Manuel" }
   ],
-  defaultTopic: "Distinguer et employer correctement le complément d'objet direct (COD) dans une phrase."
+  defaultOS: "Distinguer et employer correctement le Complément d'Objet Direct (COD) dans une phrase."
 };
 
-function switchGenCycle(cycle) {
+function setCycle(cycle) {
   currentCycle = cycle;
   if (cycle === 'pre') {
-    btnCyclePre.className = 'cycle-btn active-pre';
-    btnCycleElem.className = 'cycle-btn';
-    
-    genLevel.innerHTML = PRE_OPTIONS.levels.map(l => `<option value="${l.value}">${l.label}</option>`).join('');
-    genDiscipline.innerHTML = PRE_OPTIONS.disciplines.map(d => `<option value="${d.value}">${d.label}</option>`).join('');
-    genTopic.placeholder = "ex: Présenter un membre de sa famille en disant son nom et son âge";
-    genTopic.value = PRE_OPTIONS.defaultTopic;
+    cardPre.className = 'cycle-card active-pre';
+    cardElem.className = 'cycle-card';
+    fLevel.innerHTML = PRE_DATA.levels.map(l => `<option value="${l.value}">${l.label}</option>`).join('');
+    fDiscipline.innerHTML = PRE_DATA.disciplines.map(d => `<option value="${d.value}">${d.label}</option>`).join('');
+    fOS.value = PRE_DATA.defaultOS;
   } else {
-    btnCyclePre.className = 'cycle-btn';
-    btnCycleElem.className = 'cycle-btn active-elem';
-    
-    genLevel.innerHTML = ELEM_OPTIONS.levels.map(l => `<option value="${l.value}">${l.label}</option>`).join('');
-    genDiscipline.innerHTML = ELEM_OPTIONS.disciplines.map(d => `<option value="${d.value}">${d.label}</option>`).join('');
-    genTopic.placeholder = "ex: Distinguer et employer le complément d'objet direct (COD)";
-    genTopic.value = ELEM_OPTIONS.defaultTopic;
+    cardPre.className = 'cycle-card';
+    cardElem.className = 'cycle-card active-elem';
+    fLevel.innerHTML = ELEM_DATA.levels.map(l => `<option value="${l.value}">${l.label}</option>`).join('');
+    fDiscipline.innerHTML = ELEM_DATA.disciplines.map(d => `<option value="${d.value}">${d.label}</option>`).join('');
+    fOS.value = ELEM_DATA.defaultOS;
   }
 }
 
-// REAL APC FICHE GENERATOR ENGINE LOGIC
-const ficheGeneratorForm = document.getElementById('ficheGeneratorForm');
-const generatedFicheContainer = document.getElementById('generatedFicheContainer');
-const printableFiche = document.getElementById('printableFiche');
+// 3. MOTEUR DE GÉNÉRATION DE FICHE APC STYLE CAHIER
+const ficheForm = document.getElementById('ficheForm');
+const outputContainer = document.getElementById('outputContainer');
+const ficheContent = document.getElementById('ficheContent');
 
-ficheGeneratorForm.addEventListener('submit', (e) => {
+ficheForm.addEventListener('submit', (e) => {
   e.preventDefault();
 
-  const level = genLevel.value;
-  const discipline = genDiscipline.value;
-  const osTextUser = genTopic.value || "Effectuer la tâche indiquée dans la consigne.";
-  const teacher = document.getElementById('genTeacher').value || "Enseignant(e)";
-  const school = document.getElementById('genSchool').value || "Établissement Pédagogique";
-  const duration = document.getElementById('genDuration').value;
+  const level = fLevel.value;
+  const discipline = fDiscipline.value;
+  const os = fOS.value || "Exécuter l'activité conformément à la consigne.";
+  const teacher = document.getElementById('fTeacher').value || "Enseignant(e)";
+  const school = document.getElementById('fSchool').value || "École Pédagogique";
+  const duration = document.getElementById('fDuration').value;
 
-  const todayStr = new Date().toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' });
-  const isPreschool = currentCycle === 'pre' || ['PS', 'MS', 'GS'].includes(level);
-  const guideYear = isPreschool ? "Guide Préscolaire 2024" : "Guide Élémentaire 2025";
+  const isPreschool = currentCycle === 'pre';
+  const guideYear = isPreschool ? "Guide MEN Préscolaire 2024" : "Guide MEN Élémentaire 2025";
+  const today = new Date().toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' });
 
-  // Generate APC details based on Preschool (Guide 2024) vs Elementary (Guide 2025)
-  let domainCode = isPreschool ? "Cycle Préscolaire (5 Domaines - Guide 2024)" : "Cycle Élémentaire (Guide 2025)";
-  let competenceBase = isPreschool
-    ? "Intégrer le vocabulaire usuel, la manipulation concrète et l'expression par le jeu dans des situations de découverte du milieu."
-    : "Intégrer les structures et règles d'utilisation de la discipline dans des situations de résolution de problèmes.";
-
-  let palierText = isPreschool
-    ? "Palier Préscolaire : Mobiliser les sens, le langage et la motricité à travers des jeux guidés."
-    : "Palier 2 : Utiliser les règles fondamentales de fonctionnement de la discipline.";
-
-  let oaText = isPreschool
-    ? "OA : Communiquer avec les autres, explorer l'environnement et exprimer ses émotions."
-    : "OA 1 : Identifier et employer les constituants clés du programme.";
-
-  let osFormatted = osTextUser.startsWith("À la fin") ? osTextUser : `À la fin de la séance, l'élève / enfant doit être capable de : ${osTextUser}.`;
-
-  let materielText = isPreschool
-    ? "Pâte à modeler, images d'albums, objets réels de la classe, marionnettes, ardoises magiques, planchettes."
-    : "Tableau, ardoises, corpus rédigés sur bande-papier, manuel de l'élève, cahiers d'exercices.";
-
-  // Construct 3-Column Deroulement Table Rows
-  const stepsData = isPreschool ? [
+  // Étapes de déroulement en fonction du cycle
+  const steps = isPreschool ? [
     {
       etape: "1. Regroupement & Motivation",
-      enseignant: `Rassemble les enfants au coin regroupement. Entonne la comptine d'introduction. Présente le matériel attractif du jeu relatif à l'OS : "${osTextUser}".`,
-      eleves: "S'installent en cercle, chantent la comptine, touchent le matériel et écoutent les consignes."
+      maitre: `Rassemble les enfants au coin regroupement. Entonne la comptine thématique et présente le matériel relatif à l'OS : « ${os} ».`,
+      eleves: "Chantent la comptine, touchent le matériel et écoutent les consignes avec attention."
     },
     {
-      etape: "2. Manipulation Libre & Exploration",
-      enseignant: `Laisse les enfants manipuler librement les objets. Pose des questions ouvertes pour amener l'objectif spécifique ("Qu'est-ce que vous voyez ? Comment faire ?").`,
-      eleves: "Manipulent, trient, touchent, nomment les objets et essaient la tâche spontanément."
+      etape: "2. Manipulation & Exploration",
+      maitre: "Laisse les enfants manipuler librement le matériel. Pose des questions d'orientation ouvertes.",
+      eleves: "Manipulent, trient, nomment les objets et expriment leurs observations."
     },
     {
       etape: "3. Jeu Dirigé & Structuration",
-      enseignant: `Fixe la règle de l'activité guidée. Accompagne la réalisation de l'Objectif Spécifique. Valorise les réussites et apporte un étayage.`,
-      eleves: "Exécutent la tâche de l'OS (nommer, placer, rouler, trier) et répètent les formulations correctes."
+      maitre: `Guide la règle du jeu pour faire atteindre l'OS : « ${os} ». Accompagne chaque enfant individuellement.`,
+      eleves: "Réalisent la tâche demandée (nommer, classer, associer) et verbalisent leur démarche."
     },
     {
       etape: "4. Évaluation & Rangement",
-      enseignant: `Vérifie la réalisation de l'OS ("Montre-moi ta création / dis la réponse"). Invite les enfants au lavage des mains et au rangement.`,
-      eleves: "Montrent leur travail au groupe, puis rangent le matériel dans les bacs de la classe."
+      maitre: "Vérifie individuellement l'atteinte de l'OS. Félicite les enfants et guide le rangement des bacs.",
+      eleves: "Présentent leur réussite, rangent le matériel et se lavent les mains."
     }
   ] : [
     {
-      etape: "1. Phase de Révision / Motivation",
-      enseignant: `Demande de rappeler les pré-requis. Présente la situation-problème ou le prétexte relatif à l'OS : "${osTextUser}". Pose des questions d'orientation.`,
-      eleves: "Rappellent les connaissances antérieures. Observent le support présenté et émettent des hypothèses."
+      etape: "1. Révision / Motivation",
+      maitre: `Rappelle les prérequis. Présente le support ou la situation-problème relative à l'OS : « ${os} ».`,
+      eleves: "Répondent aux questions de rappel, observent le support et formulent des hypothèses."
     },
     {
-      etape: "2. Phase de Découverte & Recherche",
-      enseignant: `Organise les élèves en groupes. Distribue le matériel et la consigne d'investigation pour atteindre l'OS. Circule et étaye si besoin.`,
-      eleves: "Travaillent en petits groupes. Manipulent le matériel, analysent le corpus et notent leurs conclusions sur les ardoises."
+      etape: "2. Recherche & Découverte",
+      maitre: "Organise le travail en sous-groupes. Distribue le corpus et donne la consigne d'analyse.",
+      eleves: "Travaillent en groupes, échangent, recherchent la solution et notent sur l'ardoise."
     },
     {
-      etape: "3. Phase de Synthèse & Trace Écrite",
-      enseignant: `Fait passer un rapporteur par groupe. Anime la confrontation des résultats au tableau. Guide la formulation de la règle.`,
-      eleves: "Présentent leurs travaux, comparent leurs réponses et recopient la synthèse validée dans leur cahier."
+      etape: "3. Synthèse & Trace Écrite",
+      maitre: "Anime la mise en commun au tableau. Valide les bonnes réponses et formalise la règle générale.",
+      eleves: "Présentent les résultats de groupe, participent à l'élaboration de la règle et recopient sur cahier."
     },
     {
-      etape: "4. Phase d'Évaluation Spécifique",
-      enseignant: `Propose 2 à 3 exercices d'application individuelle sur ardoise ou cahier pour vérifier la maîtrise de l'Objectif Spécifique.`,
-      eleves: "Effectuent le travail individuel sans aide externe. Présentent leurs résultats."
+      etape: "4. Évaluation Spécifique",
+      maitre: "Propose 2 exercices d'application individuelle pour mesurer la maîtrise de l'Objectif Spécifique.",
+      eleves: "Réalisent les exercices individuellement sans aide sur leur cahier ou ardoise."
     }
   ];
 
-  const tableRowsHtml = stepsData.map(s => `
+  const tableRows = steps.map(s => `
     <tr>
-      <td style="font-weight: 700; color: var(--rouge);">${s.etape}</td>
-      <td>${s.enseignant}</td>
-      <td>${s.eleves}</td>
+      <td class="etape-cell">${s.etape}</td>
+      <td class="content-cell">${s.maitre}</td>
+      <td class="content-cell">${s.eleves}</td>
     </tr>
   `).join('');
 
-  // Render Complete APC Fiche Output HTML
-  printableFiche.innerHTML = `
-    <div style="border-bottom: 2px solid var(--rouge); padding-bottom: 12px; margin-bottom: 20px; display: flex; justify-content: space-between; align-items: center;">
+  ficheContent.innerHTML = `
+    <div class="cahier-head">
       <div>
-        <h2 style="font-family: var(--f-display); font-size: 24px; font-weight: 700; color: var(--ink);">${osTextUser}</h2>
-        <span style="font-family: var(--f-mono); font-size: 12px; color: var(--graphite); text-transform: uppercase;">
-          Fiche de Préparation ${isPreschool ? 'PRÉSCOLAIRE (Guide 2024)' : 'ÉLÉMENTAIRE (Guide 2025)'} — Sénégal
-        </span>
+        <div class="cahier-titre">CAHIER DE PRÉPARATION PÉDAGOGIQUE — FICHE APC</div>
+        <small style="color: var(--stylo-bleu); font-weight: 700; font-family: var(--font-heading);">
+          ${isPreschool ? 'CYCLE PRÉSCOLAIRE (5 DOMAINES)' : 'CYCLE ÉLÉMENTAIRE (6 CLASSES)'} · ${guideYear}
+        </small>
       </div>
-      <span class="fiche__stamp" style="font-size: 11px; padding: 6px 12px;">${guideYear}<br>Conforme MEN</span>
+      <div class="cahier-tag">OFFICIEL MEN SÉNÉGAL</div>
     </div>
 
-    <div class="apc-admin-grid">
-      <div><strong>ÉTABLISSEMENT / IEF :</strong> ${school}</div>
-      <div><strong>SECTION / NIVEAU :</strong> ${level}</div>
-      <div><strong>EFFECTIF :</strong> 32 Enfants / Élèves</div>
-      <div><strong>DATE &amp; DURÉE :</strong> ${todayStr} (${duration})</div>
-      <div><strong>ÉDUCATEUR / ENSEIGNANT :</strong> ${teacher}</div>
-      <div><strong>DOMAINE OFFICIEL :</strong> ${discipline}</div>
-      <div><strong>CYCLE :</strong> ${isPreschool ? 'PRÉSCOLAIRE (3-6 ans)' : 'ÉLÉMENTAIRE (6-12 ans)'}</div>
-      <div><strong>STATUT :</strong> Validé Conforme</div>
+    <div class="cahier-meta-grid">
+      <div class="cahier-meta-item">
+        <strong>Établissement / IEF :</strong> <span>${school}</span>
+      </div>
+      <div class="cahier-meta-item">
+        <strong>Date &amp; Durée :</strong> <span>${today} (${duration})</span>
+      </div>
+      <div class="cahier-meta-item">
+        <strong>Enseignant(e) :</strong> <span>${teacher}</span>
+      </div>
+      <div class="cahier-meta-item">
+        <strong>Classe / Section :</strong> <span>${level} (Effectif : 32)</span>
+      </div>
+      <div class="cahier-meta-item" style="grid-column: span 2;">
+        <strong>Domaine Officiel :</strong> <span>${discipline}</span>
+      </div>
     </div>
 
-    <div style="margin-bottom: 20px; line-height: 1.5; font-size: 14.5px;">
-      <p style="margin-bottom: 6px;"><strong>Compétence de base :</strong> ${competenceBase}</p>
-      <p style="margin-bottom: 6px;"><strong>Palier :</strong> ${palierText}</p>
-      <p style="margin-bottom: 6px;"><strong>Objective d'Apprentissage (OA) :</strong> ${oaText}</p>
-      <p style="margin-bottom: 6px; color: var(--rouge);"><strong>Objectif Spécifique (OS) :</strong> ${osFormatted}</p>
-      <p style="margin-bottom: 6px;"><strong>Moyens &amp; Matériel Didactique :</strong> ${materielText}</p>
+    <div style="margin: 16px 0 14px;">
+      <span style="color: var(--stylo-rouge); font-weight: 700; font-size: 1.05rem;">Objectif Spécifique (OS) :</span>
+      <p style="color: var(--stylo-bleu); font-family: var(--font-hand); font-size: 1.25rem; font-weight: 700; line-height: 1.35; margin-top: 4px;">
+        À la fin de la séance, l'élève / l'enfant doit être capable de : ${os}
+      </p>
     </div>
 
-    <h3 style="font-family: var(--f-display); font-size: 18px; margin-top: 24px; color: var(--ink);">
-      DÉROULEMENT DE L'ACTIVITÉ (${isPreschool ? 'Démarche du Préscolaire - Guide 2024' : 'Tableau APC 3 Colonnes - Guide 2025'})
-    </h3>
-    <table class="apc-table">
+    <table class="cahier-table">
       <thead>
         <tr>
-          <th style="width: 25%;">Étapes</th>
-          <th style="width: 38%;">Activités de l'Enseignant(e) / Éducateur</th>
-          <th style="width: 37%;">Activités des Enfants / Élèves</th>
+          <th style="width: 25%;">Étapes de la séance</th>
+          <th style="width: 38%;">Activités du Maître / Éducateur</th>
+          <th style="width: 37%;">Activités des Élèves / Enfants</th>
         </tr>
       </thead>
       <tbody>
-        ${tableRowsHtml}
+        ${tableRows}
       </tbody>
     </table>
 
-    <div class="apc-eval-box">
-      <h4>Évaluation de l'Objectif Spécifique (OS) &amp; Remédiation</h4>
-      <p><strong>Consigne :</strong> ${isPreschool ? "Vérification individuelle de la maîtrise de l'OS par observation directe." : "Répondre individuellement à la consigne d'évaluation sur le cahier."}</p>
-      <p style="margin-top: 6px;"><strong>Critères d'évaluation :</strong> 1. Réalisation de la tâche (50%) · 2. Autonomie &amp; Posture (30%) · 3. Verbalisation / Correction (20%).</p>
-      <p style="margin-top: 6px; color: var(--graphite); font-style: italic;"><strong>Remédiation anticipée :</strong> En cas de non-atteinte de l'OS, étayage individualisé et reprise progressive avec matériel concret.</p>
+    <div class="cahier-eval">
+      <h4>Évaluation de l'Objectif Spécifique &amp; Remédiation (Encre Rouge)</h4>
+      <p><strong>Critères :</strong> Réalisation correcte de la consigne (3/4 des réussites attendues).</p>
+      <p><strong>Remédiation :</strong> En cas de difficulté, reprise immédiate avec étayage personnalisé et manipulation d'objets concrets.</p>
     </div>
   `;
 
-  generatedFicheContainer.style.display = 'block';
-  generatedFicheContainer.scrollIntoView({ behavior: 'smooth' });
+  outputContainer.style.display = 'block';
+  outputContainer.scrollIntoView({ behavior: 'smooth' });
 });
 
-function copyFicheToClipboard() {
-  const text = printableFiche.innerText;
+function copyFiche() {
+  const text = document.getElementById('ficheContent').innerText;
   navigator.clipboard.writeText(text).then(() => {
     alert("La fiche de préparation a été copiée dans votre presse-papier !");
   });
 }
 
-// Initial setup
-switchGenCycle('pre');
-renderFiche('gs');
+// Initialisation
+setCycle('pre');
+
+// FAQ Accordion
+document.querySelectorAll('.faq-question').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const item = btn.closest('.faq-item');
+    const open = item.classList.contains('is-open');
+    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('is-open'));
+    if (!open) item.classList.add('is-open');
+  });
+});
 </script>
 </body>
 </html>
