@@ -553,7 +553,7 @@ button { cursor: pointer; border: none; font-family: inherit; }
         <h1>Le cahier de préparation des enseignants, <em>rédigé en 2 minutes.</em></h1>
 
         <p class="hero__desc">
-          Générez instantanément des fiches pédagogiques impeccables au format officiel sénégalais. Présentation authentique en <strong>stylo bleu et rouge</strong> sur feuille blanche réglée, conforme APC pour l'inspection.
+          Générez instantanément des fiches pédagogiques impeccables et <strong>100% cohérentes avec la discipline choisie</strong> (Mathématiques, Français, Sciences, Préscolaire...). Présentation authentique en <strong>stylo bleu et rouge</strong> sur papier blanc réglé.
         </p>
 
         <div class="hero__cta-group">
@@ -567,7 +567,7 @@ button { cursor: pointer; border: none; font-family: inherit; }
         </div>
       </div>
 
-      <!-- APERÇU CAHIER DE PRÉPARATION (STYLO BLEU / ROUGE) -->
+      <!-- APERÇU CAHIER DE PRÉPARATION (EXEMPLE MATHÉMATIQUES PARFAITEMENT COHÉRENT) -->
       <div class="cahier-preview">
         <div class="cahier-paper">
           <div class="cahier-head">
@@ -586,7 +586,7 @@ button { cursor: pointer; border: none; font-family: inherit; }
               <strong>Durée :</strong> <span>45 mns</span>
             </div>
             <div class="cahier-meta-item">
-              <strong>Discipline :</strong> <span>Langue &amp; Communication</span>
+              <strong>Discipline :</strong> <span>Mathématiques — Opérations</span>
             </div>
             <div class="cahier-meta-item">
               <strong>Date :</strong> <span>Séance du jour</span>
@@ -596,7 +596,7 @@ button { cursor: pointer; border: none; font-family: inherit; }
           <div style="margin-bottom: 12px;">
             <span style="color: var(--stylo-rouge); font-weight: 700;">Objectif Spécifique (OS) :</span>
             <p style="color: var(--stylo-bleu); font-family: var(--font-hand); font-size: 1.2rem; font-weight: 700; line-height: 1.35; margin-top: 2px;">
-              Identifier et employer correctement le Complément d'Objet Direct (COD) dans une phrase simple.
+              Effectuer correctement une multiplication d'un nombre à deux chiffres par un nombre à un chiffre avec retenue.
             </p>
           </div>
 
@@ -610,21 +610,21 @@ button { cursor: pointer; border: none; font-family: inherit; }
             </thead>
             <tbody>
               <tr>
-                <td class="etape-cell">1. Motivation</td>
-                <td class="content-cell">Présente le corpus de phrases au tableau et fait lire à haute voix.</td>
-                <td class="content-cell">Lisent le texte et repèrent les verbes d'action.</td>
+                <td class="etape-cell">1. Calcul Mental / Motivation</td>
+                <td class="content-cell">Fait réciter la table de multiplication de 4. Propose la situation : « 3 sacs de 24 mangues ».</td>
+                <td class="content-cell">Écrivent les résultats sur ardoise et analysent le problème de multiplication.</td>
               </tr>
               <tr>
-                <td class="etape-cell">2. Recherche</td>
-                <td class="content-cell">Pose la question : « Moussa mange quoi ? » pour isoler le COD.</td>
-                <td class="content-cell">Répondent « la mangue » et entourent le groupe nominal.</td>
+                <td class="etape-cell">2. Recherche &amp; Découverte</td>
+                <td class="content-cell">Fait manipuler les bâtonnets de dizaines et unités. Guide la disposition de l'opération en colonnes.</td>
+                <td class="content-cell">Disposent l'opération 24 × 3 en colonnes et calculent d'abord les unités puis les dizaines.</td>
               </tr>
             </tbody>
           </table>
 
           <div class="cahier-eval">
-            <h4>Évaluation &amp; Remédiation (Stylo Rouge)</h4>
-            <p>Consigne : Souligne le COD dans les phrases 1 et 2 sur ton ardoise.</p>
+            <h4>Évaluation &amp; Remédiation Mathématiques (Stylo Rouge)</h4>
+            <p>Consigne : Pose et effectue individuellement sur ton cahier : 32 × 4 et 45 × 3.</p>
           </div>
         </div>
       </div>
@@ -636,9 +636,9 @@ button { cursor: pointer; border: none; font-family: inherit; }
 <section class="section" id="generateur">
   <div class="container">
     <div style="text-align: center; max-width: 650px; margin: 0 auto 36px;">
-      <span class="badge badge--primary">Outil Pédagogique Actif</span>
-      <h2 style="font-size: 2.2rem; margin: 12px 0 8px;">Générez votre Fiche de Préparation</h2>
-      <p>Sélectionnez votre cycle, votre domaine et votre objectif spécifique pour générer votre fiche complète.</p>
+      <span class="badge badge--primary">Générateur Pédagogique Intelligent</span>
+      <h2 style="font-size: 2.2rem; margin: 12px 0 8px;">Générez votre Fiche 100% Cohérente</h2>
+      <p>Choisissez le cycle et la discipline : l'objectif et les étapes s'adaptent instantanément à la matière.</p>
     </div>
 
     <div class="generator-wrapper">
@@ -670,13 +670,13 @@ button { cursor: pointer; border: none; font-family: inherit; }
           </div>
 
           <div class="form-field">
-            <label for="fDiscipline">Domaine d'activités officiel</label>
-            <select id="fDiscipline" class="form-input"></select>
+            <label for="fDiscipline">Discipline / Domaine officiel</label>
+            <select id="fDiscipline" class="form-input" onchange="onDisciplineChanged()"></select>
           </div>
 
           <div class="form-field">
             <label for="fOS">Objectif Spécifique (OS)</label>
-            <input type="text" id="fOS" class="form-input" value="Nommer les membres de sa famille" placeholder="ex: Nommer les membres de sa famille">
+            <input type="text" id="fOS" class="form-input" value="Nommer les membres de sa famille" placeholder="Objectif Spécifique de la séance">
           </div>
         </div>
 
@@ -706,7 +706,7 @@ button { cursor: pointer; border: none; font-family: inherit; }
 
         <div style="text-align: center; margin-top: 24px;">
           <button type="submit" class="btn btn--primary btn--lg">
-            ⚡ Générer la Fiche au Format Cahier (Bleu &amp; Rouge)
+            ⚡ Générer la Fiche Spécifique au Format Cahier
           </button>
         </div>
       </form>
@@ -855,9 +855,9 @@ button { cursor: pointer; border: none; font-family: inherit; }
       </div>
 
       <div class="faq-item">
-        <button class="faq-question">Les fiches sont-elles conformes aux dernières révisions du Ministère ?</button>
+        <button class="faq-question">Les étapes de la fiche sont-elles adaptées à la matière choisie ?</button>
         <div class="faq-answer">
-          Oui, la plateforme applique scrupuleusement le guide curriculaire révisé de <strong>2024 pour le Préscolaire</strong> (5 domaines) et de <strong>2025 pour l'Élémentaire</strong> (CI à CM2).
+          Oui, à 100% ! Une fiche de <strong>Mathématiques</strong> intègre le calcul mental, la manipulation concrète de données et la technique opératoire ; une fiche de <strong>Français</strong> intègre le corpus de phrases, le repérage et la règle de grammaire ; une fiche de <strong>Sciences (ESVS)</strong> applique la démarche d'investigation et d'expérimentation.
         </div>
       </div>
     </div>
@@ -880,7 +880,7 @@ button { cursor: pointer; border: none; font-family: inherit; }
   </div>
 </footer>
 
-<!-- SCRIPT LOGIQUE : MODE SOMBRE / CLAIR & MOTEUR APC -->
+<!-- SCRIPT LOGIQUE : MODE SOMBRE / CLAIR & MOTEUR APC AVEC DÉMARCHES DISCIPLINAIRES -->
 <script>
 // 1. GESTION DU THÈME SOMBRE / CLAIR
 const themeToggleBtn = document.getElementById('themeToggleBtn');
@@ -902,7 +902,7 @@ themeToggleBtn.addEventListener('click', () => {
 
 initTheme();
 
-// 2. CONFIGURATION DES CYCLES (PRÉSCOLAIRE 2024 VS ÉLÉMENTAIRE 2025)
+// 2. BASE DE DONNÉES PÉDAGOGIQUES DISCIPLINAIRES (PRÉSCOLAIRE & ÉLÉMENTAIRE)
 const cardPre = document.getElementById('cardPre');
 const cardElem = document.getElementById('cardElem');
 const fLevel = document.getElementById('fLevel');
@@ -911,60 +911,234 @@ const fOS = document.getElementById('fOS');
 
 let currentCycle = 'pre';
 
-const PRE_DATA = {
-  levels: [
-    { value: 'PS', label: 'Petite Section (PS) — 3 à 4 ans' },
-    { value: 'MS', label: 'Moyenne Section (MS) — 4 à 5 ans' },
-    { value: 'GS', label: 'Grande Section (GS) — 5 à 6 ans' }
-  ],
-  disciplines: [
-    { value: 'D1 — Langue & Communication', label: 'D1 — Langue & Communication (Langage, Conte, Graphisme)' },
-    { value: 'D2 — Mathématiques', label: 'D2 — Mathématiques (Activités numériques, Géométrie, Mesure)' },
-    { value: 'D3 — Découverte du monde', label: 'D3 — Découverte du monde (IST, Temps/Espace, Hygiène)' },
-    { value: 'D4 — Développement socio-affectif', label: 'D4 — Développement socio-affectif (Vivre ensemble)' },
-    { value: 'D5 — Éducation psychomotrice & artistique', label: 'D5 — Éducation psychomotrice & artistique' }
-  ],
-  defaultOS: "Nommer les membres de sa famille en montrant leur image."
+const DISCIPLINE_DATA = {
+  // PRÉSCOLAIRE (5 DOMAINES 2024)
+  "D1 — Langue & Communication": {
+    os: "Nommer les membres de sa famille en montrant leur image sur l'album de classe.",
+    materiel: "Album photo de la classe, marottes, images séquentielles, comptine 'Ma Famille'.",
+    evalConsigne: "Montre l'image de papa / maman et dis son nom clairement.",
+    steps: [
+      { etape: "1. Regroupement & Motivation", maitre: "Rassemble les enfants en cercle. Entonne la comptine 'Ma Famille' et montre les marottes.", eleves: "Chantent la comptine en chœur, nomment les marottes et écoutent l'histoire." },
+      { etape: "2. Manipulation & Exploration", maitre: "Fait passer l'album de photos. Pose des questions : « Qui est sur cette photo ? Que fait-il ? ».", eleves: "Pointent du doigt, reconnaissent les visages et s'expriment spontanément." },
+      { etape: "3. Jeu Guidé & Expression", maitre: "Invite chaque enfant à présenter une image en formulant : « Voici mon papa / ma maman ».", eleves: "Formulent la phrase modèle en montrant leur marotte au groupe." },
+      { etape: "4. Évaluation & Rangement", maitre: "Vérifie individuellement l'association nom-image. Invite au rangement ordonné des bacs.", eleves: "Montrent l'image demandée puis rangent le matériel dans le coin langage." }
+    ]
+  },
+  "D2 — Mathématiques": {
+    os: "Dénombrer et constituer une collection de 1 à 5 objets concrets.",
+    materiel: "Bouchons de bouteilles, perles, barquettes, boîtes à nombres, jetons de couleur.",
+    evalConsigne: "Mets exactement 4 bouchons dans la barquette rouge.",
+    steps: [
+      { etape: "1. Regroupement & Motivation", maitre: "Présente le coffre aux trésors et fait compter collectivement sur les doigts de 1 à 5.", eleves: "Lèvent les doigts correspondants et scandent les nombres 1, 2, 3, 4, 5." },
+      { etape: "2. Manipulation Libre", maitre: "Distribue les barquettes de bouchons. Laisse manipuler et aligner librement.", eleves: "Touchent, empilent, comparent les tas et comptent spontanément." },
+      { etape: "3. Jeu Dirigé / Structuration", maitre: "Donne la consigne : « Remplir la boîte avec autant de bouchons que de points sur la carte ».", eleves: "Comptent les points (ex: 3), prennent 3 bouchons un à un et les déposent." },
+      { etape: "4. Évaluation & Validation", maitre: "Vérifie le comptage un par un avec chaque enfant : « Compte pour moi ».", eleves: "Pointent chaque objet en énonçant la suite numérique exacte." }
+    ]
+  },
+  "D3 — Découverte du monde": {
+    os: "Distinguer les objets lourds et légers par la pesée manuelle et la balance.",
+    materiel: "Plumes, cailloux, morceaux de bois, éponges, balance à plateaux.",
+    evalConsigne: "Trie les objets dans le panier 'Lourd' ou 'Léger'.",
+    steps: [
+      { etape: "1. Motivation & Découverte", maitre: "Montre un gros caillou et une plume. Demande d'anticiper le poids.", eleves: "Observent, touchent et émettent des prédictions (lourd / léger)." },
+      { etape: "2. Expérimentation Sensorielle", maitre: "Fait soupeser un objet dans chaque main (bras tendus comme une balance).", eleves: "Soupèsent les objets réels et ressentent la différence de poids." },
+      { etape: "3. Vérification sur la Balance", maitre: "Place les objets sur la balance à plateaux et fait observer le plateau qui descend.", eleves: "Constatent que le côté lourd descend et verbalisent le résultat." },
+      { etape: "4. Évaluation & Synthèse", maitre: "Demande de classer 3 objets du plus léger au plus lourd.", eleves: "Placent les objets dans l'ordre croissant de masse." }
+    ]
+  },
+  "D4 — Développement socio-affectif": {
+    os: "Exprimer ses émotions et respecter les règles de partage pendant les jeux d'équipe.",
+    materiel: "Cartes des émotions (joie, tristesse, colère), miroir, ballons partagés.",
+    evalConsigne: "Passe le ballon à ton camarade avec un mot gentil.",
+    steps: [
+      { etape: "1. Regroupement & Écoute", maitre: "Raconte une courte saynète sur deux enfants qui veulent le même jouet.", eleves: "Écoutent attentivement et identifient les émotions des personnages." },
+      { etape: "2. Jeu de Rôle", maitre: "Fait mimer l'expression du visage heureux lors du partage d'un jeu.", eleves: "Miment les émotions devant le miroir et partagent le matériel." },
+      { etape: "3. Règle de Vie Collective", maitre: "Formalise la règle d'or : « On attend son tour et on prête avec le sourire ».", eleves: "Répètent la règle et l'appliquent lors du jeu de ballon." },
+      { etape: "4. Clôture & Valorisation", maitre: "Félicite les comportements d'entraide observés pendant la séance.", eleves: "S'applaudissent mutuellement et se donnent la main." }
+    ]
+  },
+  "D5 — Éducation psychomotrice & artistique": {
+    os: "Sauter à cloche-pied par-dessus 3 obstacles bas en gardant son équilibre.",
+    materiel: "Cerceaux au sol, lattes en mousse, plots colorés, musique rythmée.",
+    evalConsigne: "Franchis le parcours à cloche-pied sans poser le deuxième pied.",
+    steps: [
+      { etape: "1. Échauffement Ludique", maitre: "Met la musique et invite à trottiner comme des petits lapins puis à s'arrêter au signal.", eleves: "Courent dans l'espace, s'arrêtent au coup de sifflet et s'étirent." },
+      { etape: "2. Exploration du Parcours", maitre: "Démontre le saut à cloche-pied au-dessus des lattes en mousse.", eleves: "Observent attentivement et essaient d'abord sur un pied statique." },
+      { etape: "3. Atelier Guidé", maitre: "Fait passer les enfants un par un sur la ligne d'obstacles en sécurisant la réception.", eleves: "Franchissent les 3 obstacles successivement sur le pied d'appui." },
+      { etape: "4. Retour au Calme", maitre: "Baisse l'intensité sonore et guide des respirations lentes allongés sur le tapis.", eleves: "S'allongent, inspirent profondément et se détendent." }
+    ]
+  },
+
+  // ÉLÉMENTAIRE (DISCIPLINES MEN 2025)
+  "Mathématiques — Opérations": {
+    os: "Effectuer correctement une multiplication posée d'un nombre à deux chiffres par un multiplicateur à un chiffre avec retenue.",
+    materiel: "Tableau de numération, ardoises individuelles, bûchettes/bâtonnets, manuel de mathématiques.",
+    evalConsigne: "Pose et effectue sur ton cahier de devoirs : 34 × 4 et 58 × 3.",
+    steps: [
+      { etape: "1. Calcul Mental / Révision", maitre: "Fait réciter la table de multiplication de 4 et 5 (ex: 4×6, 5×7). Présente le problème : « Le directeur achète 3 cartons de 24 cahiers ».", eleves: "Écrivent les produits sur ardoise (procédé La Martinière), lisent l'énoncé et identifient l'opération nécessaire (24 × 3)." },
+      { etape: "2. Recherche & Manipulation", maitre: "Invite les élèves en groupes à représenter 24 × 3 avec le matériel (2 dizaines 4 unités, 3 fois). Fait poser l'opération en colonnes.", eleves: "Manipulent les bâtonnets (3×4 = 12 unités → 1 dizaine en retenue et 2 unités), posent en colonnes et calculent d'abord les unités puis les dizaines." },
+      { etape: "3. Synthèse & Technique Opératoire", maitre: "Anime la mise en commun au tableau. Formalise la règle : « On multiplie d'abord les unités, on écrit le chiffre des unités et on retient les dizaines ».", eleves: "Exposent leurs démarches, valident la disposition en colonnes et recopient la règle modèle sur leur cahier de cours." },
+      { etape: "4. Évaluation Individuelle", maitre: "Donne 2 opérations d'application sur ardoises et cahiers. Circule pour vérifier le report des retenues.", eleves: "Posent et effectuent individuellement les opérations sans aide. Présentent leurs ardoises pour validation." }
+    ]
+  },
+  "Mathématiques — Géométrie": {
+    os: "Identifier, nommer et tracer un rectangle en respectant ses propriétés géométriques (côtés opposés égaux et 4 angles droits).",
+    materiel: "Règle graduée, équerre, bandes de papier quadrillées, tableau à craie.",
+    evalConsigne: "Trace à la règle et à l'équerre un rectangle de Longueur 6 cm et de largeur 3 cm.",
+    steps: [
+      { etape: "1. Révision / Motivation", maitre: "Présente diverses figures géométriques (carré, triangle, rectangle, cercle). Fait repérer les angles droits à l'équerre.", eleves: "Nomment les formes connues et testent les angles droits avec leur équerre." },
+      { etape: "2. Investigation en Groupes", maitre: "Distribue des silhouettes de rectangles. Demande de mesurer les 4 côtés et de comparer les longueurs opposées.", eleves: "Mesurent à la règle, constatent que deux côtés longs sont égaux et deux côtés courts sont égaux." },
+      { etape: "3. Synthèse & Démarche de Tracé", maitre: "Guide le tracé pas à pas au tableau : 1. Segment L, 2. Angle droit à l'équerre, 3. Segment l, 4. Fermeture.", eleves: "Suivent la démonstration au tableau et formulent les propriétés clés du rectangle." },
+      { etape: "4. Évaluation & Précision", maitre: "Fait exécuter le tracé individuel sur feuille avec cotation précise des dimensions.", eleves: "Tracent le rectangle aux dimensions demandées en vérifiant les angles droits." }
+    ]
+  },
+  "Mathématiques — Résolution de Problèmes": {
+    os: "Résoudre une situation-problème additive/soustractive à deux étapes en identifiant la question intermédiaire.",
+    materiel: "Énoncé imprimé au tableau, schéma de résolution, ardoises.",
+    evalConsigne: "Résous le problème en écrivant la question intermédiaire, le calcul et la phrase de réponse.",
+    steps: [
+      { etape: "1. Lecture & Compréhension", maitre: "Fait lire l'énoncé du problème à haute voix par deux élèves. Pose des questions de sens : « De quoi parle l'histoire ? Que cherche-t-on ? ».", eleves: "Lisent le texte, reformulent l'histoire avec leurs propres mots et soulignent les données utiles." },
+      { etape: "2. Recherche du Plan de Résolution", maitre: "Guide la recherche : « Peut-on répondre directement à la question finale ? Que faut-il calculer d'abord ? ».", eleves: "Constatent qu'il manque une donnée intermédiaire et formulent la première étape de calcul." },
+      { etape: "3. Mise en Forme Mathématique", maitre: "Fait présenter la solution au tableau selon le schéma classique (Opérations à gauche, Solutions à droite).", eleves: "Rédigent la question intermédiaire, posent l'opération 1, puis l'opération 2 et concluent par une phrase complète." },
+      { etape: "4. Évaluation Autonome", maitre: "Propose un problème similaire avec des valeurs numériques adaptées au niveau.", eleves: "Résolvent le problème individuellement sur leur cahier d'évaluation." }
+    ]
+  },
+  "Langue & Comm. — Grammaire": {
+    os: "Identifier et employer correctement le Complément d'Objet Direct (COD) dans des phrases simples.",
+    materiel: "Corpus de phrases au tableau, étiquettes de groupes de mots, ardoises.",
+    evalConsigne: "Souligne le COD dans les phrases 1 et 2 sur ton cahier.",
+    steps: [
+      { etape: "1. Révision / Motivation", maitre: "Fait rappeler la structure de la phrase minimale (Sujet + Verbe). Présente le corpus : « Fatou prépare le repas. Les élèves nettoient la cour ».", eleves: "Identifient le sujet et le verbe conjugué dans chaque phrase." },
+      { etape: "2. Observation & Questionnement", maitre: "Pose les questions clés : « Fatou prépare QUOI ? » « Les élèves nettoient QUOI ? » Fait observer la place du mot.", eleves: "Répondent « le repas », « la cour » et remarquent que ces groupes complètent directement le verbe." },
+      { etape: "3. Formalisation de la Règle", maitre: "Définit le COD : « C'est un complément qui répond à la question QUI ? ou QUOI ? posée après le verbe. Il ne peut être ni déplacé ni supprimé ».", eleves: "Répètent la règle, donnent des exemples personnels et recopient la synthèse dans le cahier de grammaire." },
+      { etape: "4. Évaluation Individuelle", maitre: "Propose 3 phrases au tableau où les élèves doivent encadrer le verbe et souligner le COD.", eleves: "Exécutent l'exercice individuellement sans aide sur leur ardoise ou cahier." }
+    ]
+  },
+  "Langue & Comm. — Lecture": {
+    os: "Lire couramment, de manière expressive et sans buter un texte court de 5 lignes en respectant la ponctuation.",
+    materiel: "Texte support agrandi au tableau, manuel de lecture, tableau des mots difficiles.",
+    evalConsigne: "Lis le paragraphe 2 à haute voix avec intonation devant la classe.",
+    steps: [
+      { etape: "1. Éveil / Anticipation", maitre: "Présente l'illustration du texte. Fait émettre des hypothèses sur le sujet de l'histoire.", eleves: "Observent l'image et émettent des prédictions sur le thème du texte." },
+      { etape: "2. Lecture Silencieuse & Décodage", maitre: "Donne une consigne de recherche. Fait décortiquer les mots complexes au tableau.", eleves: "Lisent silencieusement des yeux, repèrent les personnages et identifient les mots nouveaux." },
+      { etape: "3. Lecture Magistrale & Guidée", maitre: "Fait la lecture modèle expressive. Fait ensuite lire à relais phrase par phrase en corrigeant la prononciation.", eleves: "Écoutent l'intonation du maître puis lisent à tour de rôle en marquant les points et virgules." },
+      { etape: "4. Contrôle de Compréhension", maitre: "Pose 3 questions de compréhension littérale et inférentielle sur l'extrait lu.", eleves: "Répondent oralement et justifient en citant un passage du texte." }
+    ]
+  },
+  "Langue & Comm. — Production d'écrits": {
+    os: "Rédiger un court texte narratif de 3 à 4 phrases cohérentes à partir d'une suite de 3 images ordonnées.",
+    materiel: "Planche de 3 images séquentielles, boîte à mots (mots de liaison, verbes, noms), cahier d'écriture.",
+    evalConsigne: "Écris une phrase pour chaque image en utilisant les connecteurs d'abord, ensuite, enfin.",
+    steps: [
+      { etape: "1. Découverte de la Situation", maitre: "Affiche les 3 images désordonnées. Fait rétablir l'ordre chronologique de l'histoire.", eleves: "Observent, débattent et remettent les images dans l'ordre logique (1, 2, 3)." },
+      { etape: "2. Banque de Mots & Vocabulaire", maitre: "Collecte au tableau les verbes d'action, les personnages et les connecteurs temporels proposés par les élèves.", eleves: "Enrichissent la boîte à mots avec le lexique approprié." },
+      { etape: "3. Écriture Guidée / Premier Jet", maitre: "Fait élaborer oralement la première phrase puis guide la rédaction individuelle du premier jet.", eleves: "Rédigent leur texte sur ardoise ou brouillon en surveillant majuscules et points." },
+      { etape: "4. Relecture & Amélioration", maitre: "Fait vérifier la grille d'auto-évaluation (majuscule, sens, ponctuation, orthographe).", eleves: "Relisent leur production et recopient la version finale au propre." }
+    ]
+  },
+  "ESVS — Sciences d'observation": {
+    os: "Identifier et nommer les différentes parties d'une plante à fleurs (racines, tige, feuilles, fleur) et expliquer leur rôle.",
+    materiel: "Vraies plantes déracinées dans des pots, loupes, schémas muets sur ardoises.",
+    evalConsigne: "Légende le schéma de la plante en plaçant correctement les 4 étiquettes.",
+    steps: [
+      { etape: "1. Motivation / Situation de Départ", maitre: "Apporte une plante réelle en classe. Demande : « Pourquoi cette plante tient-elle debout ? D'où viennent les feuilles ? ».", eleves: "Observent directement la plante réelle et expriment leurs idées initiales." },
+      { etape: "2. Investigation & Observation", maitre: "Fait observer les racines, la tige et les nervures des feuilles à la loupe par groupe d'élèves.", eleves: "Touchent délicatement les racines, mesurent la tige et dessinent ce qu'ils observent." },
+      { etape: "3. Synthèse & Rôles Biologiques", maitre: "Anime la mise en commun : « Les racines puisent l'eau, la tige transporte la sève, les feuilles respirent ».", eleves: "Complètent le schéma récapitulatif annoté dans le cahier de sciences." },
+      { etape: "4. Évaluation & Schématisation", maitre: "Distribue un schéma muet où les flèches indiquent les 4 organes de la plante.", eleves: "Écrivent les termes exacts en face de chaque flèche sans faute d'orthographe." }
+    ]
+  },
+  "ESVS — Géographie du Sénégal": {
+    os: "Localiser sur la carte du Sénégal les 14 régions administratives et leurs chefs-lieux respectifs.",
+    materiel: "Grande carte murale du Sénégal, cartes muettes individuelles, feutres de couleur.",
+    evalConsigne: "Colorie la région de Thiès en jaune et écris le nom de son chef-lieu.",
+    steps: [
+      { etape: "1. Éveil & Repérage Spatial", maitre: "Affiche la carte du Sénégal. Rappelle les 4 points cardinaux et les frontières du pays.", eleves: "Situent Dakar, l'Océan Atlantique, le fleuve Sénégal et la Gambie." },
+      { etape: "2. Analyse Régionale", maitre: "Fait identifier les régions du Nord (Saint-Louis, Matam), du Centre (Thiès, Diourbel, Fatick, Kaolack), du Sud (Ziguinchor, Sédhiou, Kolda) et de l'Est (Tambacounda, Kédougou).", eleves: "Pointent les régions sur la carte murale et nomment leurs chefs-lieux." },
+      { etape: "3. Renseignement de la Carte Muette", maitre: "Guide le report des noms de régions et le coloriage par zones géographiques.", eleves: "Inscrivent les noms en lettres capitales sur leur carte muette individuelle." },
+      { etape: "4. Évaluation / Jeu de Localisation", maitre: "Pointe une région au hasard et interroge un élève pour donner son nom et chef-lieu.", eleves: "Répondent rapidement sur leur ardoise (Top chrono régions)." }
+    ]
+  },
+  "ESVS — Histoire du Sénégal": {
+    os: "Décrire les étapes majeures des royaumes traditionnels du Sénégal (Djolof, Baol, Cayor, Sine, Saloum).",
+    materiel: "Frise chronologique, récits historiques illustrés, cartes historiques du Sénégal.",
+    evalConsigne: "Associe chaque titre de souverain à son royaume (Damel -> Cayor, Bourba -> Djolof).",
+    steps: [
+      { etape: "1. Motivation / Récit Historique", maitre: "Raconte un épisode historique sur l'épopée de Ndiadiane Ndiaye et la fondation du grand Djolof.", eleves: "Écoutent le récit historique et posent des questions sur les héros du passé." },
+      { etape: "2. Analyse des Documents", maitre: "Fait observer la carte des anciens royaumes et fait lister les titres des souverains (Damel, Teigne, Bourba, Bour Sine).", eleves: "Relèvent les informations clés dans le texte historique." },
+      { etape: "3. Synthèse sur la Frise", maitre: "Structure les repères temporels sur la frise chronologique au tableau.", eleves: "Recopient le tableau récapitulatif des royaumes et leurs souverains." },
+      { etape: "4. Évaluation des Connaissances", maitre: "Propose un questionnaire à choix multiples (QCM) sur les faits historiques étudiés.", eleves: "Complètent les réponses individuellement sur leur cahier." }
+    ]
+  },
+  "EPSA — Dessin & Travail Manuel": {
+    os: "Réaliser un motif décoratif géométrique régulier en alternant deux couleurs primaires et deux formes.",
+    materiel: "Feuilles blanches, règles, crayons de couleur, feutres, pochoirs.",
+    evalConsigne: "Poursuis le motif de la frise décorative sans dépasser des lignes.",
+    steps: [
+      { etape: "1. Observation d'Œuvres d'Art", maitre: "Montre des motifs de tissus traditionnels (pagne tissé, wax) présentant des motifs répétitifs.", eleves: "Observent les rythmes de couleurs et les répétitions de formes géométriques." },
+      { etape: "2. Démonstration Technique", maitre: "Trace la grille au tableau et démontre l'alternance d'un carré bleu et d'un triangle rouge.", eleves: "S'entraînent sur ardoise à tracer les formes régulières." },
+      { etape: "3. Production Artistique", maitre: "Donne les consignes de soin, de précision du tracé et d'homogénéité du coloriage.", eleves: "Réalisent leur frise décorative sur feuille avec soin et concentration." },
+      { etape: "4. Exposition & Valorisation", maitre: "Organise une mini-exposition au tableau pour apprécier les créations de la classe.", eleves: "Présentent leur dessin et formulent des appréciations positives." }
+    ]
+  }
 };
 
-const ELEM_DATA = {
-  levels: [
-    { value: 'CI', label: "Cours d'Initiation (CI) — Étape 1" },
-    { value: 'CP', label: "Cours Préparatoire (CP) — Étape 1" },
-    { value: 'CE1', label: "Cours Élémentaire 1 (CE1) — Étape 2" },
-    { value: 'CE2', label: "Cours Élémentaire 2 (CE2) — Étape 2" },
-    { value: 'CM1', label: "Cours Moyen 1 (CM1) — Étape 3" },
-    { value: 'CM2', label: "Cours Moyen 2 (CM2) — Étape 3 / CFEE" }
-  ],
-  disciplines: [
-    { value: "Langue & Comm. — Grammaire", label: "Langue & Comm. — Grammaire" },
-    { value: "Langue & Comm. — Lecture", label: "Langue & Comm. — Lecture" },
-    { value: "Langue & Comm. — Production d'écrits", label: "Langue & Comm. — Production d'écrits" },
-    { value: "Mathématiques — Opérations", label: "Mathématiques — Opérations" },
-    { value: "Mathématiques — Géométrie", label: "Mathématiques — Géométrie" },
-    { value: "Mathématiques — Résolution de Problèmes", label: "Mathématiques — Résolution de Problèmes" },
-    { value: "ESVS — Sciences d'observation", label: "ESVS — Sciences d'observation" },
-    { value: "ESVS — Géographie du Sénégal", label: "ESVS — Géographie du Sénégal" },
-    { value: "ESVS — Histoire du Sénégal", label: "ESVS — Histoire du Sénégal" },
-    { value: "EPSA — Dessin & Travail Manuel", label: "EPSA — Dessin & Travail Manuel" }
-  ],
-  defaultOS: "Distinguer et employer correctement le Complément d'Objet Direct (COD) dans une phrase."
-};
+const PRE_LEVELS = [
+  { value: 'PS', label: 'Petite Section (PS) — 3 à 4 ans' },
+  { value: 'MS', label: 'Moyenne Section (MS) — 4 à 5 ans' },
+  { value: 'GS', label: 'Grande Section (GS) — 5 à 6 ans' }
+];
+
+const PRE_DISCIPLINES = [
+  { value: 'D1 — Langue & Communication', label: 'D1 — Langue & Communication (Langage, Conte, Graphisme)' },
+  { value: 'D2 — Mathématiques', label: 'D2 — Mathématiques (Activités numériques, Géométrie, Mesure)' },
+  { value: 'D3 — Découverte du monde', label: 'D3 — Découverte du monde (IST, Temps/Espace, Hygiène)' },
+  { value: 'D4 — Développement socio-affectif', label: 'D4 — Développement socio-affectif (Vivre ensemble)' },
+  { value: 'D5 — Éducation psychomotrice & artistique', label: 'D5 — Éducation psychomotrice & artistique' }
+];
+
+const ELEM_LEVELS = [
+  { value: 'CI', label: "Cours d'Initiation (CI) — Étape 1" },
+  { value: 'CP', label: "Cours Préparatoire (CP) — Étape 1" },
+  { value: 'CE1', label: "Cours Élémentaire 1 (CE1) — Étape 2" },
+  { value: 'CE2', label: "Cours Élémentaire 2 (CE2) — Étape 2" },
+  { value: 'CM1', label: "Cours Moyen 1 (CM1) — Étape 3" },
+  { value: 'CM2', label: "Cours Moyen 2 (CM2) — Étape 3 / CFEE" }
+];
+
+const ELEM_DISCIPLINES = [
+  { value: "Mathématiques — Opérations", label: "Mathématiques — Opérations & Calcul" },
+  { value: "Mathématiques — Géométrie", label: "Mathématiques — Géométrie & Tracés" },
+  { value: "Mathématiques — Résolution de Problèmes", label: "Mathématiques — Résolution de Problèmes" },
+  { value: "Langue & Comm. — Grammaire", label: "Langue & Comm. — Grammaire" },
+  { value: "Langue & Comm. — Lecture", label: "Langue & Comm. — Lecture expressive & sens" },
+  { value: "Langue & Comm. — Production d'écrits", label: "Langue & Comm. — Production d'écrits" },
+  { value: "ESVS — Sciences d'observation", label: "ESVS — Sciences d'observation (IST)" },
+  { value: "ESVS — Géographie du Sénégal", label: "ESVS — Géographie du Sénégal" },
+  { value: "ESVS — Histoire du Sénégal", label: "ESVS — Histoire du Sénégal" },
+  { value: "EPSA — Dessin & Travail Manuel", label: "EPSA — Dessin & Travail Manuel" }
+];
 
 function setCycle(cycle) {
   currentCycle = cycle;
   if (cycle === 'pre') {
     cardPre.className = 'cycle-card active-pre';
     cardElem.className = 'cycle-card';
-    fLevel.innerHTML = PRE_DATA.levels.map(l => `<option value="${l.value}">${l.label}</option>`).join('');
-    fDiscipline.innerHTML = PRE_DATA.disciplines.map(d => `<option value="${d.value}">${d.label}</option>`).join('');
-    fOS.value = PRE_DATA.defaultOS;
+    fLevel.innerHTML = PRE_LEVELS.map(l => `<option value="${l.value}">${l.label}</option>`).join('');
+    fDiscipline.innerHTML = PRE_DISCIPLINES.map(d => `<option value="${d.value}">${d.label}</option>`).join('');
   } else {
     cardPre.className = 'cycle-card';
     cardElem.className = 'cycle-card active-elem';
-    fLevel.innerHTML = ELEM_DATA.levels.map(l => `<option value="${l.value}">${l.label}</option>`).join('');
-    fDiscipline.innerHTML = ELEM_DATA.disciplines.map(d => `<option value="${d.value}">${d.label}</option>`).join('');
-    fOS.value = ELEM_DATA.defaultOS;
+    fLevel.innerHTML = ELEM_LEVELS.map(l => `<option value="${l.value}">${l.label}</option>`).join('');
+    fDiscipline.innerHTML = ELEM_DISCIPLINES.map(d => `<option value="${d.value}">${d.label}</option>`).join('');
+  }
+  onDisciplineChanged();
+}
+
+function onDisciplineChanged() {
+  const discKey = fDiscipline.value;
+  const match = DISCIPLINE_DATA[discKey];
+  if (match) {
+    fOS.value = match.os;
   }
 }
 
@@ -978,7 +1152,7 @@ ficheForm.addEventListener('submit', (e) => {
 
   const level = fLevel.value;
   const discipline = fDiscipline.value;
-  const os = fOS.value || "Exécuter l'activité conformément à la consigne.";
+  const osUser = fOS.value || "Effectuer l'activité pédagogique conformément à la consigne.";
   const teacher = document.getElementById('fTeacher').value || "Enseignant(e)";
   const school = document.getElementById('fSchool').value || "École Pédagogique";
   const duration = document.getElementById('fDuration').value;
@@ -987,52 +1161,19 @@ ficheForm.addEventListener('submit', (e) => {
   const guideYear = isPreschool ? "Guide MEN Préscolaire 2024" : "Guide MEN Élémentaire 2025";
   const today = new Date().toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' });
 
-  // Étapes de déroulement en fonction du cycle
-  const steps = isPreschool ? [
-    {
-      etape: "1. Regroupement & Motivation",
-      maitre: `Rassemble les enfants au coin regroupement. Entonne la comptine thématique et présente le matériel relatif à l'OS : « ${os} ».`,
-      eleves: "Chantent la comptine, touchent le matériel et écoutent les consignes avec attention."
-    },
-    {
-      etape: "2. Manipulation & Exploration",
-      maitre: "Laisse les enfants manipuler librement le matériel. Pose des questions d'orientation ouvertes.",
-      eleves: "Manipulent, trient, nomment les objets et expriment leurs observations."
-    },
-    {
-      etape: "3. Jeu Dirigé & Structuration",
-      maitre: `Guide la règle du jeu pour faire atteindre l'OS : « ${os} ». Accompagne chaque enfant individuellement.`,
-      eleves: "Réalisent la tâche demandée (nommer, classer, associer) et verbalisent leur démarche."
-    },
-    {
-      etape: "4. Évaluation & Rangement",
-      maitre: "Vérifie individuellement l'atteinte de l'OS. Félicite les enfants et guide le rangement des bacs.",
-      eleves: "Présentent leur réussite, rangent le matériel et se lavent les mains."
-    }
-  ] : [
-    {
-      etape: "1. Révision / Motivation",
-      maitre: `Rappelle les prérequis. Présente le support ou la situation-problème relative à l'OS : « ${os} ».`,
-      eleves: "Répondent aux questions de rappel, observent le support et formulent des hypothèses."
-    },
-    {
-      etape: "2. Recherche & Découverte",
-      maitre: "Organise le travail en sous-groupes. Distribue le corpus et donne la consigne d'analyse.",
-      eleves: "Travaillent en groupes, échangent, recherchent la solution et notent sur l'ardoise."
-    },
-    {
-      etape: "3. Synthèse & Trace Écrite",
-      maitre: "Anime la mise en commun au tableau. Valide les bonnes réponses et formalise la règle générale.",
-      eleves: "Présentent les résultats de groupe, participent à l'élaboration de la règle et recopient sur cahier."
-    },
-    {
-      etape: "4. Évaluation Spécifique",
-      maitre: "Propose 2 exercices d'application individuelle pour mesurer la maîtrise de l'Objectif Spécifique.",
-      eleves: "Réalisent les exercices individuellement sans aide sur leur cahier ou ardoise."
-    }
-  ];
+  // Recherche des étapes et ressources spécifiques à la discipline
+  const discConfig = DISCIPLINE_DATA[discipline] || {
+    materiel: "Tableau, ardoises, manuel de l'élève, cahiers d'exercices.",
+    evalConsigne: "Réaliser l'exercice d'évaluation individuelle sur le cahier.",
+    steps: [
+      { etape: "1. Révision / Motivation", maitre: `Rappelle les prérequis et présente la situation relative à l'OS : « ${osUser} ».`, eleves: "Observent, répondent aux questions de rappel et émettent des hypothèses." },
+      { etape: "2. Recherche & Découverte", maitre: "Organise le travail par groupes. Donne la consigne d'investigation.", eleves: "Travaillent en équipe, manipulent le matériel et recherchent la solution." },
+      { etape: "3. Synthèse & Trace Écrite", maitre: "Anime la mise en commun au tableau et valide la démarche correcte.", eleves: "Présentent leurs résultats et recopient la synthèse validée dans leur cahier." },
+      { etape: "4. Évaluation Individuelle", maitre: "Propose 2 exercices individuels pour vérifier la maîtrise de l'Objectif Spécifique.", eleves: "Effectuent le travail individuel sans aide externe." }
+    ]
+  };
 
-  const tableRows = steps.map(s => `
+  const tableRows = discConfig.steps.map(s => `
     <tr>
       <td class="etape-cell">${s.etape}</td>
       <td class="content-cell">${s.maitre}</td>
@@ -1065,21 +1206,24 @@ ficheForm.addEventListener('submit', (e) => {
         <strong>Classe / Section :</strong> <span>${level} (Effectif : 32)</span>
       </div>
       <div class="cahier-meta-item" style="grid-column: span 2;">
-        <strong>Domaine Officiel :</strong> <span>${discipline}</span>
+        <strong>Discipline Officielle :</strong> <span>${discipline}</span>
+      </div>
+      <div class="cahier-meta-item" style="grid-column: span 2;">
+        <strong>Matériel didactique :</strong> <span style="font-size: 1.05rem;">${discConfig.materiel}</span>
       </div>
     </div>
 
     <div style="margin: 16px 0 14px;">
       <span style="color: var(--stylo-rouge); font-weight: 700; font-size: 1.05rem;">Objectif Spécifique (OS) :</span>
       <p style="color: var(--stylo-bleu); font-family: var(--font-hand); font-size: 1.25rem; font-weight: 700; line-height: 1.35; margin-top: 4px;">
-        À la fin de la séance, l'élève / l'enfant doit être capable de : ${os}
+        À la fin de la séance, l'élève / l'enfant doit être capable de : ${osUser}
       </p>
     </div>
 
     <table class="cahier-table">
       <thead>
         <tr>
-          <th style="width: 25%;">Étapes de la séance</th>
+          <th style="width: 25%;">Étapes de la séance (${discipline})</th>
           <th style="width: 38%;">Activités du Maître / Éducateur</th>
           <th style="width: 37%;">Activités des Élèves / Enfants</th>
         </tr>
@@ -1091,8 +1235,9 @@ ficheForm.addEventListener('submit', (e) => {
 
     <div class="cahier-eval">
       <h4>Évaluation de l'Objectif Spécifique &amp; Remédiation (Encre Rouge)</h4>
-      <p><strong>Critères :</strong> Réalisation correcte de la consigne (3/4 des réussites attendues).</p>
-      <p><strong>Remédiation :</strong> En cas de difficulté, reprise immédiate avec étayage personnalisé et manipulation d'objets concrets.</p>
+      <p><strong>Consigne d'évaluation :</strong> ${discConfig.evalConsigne}</p>
+      <p style="margin-top: 4px;"><strong>Critère de réussite :</strong> Au moins 3/4 des réussites attendues sans aide.</p>
+      <p style="margin-top: 4px;"><strong>Remédiation :</strong> Étayage individualisé et manipulation de matériel concret en cas d'obstacle.</p>
     </div>
   `;
 
@@ -1107,7 +1252,7 @@ function copyFiche() {
   });
 }
 
-// Initialisation
+// Initialisation au démarrage
 setCycle('pre');
 
 // FAQ Accordion
