@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>SUÑU FICHES — Le Générateur N°1 de Fiches Pédagogiques au Sénégal</title>
-<meta name="description" content="Plateforme de préparation de fiches pédagogiques pour le préscolaire (5 domaines) et l'élémentaire sénégalais (PS à CM2). 100% conforme aux guides curriculaires du Ministère. Export PDF & paiement Wave / Orange Money.">
+<meta name="description" content="Plateforme de préparation de fiches pédagogiques pour le préscolaire (Guides 2024) et l'élémentaire sénégalais (Guides 2025). 100% conforme aux programmes du Ministère. Export PDF & paiement Wave / Orange Money.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Karla:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
@@ -410,8 +410,8 @@ button { cursor: pointer; border: none; background: none; }
   <nav>
     <a href="#hero" class="mobile-link">Accueil</a>
     <a href="#generateur" class="mobile-link">Générateur de Fiche</a>
-    <a href="#niveaux-prescolaire" class="mobile-link">Préscolaire (5 Domaines)</a>
-    <a href="#niveaux-elementaire" class="mobile-link">Élémentaire (3 Étapes)</a>
+    <a href="#niveaux-prescolaire" class="mobile-link">Préscolaire (Guide 2024)</a>
+    <a href="#niveaux-elementaire" class="mobile-link">Élémentaire (Guide 2025)</a>
     <a href="#tarifs" class="mobile-link">Tarifs &amp; Mobile Money</a>
     <a href="#faq" class="mobile-link">Questions fréquentes</a>
   </nav>
@@ -433,8 +433,8 @@ button { cursor: pointer; border: none; background: none; }
 
     <nav class="nav" aria-label="Navigation principale">
       <a href="#generateur">Générateur APC</a>
-      <a href="#niveaux-prescolaire">Préscolaire</a>
-      <a href="#niveaux-elementaire">Élémentaire</a>
+      <a href="#niveaux-prescolaire">Préscolaire (2024)</a>
+      <a href="#niveaux-elementaire">Élémentaire (2025)</a>
       <a href="#tarifs">Tarifs</a>
       <a href="#faq">FAQ</a>
     </nav>
@@ -469,9 +469,9 @@ button { cursor: pointer; border: none; background: none; }
 
     <div class="hero__grid">
       <div>
-        <span class="eyebrow" id="heroEyebrow">Préscolaire &amp; Élémentaire · Sénégal</span>
+        <span class="eyebrow" id="heroEyebrow">Préscolaire (2024) &amp; Élémentaire (2025) · Sénégal</span>
         <h1 class="display" id="heroTitle">Votre cahier de préparation <em>se remplit en 2 minutes.</em></h1>
-        <p class="hero__lede" id="heroLede">Sélectionnez la classe, le domaine et le thème du jour. SUÑU FICHES rédige automatiquement votre fiche de préparation conforme aux guides curriculaires officiels du Sénégal.</p>
+        <p class="hero__lede" id="heroLede">Sélectionnez la classe, le domaine et l'objectif spécifique du jour. SUÑU FICHES rédige automatiquement votre fiche de préparation conforme aux guides curriculaires révisés du Sénégal.</p>
         
         <div class="hero__cta">
           <a class="btn btn--primary btn--lg" href="#generateur">Générer ma fiche maintenant</a>
@@ -489,7 +489,7 @@ button { cursor: pointer; border: none; background: none; }
       <div class="demo-card">
         <div class="demo-card__header">
           <span class="demo-card__title">🔬 Aperçu rapide d'une fiche</span>
-          <span class="badge badge--vert">APC Sénégal 2026</span>
+          <span class="badge badge--vert">Guides MEN 2024 / 2025</span>
         </div>
 
         <div class="picker-bar" role="tablist" aria-label="Sélection du niveau">
@@ -515,16 +515,16 @@ button { cursor: pointer; border: none; background: none; }
     <div class="sec-head up" style="margin: 0 auto 28px; text-align: center;">
       <span class="eyebrow">Générateur Pédagogique Actif</span>
       <h2 class="display">Sélectionnez votre Cycle &amp; Générez votre Fiche APC</h2>
-      <p>Conforme aux planifications officielles du Ministère de l'Éducation Nationale du Sénégal (juillet 2016).</p>
+      <p>Conforme aux guides curriculaires du Ministère de l'Éducation Nationale (Préscolaire 2024 · Élémentaire 2025).</p>
     </div>
 
     <!-- Cycle Selector Switcher -->
     <div class="cycle-toggle-bar">
       <button class="cycle-btn active-pre" id="btnCyclePre" onclick="switchGenCycle('pre')">
-        🧸 Cycle PRÉSCOLAIRE (3 à 6 ans)
+        🧸 Cycle PRÉSCOLAIRE (Guides 2024)
       </button>
       <button class="cycle-btn" id="btnCycleElem" onclick="switchGenCycle('elem')">
-        🎒 Cycle ÉLÉMENTAIRE (6 à 12 ans)
+        🎒 Cycle ÉLÉMENTAIRE (Guides 2025)
       </button>
     </div>
 
@@ -546,8 +546,8 @@ button { cursor: pointer; border: none; background: none; }
           </div>
 
           <div class="form-group">
-            <label for="genTopic">Sujet de la leçon / Nom du Jeu</label>
-            <input type="text" id="genTopic" class="form-control" placeholder="ex: Nommer les membres de la famille" value="Nommer les membres de la famille">
+            <label for="genTopic">Objectif Spécifique (OS)</label>
+            <input type="text" id="genTopic" class="form-control" placeholder="ex: Nommer les membres de sa famille" value="Nommer les membres de sa famille">
           </div>
         </div>
 
@@ -565,10 +565,12 @@ button { cursor: pointer; border: none; background: none; }
           <div class="form-group">
             <label for="genDuration">Durée de la séance</label>
             <select id="genDuration" class="form-control">
-              <option value="20 minutes">20 minutes (PS - Préscolaire)</option>
-              <option value="25 minutes" selected>25 minutes (MS/GS - Préscolaire)</option>
-              <option value="45 minutes">45 minutes (Élémentaire Étape 1 & 2)</option>
-              <option value="50 minutes">50 minutes (Élémentaire Étape 3)</option>
+              <option value="20 mns">20 mns</option>
+              <option value="25 mns" selected>25 mns</option>
+              <option value="30 mns">30 mns</option>
+              <option value="45 mns">45 mns</option>
+              <option value="50 mns">50 mns</option>
+              <option value="1h">1h</option>
             </select>
           </div>
         </div>
@@ -598,15 +600,15 @@ button { cursor: pointer; border: none; background: none; }
   </div>
 </section>
 
-<!-- SEPARATED CURRICULUM COVERAGE: PRE-SCHOOL & ELEMENTARY -->
+<!-- SEPARATED CURRICULUM COVERAGE: PRE-SCHOOL (2024) & ELEMENTARY (2025) -->
 <section class="section" id="niveaux-prescolaire">
   <div class="wrap">
 
-    <!-- 1. PRÉSCOLAIRE (5 DOMAINES OFFICIELS) -->
+    <!-- 1. PRÉSCOLAIRE (GUIDE 2024 - 5 DOMAINES OFFICIELS) -->
     <div class="curric-box up" style="border-left: 6px solid var(--vert);">
       <div class="curric-box__head">
         <div>
-          <span class="badge badge--vert">Référentiel Officiel Préscolaire</span>
+          <span class="badge badge--vert">Référentiel Officiel Préscolaire (Révision 2024)</span>
           <h3 class="curric-box__title" style="margin-top: 8px;">1. Cycle Préscolaire (3 à 6 ans)</h3>
         </div>
         <span style="font-family: var(--f-mono); font-size: 13px; color: var(--vert); font-weight: 700;">
@@ -630,23 +632,23 @@ button { cursor: pointer; border: none; background: none; }
       </div>
 
       <p style="font-size: 15px; font-weight: 700; color: var(--ink); margin-bottom: 12px;">
-        Les 5 Domaines d'Activités du Préscolaire Sénégalais (APC) :
+        Les 5 Domaines d'Activités du Préscolaire Sénégalais (Guide MEN 2024) :
       </p>
 
       <div class="domain-chips">
-        <span class="chip chip--pre">1. Langue et Communication (Langage, Conte, Lecture, Graphisme)</span>
+        <span class="chip chip--pre">1. Langue et Communication (Langage, Conte, Pré-lecture, Graphisme)</span>
         <span class="chip chip--pre">2. Mathématiques (Activités numériques, Géométriques, Mesure)</span>
-        <span class="chip chip--pre">3. Découverte du monde (IST, Hygiène &amp; Bien-être)</span>
+        <span class="chip chip--pre">3. Découverte du monde (IST, Temps/Espace, Hygiène &amp; Bien-être)</span>
         <span class="chip chip--pre">4. Développement socio-affectif et bien-être global (Vivre ensemble &amp; Environnement)</span>
         <span class="chip chip--pre">5. Éducation psychomotrice et artistique (Psychomotricité &amp; Arts plastiques/scéniques)</span>
       </div>
     </div>
 
-    <!-- 2. ÉLÉMENTAIRE (6 CLASSES / 3 ÉTAPES) -->
+    <!-- 2. ÉLÉMENTAIRE (GUIDE 2025 - 6 CLASSES / 3 ÉTAPES) -->
     <div class="curric-box up" id="niveaux-elementaire" style="border-left: 6px solid var(--rouge);">
       <div class="curric-box__head">
         <div>
-          <span class="badge badge--rouge">Référentiel Officiel Élémentaire</span>
+          <span class="badge badge--rouge">Référentiel Officiel Élémentaire (Révision 2025)</span>
           <h3 class="curric-box__title" style="margin-top: 8px;">2. Cycle Élémentaire (6 à 12 ans)</h3>
         </div>
         <span style="font-family: var(--f-mono); font-size: 13px; color: var(--rouge); font-weight: 700;">
@@ -670,7 +672,7 @@ button { cursor: pointer; border: none; background: none; }
       </div>
 
       <p style="font-size: 15px; font-weight: 700; color: var(--ink); margin-bottom: 12px;">
-        Les 5 Domaines d'Enseignement Élémentaire :
+        Les 5 Domaines d'Enseignement Élémentaire (Guide MEN 2025) :
       </p>
 
       <div class="domain-chips">
@@ -708,7 +710,7 @@ button { cursor: pointer; border: none; background: none; }
         <h3><span class="compare-icon compare-icon--green">✓</span> Avec SUÑU FICHES</h3>
         <ul class="compare-list">
           <li><span class="compare-icon compare-icon--green">✓</span> Une fiche complète rédigée et personnalisée en 2 minutes chrono.</li>
-          <li><span class="compare-icon compare-icon--green">✓</span> 100% conforme au guide curriculaire du MEN (juillet 2016).</li>
+          <li><span class="compare-icon compare-icon--green">✓</span> 100% conforme aux guides curriculaires du MEN (Préscolaire 2024 &amp; Élémentaire 2025).</li>
           <li><span class="compare-icon compare-icon--green">✓</span> Bibliothèque numérique sécurisée et réutilisable chaque année.</li>
           <li><span class="compare-icon compare-icon--green">✓</span> Exportation PDF propre, prête à imprimer ou à partager.</li>
         </ul>
@@ -750,7 +752,7 @@ button { cursor: pointer; border: none; background: none; }
       <div class="step-card up">
         <div class="step-card__num">1</div>
         <h3>Choisissez le niveau</h3>
-        <p>Sélectionnez votre classe (Petite Section au CM2), le domaine d'apprentissage et le sujet de votre leçon.</p>
+        <p>Sélectionnez votre classe (Petite Section au CM2), le domaine d'apprentissage et l'objectif spécifique (OS).</p>
       </div>
 
       <div class="step-card up">
@@ -800,7 +802,7 @@ button { cursor: pointer; border: none; background: none; }
       </div>
 
       <div class="testi-card up">
-        <p class="testi-quote">« La démarche d'exploitation du texte et les barèmes de mathématiques respectent à 100% le guide curriculaire de juillet 2016. C'est un gain de temps inestimable. »</p>
+        <p class="testi-quote">« La démarche d'exploitation du texte et les barèmes de mathématiques respectent à 100% les révisions curriculaires du MEN (2024/2025). C'est un gain de temps inestimable. »</p>
         <div class="testi-author">
           <div class="testi-avatar">BD</div>
           <div class="testi-meta">
@@ -891,14 +893,14 @@ button { cursor: pointer; border: none; background: none; }
       <div class="faq-item is-open">
         <button class="faq-question">Les fiches sont-elles 100% conformes au programme sénégalais ?</button>
         <div class="faq-answer">
-          Oui, nos modèles respectent scrupuleusement le guide curriculaire de l'enseignement élémentaire et les planifications des 5 domaines du préscolaire édités par le Ministère de l'Éducation Nationale (juillet 2016).
+          Oui, nos modèles respectent scrupuleusement les révisions officielles des guides curriculaires du Ministère de l'Éducation Nationale du Sénégal (Préscolaire 2024 · Élémentaire 2025).
         </div>
       </div>
 
       <div class="faq-item">
         <button class="faq-question">Quels sont les 5 domaines officiels du Préscolaire ?</button>
         <div class="faq-answer">
-          Les 5 domaines du préscolaire sont : 1. Langue et Communication · 2. Mathématiques · 3. Découverte du Monde · 4. Développement socio-affectif et bien-être global · 5. Éducation psychomotrice et artistique.
+          Les 5 domaines du préscolaire (Guide 2024) sont : 1. Langue et Communication · 2. Mathématiques · 3. Découverte du Monde · 4. Développement socio-affectif et bien-être global · 5. Éducation psychomotrice et artistique.
         </div>
       </div>
 
@@ -951,104 +953,104 @@ button { cursor: pointer; border: none; background: none; }
 const DEMO_DATABASE = {
   gs: {
     titre: "Nommer les membres de la famille (Jeu d'Album)",
-    stamp: "Guide Préscolaire",
+    stamp: "Guide Pré 2024",
     rows: [
       ["Niveau", "Grande Section (GS) — 5 à 6 ans"],
       ["Domaine", "D1 — Langue & Communication"],
-      ["Durée", "25 minutes"],
+      ["Durée", "25 mns"],
       ["Objectif (OS)", "Présenter un membre de sa famille en disant son nom et son âge."],
       ["Matériel", "Album photo de classe, étiquettes-images, marionnettes."]
     ],
     steps: [
-      ["1", "Motivation — Jeu de regroupement et comptine 'Ma Famille' (5 min)"],
-      ["2", "Découverte — Présentation de l'album imagé (8 min)"],
-      ["3", "Expression — Chaque enfant présente sa marionnette (7 min)"],
-      ["4", "Évaluation — Associer l'image au mot entendu (5 min)"]
+      ["1", "Motivation — Jeu de regroupement et comptine 'Ma Famille' (5 mns)"],
+      ["2", "Découverte — Présentation de l'album imagé (8 mns)"],
+      ["3", "Expression — Chaque enfant présente sa marionnette (7 mns)"],
+      ["4", "Évaluation — Associer l'image au mot entendu (5 mns)"]
     ]
   },
   ci: {
     titre: "Lecture — Découverte du son [a]",
-    stamp: "Initiation APC",
+    stamp: "Guide Élem 2025",
     rows: [
       ["Niveau", "Cours d'Initiation (CI) — Étape 1"],
       ["Discipline", "Langue & Communication — Lecture"],
-      ["Durée", "45 minutes"],
+      ["Durée", "45 mns"],
       ["Objectif (OS)", "Isoler le son [a] à l'oral et l'associer à la graphie 'a'."],
       ["Matériel", "Tableau, ardoises, images (ananas, banane, tasse)."]
     ],
     steps: [
-      ["1", "Révision — Rappel des voyelles connues (5 min)"],
-      ["2", "Discrimination auditive — Détection du son dans la comptine (10 min)"],
-      ["3", "Discrimination visuelle & Écriture — Tracé sur ardoise (18 min)"],
-      ["4", "Évaluation — Entourer la lettre 'a' dans des mots simples (12 min)"]
+      ["1", "Révision — Rappel des voyelles connues (5 mns)"],
+      ["2", "Discrimination auditive — Détection du son dans la comptine (10 mns)"],
+      ["3", "Discrimination visuelle & Écriture — Tracé sur ardoise (18 mns)"],
+      ["4", "Évaluation — Entourer la lettre 'a' dans des mots simples (12 mns)"]
     ]
   },
   cp: {
     titre: "L'addition sans retenue jusqu'à 20",
-    stamp: "Initiation APC",
+    stamp: "Guide Élem 2025",
     rows: [
       ["Niveau", "Cours Préparatoire (CP) — Étape 1"],
       ["Discipline", "Mathématiques — Opérations"],
-      ["Durée", "45 minutes"],
+      ["Durée", "45 mns"],
       ["Objectif (OS)", "Effectuer une addition posée de deux nombres < 20."],
       ["Matériel", "Bâtonnets, bouliers, ardoises, manuel."]
     ],
     steps: [
-      ["1", "Calcul mental — Comptage de 2 en 2 jusqu'à 20 (5 min)"],
-      ["2", "Situation problème — Vente de mangues au marché (12 min)"],
-      ["3", "Institutionalisation — Technique opératoire au tableau (15 min)"],
-      ["4", "Évaluation — 3 additions individuelles sur ardoise (13 min)"]
+      ["1", "Calcul mental — Comptage de 2 en 2 jusqu'à 20 (5 mns)"],
+      ["2", "Situation problème — Vente de mangues au marché (12 mns)"],
+      ["3", "Institutionalisation — Technique opératoire au tableau (15 mns)"],
+      ["4", "Évaluation — 3 additions individuelles sur ardoise (13 mns)"]
     ]
   },
   ce1: {
     titre: "Les parties de la plante",
-    stamp: "Consolidation APC",
+    stamp: "Guide Élem 2025",
     rows: [
       ["Niveau", "Cours Élémentaire 1 (CE1) — Étape 2"],
       ["Discipline", "ESVS — Sciences d'Observation"],
-      ["Durée", "45 minutes"],
+      ["Durée", "45 mns"],
       ["Objectif (OS)", "Nommer les 4 parties principales d'une plante à fleurs."],
       ["Matériel", "Plantes réelles, loupes, cahier d'expériences."]
     ],
     steps: [
-      ["1", "Motivation — Observation directe d'une plante déracinée (7 min)"],
-      ["2", "Investigation — Identification des racines, tige, feuilles (15 min)"],
-      ["3", "Tracé — Schématisation annotée sur cahier (13 min)"],
-      ["4", "Évaluation — Légender un schéma muet (10 min)"]
+      ["1", "Motivation — Observation directe d'une plante déracinée (7 mns)"],
+      ["2", "Investigation — Identification des racines, tige, feuilles (15 mns)"],
+      ["3", "Tracé — Schématisation annotée sur cahier (13 mns)"],
+      ["4", "Évaluation — Légender un schéma muet (10 mns)"]
     ]
   },
   ce2: {
     titre: "Grammaire — Le COD et le COI",
-    stamp: "Consolidation APC",
+    stamp: "Guide Élem 2025",
     rows: [
       ["Niveau", "Cours Élémentaire 2 (CE2) — Étape 2"],
       ["Discipline", "Langue & Communication — Grammaire"],
-      ["Durée", "50 minutes"],
+      ["Durée", "50 mns"],
       ["Objectif (OS)", "Distinguer le complément d'objet direct du complément indirect."],
       ["Matériel", "Corpus de phrases au tableau, étiquettes grammaire."]
     ],
     steps: [
-      ["1", "Rappel — Le groupe verbal et le sujet (6 min)"],
-      ["2", "Observation — Questionnement 'Qui ? Quoi ? À qui ?' (14 min)"],
-      ["3", "Formalisation — Élaboration de la règle de grammaire (15 min)"],
-      ["4", "Évaluation — Exercice d'application individuel (15 min)"]
+      ["1", "Rappel — Le groupe verbal et le sujet (6 mns)"],
+      ["2", "Observation — Questionnement 'Qui ? Quoi ? À qui ?' (14 mns)"],
+      ["3", "Formalisation — Élaboration de la règle de grammaire (15 mns)"],
+      ["4", "Évaluation — Exercice d'application individuel (15 mns)"]
     ]
   },
   cm1: {
     titre: "Géographie — Les régions du Sénégal",
-    stamp: "Approfondissement APC",
+    stamp: "Guide Élem 2025",
     rows: [
       ["Niveau", "Cours Moyen 1 (CM1) — Étape 3"],
       ["Discipline", "ESVS — Géographie du Sénégal"],
-      ["Durée", "50 minutes"],
+      ["Durée", "50 mns"],
       ["Objectif (OS)", "Localiser les 14 régions administratives et leurs chefs-lieux."],
       ["Matériel", "Carte murale du Sénégal, cartes muettes, crayons."]
     ],
     steps: [
-      ["1", "Motivation — Découverte de la carte administrative (8 min)"],
-      ["2", "Analyse — Repérage des régions du Nord, Sud, Est, Ouest (17 min)"],
-      ["3", "Production — Coloriage et renseignement de la carte muette (15 min)"],
-      ["4", "Évaluation — Quiz de localisation rapide (10 min)"]
+      ["1", "Motivation — Découverte de la carte administrative (8 mns)"],
+      ["2", "Analyse — Repérage des régions du Nord, Sud, Est, Ouest (17 mns)"],
+      ["3", "Production — Coloriage et renseignement de la carte muette (15 mns)"],
+      ["4", "Évaluation — Quiz de localisation rapide (10 mns)"]
     ]
   },
   cm2: {
@@ -1057,15 +1059,15 @@ const DEMO_DATABASE = {
     rows: [
       ["Niveau", "Cours Moyen 2 (CM2) — Étape 3"],
       ["Discipline", "Mathématiques — Résolution de Problèmes"],
-      ["Durée", "55 minutes"],
+      ["Durée", "55 mns"],
       ["Objectif (OS)", "Calculer une remise ou une augmentation en pourcentage."],
       ["Matériel", "Annales du CFEE, cahiers d'exercices, tableau."]
     ],
     steps: [
-      ["1", "Calcul rapide — Fractions simples et décimaux (7 min)"],
-      ["2", "Situation CFEE — Réduction de 15% sur un achat de fournitures (18 min)"],
-      ["3", "Méthodologie — Application de la règle de trois (15 min)"],
-      ["4", "Évaluation — Problème type CFEE en autonomie (15 min)"]
+      ["1", "Calcul rapide — Fractions simples et décimaux (7 mns)"],
+      ["2", "Situation CFEE — Réduction de 15% sur un achat de fournitures (18 mns)"],
+      ["3", "Méthodologie — Application de la règle de trois (15 mns)"],
+      ["4", "Évaluation — Problème type CFEE en autonomie (12 mns)"]
     ]
   }
 };
@@ -1083,8 +1085,8 @@ const PERSPECTIVES = {
   },
   inspection: {
     eyebrow: "Conformité Inspection & Curriculum",
-    title: "Des fiches 100% conformes <em>aux exigences de l'APC.</em>",
-    lede: "Trames officielles (juillet 2016), respect des 5 domaines du préscolaire et des démarches par activité en élémentaire."
+    title: "Des fiches 100% conformes <em>aux exigences du MEN.</em>",
+    lede: "Respect des révisions des guides curriculaires du Ministère de l'Éducation Nationale : Préscolaire (2024) et Élémentaire (2025)."
   }
 };
 
@@ -1213,7 +1215,7 @@ const PRE_OPTIONS = {
     { value: 'D4 — Développement socio-affectif', label: 'D4 — Développement socio-affectif (Vivre ensemble & Environnement)' },
     { value: 'D5 — Éducation psychomotrice & artistique', label: 'D5 — Éducation psychomotrice & artistique (Motricité & Arts)' }
   ],
-  defaultTopic: "Nommer les membres de sa famille (Jeu d'album)"
+  defaultTopic: "Présenter un membre de sa famille en disant son nom et son âge."
 };
 
 const ELEM_OPTIONS = {
@@ -1237,7 +1239,7 @@ const ELEM_OPTIONS = {
     { value: "ESVS — Histoire du Sénégal", label: "ESVS — Histoire du Sénégal" },
     { value: "EPSA — Dessin & Travail Manuel", label: "EPSA — Dessin & Travail Manuel" }
   ],
-  defaultTopic: "Le complément d'objet direct (COD)"
+  defaultTopic: "Distinguer et employer correctement le complément d'objet direct (COD) dans une phrase."
 };
 
 function switchGenCycle(cycle) {
@@ -1248,6 +1250,7 @@ function switchGenCycle(cycle) {
     
     genLevel.innerHTML = PRE_OPTIONS.levels.map(l => `<option value="${l.value}">${l.label}</option>`).join('');
     genDiscipline.innerHTML = PRE_OPTIONS.disciplines.map(d => `<option value="${d.value}">${d.label}</option>`).join('');
+    genTopic.placeholder = "ex: Présenter un membre de sa famille en disant son nom et son âge";
     genTopic.value = PRE_OPTIONS.defaultTopic;
   } else {
     btnCyclePre.className = 'cycle-btn';
@@ -1255,6 +1258,7 @@ function switchGenCycle(cycle) {
     
     genLevel.innerHTML = ELEM_OPTIONS.levels.map(l => `<option value="${l.value}">${l.label}</option>`).join('');
     genDiscipline.innerHTML = ELEM_OPTIONS.disciplines.map(d => `<option value="${d.value}">${d.label}</option>`).join('');
+    genTopic.placeholder = "ex: Distinguer et employer le complément d'objet direct (COD)";
     genTopic.value = ELEM_OPTIONS.defaultTopic;
   }
 }
@@ -1269,16 +1273,17 @@ ficheGeneratorForm.addEventListener('submit', (e) => {
 
   const level = genLevel.value;
   const discipline = genDiscipline.value;
-  const topic = genTopic.value || "Activité du jour";
+  const osTextUser = genTopic.value || "Effectuer la tâche indiquée dans la consigne.";
   const teacher = document.getElementById('genTeacher').value || "Enseignant(e)";
   const school = document.getElementById('genSchool').value || "Établissement Pédagogique";
   const duration = document.getElementById('genDuration').value;
 
   const todayStr = new Date().toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' });
   const isPreschool = currentCycle === 'pre' || ['PS', 'MS', 'GS'].includes(level);
+  const guideYear = isPreschool ? "Guide Préscolaire 2024" : "Guide Élémentaire 2025";
 
-  // Generate APC details based on Preschool (5 domains) vs Elementary
-  let domainCode = isPreschool ? "Cycle Préscolaire (5 Domaines)" : "Cycle Élémentaire (APC)";
+  // Generate APC details based on Preschool (Guide 2024) vs Elementary (Guide 2025)
+  let domainCode = isPreschool ? "Cycle Préscolaire (5 Domaines - Guide 2024)" : "Cycle Élémentaire (Guide 2025)";
   let competenceBase = isPreschool
     ? "Intégrer le vocabulaire usuel, la manipulation concrète et l'expression par le jeu dans des situations de découverte du milieu."
     : "Intégrer les structures et règles d'utilisation de la discipline dans des situations de résolution de problèmes.";
@@ -1291,9 +1296,7 @@ ficheGeneratorForm.addEventListener('submit', (e) => {
     ? "OA : Communiquer avec les autres, explorer l'environnement et exprimer ses émotions."
     : "OA 1 : Identifier et employer les constituants clés du programme.";
 
-  let osText = isPreschool
-    ? `À la fin de l'activité, l'enfant doit être capable de participer au jeu nommé « ${topic} » et de verbaliser son action.`
-    : `À la fin de la séance, l'élève doit être capable d'identifier et d'employer correctement ${topic} dans 3 exercices d'application.`;
+  let osFormatted = osTextUser.startsWith("À la fin") ? osTextUser : `À la fin de la séance, l'élève / enfant doit être capable de : ${osTextUser}.`;
 
   let materielText = isPreschool
     ? "Pâte à modeler, images d'albums, objets réels de la classe, marionnettes, ardoises magiques, planchettes."
@@ -1302,44 +1305,44 @@ ficheGeneratorForm.addEventListener('submit', (e) => {
   // Construct 3-Column Deroulement Table Rows
   const stepsData = isPreschool ? [
     {
-      etape: "1. Regroupement & Motivation (4-5 min)",
-      enseignant: `Rassemble les enfants au coin regroupement. Entonne la comptine d'introduction. Présente le matériel attractif du jeu relatif à "${topic}".`,
-      eleves: "S'installent en cercle, chantent la comptine, touchent le matériel et écoutent l'histoire du jeu."
+      etape: "1. Regroupement & Motivation",
+      enseignant: `Rassemble les enfants au coin regroupement. Entonne la comptine d'introduction. Présente le matériel attractif du jeu relatif à l'OS : "${osTextUser}".`,
+      eleves: "S'installent en cercle, chantent la comptine, touchent le matériel et écoutent les consignes."
     },
     {
-      etape: "2. Manipulation Libre & Exploration (8-10 min)",
-      enseignant: `Laisse les enfants manipuler librement les objets. Pose des questions ouvertes ("Qu'est-ce que vous voyez ? Comment faire ?").`,
-      eleves: "Manipulent, trient, touchent, nomment les objets et essaient les règles du jeu spontanément."
+      etape: "2. Manipulation Libre & Exploration",
+      enseignant: `Laisse les enfants manipuler librement les objets. Pose des questions ouvertes pour amener l'objectif spécifique ("Qu'est-ce que vous voyez ? Comment faire ?").`,
+      eleves: "Manipulent, trient, touchent, nomment les objets et essaient la tâche spontanément."
     },
     {
-      etape: "3. Jeu Dirigé & Structuration (7-8 min)",
-      enseignant: `Fixe la règle du jeu nommé "${topic}". Guide l'action de chaque enfant à son tour. Valorise les réussites et corrige gentiment.`,
-      eleves: "Exécutent la tâche du jeu (nommer, placer, rouler, trier), répètent les mots nouveaux."
+      etape: "3. Jeu Dirigé & Structuration",
+      enseignant: `Fixe la règle de l'activité guidée. Accompagne la réalisation de l'Objectif Spécifique. Valorise les réussites et apporte un étayage.`,
+      eleves: "Exécutent la tâche de l'OS (nommer, placer, rouler, trier) et répètent les formulations correctes."
     },
     {
-      etape: "4. Évaluation & Rangement (3-4 min)",
-      enseignant: `Vérifie la réalisation individuelle ("Montre-moi ta création / dis le mot"). Invite les enfants au lavage des mains et au rangement.`,
+      etape: "4. Évaluation & Rangement",
+      enseignant: `Vérifie la réalisation de l'OS ("Montre-moi ta création / dis la réponse"). Invite les enfants au lavage des mains et au rangement.`,
       eleves: "Montrent leur travail au groupe, puis rangent le matériel dans les bacs de la classe."
     }
   ] : [
     {
-      etape: "1. Phase de Révision / Motivation (5-7 min)",
-      enseignant: `Demande de rappeler les pré-requis. Présente la situation-problème ou le prétexte relatif à "${topic}". Pose des questions d'orientation.`,
+      etape: "1. Phase de Révision / Motivation",
+      enseignant: `Demande de rappeler les pré-requis. Présente la situation-problème ou le prétexte relatif à l'OS : "${osTextUser}". Pose des questions d'orientation.`,
       eleves: "Rappellent les connaissances antérieures. Observent le support présenté et émettent des hypothèses."
     },
     {
-      etape: "2. Phase de Découverte & Recherche (12-15 min)",
-      enseignant: `Organise les élèves en groupes. Distribue le matériel et la consigne d'investigation sur "${topic}". Circule et étaye si besoin.`,
+      etape: "2. Phase de Découverte & Recherche",
+      enseignant: `Organise les élèves en groupes. Distribue le matériel et la consigne d'investigation pour atteindre l'OS. Circule et étaye si besoin.`,
       eleves: "Travaillent en petits groupes. Manipulent le matériel, analysent le corpus et notent leurs conclusions sur les ardoises."
     },
     {
-      etape: "3. Phase de Synthèse & Trace Écrite (12-15 min)",
+      etape: "3. Phase de Synthèse & Trace Écrite",
       enseignant: `Fait passer un rapporteur par groupe. Anime la confrontation des résultats au tableau. Guide la formulation de la règle.`,
       eleves: "Présentent leurs travaux, comparent leurs réponses et recopient la synthèse validée dans leur cahier."
     },
     {
-      etape: "4. Phase d'Évaluation Spécifique (8-10 min)",
-      enseignant: `Propose 2 à 3 exercices d'application individuelle sur ardoise ou cahier pour vérifier l'acquisition de l'OS (${topic}).`,
+      etape: "4. Phase d'Évaluation Spécifique",
+      enseignant: `Propose 2 à 3 exercices d'application individuelle sur ardoise ou cahier pour vérifier la maîtrise de l'Objectif Spécifique.`,
       eleves: "Effectuent le travail individuel sans aide externe. Présentent leurs résultats."
     }
   ];
@@ -1356,12 +1359,12 @@ ficheGeneratorForm.addEventListener('submit', (e) => {
   printableFiche.innerHTML = `
     <div style="border-bottom: 2px solid var(--rouge); padding-bottom: 12px; margin-bottom: 20px; display: flex; justify-content: space-between; align-items: center;">
       <div>
-        <h2 style="font-family: var(--f-display); font-size: 26px; font-weight: 700; color: var(--ink);">${topic}</h2>
+        <h2 style="font-family: var(--f-display); font-size: 24px; font-weight: 700; color: var(--ink);">${osTextUser}</h2>
         <span style="font-family: var(--f-mono); font-size: 12px; color: var(--graphite); text-transform: uppercase;">
-          Fiche de Préparation ${isPreschool ? 'PRÉSCOLAIRE (5 Domaines)' : 'ÉLÉMENTAIRE (APC)'} — Sénégal
+          Fiche de Préparation ${isPreschool ? 'PRÉSCOLAIRE (Guide 2024)' : 'ÉLÉMENTAIRE (Guide 2025)'} — Sénégal
         </span>
       </div>
-      <span class="fiche__stamp" style="font-size: 11px; padding: 6px 12px;">Guide Curriculaire<br>Conforme MEN</span>
+      <span class="fiche__stamp" style="font-size: 11px; padding: 6px 12px;">${guideYear}<br>Conforme MEN</span>
     </div>
 
     <div class="apc-admin-grid">
@@ -1379,17 +1382,17 @@ ficheGeneratorForm.addEventListener('submit', (e) => {
       <p style="margin-bottom: 6px;"><strong>Compétence de base :</strong> ${competenceBase}</p>
       <p style="margin-bottom: 6px;"><strong>Palier :</strong> ${palierText}</p>
       <p style="margin-bottom: 6px;"><strong>Objective d'Apprentissage (OA) :</strong> ${oaText}</p>
-      <p style="margin-bottom: 6px; color: var(--rouge);"><strong>Objectif Spécifique / Nom du Jeu (OS) :</strong> ${osText}</p>
+      <p style="margin-bottom: 6px; color: var(--rouge);"><strong>Objectif Spécifique (OS) :</strong> ${osFormatted}</p>
       <p style="margin-bottom: 6px;"><strong>Moyens &amp; Matériel Didactique :</strong> ${materielText}</p>
     </div>
 
     <h3 style="font-family: var(--f-display); font-size: 18px; margin-top: 24px; color: var(--ink);">
-      DÉROULEMENT DE L'ACTIVITÉ (${isPreschool ? 'Démarche du Préscolaire' : 'Tableau APC 3 Colonnes'})
+      DÉROULEMENT DE L'ACTIVITÉ (${isPreschool ? 'Démarche du Préscolaire - Guide 2024' : 'Tableau APC 3 Colonnes - Guide 2025'})
     </h3>
     <table class="apc-table">
       <thead>
         <tr>
-          <th style="width: 25%;">Étapes &amp; Durée</th>
+          <th style="width: 25%;">Étapes</th>
           <th style="width: 38%;">Activités de l'Enseignant(e) / Éducateur</th>
           <th style="width: 37%;">Activités des Enfants / Élèves</th>
         </tr>
@@ -1400,10 +1403,10 @@ ficheGeneratorForm.addEventListener('submit', (e) => {
     </table>
 
     <div class="apc-eval-box">
-      <h4>Évaluation &amp; Remédiation Pédagogique</h4>
-      <p><strong>Consigne :</strong> ${isPreschool ? "Vérification individuelle par observation directe du geste et de la verbalisation." : "Répondre aux consignes proposées au tableau sur le cahier."}</p>
+      <h4>Évaluation de l'Objectif Spécifique (OS) &amp; Remédiation</h4>
+      <p><strong>Consigne :</strong> ${isPreschool ? "Vérification individuelle de la maîtrise de l'OS par observation directe." : "Répondre individuellement à la consigne d'évaluation sur le cahier."}</p>
       <p style="margin-top: 6px;"><strong>Critères d'évaluation :</strong> 1. Réalisation de la tâche (50%) · 2. Autonomie &amp; Posture (30%) · 3. Verbalisation / Correction (20%).</p>
-      <p style="margin-top: 6px; color: var(--graphite); font-style: italic;"><strong>Remédiation anticipée :</strong> En cas de difficulté, étayage individualisé et reprise au coin jeu avec matériel adapté.</p>
+      <p style="margin-top: 6px; color: var(--graphite); font-style: italic;"><strong>Remédiation anticipée :</strong> En cas de non-atteinte de l'OS, étayage individualisé et reprise progressive avec matériel concret.</p>
     </div>
   `;
 
