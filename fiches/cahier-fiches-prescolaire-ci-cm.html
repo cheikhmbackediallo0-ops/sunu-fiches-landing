@@ -1,0 +1,1295 @@
+<title>Cahier de fiches — Volume 2</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Karla:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap">
+
+<style>
+:root{
+  --ink:#16265E; --ink-soft:#2E3E73; --paper:#FBFAF5; --paper-2:#FFFFFF;
+  --seyes:#CBD3EC; --rouge:#C8322A; --vert:#157F4C; --graphite:#545B70;
+  --hairline:#E2E0D6; --ocre:#A8641C; --prune:#6B3A6E;
+  --f-display:"Fraunces",Georgia,serif;
+  --f-body:"Karla",system-ui,-apple-system,sans-serif;
+  --f-mono:"Space Mono",ui-monospace,monospace;
+
+  --desk:#EDEAE0; --desk-2:#E3DFD2; --desk-ink:#16265E; --desk-soft:#545B70;
+  --desk-line:#D2CCBB;
+  --shadow:0 1px 2px rgba(22,38,94,.08), 0 14px 34px rgba(22,38,94,.10);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --desk:#191B21; --desk-2:#22252D; --desk-ink:#F2EFE6; --desk-soft:#A6A9B4;
+    --desk-line:#33373F;
+    --shadow:0 1px 2px rgba(0,0,0,.5), 0 18px 44px rgba(0,0,0,.45);
+  }
+}
+:root[data-theme="dark"]{
+  --desk:#191B21; --desk-2:#22252D; --desk-ink:#F2EFE6; --desk-soft:#A6A9B4;
+  --desk-line:#33373F;
+  --shadow:0 1px 2px rgba(0,0,0,.5), 0 18px 44px rgba(0,0,0,.45);
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0; background:var(--desk); color:var(--desk-ink);
+  font-family:var(--f-body); font-size:16px; line-height:1.55;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:940px; margin:0 auto; padding:0 20px 90px}
+
+.masthead{padding:56px 0 26px}
+.eyebrow{
+  font-family:var(--f-mono); font-size:11px; letter-spacing:.16em;
+  text-transform:uppercase; color:var(--desk-soft); margin:0 0 14px;
+}
+.masthead h1{
+  font-family:var(--f-display); font-weight:600; font-size:clamp(34px,6vw,54px);
+  line-height:1.04; margin:0 0 14px; text-wrap:balance;
+  font-variation-settings:"opsz" 100;
+}
+.masthead h1 em{font-style:normal; color:var(--rouge)}
+:root[data-theme="dark"] .masthead h1 em{color:#F07A6F}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .masthead h1 em{color:#F07A6F}}
+.lede{max-width:60ch; color:var(--desk-soft); font-size:17px; margin:0 0 8px}
+.src{
+  font-family:var(--f-mono); font-size:11.5px; line-height:1.7;
+  color:var(--desk-soft); max-width:64ch; margin:18px 0 0;
+  border-left:2px solid var(--desk-line); padding-left:14px;
+}
+
+.toolbar{
+  position:sticky; top:0; z-index:20; margin:26px 0 0;
+  background:color-mix(in srgb, var(--desk) 86%, transparent);
+  backdrop-filter:blur(8px);
+  border-top:1px solid var(--desk-line); border-bottom:1px solid var(--desk-line);
+  padding:12px 0; display:flex; flex-wrap:wrap; gap:18px; align-items:center;
+}
+.grp{display:flex; gap:7px; align-items:center; flex-wrap:wrap}
+.grp > span{
+  font-family:var(--f-mono); font-size:10px; letter-spacing:.14em;
+  text-transform:uppercase; color:var(--desk-soft); margin-right:2px;
+}
+button.chip{
+  font-family:var(--f-body); font-weight:600; font-size:13px;
+  padding:5px 13px; border-radius:999px; cursor:pointer;
+  border:1px solid var(--desk-line); background:transparent; color:var(--desk-soft);
+  transition:background .15s, color .15s, border-color .15s;
+}
+button.chip:hover{border-color:var(--desk-ink); color:var(--desk-ink)}
+button.chip[aria-pressed="true"]{background:var(--desk-ink); color:var(--desk); border-color:var(--desk-ink)}
+button.chip:focus-visible{outline:2px solid var(--rouge); outline-offset:2px}
+.count{margin-left:auto; font-family:var(--f-mono); font-size:11px; color:var(--desk-soft); letter-spacing:.06em}
+
+.sommaire{margin:38px 0 10px}
+.sommaire h2{
+  font-family:var(--f-mono); font-size:11px; letter-spacing:.16em;
+  text-transform:uppercase; color:var(--desk-soft); font-weight:700; margin:0 0 14px;
+}
+.toc{list-style:none; margin:0; padding:0; display:grid; gap:1px; background:var(--desk-line);
+  border:1px solid var(--desk-line); border-radius:10px; overflow:hidden}
+.toc li{background:var(--desk)}
+.toc a{
+  display:grid; grid-template-columns:38px 1fr auto; gap:14px; align-items:baseline;
+  padding:11px 16px; text-decoration:none; color:var(--desk-ink);
+}
+.toc a:hover{background:var(--desk-2)}
+.toc a:focus-visible{outline:2px solid var(--rouge); outline-offset:-2px}
+.toc .n{font-family:var(--f-mono); font-size:12px; color:var(--desk-soft)}
+.toc .t{font-weight:600; font-size:15px}
+.toc .t small{display:block; font-weight:400; font-size:12.5px; color:var(--desk-soft); margin-top:1px}
+.toc .m{font-family:var(--f-mono); font-size:10.5px; letter-spacing:.08em; color:var(--desk-soft); text-align:right}
+
+.sheet{
+  background:var(--paper-2); color:var(--ink);
+  border-radius:4px; box-shadow:var(--shadow);
+  padding:40px 44px 44px; margin:34px 0;
+  border-top:5px solid var(--dom, var(--ink));
+  max-width:820px;
+}
+.sheet[hidden]{display:none}
+.sheet h2, .sheet h3{font-family:var(--f-display); font-variation-settings:"opsz" 40}
+
+.fiche-head{display:flex; justify-content:space-between; align-items:flex-start; gap:22px; flex-wrap:wrap; margin-bottom:16px}
+.fiche-head .tag{
+  font-family:var(--f-mono); font-size:10px; letter-spacing:.14em;
+  text-transform:uppercase; color:var(--dom, var(--ink)); font-weight:700;
+}
+.fiche-head h2{font-size:27px; font-weight:600; line-height:1.15; margin:5px 0 0; max-width:26ch; text-wrap:balance}
+.fiche-no{
+  font-family:var(--f-mono); font-size:11px; color:var(--graphite);
+  border:1px solid var(--hairline); border-radius:999px; padding:4px 11px; white-space:nowrap;
+}
+
+.jeu-badge{
+  display:inline-flex; align-items:center; gap:8px; margin:2px 0 18px;
+  background:var(--paper); border:1px solid var(--dom); border-radius:999px;
+  padding:6px 16px 6px 13px; font-size:14.5px; color:var(--ink);
+}
+.jeu-badge b{
+  font-family:var(--f-mono); font-size:9.5px; letter-spacing:.12em;
+  text-transform:uppercase; color:var(--dom); font-weight:700;
+}
+.jeu-badge span{font-family:var(--f-display); font-weight:600; font-size:16px}
+
+.admin{
+  display:grid; grid-template-columns:repeat(4,1fr); gap:0 18px;
+  border:1px solid var(--hairline); border-radius:6px;
+  padding:12px 16px 14px; margin:0 0 22px; background:var(--paper);
+}
+.admin div{padding:5px 0}
+.admin b{
+  display:block; font-family:var(--f-mono); font-size:9.5px; letter-spacing:.11em;
+  text-transform:uppercase; color:var(--graphite); font-weight:400; margin-bottom:3px;
+}
+.admin .fill{display:block; border-bottom:1px dotted #B9B3A2; height:15px}
+.admin .val{display:block; font-weight:600; font-size:14px; color:var(--ink)}
+@media (max-width:640px){.admin{grid-template-columns:repeat(2,1fr)}}
+
+.apc{margin:0 0 24px}
+.apc .row{display:grid; grid-template-columns:150px 1fr; gap:0 18px; padding:9px 0; border-top:1px solid var(--hairline)}
+.apc .row:last-child{border-bottom:1px solid var(--hairline)}
+.apc .k{font-family:var(--f-mono); font-size:10px; letter-spacing:.11em; text-transform:uppercase; color:var(--graphite); padding-top:3px}
+.apc .v{font-size:14.5px; line-height:1.5}
+.apc .v strong{font-weight:600}
+.apc ul{margin:2px 0 0; padding-left:18px}
+.apc li{margin:2px 0}
+@media (max-width:640px){.apc .row{grid-template-columns:1fr; gap:2px}}
+
+.sheet h3{
+  font-size:12px; font-family:var(--f-mono); font-weight:700;
+  letter-spacing:.15em; text-transform:uppercase; color:var(--dom, var(--ink));
+  margin:30px 0 12px; display:flex; align-items:center; gap:12px;
+}
+.sheet h3::after{content:""; flex:1; height:1px; background:var(--hairline)}
+
+.scroller{overflow-x:auto; -webkit-overflow-scrolling:touch}
+table{border-collapse:collapse; width:100%; min-width:620px; font-size:13.5px}
+thead th{
+  font-family:var(--f-mono); font-size:9.5px; letter-spacing:.12em; text-transform:uppercase;
+  color:var(--graphite); font-weight:400; text-align:left; vertical-align:bottom;
+  padding:0 12px 7px; border-bottom:1.5px solid var(--ink);
+}
+tbody td{padding:11px 12px; vertical-align:top; border-bottom:1px solid var(--hairline); line-height:1.5}
+tbody tr:last-child td{border-bottom:1.5px solid var(--ink)}
+td.step{width:132px; color:var(--ink)}
+td.step b{display:block; font-weight:600; font-size:13.5px}
+td.step span{display:block; font-family:var(--f-mono); font-size:10px; color:var(--graphite); margin-top:3px}
+td.maitre{width:41%}
+td p{margin:0 0 6px}
+td p:last-child{margin-bottom:0}
+td ul{margin:0; padding-left:16px}
+td li{margin:2px 0}
+.say{color:var(--ink-soft); font-style:italic}
+.say::before{content:"« "} .say::after{content:" »"}
+
+table.bareme{min-width:480px}
+table.bareme td.pts{text-align:right; font-family:var(--f-mono); font-weight:700; font-variant-numeric:tabular-nums; width:72px; color:var(--ink)}
+table.bareme tfoot td{padding:9px 12px; font-weight:700; border:0; font-family:var(--f-mono); font-size:12px}
+table.bareme tfoot td.pts{color:var(--rouge)}
+.crit{font-weight:600}
+
+.consigne{
+  border:1px solid var(--hairline); border-left:3px solid var(--dom, var(--ink));
+  border-radius:0 6px 6px 0; padding:14px 18px; margin:0 0 16px;
+  background:var(--paper); font-size:14px;
+}
+.consigne b{
+  display:block; font-family:var(--f-mono); font-size:9.5px; letter-spacing:.12em;
+  text-transform:uppercase; color:var(--graphite); font-weight:400; margin-bottom:5px;
+}
+.consigne p{margin:0 0 7px} .consigne p:last-child{margin:0}
+
+.support{
+  background:var(--paper-2);
+  background-image:repeating-linear-gradient(to bottom,
+    transparent 0, transparent 27px, var(--seyes) 27px, var(--seyes) 28px);
+  background-position:0 6px;
+  border:1px solid var(--seyes); border-radius:6px;
+  padding:14px 18px 10px; margin:0 0 16px; font-size:15px; line-height:28px;
+}
+.support h4{margin:0; font-family:var(--f-display); font-size:16px; font-weight:600; line-height:28px}
+.support p{margin:0; line-height:28px}
+.support .credit{font-family:var(--f-mono); font-size:10px; color:var(--graphite); line-height:28px; text-align:right}
+
+table.remed{min-width:560px}
+table.remed td:first-child{width:31%}
+table.remed td:nth-child(2){width:29%; color:var(--graphite)}
+
+.note{font-size:12.5px; color:var(--graphite); margin:12px 0 0; padding-left:15px; border-left:2px solid var(--hairline)}
+.note b{color:var(--ink)}
+
+.empty{text-align:center; padding:60px 20px; color:var(--desk-soft); font-family:var(--f-mono); font-size:13px}
+.empty[hidden]{display:none}
+
+.colophon{
+  margin-top:56px; padding-top:22px; border-top:1px solid var(--desk-line);
+  font-family:var(--f-mono); font-size:11px; line-height:1.8; color:var(--desk-soft);
+}
+.colophon a{color:inherit}
+
+@media (max-width:700px){
+  .sheet{padding:28px 20px 32px; border-radius:0; margin-left:-20px; margin-right:-20px}
+  .fiche-head h2{font-size:22px}
+}
+
+@media print{
+  @page{size:A4 portrait; margin:12mm 13mm}
+  body{background:#fff; color:#000; font-size:10.5pt}
+  .masthead, .toolbar, .sommaire, .colophon, .empty{display:none !important}
+  .wrap{max-width:none; padding:0}
+  .sheet{
+    box-shadow:none; border-radius:0; margin:0; padding:0 0 8mm; max-width:none;
+    border-top:3pt solid #000; padding-top:6mm;
+    page-break-after:always; break-after:page;
+  }
+  .sheet:last-of-type{page-break-after:auto; break-after:auto}
+  .sheet[hidden]{display:none !important}
+  .fiche-head .tag, .sheet h3, .jeu-badge b{color:#000}
+  .jeu-badge{border-color:#000}
+  .sheet h3{margin:7mm 0 3mm}
+  .scroller{overflow:visible}
+  table{min-width:0 !important; font-size:9.5pt}
+  tr, .consigne, .support, .admin, .jeu-badge{page-break-inside:avoid; break-inside:avoid}
+  .support{background-image:none}
+  a{text-decoration:none; color:#000}
+}
+</style>
+
+<div class="wrap">
+
+<header class="masthead">
+  <p class="eyebrow">SUÑU FICHES · Volume 2 · Préscolaire · CI-CP · CM1-CM2</p>
+  <h1>Du jeu de la petite section au <em>texte argumentatif</em></h1>
+  <p class="lede">Neuf fiches qui couvrent les niveaux absents du premier cahier : les trois sections du préscolaire, la première étape de l'élémentaire et la troisième. Chaque fiche suit la planification officielle de son niveau.</p>
+  <p class="lede">Au préscolaire, l'apprentissage passe par un <strong>jeu nommé</strong> : la fiche est bâtie autour de lui. À l'élémentaire, la trame reste celle du volume 1 — déroulement en trois colonnes, barème critérié, remédiation.</p>
+  <p class="src">Référentiels : Planifications des apprentissages PS / MS / GS<br>(3<sup>ème</sup> trimestre) · Guides pédagogiques de l'enseignement<br>élémentaire, 1<sup>ère</sup> et 3<sup>ème</sup> étapes — Ministère de l'Éducation<br>nationale du Sénégal, juin 2016.</p>
+</header>
+
+<div class="toolbar">
+  <div class="grp" id="f-niveau">
+    <span>Niveau</span>
+    <button class="chip" data-v="all" aria-pressed="true">Tous</button>
+    <button class="chip" data-v="PRE" aria-pressed="false">Préscolaire</button>
+    <button class="chip" data-v="CICP" aria-pressed="false">CI-CP</button>
+    <button class="chip" data-v="CM" aria-pressed="false">CM1-CM2</button>
+  </div>
+  <div class="grp" id="f-domaine">
+    <span>Domaine</span>
+    <button class="chip" data-v="all" aria-pressed="true">Tous</button>
+    <button class="chip" data-v="LC" aria-pressed="false">Langue</button>
+    <button class="chip" data-v="MATH" aria-pressed="false">Maths</button>
+    <button class="chip" data-v="ESVS" aria-pressed="false">ESVS</button>
+  </div>
+  <p class="count" id="count">9 fiches</p>
+</div>
+
+<section class="sommaire">
+  <h2>Sommaire</h2>
+  <ul class="toc" id="toc">
+    <li data-niveau="PRE" data-domaine="LC"><a href="#f1"><span class="n">01</span><span class="t">Voici ma sœur, elle s'appelle Nafi<small>Petite section · Langage · semaine 2</small></span><span class="m">PS · 25 mn</span></a></li>
+    <li data-niveau="PRE" data-domaine="LC"><a href="#f2"><span class="n">02</span><span class="t">Où suis-je ?<small>Moyenne section · Lecture · semaine 1</small></span><span class="m">MS · 25 mn</span></a></li>
+    <li data-niveau="PRE" data-domaine="MATH"><a href="#f3"><span class="n">03</span><span class="t">Six et sept dans tous leurs états<small>Grande section · Activités numériques · semaine 3</small></span><span class="m">GS · 30 mn</span></a></li>
+    <li data-niveau="CICP" data-domaine="LC"><a href="#f4"><span class="n">04</span><span class="t">Je m'appelle… et toi ?<small>Langage · palier 1 · prise de contact</small></span><span class="m">CI · 30 mn</span></a></li>
+    <li data-niveau="CICP" data-domaine="LC"><a href="#f5"><span class="n">05</span><span class="t">Le son [f] et le mouton de papa<small>Lecture · palier 4</small></span><span class="m">CI · 35 mn</span></a></li>
+    <li data-niveau="CICP" data-domaine="LC"><a href="#f6"><span class="n">06</span><span class="t">Écrire l'histoire d'une BD muette<small>Communication écrite · palier 6 · narratif</small></span><span class="m">CP · 40 mn</span></a></li>
+    <li data-niveau="CM" data-domaine="LC"><a href="#f7"><span class="n">07</span><span class="t">Expliquer pour éviter l'accident<small>Expression orale · palier 4 · informatif</small></span><span class="m">CM1 · 45 mn</span></a></li>
+    <li data-niveau="CM" data-domaine="LC"><a href="#f8"><span class="n">08</span><span class="t">Convaincre par écrit<small>Production d'écrits · palier 6 · argumentatif</small></span><span class="m">CM2 · 50 mn</span></a></li>
+    <li data-niveau="CM" data-domaine="ESVS"><a href="#f9"><span class="n">09</span><span class="t">Insalubrité, promiscuité, paludisme<small>Vivre dans son milieu · palier 1</small></span><span class="m">CM1 · 45 mn</span></a></li>
+  </ul>
+</section>
+
+<p class="empty" id="empty" hidden>Aucune fiche ne correspond à ce filtre.</p>
+
+
+<!-- ══════════════════ FICHE 01 — PS ══════════════════ -->
+<article class="sheet" id="f1" data-niveau="PRE" data-domaine="LC" style="--dom:var(--prune)">
+  <div class="fiche-head">
+    <div>
+      <p class="tag">Domaine 1 · Activités langagières orales · Langage</p>
+      <h2>Voici ma sœur, elle s'appelle Nafi</h2>
+    </div>
+    <p class="fiche-no">Fiche 01 · PS · 25 mn</p>
+  </div>
+
+  <div class="admin">
+    <div><b>IEF</b><span class="fill"></span></div>
+    <div><b>Case / École</b><span class="fill"></span></div>
+    <div><b>Section</b><span class="val">Petite section</span></div>
+    <div><b>Effectif</b><span class="fill"></span></div>
+    <div><b>Date</b><span class="fill"></span></div>
+    <div><b>Trimestre</b><span class="val">3 · semaine 2</span></div>
+    <div><b>Éducateur(trice)</b><span class="fill"></span></div>
+    <div><b>Visa</b><span class="fill"></span></div>
+  </div>
+
+  <div class="apc">
+    <div class="row"><div class="k">Compétence de base</div><div class="v">Intégrer le vocabulaire usuel, des comportements non verbaux et des règles simples de fonctionnement de la langue (ordre des mots, articulation, prononciation) dans des situations de production de messages oraux de types informatif, narratif, descriptif et injonctif.</div></div>
+    <div class="row"><div class="k">OA</div><div class="v">Communiquer avec les autres et se faire comprendre.</div></div>
+    <div class="row"><div class="k">OS 2</div><div class="v">Présenter quelqu'un.</div></div>
+    <div class="row"><div class="k">Contenus</div><div class="v"><strong>Voici + GN + pronom personnel + s'appeler au présent + nom.</strong><br>Exemple : <em>Voici ma sœur, elle s'appelle Nafi. Voici mon frère, il s'appelle Sidi.</em></div></div>
+    <div class="row"><div class="k">Matériel</div><div class="v">Photos de famille apportées par les enfants (demandées la veille) · poupées et marionnettes du coin jeu · deux chaises pour le « coin visite ».</div></div>
+    <div class="row"><div class="k">Prérequis</div><div class="v">Semaine 1 : « nom de la personne + est mon frère / ma sœur » (Sidi est mon frère).</div></div>
+  </div>
+
+  <h3>Déroulement</h3>
+  <div class="scroller">
+  <table>
+    <thead><tr><th>Moments</th><th>Activités de l'éducateur(trice)</th><th>Activités des enfants</th></tr></thead>
+    <tbody>
+      <tr>
+        <td class="step"><b>Mise en train</b><span>4 mn · regroupement</span></td>
+        <td class="maitre">Comptine des prénoms : chaque enfant se lève quand il entend le sien. Rappelle la semaine passée : <span class="say">Sidi, dis-nous, qui est Awa pour toi ?</span></td>
+        <td>Chantent, se lèvent au bon moment. Répondent : <em>Awa est ma sœur.</em></td>
+      </tr>
+      <tr>
+        <td class="step"><b>Découverte</b><span>6 mn · regroupement</span></td>
+        <td class="maitre">Amène une marionnette. <span class="say">Aujourd'hui, quelqu'un veut faire connaissance avec vous.</span> Fait le modèle en montrant une photo : <span class="say">Voici ma sœur, elle s'appelle Aminata.</span> Répète trois fois, lentement, en montrant du doigt.</td>
+        <td>Écoutent. Répètent en chœur, puis quelques-uns individuellement : <em>Voici ma sœur, elle s'appelle…</em></td>
+      </tr>
+      <tr>
+        <td class="step"><b>Atelier — le coin visite</b><span>10 mn · groupes de 5</span></td>
+        <td class="maitre">Installe deux chaises. Un enfant reçoit, un autre arrive avec sa photo ou sa poupée et présente. Circule d'un groupe à l'autre, souffle le début de la phrase si l'enfant bloque : <span class="say">Voici…</span> Corrige <em>il / elle</em> sans reprendre l'enfant devant les autres.</td>
+        <td>Jouent la visite deux par deux. Présentent leur photo ou leur poupée : <em>Voici mon frère, il s'appelle Modou.</em> Les autres écoutent et applaudissent à la fin.</td>
+      </tr>
+      <tr>
+        <td class="step"><b>Verbalisation</b><span>3 mn · regroupement</span></td>
+        <td class="maitre"><span class="say">Qui a présenté un frère ? Qui a présenté une sœur ?</span> Fait redire deux ou trois présentations réussies devant le grand groupe.</td>
+        <td>Lèvent la main, redisent leur phrase devant tout le monde.</td>
+      </tr>
+      <tr>
+        <td class="step"><b>Prolongement</b><span>2 mn</span></td>
+        <td class="maitre">Affiche les photos au coin regroupement. <span class="say">Demain, on présentera aussi vos amis.</span></td>
+        <td>Rangent leur photo au tableau des familles.</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3>Évaluation</h3>
+  <div class="consigne">
+    <b>Situation d'observation</b>
+    <p>Au moment de l'accueil du lendemain, chaque enfant présente une personne de son choix (photo, poupée ou camarade) à l'éducateur(trice).</p>
+    <p>L'observation se fait sur trois enfants par jour, notée dans le cahier de suivi — jamais sur toute la section le même jour.</p>
+  </div>
+  <div class="scroller">
+  <table class="bareme">
+    <thead><tr><th>Ce qu'on observe</th><th>Indicateurs</th><th class="pts">Acquis</th></tr></thead>
+    <tbody>
+      <tr><td class="crit">La structure</td><td>L'enfant emploie « Voici » suivi du groupe nominal, puis le verbe s'appeler au présent</td><td class="pts">A · ECA · NA</td></tr>
+      <tr><td class="crit">Le pronom</td><td>Il / elle est employé selon la personne présentée</td><td class="pts">A · ECA · NA</td></tr>
+      <tr><td class="crit">L'attitude</td><td>L'enfant montre du geste la personne présentée et parle assez fort pour être entendu</td><td class="pts">A · ECA · NA</td></tr>
+    </tbody>
+    <tfoot><tr><td colspan="3">A = acquis · ECA = en cours d'acquisition · NA = non acquis</td></tr></tfoot>
+  </table>
+  </div>
+  <p class="note"><b>NB.</b> Au préscolaire on n'attribue pas de note chiffrée : on renseigne le cahier de suivi individuel. L'apprentissage de l'intégration (SAI) et l'évaluation de l'intégration (SEI) de cette activité sont programmés en semaines 9 et 10 du trimestre.</p>
+
+  <h3>Remédiation</h3>
+  <div class="scroller">
+  <table class="remed">
+    <thead><tr><th>Difficulté observée</th><th>Source probable</th><th>Dispositif</th></tr></thead>
+    <tbody>
+      <tr><td>L'enfant dit seulement le prénom : <em>Nafi.</em></td><td>La phrase complète n'est pas encore un besoin : montrer suffit à se faire comprendre.</td><td><strong>Étayage progressif :</strong> l'adulte dit « Voici… » et l'enfant complète ; puis « Voici ma sœur… » et l'enfant termine ; puis rien. Trois jours suffisent en général.</td></tr>
+      <tr><td>Confusion <em>il</em> / <em>elle</em>.</td><td>Le wolof ne marque pas le genre du pronom : rien dans la langue première n'y prépare.</td><td><strong>Jeu de tri :</strong> deux boîtes, une avec la photo d'un garçon, l'autre d'une fille ; l'enfant range chaque image en disant « il » ou « elle ». À reprendre en petit groupe, deux minutes par jour.</td></tr>
+      <tr><td>L'enfant refuse de parler devant le groupe.</td><td>Timidité ; le grand groupe est trop exposé à cet âge.</td><td><strong>Différenciation :</strong> il présente d'abord à la marionnette seule, puis à un camarade, puis à trois. Ne jamais forcer le passage devant la section.</td></tr>
+    </tbody>
+  </table>
+  </div>
+</article>
+
+
+<!-- ══════════════════ FICHE 02 — MS ══════════════════ -->
+<article class="sheet" id="f2" data-niveau="PRE" data-domaine="LC" style="--dom:var(--prune)">
+  <div class="fiche-head">
+    <div>
+      <p class="tag">Domaine 1 · Activités langagières écrites · Lecture</p>
+      <h2>Où suis-je ?</h2>
+    </div>
+    <p class="fiche-no">Fiche 02 · MS · 25 mn</p>
+  </div>
+
+  <p class="jeu-badge"><b>Nom du jeu</b><span>« Où suis-je ? »</span></p>
+
+  <div class="admin">
+    <div><b>IEF</b><span class="fill"></span></div>
+    <div><b>Case / École</b><span class="fill"></span></div>
+    <div><b>Section</b><span class="val">Moyenne section</span></div>
+    <div><b>Effectif</b><span class="fill"></span></div>
+    <div><b>Date</b><span class="fill"></span></div>
+    <div><b>Trimestre</b><span class="val">3 · semaine 1</span></div>
+    <div><b>Éducateur(trice)</b><span class="fill"></span></div>
+    <div><b>Visa</b><span class="fill"></span></div>
+  </div>
+
+  <div class="apc">
+    <div class="row"><div class="k">Compétence de base</div><div class="v">Intégrer des notions liées à la découverte de la fonction et du fonctionnement de l'écrit, ainsi que le principe alphabétique, dans des situations de compréhension de textes écrits entendus et de productions d'un écrit simple.</div></div>
+    <div class="row"><div class="k">OA 1</div><div class="v">Identifier les composantes sonores du langage.</div></div>
+    <div class="row"><div class="k">OS 1</div><div class="v">Localiser un son dans un mot : <strong>début, milieu, fin</strong>.</div></div>
+    <div class="row"><div class="k">Contenus</div><div class="v">Jeux de localisation d'un son dans un mot : début, milieu, fin.</div></div>
+    <div class="row"><div class="k">Son travaillé</div><div class="v">Le son <strong>[a]</strong> — à reprendre les jours suivants avec [i], [o], [m].</div></div>
+    <div class="row"><div class="k">Matériel</div><div class="v">Une bande de trois cases dessinée au sol à la craie (ou trois cerceaux) · images d'objets familiers contenant le son : <em>a</em>rdoise, <em>a</em>vion · b<em>a</em>nane, cr<em>a</em>vate · chocol<em>a</em>t, papa · jetons.</div></div>
+  </div>
+
+  <h3>Règle du jeu</h3>
+  <div class="consigne">
+    <b>« Où suis-je ? »</b>
+    <p>Trois cases sont tracées au sol : <strong>DÉBUT · MILIEU · FIN</strong>. L'éducateur prononce un mot en détachant bien les syllabes. L'enfant qui tient l'image doit aller se placer dans la case où il « entend » le son cherché.</p>
+    <p>Le groupe valide en frappant dans les mains si la case est la bonne. Sinon, l'éducateur redit le mot deux fois, plus lentement.</p>
+  </div>
+
+  <h3>Déroulement</h3>
+  <div class="scroller">
+  <table>
+    <thead><tr><th>Moments</th><th>Activités de l'éducateur(trice)</th><th>Activités des enfants</th></tr></thead>
+    <tbody>
+      <tr>
+        <td class="step"><b>Réveil de l'oreille</b><span>4 mn · regroupement</span></td>
+        <td class="maitre">Fait scander des prénoms en frappant les mains : <span class="say">A-mi-na-ta.</span> Puis : <span class="say">Écoutez bien, je vais dire un mot et vous me direz si vous entendez [a].</span></td>
+        <td>Scandent les prénoms en frappant. Lèvent le pouce quand ils entendent [a].</td>
+      </tr>
+      <tr>
+        <td class="step"><b>Découverte des trois cases</b><span>5 mn · regroupement</span></td>
+        <td class="maitre">Trace les trois cases. Prend l'image de l'<em>a</em>rdoise. <span class="say">A-r-doise. Le [a], je l'entends tout au début.</span> Se place dans la première case. Recommence avec ban<em>a</em>ne (milieu) et chocol<em>a</em>t (fin).</td>
+        <td>Observent. Répètent le mot en cherchant le son. Nomment la case : <em>début, milieu, fin.</em></td>
+      </tr>
+      <tr>
+        <td class="step"><b>Le jeu</b><span>12 mn · deux groupes</span></td>
+        <td class="maitre">Distribue une image par enfant. Appelle les enfants un par un. Fait valider par le groupe. Note discrètement qui hésite. Après six passages, inverse : c'est un enfant qui prononce le mot.</td>
+        <td>Prennent leur image, écoutent le mot, se placent dans la case choisie et disent pourquoi : <em>J'entends [a] à la fin.</em> Les autres valident en frappant.</td>
+      </tr>
+      <tr>
+        <td class="step"><b>Trace</b><span>4 mn · atelier</span></td>
+        <td class="maitre">Distribue une feuille à trois cases. <span class="say">Colle ton image dans la bonne case.</span></td>
+        <td>Collent leur image dans la case correspondante. Rangent la feuille dans le classeur individuel.</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3>Évaluation</h3>
+  <div class="consigne">
+    <b>Situation d'observation</b>
+    <p>Chaque enfant reçoit trois images nouvelles contenant le son [a]. Il les place lui-même dans les trois cases de sa feuille, sans que le mot soit dit par l'adulte : il doit le nommer seul, puis chercher.</p>
+  </div>
+  <div class="scroller">
+  <table class="bareme">
+    <thead><tr><th>Ce qu'on observe</th><th>Indicateurs</th><th class="pts">Acquis</th></tr></thead>
+    <tbody>
+      <tr><td class="crit">Perception du son</td><td>L'enfant repère la présence du son [a] dans le mot</td><td class="pts">A · ECA · NA</td></tr>
+      <tr><td class="crit">Localisation</td><td>Il place correctement au moins 2 images sur 3</td><td class="pts">A · ECA · NA</td></tr>
+      <tr><td class="crit">Verbalisation</td><td>Il dit où il entend le son : au début, au milieu, à la fin</td><td class="pts">A · ECA · NA</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3>Remédiation</h3>
+  <div class="scroller">
+  <table class="remed">
+    <thead><tr><th>Difficulté observée</th><th>Source probable</th><th>Dispositif</th></tr></thead>
+    <tbody>
+      <tr><td>L'enfant place tout au « début ».</td><td>Stratégie d'évitement : la première case est la plus facile à retenir, il coche par défaut.</td><td><strong>Réduire à deux cases :</strong> travailler d'abord DÉBUT / FIN seulement, sans le milieu, jusqu'à ce que l'opposition soit sûre. Le milieu s'ajoute après.</td></tr>
+      <tr><td>Il confond le son [a] et la lettre <em>a</em> qu'il voit écrite.</td><td>À cet âge le son et la lettre se mélangent facilement, surtout si des étiquettes traînent.</td><td><strong>Retirer tout écrit :</strong> jouer uniquement à l'oral et avec des images, yeux fermés si nécessaire. Le passage à la lettre n'est visé qu'en grande section.</td></tr>
+      <tr><td>Il ne trouve pas mais suit celui qui passe avant lui.</td><td>Imitation du camarade ; la tâche n'est pas encore individuelle pour lui.</td><td><strong>Tutorat inversé :</strong> lui confier le rôle de « celui qui dit le mot ». Prononcer pour les autres oblige à écouter le mot en entier.</td></tr>
+    </tbody>
+  </table>
+  </div>
+</article>
+
+
+<!-- ══════════════════ FICHE 03 — GS ══════════════════ -->
+<article class="sheet" id="f3" data-niveau="PRE" data-domaine="MATH" style="--dom:var(--ink)">
+  <div class="fiche-head">
+    <div>
+      <p class="tag">Domaine 2 · Mathématiques · Activités numériques</p>
+      <h2>Six et sept dans tous leurs états</h2>
+    </div>
+    <p class="fiche-no">Fiche 03 · GS · 30 mn</p>
+  </div>
+
+  <div class="admin">
+    <div><b>IEF</b><span class="fill"></span></div>
+    <div><b>Case / École</b><span class="fill"></span></div>
+    <div><b>Section</b><span class="val">Grande section</span></div>
+    <div><b>Effectif</b><span class="fill"></span></div>
+    <div><b>Date</b><span class="fill"></span></div>
+    <div><b>Trimestre</b><span class="val">3 · semaine 3</span></div>
+    <div><b>Éducateur(trice)</b><span class="fill"></span></div>
+    <div><b>Visa</b><span class="fill"></span></div>
+  </div>
+
+  <div class="apc">
+    <div class="row"><div class="k">Compétence de base</div><div class="v">Intégrer des notions numériques dans des situations de résolution de problèmes mathématiques.</div></div>
+    <div class="row"><div class="k">OA 3</div><div class="v">Connaître de petits nombres.</div></div>
+    <div class="row"><div class="k">OS 3</div><div class="v">Décomposer les nombres <strong>6 et 7</strong>.</div></div>
+    <div class="row"><div class="k">Contenus</div><div class="v">Décomposition des nombres 6 et 7 : 6 = 5 + 1 = 4 + 2 = 3 + 3 · 7 = 6 + 1 = 5 + 2 = 4 + 3.</div></div>
+    <div class="row"><div class="k">Matériel</div><div class="v">Coquillages, capsules ou graines (7 par enfant) · deux barquettes par enfant · une grande boîte opaque pour le maître · bande numérique affichée jusqu'à 10.</div></div>
+    <div class="row"><div class="k">Prérequis</div><div class="v">Semaines 1 et 2 : comparer des quantités (plus que, moins que, autant que) ; résoudre un problème d'ajout, de retrait ou de partage.</div></div>
+  </div>
+
+  <h3>Déroulement</h3>
+  <div class="scroller">
+  <table>
+    <thead><tr><th>Moments</th><th>Activités de l'éducateur(trice)</th><th>Activités des enfants</th></tr></thead>
+    <tbody>
+      <tr>
+        <td class="step"><b>Comptine numérique</b><span>4 mn · regroupement</span></td>
+        <td class="maitre">Fait réciter la suite jusqu'à 10, puis en partant de 3, puis en s'arrêtant sur commande. <span class="say">Montrez-moi 6 doigts. Autrement.</span></td>
+        <td>Récitent. Montrent 6 doigts de plusieurs façons : 5 + 1, 4 + 2, 3 + 3.</td>
+      </tr>
+      <tr>
+        <td class="step"><b>La boîte qui cache</b><span>8 mn · regroupement</span></td>
+        <td class="maitre">Compte 6 coquillages avec les enfants, les met dans la boîte. En sort 2 sous leurs yeux. <span class="say">Combien en reste-t-il dans la boîte ?</span> Laisse chercher, puis vérifie en vidant. Recommence : 6 avec 1 sorti, avec 3 sortis.</td>
+        <td>Comptent avec l'adulte. Cherchent sans voir. Annoncent leur réponse. Vérifient au comptage. Constatent : <em>6, c'est 4 et 2. C'est aussi 3 et 3.</em></td>
+      </tr>
+      <tr>
+        <td class="step"><b>Atelier des deux barquettes</b><span>12 mn · groupes de 4</span></td>
+        <td class="maitre">Donne 6 graines et 2 barquettes à chacun. <span class="say">Range tes 6 graines dans les deux barquettes, comme tu veux. Trouve toutes les façons.</span> Circule, fait dire chaque trouvaille, fait remarquer les doubles. Passe ensuite à 7.</td>
+        <td>Répartissent les graines dans les deux barquettes. Cherchent d'autres partages. Disent à voix haute : <em>4 ici et 2 là, ça fait 6.</em> Reprennent avec 7 graines.</td>
+      </tr>
+      <tr>
+        <td class="step"><b>Affichage collectif</b><span>4 mn · regroupement</span></td>
+        <td class="maitre">Note au tableau, sous forme de dessins, toutes les décompositions trouvées pour 6 puis pour 7. Fait compter les façons trouvées.</td>
+        <td>Dictent leurs décompositions. Comptent : trois façons pour 6, trois pour 7 (sans compter les inversions).</td>
+      </tr>
+      <tr>
+        <td class="step"><b>Trace</b><span>2 mn · individuel</span></td>
+        <td class="maitre">Distribue une fiche avec deux barquettes vides et le nombre 6 écrit au-dessus.</td>
+        <td>Dessinent une décomposition de leur choix et rangent la fiche au classeur.</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3>Évaluation</h3>
+  <div class="consigne">
+    <b>Situation d'observation</b>
+    <p>La boîte contient 7 graines. L'éducateur en sort 3 sous les yeux de l'enfant, seul à seul.</p>
+    <p><em>Combien en reste-t-il dans la boîte ? Trouve une autre façon de faire 7 avec les deux barquettes.</em></p>
+  </div>
+  <div class="scroller">
+  <table class="bareme">
+    <thead><tr><th>Ce qu'on observe</th><th>Indicateurs</th><th class="pts">Acquis</th></tr></thead>
+    <tbody>
+      <tr><td class="crit">Décomposition</td><td>L'enfant trouve le complément sans avoir besoin de voir la collection</td><td class="pts">A · ECA · NA</td></tr>
+      <tr><td class="crit">Souplesse</td><td>Il propose au moins deux décompositions différentes du même nombre</td><td class="pts">A · ECA · NA</td></tr>
+      <tr><td class="crit">Verbalisation</td><td>Il dit ce qu'il a fait : « 4 et 3, ça fait 7 »</td><td class="pts">A · ECA · NA</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3>Remédiation</h3>
+  <div class="scroller">
+  <table class="remed">
+    <thead><tr><th>Difficulté observée</th><th>Source probable</th><th>Dispositif</th></tr></thead>
+    <tbody>
+      <tr><td>L'enfant doit tout recompter à chaque fois, depuis 1.</td><td>Le nombre n'est pas encore un tout : il reste une suite de mots à parcourir.</td><td><strong>Constellations :</strong> travailler les configurations de dés et de doigts, reconnues d'un coup d'œil, avant de revenir au partage. Deux minutes chaque jour au moment de l'accueil.</td></tr>
+      <tr><td>Il trouve une seule décomposition et s'arrête.</td><td>La consigne « toutes les façons » n'a pas de sens pour lui : une réponse suffit.</td><td><strong>Contrainte de jeu :</strong> « celui qui trouve le plus de façons gagne un jeton ». Le comptage des jetons rend la recherche multiple désirable.</td></tr>
+      <tr><td>Il annonce un nombre au hasard dès que la boîte est fermée.</td><td>Il ne peut pas encore agir mentalement sur une quantité cachée.</td><td><strong>Cacher progressivement :</strong> d'abord la boîte transparente, puis à moitié couverte, puis opaque. Rester à l'étape où l'enfant réussit une semaine entière avant de couvrir davantage.</td></tr>
+    </tbody>
+  </table>
+  </div>
+</article>
+
+
+<!-- ══════════════════ FICHE 04 — CI ══════════════════ -->
+<article class="sheet" id="f4" data-niveau="CICP" data-domaine="LC" style="--dom:var(--rouge)">
+  <div class="fiche-head">
+    <div>
+      <p class="tag">Langue et Communication · Communication orale · Langage</p>
+      <h2>Je m'appelle… et toi ?</h2>
+    </div>
+    <p class="fiche-no">Fiche 04 · CI · 30 mn</p>
+  </div>
+
+  <div class="admin">
+    <div><b>IEF</b><span class="fill"></span></div>
+    <div><b>École</b><span class="fill"></span></div>
+    <div><b>Classe</b><span class="val">CI</span></div>
+    <div><b>Effectif</b><span class="fill"></span></div>
+    <div><b>Date</b><span class="fill"></span></div>
+    <div><b>Durée</b><span class="val">30 mn</span></div>
+    <div><b>Enseignant(e)</b><span class="fill"></span></div>
+    <div><b>Visa</b><span class="fill"></span></div>
+  </div>
+
+  <div class="apc">
+    <div class="row"><div class="k">Compétence de base</div><div class="v">Intégrer le vocabulaire adéquat, les comportements non verbaux, le schéma intonatif, des structures et des règles syntaxiques simples dans des situations de compréhension et de production d'énoncés oraux relatifs au contact social, à la narration, à la description et à l'injonction.</div></div>
+    <div class="row"><div class="k">Palier 1 — 8 sem.</div><div class="v">Intégrer le vocabulaire adéquat, les comportements non verbaux, le schéma intonatif, des structures et des règles syntaxiques simples dans des situations de production d'énoncés oraux relatifs à la <strong>prise de contact et à la prise de congé</strong>.</div></div>
+    <div class="row"><div class="k">OA</div><div class="v">Se présenter et demander à quelqu'un de se présenter.</div></div>
+    <div class="row"><div class="k">OS 2 — semaine 2</div><div class="v">Se présenter et demander à son interlocuteur (trice) de se présenter.</div></div>
+    <div class="row"><div class="k">Contenus</div><div class="v"><ul>
+      <li>Verbe être au présent + prénom · <em>Moi, mon nom, mon prénom, c'est…</em></li>
+      <li>Verbe s'appeler au présent + prénom : <em>je m'appelle…</em></li>
+      <li><em>Comment tu t'appelles ? Comment t'appelles-tu ? Quel est ton nom ? Quel est ton prénom ?</em></li>
+    </ul></div></div>
+    <div class="row"><div class="k">Moyens</div><div class="v">Deux marionnettes ou deux foulards pour distinguer les rôles · les étiquettes-prénoms de la classe.</div></div>
+    <div class="row"><div class="k">Progression</div><div class="v">Un OS par semaine. Deux séances par jour du lundi au jeudi : présentation / acquisition · consolidation / fixation · exploitation / transfert.</div></div>
+  </div>
+
+  <h3>Déroulement</h3>
+  <div class="scroller">
+  <table>
+    <thead><tr><th>Étapes</th><th>Activités de l'enseignant(e)</th><th>Activités des élèves</th></tr></thead>
+    <tbody>
+      <tr>
+        <td class="step"><b>Rappel</b><span>3 mn · collectif</span></td>
+        <td class="maitre">Fait rejouer la salutation de la semaine 1 : <span class="say">Bonjour Ngor. — Bonjour maître. Comment ça va ?</span> Interroge quatre élèves rapidement.</td>
+        <td>Se saluent deux à deux, demandent des nouvelles, répondent.</td>
+      </tr>
+      <tr>
+        <td class="step"><b>Présentation</b><span>7 mn · collectif</span></td>
+        <td class="maitre">Prend les deux marionnettes et joue seul la scène. <span class="say">Bonjour ! Je m'appelle Fama. Et toi, comment tu t'appelles ? — Moi, je m'appelle Alfred.</span> Rejoue trois fois. Fait répéter chaque réplique en chœur, puis par rangée.</td>
+        <td>Écoutent, observent qui parle. Répètent en chœur : <em>Je m'appelle… Comment tu t'appelles ?</em></td>
+      </tr>
+      <tr>
+        <td class="step"><b>Acquisition</b><span>8 mn · collectif</span></td>
+        <td class="maitre">Fait varier les formules au tableau des étiquettes : <span class="say">Mon nom, c'est Diallo. Mon prénom, c'est Awa. Quel est ton nom ?</span> Corrige l'articulation, fait allonger le souffle sur la question.</td>
+        <td>Produisent à leur tour, avec leur propre prénom. Utilisent tour à tour <em>je m'appelle</em> et <em>mon prénom, c'est…</em></td>
+      </tr>
+      <tr>
+        <td class="step"><b>Consolidation</b><span>8 mn · binômes</span></td>
+        <td class="maitre">Fait circuler : chaque élève doit demander son prénom à trois camarades qu'il connaît mal. Passe dans les rangs, souffle la question à ceux qui bloquent, veille au regard porté sur l'interlocuteur.</td>
+        <td>Se déplacent, se saluent, se présentent, demandent le prénom, remercient. Retiennent trois prénoms nouveaux.</td>
+      </tr>
+      <tr>
+        <td class="step"><b>Exploitation</b><span>4 mn · collectif</span></td>
+        <td class="maitre">Fait passer deux binômes devant la classe. Fait dire aux autres ce qui a bien marché — jamais ce qui a raté.</td>
+        <td>Deux binômes rejouent la scène. Les autres repèrent : <em>il a regardé son ami, il a parlé fort.</em></td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3>Évaluation</h3>
+  <div class="consigne">
+    <b>Consigne</b>
+    <p>Un(e) nouvel(le) élève arrive dans la classe. Tu vas t'asseoir à côté de lui / d'elle.</p>
+    <p>Salue-le, présente-toi et demande-lui de se présenter.</p>
+  </div>
+  <div class="scroller">
+  <table class="bareme">
+    <thead><tr><th>Critère</th><th>Indicateurs</th><th class="pts">Note</th></tr></thead>
+    <tbody>
+      <tr><td class="crit">Pertinence</td><td>Tous les éléments sont présents : salutation, présentation de soi, demande de présentation, prise de congé (22) · 3 éléments (17) · 2 éléments (12) · 1 élément (7) · aucun (0)</td><td class="pts">22</td></tr>
+      <tr><td class="crit">Cohérence</td><td>Toutes les phrases sont en lien (17) · les 2 tiers (13) · la moitié (9) · le tiers (5) · aucun lien (0)</td><td class="pts">17</td></tr>
+      <tr><td class="crit">Correction de la langue</td><td>Aucune erreur (16) · 1 à 4 erreurs (11) · 5 à 7 (6) · 8 à 10 (1) · plus de 10 (0)</td><td class="pts">16</td></tr>
+      <tr><td class="crit">Comportement non verbal</td><td>Gestes, posture et regard porté sur l'interlocuteur corrects (5) · une déficience notoire (2) · deux (1) · plus de deux (0)</td><td class="pts">5</td></tr>
+    </tbody>
+    <tfoot><tr><td colspan="2">Total — compétent à partir de 30</td><td class="pts">60</td></tr></tfoot>
+  </table>
+  </div>
+  <p class="note"><b>NB.</b> Cette évaluation n'intervient qu'en fin de palier 4 (fin du CI). En cours de palier 1, on se contente de l'évaluation formative après chaque OS.</p>
+
+  <h3>Remédiation</h3>
+  <div class="scroller">
+  <table class="remed">
+    <thead><tr><th>Erreur observée</th><th>Source probable</th><th>Dispositif</th></tr></thead>
+    <tbody>
+      <tr><td>L'élève répond à la question mais ne la pose jamais.</td><td>Il n'a mémorisé qu'un rôle sur deux : celui de celui qui répond, plus court.</td><td><strong>Inversion systématique :</strong> imposer que chaque élève commence l'échange une fois sur deux. Marquer le rôle par un foulard qui change de main.</td></tr>
+      <tr><td>« Je m'appelle Modou » devient « Je appelle Modou ».</td><td>Le pronom réfléchi n'existe pas sous cette forme en wolof : il n'a pas d'appui dans la langue première.</td><td><strong>Répétition rythmée :</strong> frapper les mains sur les trois temps « je / me / appelle », en chœur puis individuellement, deux minutes par jour pendant une semaine.</td></tr>
+      <tr><td>L'élève parle en regardant le maître, pas son camarade.</td><td>Le maître reste le destinataire réel de toute parole scolaire.</td><td><strong>Sortir du champ :</strong> l'enseignant se place derrière les deux élèves, hors de leur vue, pendant l'échange. Le regard se reporte naturellement sur le camarade.</td></tr>
+    </tbody>
+  </table>
+  </div>
+</article>
+
+
+<!-- ══════════════════ FICHE 05 — CI ══════════════════ -->
+<article class="sheet" id="f5" data-niveau="CICP" data-domaine="LC" style="--dom:var(--rouge)">
+  <div class="fiche-head">
+    <div>
+      <p class="tag">Langue et Communication · Communication écrite · Lecture</p>
+      <h2>Le son [f] et le mouton de papa</h2>
+    </div>
+    <p class="fiche-no">Fiche 05 · CI · 35 mn</p>
+  </div>
+
+  <div class="admin">
+    <div><b>IEF</b><span class="fill"></span></div>
+    <div><b>École</b><span class="fill"></span></div>
+    <div><b>Classe</b><span class="val">CI</span></div>
+    <div><b>Effectif</b><span class="fill"></span></div>
+    <div><b>Date</b><span class="fill"></span></div>
+    <div><b>Durée</b><span class="val">35 mn</span></div>
+    <div><b>Enseignant(e)</b><span class="fill"></span></div>
+    <div><b>Visa</b><span class="fill"></span></div>
+  </div>
+
+  <div class="apc">
+    <div class="row"><div class="k">Compétence de base</div><div class="v">Intégrer les mécanismes d'identification des mots et des stratégies de compréhension dans des situations de lecture de petits textes.</div></div>
+    <div class="row"><div class="k">Palier 4 — 4 sem.</div><div class="v">Intégrer les mécanismes d'identification des mots et des stratégies de compréhension dans des situations de lecture de petits textes.</div></div>
+    <div class="row"><div class="k">OA</div><div class="v">Maîtriser des correspondances graphophonologiques · Lire et comprendre de petits textes.</div></div>
+    <div class="row"><div class="k">OS</div><div class="v">Lire et écrire le son <strong>[f]</strong>, former des syllabes et des mots ; puis <strong>dégager l'idée générale</strong> d'un petit texte lu par soi-même.</div></div>
+    <div class="row"><div class="k">Contenus du palier</div><div class="v">Combinatoire : <strong>f, u, ou, é = et, è = ê = ai = ei, s, r, au = eau = o, on = om</strong>. Mots fréquents : plus, dire, me, on, mon, lui, nous, comme, mais, pouvoir, avec, tout, y, aller, voir. Recherche de mots de sens opposés.</div></div>
+    <div class="row"><div class="k">Moyens</div><div class="v">Ardoises · étiquettes-syllabes mobiles · texte reproduit au tableau · cahier de devoirs.</div></div>
+    <div class="row"><div class="k">Remarque</div><div class="v">L'ordre des OA n'est pas figé : on peut aller du texte au décodage ou l'inverse. Ce qui compte est que la rencontre du texte mobilise le décodage au service du sens.</div></div>
+  </div>
+
+  <h3>Texte support</h3>
+  <div class="support">
+    <h4>Le mouton de papa</h4>
+    <p>Le mouton blanc de papa est gros. Sa tête est ronde et ses pattes sont solides. Il est beau. Il saute et bêle dès que papa arrive à la maison. Tout le monde l'aime.</p>
+    <p class="credit">Texte du guide, palier 4.</p>
+  </div>
+
+  <h3>Déroulement</h3>
+  <div class="scroller">
+  <table>
+    <thead><tr><th>Étapes</th><th>Activités de l'enseignant(e)</th><th>Activités des élèves</th></tr></thead>
+    <tbody>
+      <tr>
+        <td class="step"><b>Du sens au signe</b><span>5 mn · collectif</span></td>
+        <td class="maitre">Écrit au tableau : <em>Fama a fait la fête.</em> Fait lire par un bon lecteur. <span class="say">Quel bruit revient dans cette phrase ?</span> Extrait le mot <em>Fama</em>, puis la syllabe <em>fa</em>, puis isole le son [f].</td>
+        <td>Écoutent, repèrent le son qui revient. Isolent : <em>Fa-ma. F !</em></td>
+      </tr>
+      <tr>
+        <td class="step"><b>Reconnaissance auditive</b><span>4 mn · collectif</span></td>
+        <td class="maitre"><span class="say">Levez le doigt quand vous entendez [f].</span> Dicte : farine, banane, café, foulard, tomate, feuille, riz, fenêtre.</td>
+        <td>Lèvent le doigt au bon moment. Proposent d'autres mots contenant [f].</td>
+      </tr>
+      <tr>
+        <td class="step"><b>Des lettres aux mots</b><span>8 mn · individuel</span></td>
+        <td class="maitre">Écrit les mots trouvés, fait entourer la lettre f. Fait former sur l'ardoise : fa, fi, fo, fu, fé, fou. Puis : fil, fou, café, filet. Dictée rapide de trois syllabes et deux mots.</td>
+        <td>Entourent le f. Forment les syllabes sur l'ardoise avec les étiquettes, puis les écrivent. Les lisent à voix haute. Écrivent sous la dictée.</td>
+      </tr>
+      <tr>
+        <td class="step"><b>Mise en projet de lecture</b><span>3 mn · collectif</span></td>
+        <td class="maitre">Découvre le titre seul. <span class="say">De qui va parler ce texte ? Comment est ce mouton, à votre avis ?</span> Note deux hypothèses.</td>
+        <td>Émettent des hypothèses à partir du titre.</td>
+      </tr>
+      <tr>
+        <td class="step"><b>Lecture silencieuse</b><span>4 mn · individuel</span></td>
+        <td class="maitre">Découvre le texte. Circule sans intervenir.</td>
+        <td>Lisent seuls, en silence.</td>
+      </tr>
+      <tr>
+        <td class="step"><b>Exploitation</b><span>7 mn · collectif</span></td>
+        <td class="maitre">Fait dire ce qui a été compris. Fait relever les mots qui disent comment est le mouton. Fait chercher les parties du corps citées. Explique <em>bêler</em> par le contexte.</td>
+        <td>Reformulent. Relèvent : <em>blanc, gros, rond, solides, beau.</em> Citent : la tête, les pattes. Comprennent que bêler, c'est le cri du mouton.</td>
+      </tr>
+      <tr>
+        <td class="step"><b>Lecture à voix haute</b><span>4 mn · collectif</span></td>
+        <td class="maitre">Lit le texte en modèle, marque les points. Fait lire cinq ou six élèves, une phrase chacun.</td>
+        <td>Écoutent le modèle, puis lisent une phrase chacun en respectant les points.</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3>Évaluation</h3>
+  <div class="consigne">
+    <b>Consigne</b>
+    <p>1. Écris sous la dictée : <em>fa · fou · café · Le filet de Fama.</em></p>
+    <p>2. Relève dans le texte les mots qui montrent comment est le mouton de papa.</p>
+    <p>3. Quelles sont les parties du mouton décrites dans le texte ?</p>
+  </div>
+  <div class="scroller">
+  <table class="bareme">
+    <thead><tr><th>Critère</th><th>Indicateurs</th><th class="pts">Note</th></tr></thead>
+    <tbody>
+      <tr><td class="crit">Compréhension</td><td>Les qualificatifs du mouton sont relevés (13) · les parties du corps citées sont exactes (12) — toutes les tâches réalisées 25 · quatre à trois 20 · deux 15 · une 10 · aucune 0</td><td class="pts">25</td></tr>
+      <tr><td class="crit">Fluidité de la lecture</td><td>Respect des 3 indicateurs — prononciation, vitesse, expression (15) · 2 indicateurs (10) · 1 indicateur (5) · aucun (0)</td><td class="pts">15</td></tr>
+    </tbody>
+    <tfoot><tr><td colspan="2">Total — compétent à partir de 20</td><td class="pts">40</td></tr></tfoot>
+  </table>
+  </div>
+
+  <h3>Remédiation</h3>
+  <div class="scroller">
+  <table class="remed">
+    <thead><tr><th>Erreur observée</th><th>Source probable</th><th>Dispositif</th></tr></thead>
+    <tbody>
+      <tr><td>L'élève écrit <em>ve</em> pour <em>fe</em>.</td><td>Confusion [f] / [v] : mêmes lèvres et mêmes dents, seule la vibration change.</td><td><strong>Consolidation par le toucher :</strong> main sur la gorge — [f] ne fait pas vibrer, [v] fait vibrer. Puis paires minimales : fil/ville, foie/voie, en dictée quotidienne de trois paires.</td></tr>
+      <tr><td>Il déchiffre chaque mot correctement mais ne sait pas de quoi parle le texte.</td><td>Tout l'effort passe dans le décodage ; il ne reste rien pour le sens.</td><td><strong>Alléger la charge :</strong> lui faire relire le texte deux fois avant de poser la moindre question, ou lui lire le texte à voix haute avant qu'il ne le lise lui-même.</td></tr>
+      <tr><td>Il relève des mots au hasard pour la question 2.</td><td>La question « comment est » n'est pas comprise comme portant sur les qualités.</td><td><strong>Réapprentissage :</strong> travailler d'abord à l'oral sur des objets de la classe — « comment est cette ardoise ? » — puis revenir au texte avec la même question.</td></tr>
+    </tbody>
+  </table>
+  </div>
+</article>
+
+
+<!-- ══════════════════ FICHE 06 — CP ══════════════════ -->
+<article class="sheet" id="f6" data-niveau="CICP" data-domaine="LC" style="--dom:var(--rouge)">
+  <div class="fiche-head">
+    <div>
+      <p class="tag">Langue et Communication · Communication écrite · Production</p>
+      <h2>Écrire l'histoire d'une BD muette</h2>
+    </div>
+    <p class="fiche-no">Fiche 06 · CP · 40 mn</p>
+  </div>
+
+  <div class="admin">
+    <div><b>IEF</b><span class="fill"></span></div>
+    <div><b>École</b><span class="fill"></span></div>
+    <div><b>Classe</b><span class="val">CP</span></div>
+    <div><b>Effectif</b><span class="fill"></span></div>
+    <div><b>Date</b><span class="fill"></span></div>
+    <div><b>Durée</b><span class="val">40 mn</span></div>
+    <div><b>Enseignant(e)</b><span class="fill"></span></div>
+    <div><b>Visa</b><span class="fill"></span></div>
+  </div>
+
+  <div class="apc">
+    <div class="row"><div class="k">Compétence de base</div><div class="v">Intégrer le vocabulaire adéquat, des structures et des règles syntaxiques simples dans des situations de production d'énoncés écrits adaptés à la situation de communication.</div></div>
+    <div class="row"><div class="k">Palier 6 — 6 sem.</div><div class="v">Intégrer le vocabulaire adéquat, des structures et des règles syntaxiques simples, le <strong>présent de l'indicatif</strong> dans des situations de production d'énoncés écrits d'au moins 2 phrases relatifs à la <strong>narration</strong>.</div></div>
+    <div class="row"><div class="k">OA</div><div class="v">Relater par écrit un conte, un récit, une bande dessinée.</div></div>
+    <div class="row"><div class="k">OS</div><div class="v">Relater par écrit l'histoire racontée par une <strong>BD muette</strong>.</div></div>
+    <div class="row"><div class="k">Contenus</div><div class="v"><ul>
+      <li>Verbes d'action usuels au présent de l'indicatif</li>
+      <li>Succession des actions</li>
+      <li>Emploi des pronoms : je, il, elle, nous, ils, elles</li>
+      <li>Connecteurs : <em>et, puis, avant, après · d'abord, ensuite, enfin · mais, car</em></li>
+      <li>Phrase simple : sujet + verbe + complément</li>
+    </ul></div></div>
+    <div class="row"><div class="k">Moyens</div><div class="v">Une BD muette de 4 vignettes agrandie au tableau + une par binôme · bandes de papier pour les légendes · référentiel de connecteurs affiché.</div></div>
+    <div class="row"><div class="k">Destinataire</div><div class="v">Le petit frère / la petite sœur au CI, qui ne sait pas encore lire seul les images.</div></div>
+  </div>
+
+  <h3>Déroulement</h3>
+  <div class="scroller">
+  <table>
+    <thead><tr><th>Étapes</th><th>Activités de l'enseignant(e)</th><th>Activités des élèves</th></tr></thead>
+    <tbody>
+      <tr>
+        <td class="step"><b>Le projet</b><span>4 mn · collectif</span></td>
+        <td class="maitre">Affiche la BD muette. <span class="say">Cette bande dessinée n'a pas de mots. Votre petit frère ne comprend pas l'histoire. Qu'est-ce qu'on peut faire ?</span> Retient la proposition : écrire une phrase sous chaque image.</td>
+        <td>Observent, proposent. Comprennent la tâche et à qui elle est destinée.</td>
+      </tr>
+      <tr>
+        <td class="step"><b>Lire les images</b><span>8 mn · collectif</span></td>
+        <td class="maitre">Fait décrire chaque vignette à l'oral, dans l'ordre. <span class="say">Qui est là ? Que fait-il ? Et après ?</span> Fait remarquer ce qui change d'une vignette à la suivante.</td>
+        <td>Racontent oralement, vignette par vignette. Repèrent le personnage principal et ce qu'il fait à chaque fois.</td>
+      </tr>
+      <tr>
+        <td class="step"><b>Outils de langue</b><span>8 mn · collectif</span></td>
+        <td class="maitre">Fait relever les verbes d'action nécessaires, les écrit au tableau au présent : <em>il marche, il tombe, il pleure, il rit.</em> Fait choisir les connecteurs dans le référentiel : <em>d'abord, puis, ensuite, enfin.</em></td>
+        <td>Dictent les verbes, vérifient la terminaison du présent. Choisissent un connecteur pour chaque vignette et l'écrivent sur une bande.</td>
+      </tr>
+      <tr>
+        <td class="step"><b>Critères de réussite</b><span>4 mn · collectif</span></td>
+        <td class="maitre">Fait formuler les critères au « je ». Les écrit au tableau, les fait recopier au dos du cahier.</td>
+        <td>Formulent et recopient : <em>1. J'ai écrit une phrase sous chaque image. 2. Ma phrase a un sujet et un verbe. 3. J'ai commencé par une majuscule et fini par un point. 4. J'ai employé un mot pour dire l'ordre.</em></td>
+      </tr>
+      <tr>
+        <td class="step"><b>Premier jet</b><span>12 mn · individuel</span></td>
+        <td class="maitre">Distribue la BD. Circule, ne corrige pas la copie : renvoie à la fiche de critères et au référentiel affiché. Aide à l'orthographe des mots demandés, sans écrire à la place.</td>
+        <td>Écrivent une phrase sous chaque vignette. Se relisent en cochant leur fiche de critères.</td>
+      </tr>
+      <tr>
+        <td class="step"><b>Retour</b><span>4 mn · collectif</span></td>
+        <td class="maitre">Affiche trois productions sans nommer les auteurs. <span class="say">Qu'est-ce qui marche bien ici ?</span> Annonce le deuxième jet pour la séance suivante.</td>
+        <td>Repèrent les réussites. Notent ce qu'ils veulent améliorer sur leur propre texte.</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3>Évaluation</h3>
+  <div class="consigne">
+    <b>Consigne</b>
+    <p>Voici une nouvelle bande dessinée sans légende. Ton petit frère veut comprendre l'histoire.</p>
+    <p>Écris une phrase sous chaque vignette pour lui raconter ce qui se passe.</p>
+  </div>
+  <div class="scroller">
+  <table class="bareme">
+    <thead><tr><th>Critère</th><th>Indicateurs</th><th class="pts">Note</th></tr></thead>
+    <tbody>
+      <tr><td class="crit">Pertinence</td><td>Chaque phrase correspond bien à sa vignette (22) · une seule phrase inadaptée (17) · aucune phrase adaptée (0)</td><td class="pts">22</td></tr>
+      <tr><td class="crit">Cohérence</td><td>Toutes les phrases sont en lien et racontent une histoire suivie (17) · les phrases ne sont pas en lien (0)</td><td class="pts">17</td></tr>
+      <tr><td class="crit">Correction de la langue</td><td>Aucune erreur de grammaire, conjugaison, orthographe, syntaxe (16) · 1 à 4 erreurs (11) · 5 à 7 (6) · 8 à 10 (1) · plus de 10 (0)</td><td class="pts">16</td></tr>
+      <tr><td class="crit">Présentation</td><td>Pas de rature ni de surcharge, écriture lisible, mise en page correcte et aérée (5) · rature (4) · rature et surcharge (3) · + manque de lisibilité (2) · + mise en page insuffisante (0)</td><td class="pts">5</td></tr>
+    </tbody>
+    <tfoot><tr><td colspan="2">Total — compétent à partir de 30</td><td class="pts">60</td></tr></tfoot>
+  </table>
+  </div>
+
+  <h3>Remédiation</h3>
+  <div class="scroller">
+  <table class="remed">
+    <thead><tr><th>Erreur observée</th><th>Source probable</th><th>Dispositif</th></tr></thead>
+    <tbody>
+      <tr><td>L'élève écrit quatre phrases sans lien : <em>Un garçon. Un ballon. Une voiture. Il pleure.</em></td><td>Il nomme ce qu'il voit image par image au lieu de raconter une suite.</td><td><strong>Écriture interactive :</strong> reprendre collectivement au tableau, en obligeant chaque phrase à commencer par un connecteur pris dans le référentiel. Puis refaire seul sur une autre BD.</td></tr>
+      <tr><td>Les verbes passent du présent au passé sans raison.</td><td>Le récit oral se dit spontanément au passé composé ; l'écrit garde la trace de cette oralité.</td><td><strong>Consolidation :</strong> transformer collectivement un court texte du passé au présent, oralement puis par écrit, trois jours de suite avant de reprendre la production.</td></tr>
+      <tr><td>Aucune majuscule ni point.</td><td>La phrase n'est pas encore une unité pour lui : il écrit un flux.</td><td><strong>Découpage matériel :</strong> une bande de papier = une phrase. On ne peut écrire qu'une phrase par bande, majuscule au début, point à la fin. Le support impose la règle avant que l'élève ne l'intériorise.</td></tr>
+    </tbody>
+  </table>
+  </div>
+</article>
+
+
+<!-- ══════════════════ FICHE 07 — CM1 ══════════════════ -->
+<article class="sheet" id="f7" data-niveau="CM" data-domaine="LC" style="--dom:var(--rouge)">
+  <div class="fiche-head">
+    <div>
+      <p class="tag">Langue et Communication · Communication orale · Expression orale</p>
+      <h2>Expliquer pour éviter l'accident</h2>
+    </div>
+    <p class="fiche-no">Fiche 07 · CM1 · 45 mn</p>
+  </div>
+
+  <div class="admin">
+    <div><b>IEF</b><span class="fill"></span></div>
+    <div><b>École</b><span class="fill"></span></div>
+    <div><b>Classe</b><span class="val">CM1</span></div>
+    <div><b>Effectif</b><span class="fill"></span></div>
+    <div><b>Date</b><span class="fill"></span></div>
+    <div><b>Durée</b><span class="val">45 mn</span></div>
+    <div><b>Enseignant(e)</b><span class="fill"></span></div>
+    <div><b>Visa</b><span class="fill"></span></div>
+  </div>
+
+  <div class="apc">
+    <div class="row"><div class="k">Compétence de base</div><div class="v">Intégrer le vocabulaire adéquat, les comportements non verbaux, le schéma intonatif et des règles syntaxiques dans des situations de compréhension et de production de messages oraux relatifs à la transmission d'informations et aux échanges verbaux.</div></div>
+    <div class="row"><div class="k">Palier 4 — 4 sem.</div><div class="v">Intégrer le vocabulaire adéquat, les comportements non verbaux, le schéma intonatif et des règles syntaxiques dans des situations de transmission d'informations de type <strong>informatif</strong>.</div></div>
+    <div class="row"><div class="k">OA</div><div class="v">Donner des informations · Expliquer un mécanisme, un phénomène.</div></div>
+    <div class="row"><div class="k">OS</div><div class="v">Donner des informations tirées de sa lecture, des médias · <strong>Faire comprendre un phénomène</strong> et expliquer les actions nécessaires pour l'éviter.</div></div>
+    <div class="row"><div class="k">Contenus</div><div class="v">La manière de présenter les idées, l'articulation, la clarté, le rythme de la parole, la maîtrise du souffle, la <strong>justesse des informations</strong>, la cohérence.</div></div>
+    <div class="row"><div class="k">Moyens</div><div class="v">L'article photocopié (ou recopié au tableau) · une bonbonne de gaz vide et un détendeur, si l'école en dispose · d'autres coupures de presse pour varier les supports entre les groupes.</div></div>
+    <div class="row"><div class="k">Récitation</div><div class="v">2 textes tout au long du palier — un poème et un texte en prose.</div></div>
+  </div>
+
+  <h3>Article support</h3>
+  <div class="support">
+    <h4>Encore une imprudence coupable !</h4>
+    <p>Le quartier Fass Paillote a été ravagé par les flammes. C'est ce matin, aux environs de 10 heures, que le feu s'est déclaré dans une maison, après une forte détonation perceptible à des centaines de mètres.</p>
+    <p>Les premiers prélèvements des sapeurs-pompiers attestent que l'incendie a été causé par une bonbonne de gaz. Fama, une fillette d'une douzaine d'années, devait recharger une bonbonne en l'absence de sa mère. Ne maîtrisant pas l'opération, elle a cassé l'embout du bec de gaz et le premier jet s'est transformé en flammes à cause d'un feu qui couvait à côté.</p>
+    <p>Le gaz est une matière très inflammable. D'abord, il faut faire l'opération en plein air. Ensuite, il faut s'assurer qu'il n'y a pas de feu à côté. Après quoi, il faut fermer le bec du gaz avant de le mettre dans l'embout de la bouteille et le visser à fond. Enfin, il faut vérifier s'il n'y a pas de fuite.</p>
+    <p class="credit">Article du guide, palier 4 — abrégé.</p>
+  </div>
+
+  <h3>Déroulement</h3>
+  <div class="scroller">
+  <table>
+    <thead><tr><th>Étapes</th><th>Activités de l'enseignant(e)</th><th>Activités des élèves</th></tr></thead>
+    <tbody>
+      <tr>
+        <td class="step"><b>Appropriation</b><span>8 mn · collectif</span></td>
+        <td class="maitre">Fait lire l'article silencieusement, puis à voix haute. <span class="say">Que s'est-il passé ? Où ? Pourquoi ?</span> Fait distinguer ce qui relève du récit de l'accident et ce qui relève des précautions.</td>
+        <td>Lisent, répondent. Repèrent deux parties dans l'article : ce qui est arrivé, et ce qu'il faut faire pour que ça n'arrive pas.</td>
+      </tr>
+      <tr>
+        <td class="step"><b>Production libre</b><span>8 mn · collectif</span></td>
+        <td class="maitre"><span class="say">Qui peut expliquer à la classe comment recharger une bonbonne sans danger ?</span> Fait passer trois élèves. <strong>Ne corrige pas.</strong> Note les erreurs récurrentes.</td>
+        <td>S'expriment librement à partir de l'article. Écoutent leurs camarades.</td>
+      </tr>
+      <tr>
+        <td class="step"><b>Exploitation</b><span>18 mn · collectif puis groupes</span></td>
+        <td class="maitre">Fait dégager l'ordre des opérations et le rôle des connecteurs : <em>d'abord, ensuite, après quoi, enfin.</em> Fait reformuler chaque étape en une phrase claire. Travaille la clarté : <span class="say">Ton camarade doit pouvoir le faire rien qu'en t'écoutant.</span> Répartit les groupes, distribue une coupure de presse différente à chacun.</td>
+        <td>Dégagent les quatre étapes et les nomment dans l'ordre. Reformulent. S'entraînent en groupe : l'un explique, les autres exécutent le geste — si le geste est faux, l'explication l'était.</td>
+      </tr>
+      <tr>
+        <td class="step"><b>Évaluation de l'OS</b><span>11 mn · individuel</span></td>
+        <td class="maitre">Fait passer quatre élèves devant la classe, chacun sur un support différent. Renseigne la grille. Les autres passeront aux séances suivantes.</td>
+        <td>Présentent leur explication devant la classe. Les auditeurs disent ensuite ce qui était clair et ce qui manquait.</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3>Évaluation</h3>
+  <div class="consigne">
+    <b>Consigne</b>
+    <p>Tu as trouvé dans le journal un article racontant comment on a réanimé un enfant sauvé de la noyade : le retourner sur le ventre, lui tourner la tête sur le côté, appuyer fortement sur le dos, relâcher la pression et recommencer avec méthode jusqu'à ce que l'eau sorte.</p>
+    <p>Donne les informations utiles à tes amis pour expliquer comment secourir une personne sauvée d'une noyade.</p>
+  </div>
+  <div class="scroller">
+  <table class="bareme">
+    <thead><tr><th>Critère</th><th>Indicateurs</th><th class="pts">Note</th></tr></thead>
+    <tbody>
+      <tr><td class="crit">Pertinence</td><td>Toutes les étapes pour ranimer un noyé (22) · la moitié (17) · le tiers (12) · une seule (7) · aucune (0)</td><td class="pts">22</td></tr>
+      <tr><td class="crit">Cohérence</td><td>Toutes les phrases sont en lien (17) · les 2 tiers (12) · la moitié (7) · le tiers (2) · moins du tiers (0)</td><td class="pts">17</td></tr>
+      <tr><td class="crit">Correction</td><td>0 à 3 erreurs (16) · 3 à 5 erreurs (11) · 5 à 10 erreurs (6) · plus de 10 (0)</td><td class="pts">16</td></tr>
+      <tr><td class="crit">Comportement non verbal</td><td>Gestes, posture, regard porté sur l'auditoire corrects (5) · une déficience notoire (2) · deux manquements (1) · plus de deux (0)</td><td class="pts">5</td></tr>
+    </tbody>
+    <tfoot><tr><td colspan="2">Total — compétent à partir de 30</td><td class="pts">60</td></tr></tfoot>
+  </table>
+  </div>
+  <p class="note"><b>NB.</b> Faire travailler les élèves par groupes sur des coupures de presse différentes : c'est le seul moyen d'éviter que les derniers passages ne soient qu'une duplication des premiers.</p>
+
+  <h3>Remédiation</h3>
+  <div class="scroller">
+  <table class="remed">
+    <thead><tr><th>Erreur observée</th><th>Source probable</th><th>Dispositif</th></tr></thead>
+    <tbody>
+      <tr><td>L'élève raconte l'accident au lieu d'expliquer la précaution.</td><td>Le récit est le mode de discours le plus disponible : il glisse du texte informatif vers le narratif.</td><td><strong>Réapprentissage :</strong> faire trier des phrases en deux colonnes — « ça raconte » / « ça explique » — puis interdire le passé composé dans la production.</td></tr>
+      <tr><td>Les étapes sont données en désordre.</td><td>L'ordre des opérations n'a pas été construit : l'élève restitue dans l'ordre où il s'en souvient.</td><td><strong>Consolidation matérielle :</strong> quatre bandes de papier, une par étape, à remettre dans l'ordre avant de parler. Faire exécuter le geste pour vérifier que l'ordre tient.</td></tr>
+      <tr><td>L'explication est juste mais personne ne peut la suivre.</td><td>Débit trop rapide, pas de pause entre les étapes, aucun connecteur.</td><td><strong>Contrainte de forme :</strong> obliger à commencer chaque étape par un connecteur du référentiel et à marquer une pause après chacune. Chronométrer : quatre étapes en moins de trente secondes, c'est trop rapide.</td></tr>
+    </tbody>
+  </table>
+  </div>
+</article>
+
+
+<!-- ══════════════════ FICHE 08 — CM2 ══════════════════ -->
+<article class="sheet" id="f8" data-niveau="CM" data-domaine="LC" style="--dom:var(--rouge)">
+  <div class="fiche-head">
+    <div>
+      <p class="tag">Langue et Communication · Communication écrite · Production d'écrits</p>
+      <h2>Convaincre par écrit</h2>
+    </div>
+    <p class="fiche-no">Fiche 08 · CM2 · 50 mn</p>
+  </div>
+
+  <div class="admin">
+    <div><b>IEF</b><span class="fill"></span></div>
+    <div><b>École</b><span class="fill"></span></div>
+    <div><b>Classe</b><span class="val">CM2</span></div>
+    <div><b>Effectif</b><span class="fill"></span></div>
+    <div><b>Date</b><span class="fill"></span></div>
+    <div><b>Durée</b><span class="val">50 mn</span></div>
+    <div><b>Enseignant(e)</b><span class="fill"></span></div>
+    <div><b>Visa</b><span class="fill"></span></div>
+  </div>
+
+  <div class="apc">
+    <div class="row"><div class="k">Compétence de base</div><div class="v">Intégrer le vocabulaire adéquat, les indices significatifs, des structures et des règles syntaxiques dans des situations de production de textes narratifs, descriptifs, injonctifs, informatifs, argumentatifs, dialogués et poétiques.</div></div>
+    <div class="row"><div class="k">Palier 6 — 6 sem.</div><div class="v">Intégrer le vocabulaire adéquat, les indices significatifs et des règles syntaxiques dans des situations de production de textes <strong>argumentatifs</strong>.</div></div>
+    <div class="row"><div class="k">Intention</div><div class="v"><strong>Persuader, convaincre.</strong></div></div>
+    <div class="row"><div class="k">OA 2 — séance 1</div><div class="v">Produire des textes argumentatifs : <strong>identifier les caractéristiques du type de texte</strong> et établir la fiche de critères de réussite.</div></div>
+    <div class="row"><div class="k">Outils de langue</div><div class="v"><ul>
+      <li><strong>Grammaire</strong> — propositions circonstancielles de temps et de lieu ; pronoms démonstratifs (celui-ci, celle-ci) ; COS et complément d'attribution ; distinguer le COI du COS</li>
+      <li><strong>Conjugaison</strong> — verbes en -eler, -eter, -yer (essuyer, balayer) ; verbes en è + consonne</li>
+      <li><strong>Orthographe</strong> — <em>quel, quels, quelle, quelles</em> selon la classe grammaticale ; mots fréquents échelon 16, 1<sup>ère</sup> partie</li>
+      <li><strong>Vocabulaire</strong> — utiliser avec aisance un dictionnaire, y compris électronique</li>
+    </ul></div></div>
+    <div class="row"><div class="k">Moyens</div><div class="v">Trois textes argumentatifs courts (lettre de réclamation, tract, article d'opinion) · grandes feuilles · référentiel affiché.</div></div>
+    <div class="row"><div class="k">Programmation</div><div class="v">Le guide impose que l'OS « identifier les caractéristiques du type de texte » soit placé <strong>au début</strong> de la programmation, pour les six semaines du palier.</div></div>
+  </div>
+
+  <h3>Déroulement</h3>
+  <div class="scroller">
+  <table>
+    <thead><tr><th>Étapes</th><th>Activités de l'enseignant(e)</th><th>Activités des élèves</th></tr></thead>
+    <tbody>
+      <tr>
+        <td class="step"><b>Le projet d'écriture</b><span>5 mn · collectif</span></td>
+        <td class="maitre">Pose le projet réel : la mairie envisage de supprimer le terrain de sport du quartier pour y construire un marché. La classe va écrire au maire. <span class="say">À qui écrit-on ? Dans quel but ? Que se passe-t-il si notre texte ne convainc pas ?</span></td>
+        <td>Répondent : au maire, pour qu'il renonce ; si le texte est faible, le terrain disparaît. Comprennent l'enjeu réel.</td>
+      </tr>
+      <tr>
+        <td class="step"><b>Lire pour écrire</b><span>15 mn · groupes de 4</span></td>
+        <td class="maitre">Distribue un texte argumentatif par groupe. <span class="say">Cherchez : que veut obtenir celui qui écrit ? Combien de raisons donne-t-il ? Comment sait-on qu'on passe d'une raison à une autre ?</span> Circule et relance.</td>
+        <td>Lisent, repèrent la thèse, comptent les arguments, soulignent les mots qui les articulent. Un rapporteur note les remarques du groupe.</td>
+      </tr>
+      <tr>
+        <td class="step"><b>Mise en commun</b><span>10 mn · collectif</span></td>
+        <td class="maitre">Fait rapporter chaque groupe. Construit au tableau le référentiel du texte argumentatif : une <strong>thèse</strong> annoncée ; des <strong>arguments</strong> numérotés, chacun appuyé d'un <strong>exemple</strong> ; des <strong>connecteurs</strong> logiques ; une <strong>conclusion</strong> qui reprend la demande. Fait comparer avec le texte informatif du palier 5 : <span class="say">Qu'est-ce qui change ?</span></td>
+        <td>Rapportent, confrontent. Dégagent la structure. Comparent : le texte informatif dit ce qui est ; l'argumentatif veut faire changer d'avis.</td>
+      </tr>
+      <tr>
+        <td class="step"><b>Outils de langue</b><span>8 mn · collectif</span></td>
+        <td class="maitre">Fait relever les connecteurs des trois textes et les classe : <em>d'abord, en premier lieu · de plus, par ailleurs, en outre · en effet, car, parce que · c'est pourquoi, donc, ainsi · enfin, en conclusion.</em> Vérifie l'accord de <em>quel / quelle / quels / quelles</em> sur trois phrases dictées.</td>
+        <td>Relèvent et classent les connecteurs dans leur cahier d'outils. Écrivent les trois phrases dictées et justifient l'accord.</td>
+      </tr>
+      <tr>
+        <td class="step"><b>Fiche de critères</b><span>6 mn · collectif</span></td>
+        <td class="maitre">Fait formuler les critères au « je », les écrit au tableau, les fait recopier au dos du cahier de production.</td>
+        <td>Formulent et recopient : <em>1. J'annonce clairement ce que je veux. 2. Je donne au moins trois raisons. 3. Chaque raison a un exemple. 4. J'emploie un connecteur devant chaque raison. 5. Je termine en redisant ma demande.</em></td>
+      </tr>
+      <tr>
+        <td class="step"><b>Amorce du premier jet</b><span>6 mn · individuel</span></td>
+        <td class="maitre">Fait rédiger la thèse et le premier argument seulement. <span class="say">Relis-toi avec ta fiche : quel numéro n'est pas encore coché ?</span> Annonce la suite pour la séance suivante.</td>
+        <td>Rédigent l'annonce de la thèse et leur premier argument, avec son exemple. Cochent leur fiche de critères.</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3>Évaluation</h3>
+  <div class="consigne">
+    <b>Consigne</b>
+    <p>Certains élèves de ton école jettent leurs papiers dans la cour au lieu d'utiliser les poubelles. Le directeur veut afficher un texte pour les faire changer de comportement.</p>
+    <p>Rédige ce texte. Donne au moins trois raisons, chacune appuyée d'un exemple, et termine en redisant ce que tu demandes.</p>
+  </div>
+  <div class="scroller">
+  <table class="bareme">
+    <thead><tr><th>Critère</th><th>Indicateurs</th><th class="pts">Note</th></tr></thead>
+    <tbody>
+      <tr><td class="crit">Pertinence</td><td>Le texte cherche bien à convaincre et non à raconter ou décrire (8) · la thèse est annoncée clairement (7) · au moins trois arguments sont donnés (7)</td><td class="pts">22</td></tr>
+      <tr><td class="crit">Cohérence</td><td>Chaque argument est appuyé d'un exemple (7) · les connecteurs logiques articulent les arguments (6) · la conclusion reprend la demande (4)</td><td class="pts">17</td></tr>
+      <tr><td class="crit">Correction</td><td>Les propositions circonstancielles sont correctement construites (6) · les verbes en -eler, -eter, -yer sont bien conjugués (5) · <em>quel / quelle / quels / quelles</em> et les mots de l'échelon 16 sont bien orthographiés (5)</td><td class="pts">16</td></tr>
+      <tr><td class="crit">Présentation</td><td>La production est soignée : écriture lisible, paragraphes séparés, pas de surcharge</td><td class="pts">5</td></tr>
+    </tbody>
+    <tfoot><tr><td colspan="2">Total — compétent à partir de 30</td><td class="pts">60</td></tr></tfoot>
+  </table>
+  </div>
+
+  <h3>Remédiation</h3>
+  <div class="scroller">
+  <table class="remed">
+    <thead><tr><th>Erreur observée</th><th>Source probable</th><th>Dispositif</th></tr></thead>
+    <tbody>
+      <tr><td>L'élève répète trois fois la même raison sous des mots différents.</td><td>Il confond « donner trois arguments » et « faire trois phrases » : l'exigence est comptée, pas comprise.</td><td><strong>Consolidation :</strong> banque d'arguments construite collectivement au tableau, classés par nature — santé, propreté, image de l'école, coût. L'élève doit en prendre un dans trois catégories différentes.</td></tr>
+      <tr><td>Aucun exemple : les arguments restent abstraits.</td><td>L'exemple paraît superflu : l'élève croit que l'affirmation suffit.</td><td><strong>Contrainte d'écriture :</strong> imposer la formule « Par exemple, … » après chaque argument, matériellement pré-écrite sur le brouillon. On retire l'amorce quand elle est intégrée.</td></tr>
+      <tr><td>Le texte tourne à la liste d'ordres : <em>Ne jetez pas. Ramassez. Utilisez la poubelle.</em></td><td>Glissement vers l'injonctif du palier 3, mieux maîtrisé et plus rapide à produire.</td><td><strong>Réapprentissage par contraste :</strong> mettre côte à côte un texte injonctif et un texte argumentatif sur le même sujet, faire dire ce que chacun produit chez le lecteur — obéir sans comprendre, ou être convaincu.</td></tr>
+    </tbody>
+  </table>
+  </div>
+</article>
+
+
+<!-- ══════════════════ FICHE 09 — CM1 ══════════════════ -->
+<article class="sheet" id="f9" data-niveau="CM" data-domaine="ESVS" style="--dom:var(--vert)">
+  <div class="fiche-head">
+    <div>
+      <p class="tag">ESVS · Développement durable · Vivre dans son milieu</p>
+      <h2>Insalubrité, promiscuité, paludisme</h2>
+    </div>
+    <p class="fiche-no">Fiche 09 · CM1 · 45 mn</p>
+  </div>
+
+  <div class="admin">
+    <div><b>IEF</b><span class="fill"></span></div>
+    <div><b>École</b><span class="fill"></span></div>
+    <div><b>Classe</b><span class="val">CM1</span></div>
+    <div><b>Effectif</b><span class="fill"></span></div>
+    <div><b>Date</b><span class="fill"></span></div>
+    <div><b>Durée</b><span class="val">45 mn</span></div>
+    <div><b>Enseignant(e)</b><span class="fill"></span></div>
+    <div><b>Visa</b><span class="fill"></span></div>
+  </div>
+
+  <div class="apc">
+    <div class="row"><div class="k">Compétence de base</div><div class="v">Intégrer des notions de base et des techniques simples dans des situations d'analyse et de proposition de solutions adaptées à des problèmes d'environnement, de nutrition, de population et de santé de son milieu proche.</div></div>
+    <div class="row"><div class="k">Palier 1</div><div class="v">Intégrer des notions de base, des démarches et des techniques simples dans des situations d'explication et de proposition de solutions pertinentes à des problèmes nés des <strong>interrelations entre insalubrité, promiscuité et paludisme</strong> (ou maladies diarrhéiques).</div></div>
+    <div class="row"><div class="k">OA</div><div class="v">Proposer des solutions à des problèmes nés des interrelations entre insalubrité, promiscuité et paludisme.</div></div>
+    <div class="row"><div class="k">OS</div><div class="v">Décrire les <strong>formes de cohabitation</strong> et les <strong>manifestations de l'insalubrité</strong>, puis établir le lien avec la maladie.</div></div>
+    <div class="row"><div class="k">Contenus</div><div class="v">
+      <strong>Formes de cohabitation :</strong> voisinage de concessions ; grande famille ; plusieurs familles dans une même maison ; plusieurs personnes dans une même pièce.<br>
+      <strong>Manifestations de l'insalubrité :</strong> accumulation (surproduction) de déchets domestiques — ordures et eaux usées, péril fécal, prolifération des mouches et autres parasites.<br>
+      <strong>Gestion des déchets ménagers :</strong> collecte, traitement, évacuation.
+    </div></div>
+    <div class="row"><div class="k">Moyens</div><div class="v">Photos du quartier prises la veille par des élèves · relevé des absences pour maladie du trimestre · si possible, l'infirmier du poste de santé invité · grandes feuilles pour le schéma.</div></div>
+    <div class="row"><div class="k">Différence avec l'étape 2</div><div class="v">Au CE, on traitait le paludisme <em>seul</em>. Au CM1, l'objet d'étude est la <strong>chaîne</strong> qui relie l'entassement, les déchets et la maladie : c'est le lien qu'il faut faire construire, pas la maladie.</div></div>
+  </div>
+
+  <h3>Situation de départ</h3>
+  <div class="consigne">
+    <b>La situation posée aux élèves</b>
+    <p>Dans le quartier de Ndiaye Thioro, quatre familles vivent dans la même maison. La cour sert à la fois de cuisine, de buanderie et de lieu de jeu pour onze enfants. Les eaux usées s'écoulent dans une rigole à ciel ouvert le long du mur ; les ordures s'entassent au fond de la cour depuis que le camion ne passe plus.</p>
+    <p>Ce trimestre, six élèves de la classe habitant ce quartier ont manqué l'école pour cause de paludisme.</p>
+    <p><em>Le chef de quartier vous demande d'expliquer pourquoi il y a tant de malades dans cette maison précisément, et de proposer des solutions réalisables.</em></p>
+  </div>
+
+  <h3>Déroulement</h3>
+  <div class="scroller">
+  <table>
+    <thead><tr><th>Étapes</th><th>Activités de l'enseignant(e)</th><th>Activités des élèves</th></tr></thead>
+    <tbody>
+      <tr>
+        <td class="step"><b>Observation et questionnement</b><span>10 mn · collectif</span></td>
+        <td class="maitre">Présente la situation et les photos. <span class="say">Observez sans commenter, puis dites ce qui vous frappe.</span> Recueille toutes les questions des élèves au tableau, sans y répondre.</td>
+        <td>Observent, décrivent ce qu'ils voient : la rigole, le tas d'ordures, les enfants nombreux. Posent leurs questions : <em>Pourquoi le camion ne passe plus ? Est-ce que c'est l'eau sale qui donne le palu ?</em></td>
+      </tr>
+      <tr>
+        <td class="step"><b>Décrire la cohabitation</b><span>8 mn · groupes</span></td>
+        <td class="maitre">Fait nommer les formes de cohabitation représentées, en partant du vécu des élèves. <span class="say">Combien êtes-vous dans votre chambre ? Combien de familles dans votre maison ?</span> Introduit le mot <strong>promiscuité</strong> à partir des réponses.</td>
+        <td>Nomment : voisinage de concessions, grande famille, plusieurs familles dans une maison, plusieurs personnes dans une pièce. Situent leur propre logement dans cette liste.</td>
+      </tr>
+      <tr>
+        <td class="step"><b>Décrire l'insalubrité</b><span>8 mn · groupes</span></td>
+        <td class="maitre">Fait relever les manifestations sur les photos. Fait classer : ordures solides / eaux usées / péril fécal / parasites. <span class="say">Qu'est-ce qui augmente quand le nombre d'habitants augmente ?</span></td>
+        <td>Classent les manifestations. Constatent : plus il y a de monde, plus il y a de déchets, et la cour ne grandit pas.</td>
+      </tr>
+      <tr>
+        <td class="step"><b>Construire la chaîne</b><span>12 mn · collectif</span></td>
+        <td class="maitre">Conduit l'analyse en faisant établir les maillons un par un, sans les donner : promiscuité → surproduction de déchets → eaux stagnantes et ordures → gîtes larvaires de l'anophèle → piqûres nombreuses → cas de paludisme groupés dans la même maison. Fait justifier chaque flèche.</td>
+        <td>Établissent la chaîne et la justifient maillon par maillon. Comprennent pourquoi les malades sont concentrés dans une maison et non répartis au hasard.</td>
+      </tr>
+      <tr>
+        <td class="step"><b>Proposer et trier</b><span>5 mn · groupes</span></td>
+        <td class="maitre"><span class="say">Proposez des solutions, puis rangez-les en deux colonnes : ce que nous pouvons faire nous-mêmes, ce qui dépend d'autrui.</span> Ne garde que la première colonne pour l'engagement.</td>
+        <td>Proposent : curer la rigole, couvrir les récipients, organiser la collecte entre familles, dormir sous moustiquaire, saisir le chef de quartier pour le camion. Trient les deux colonnes.</td>
+      </tr>
+      <tr>
+        <td class="step"><b>Récapitulation</b><span>2 mn · individuel</span></td>
+        <td class="maitre">Fait recopier le schéma <strong>PROBLÈME → CAUSES → CONSÉQUENCES → SOLUTIONS</strong> tel qu'il a été construit.</td>
+        <td>Copient le schéma dans le cahier.</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3>Évaluation</h3>
+  <div class="consigne">
+    <b>Consigne</b>
+    <p>Dans une concession voisine, trois familles partagent une cour où stagne l'eau des lessives. Deux enfants viennent d'être hospitalisés pour des diarrhées.</p>
+    <p>1. Explique en quatre étapes comment on passe de l'entassement des familles à la maladie.</p>
+    <p>2. Propose trois solutions que les habitants peuvent appliquer eux-mêmes cette semaine.</p>
+    <p>3. Dis laquelle de tes solutions agit sur la cause, et non sur la conséquence.</p>
+  </div>
+  <div class="scroller">
+  <table class="bareme">
+    <thead><tr><th>Critère</th><th>Indicateurs</th><th class="pts">Note</th></tr></thead>
+    <tbody>
+      <tr><td class="crit">Justesse</td><td>Les quatre maillons de la chaîne sont exacts et dans l'ordre (3) · le mode de transmission de la maladie est correct (1)</td><td class="pts">4</td></tr>
+      <tr><td class="crit">Pertinence</td><td>Les trois solutions répondent bien à la situation décrite (2) · la solution agissant sur la cause est correctement désignée (1)</td><td class="pts">3</td></tr>
+      <tr><td class="crit">Faisabilité</td><td>Les solutions sont réalisables par les habitants eux-mêmes, cette semaine, avec ce dont ils disposent</td><td class="pts">3</td></tr>
+    </tbody>
+    <tfoot><tr><td colspan="2">Total — compétent à partir de 5</td><td class="pts">10</td></tr></tfoot>
+  </table>
+  </div>
+
+  <h3>Remédiation</h3>
+  <div class="scroller">
+  <table class="remed">
+    <thead><tr><th>Erreur observée</th><th>Source probable</th><th>Dispositif</th></tr></thead>
+    <tbody>
+      <tr><td>L'élève écrit que c'est l'eau sale qui donne le paludisme.</td><td>Représentation très résistante du milieu : l'eau stagnante est vue comme la cause directe, non comme le lieu de ponte de l'anophèle.</td><td><strong>Réapprentissage :</strong> reconstituer la chaîne en quatre images à remettre dans l'ordre — eau stagnante → ponte → moustique adulte → piqûre — et la faire raconter par plusieurs élèves avant de l'écrire.</td></tr>
+      <tr><td>L'élève traite la promiscuité et le paludisme séparément, sans les relier.</td><td>Habitude prise à l'étape 2, où chaque problème s'étudiait isolément. L'objet « interrelation » est nouveau.</td><td><strong>Contrainte de raisonnement :</strong> exiger une production entièrement en « donc » et « parce que » — chaque phrase doit s'accrocher à la précédente. Une chaîne dont un maillon ne s'accroche pas est refusée.</td></tr>
+      <tr><td>Solutions irréalisables : <em>reloger les familles, construire des égouts.</em></td><td>Le critère de faisabilité n'est pas intégré : la solution est pensée en grand plutôt qu'à sa portée.</td><td><strong>Consolidation :</strong> trier dix propositions en deux colonnes — « je peux le faire moi-même » / « cela dépend des autres » — puis ne garder que la première pour l'engagement de classe.</td></tr>
+    </tbody>
+  </table>
+  </div>
+</article>
+
+<footer class="colophon">
+  SUÑU FICHES — cahier volume 2 : préscolaire, CI-CP, CM1-CM2.<br>
+  Conforme aux planifications des apprentissages PS / MS / GS et aux Guides pédagogiques de l'enseignement élémentaire, 1<sup>ère</sup> et 3<sup>ème</sup> étapes, Ministère de l'Éducation nationale du Sénégal, juin 2016.<br>
+  Les planifications préscolaires fournies ne détaillent pas de démarche de séance : le déroulement en cinq moments proposé ici est une trame d'usage, à ajuster à l'organisation de la case.<br>
+  Les textes supports et les situations sont des exemples : ils s'adaptent au manuel en usage et au milieu de l'école.
+</footer>
+
+</div>
+
+<script>
+(function(){
+  var state = {niveau:"all", domaine:"all"};
+  var sheets = Array.prototype.slice.call(document.querySelectorAll(".sheet"));
+  var rows   = Array.prototype.slice.call(document.querySelectorAll("#toc li"));
+  var count  = document.getElementById("count");
+  var empty  = document.getElementById("empty");
+
+  function matches(el){
+    return (state.niveau === "all" || el.dataset.niveau === state.niveau) &&
+           (state.domaine === "all" || el.dataset.domaine === state.domaine);
+  }
+
+  function apply(){
+    var n = 0;
+    sheets.forEach(function(s){
+      var ok = matches(s);
+      s.hidden = !ok;
+      if (ok) n++;
+    });
+    rows.forEach(function(r){ r.hidden = !matches(r); });
+    count.textContent = n + (n > 1 ? " fiches" : " fiche");
+    empty.hidden = n !== 0;
+  }
+
+  ["f-niveau","f-domaine"].forEach(function(id){
+    var key = id.slice(2);
+    document.getElementById(id).addEventListener("click", function(e){
+      var b = e.target.closest("button.chip");
+      if (!b) return;
+      state[key] = b.dataset.v;
+      Array.prototype.forEach.call(this.querySelectorAll("button.chip"), function(x){
+        x.setAttribute("aria-pressed", String(x === b));
+      });
+      apply();
+    });
+  });
+
+  apply();
+})();
+</script>

@@ -4,12 +4,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>SUÑU FICHES — Plateforme N°1 de Fiches Pédagogiques au Sénégal</title>
-<meta name="description" content="Générateur professionnel de fiches pédagogiques APC conformes aux guides officiels du MEN sénégalais : Guide 1 (CI-CP), Guide 2 (CE1-CE2), Guide 3 (CM1-CM2) et Guide Préscolaire (2024).">
+<meta name="description" content="Générateur professionnel de fiches pédagogiques APC conformes aux guides officiels du MEN sénégalais : Guide Préscolaire (2024), Guide 1 (CI-CP), Guide 2 (CE1-CE2), Guide 3 (CM1-CM2).">
 
 <!-- Google Fonts: Inter pour l'interface pro + Kalam & Caveat pour l'écriture stylo plume/bille authentique -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Inter:wght@400;500;600;700;800&family=Kalam:wght@400;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Inter:wght@400;500;600;700;800;900&family=Kalam:wght@400;700&family=Plus+Jakarta+Sans:wght@600;700;800;900&family=Space+Mono:wght@700&display=swap" rel="stylesheet">
 
 <style>
 /* ==========================================================================
@@ -25,19 +25,22 @@
   --bg-body: #F8FAFC;
   --bg-card: #FFFFFF;
   --bg-card-subtle: #F1F5F9;
-  --bg-nav: rgba(255, 255, 255, 0.92);
-  --border-color: #E2E8F0;
+  --bg-nav: #FFFFFF;
+  --border-color: #CBD5E1;
   --border-focus: #2563EB;
 
   --text-main: #0F172A;
-  --text-muted: #475569;
+  --text-muted: #334155;
   --text-light: #64748B;
 
-  --primary: #1E40AF;
-  --primary-hover: #1D4ED8;
+  --primary: #1D4ED8;
+  --primary-hover: #1E40AF;
   --accent-red: #DC2626;
   --accent-green: #059669;
   --accent-green-bg: #ECFDF5;
+  --accent-green-text: #065F46;
+  --accent-blue-bg: #EFF6FF;
+  --accent-blue-text: #1E40AF;
   --accent-red-bg: #FEF2F2;
 
   /* Cahier de Préparation / Fiche (Papier Blanc Réglé) */
@@ -46,34 +49,37 @@
   --cahier-margin: #EF4444;
   --stylo-bleu: #172554;      /* Encre bleu Bic authentique */
   --stylo-rouge: #B91C1C;     /* Encre rouge correction/titre */
-  --cahier-shadow: 0 12px 32px -4px rgba(15, 23, 42, 0.12), 0 4px 12px -2px rgba(15, 23, 42, 0.08);
+  --cahier-shadow: 0 16px 36px -4px rgba(15, 23, 42, 0.14), 0 6px 16px -2px rgba(15, 23, 42, 0.08);
 
-  --shadow-sm: 0 1px 3px rgba(0,0,0,0.06);
-  --shadow-md: 0 4px 14px rgba(0,0,0,0.07);
-  --shadow-lg: 0 10px 30px rgba(0,0,0,0.1);
+  --shadow-sm: 0 2px 4px rgba(0,0,0,0.06);
+  --shadow-md: 0 6px 18px rgba(0,0,0,0.08);
+  --shadow-lg: 0 14px 34px rgba(0,0,0,0.12);
   --radius-sm: 8px;
-  --radius-md: 12px;
-  --radius-lg: 18px;
-  --max-w: 1200px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --max-w: 1240px;
 }
 
 [data-theme="dark"] {
   --bg-body: #0B0F19;
   --bg-card: #131B2E;
   --bg-card-subtle: #1E293B;
-  --bg-nav: rgba(11, 15, 25, 0.94);
-  --border-color: #232F47;
+  --bg-nav: #0F172A;
+  --border-color: #334155;
   --border-focus: #3B82F6;
 
-  --text-main: #F8FAFC;
-  --text-muted: #94A3B8;
-  --text-light: #64748B;
+  --text-main: #FFFFFF;
+  --text-muted: #CBD5E1;
+  --text-light: #94A3B8;
 
   --primary: #3B82F6;
   --primary-hover: #60A5FA;
   --accent-red: #F87171;
   --accent-green: #10B981;
   --accent-green-bg: #064E3B;
+  --accent-green-text: #FFFFFF;
+  --accent-blue-bg: #1E3A8A;
+  --accent-blue-text: #FFFFFF;
   --accent-red-bg: #450A0A;
 
   /* Le cahier reste une feuille blanche authentique de haute lisibilité */
@@ -82,11 +88,11 @@
   --cahier-margin: #EF4444;
   --stylo-bleu: #172554;
   --stylo-rouge: #B91C1C;
-  --cahier-shadow: 0 14px 40px rgba(0, 0, 0, 0.6);
+  --cahier-shadow: 0 16px 44px rgba(0, 0, 0, 0.7);
 
-  --shadow-sm: 0 1px 3px rgba(0,0,0,0.3);
-  --shadow-md: 0 4px 16px rgba(0,0,0,0.4);
-  --shadow-lg: 0 12px 32px rgba(0,0,0,0.5);
+  --shadow-sm: 0 2px 6px rgba(0,0,0,0.4);
+  --shadow-md: 0 8px 22px rgba(0,0,0,0.5);
+  --shadow-lg: 0 16px 36px rgba(0,0,0,0.6);
 }
 
 /* ==========================================================================
@@ -110,8 +116,8 @@ body {
 h1, h2, h3, h4 {
   font-family: var(--font-heading);
   color: var(--text-main);
-  line-height: 1.25;
-  font-weight: 700;
+  line-height: 1.22;
+  font-weight: 800;
   letter-spacing: -0.02em;
 }
 
@@ -119,82 +125,90 @@ p { color: var(--text-muted); font-size: 1.05rem; }
 a { color: inherit; text-decoration: none; }
 button { cursor: pointer; border: none; font-family: inherit; }
 
-/* Badge & Étiquettes */
+/* Badges & Pastilles */
 .badge {
   display: inline-flex; align-items: center; gap: 6px;
-  font-size: 0.8rem; font-weight: 700; text-transform: uppercase;
-  letter-spacing: 0.06em; padding: 6px 14px; border-radius: 999px;
+  font-size: 0.82rem; font-weight: 800; text-transform: uppercase;
+  letter-spacing: 0.05em; padding: 6px 14px; border-radius: 999px;
 }
-.badge--primary { background: #DBEAFE; color: #1D4ED8; }
-.badge--green { background: var(--accent-green-bg); color: var(--accent-green); }
-.badge--red { background: var(--accent-red-bg); color: var(--accent-red); }
+.badge--primary { background: #DBEAFE; color: #1D4ED8; border: 1px solid #93C5FD; }
+.badge--green { background: #DCFCE7; color: #047857; border: 1px solid #86EFAC; }
+.badge--red { background: #FEE2E2; color: #B91C1C; border: 1px solid #FCA5A5; }
 
 /* ==========================================================================
-   HEADER & NAVIGATION PRO
+   EN-TÊTE ULTRA-VISIBLE, HAUT CONTRASTE & DESIGN PRO
    ========================================================================== */
 .header {
-  position: sticky; top: 0; z-index: 100;
+  position: sticky; top: 0; z-index: 200;
   background: var(--bg-nav);
-  backdrop-filter: blur(12px);
-  border-bottom: 1px solid var(--border-color);
+  border-bottom: 2px solid var(--border-color);
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
   transition: all 0.2s;
 }
 .header__inner {
   display: flex; align-items: center; justify-content: space-between;
-  height: 72px; gap: 20px;
+  height: 80px; gap: 20px;
 }
+
 .logo {
-  display: flex; align-items: center; gap: 12px;
-  font-family: var(--font-heading); font-weight: 800; font-size: 1.25rem;
-  color: var(--text-main);
+  display: flex; align-items: center; gap: 14px;
 }
 .logo-icon {
-  width: 36px; height: 36px; border-radius: 10px;
+  width: 44px; height: 44px; border-radius: 12px;
   background: linear-gradient(135deg, #1E40AF 0%, #3B82F6 100%);
-  display: grid; place-items: center; color: white; font-weight: 800; font-size: 1.1rem;
+  display: grid; place-items: center; color: white; font-weight: 900; font-size: 1.25rem;
+  box-shadow: 0 4px 10px rgba(30, 64, 175, 0.35);
+}
+.logo-text strong {
+  display: block; font-family: var(--font-heading); font-size: 1.35rem;
+  font-weight: 900; color: var(--text-main); line-height: 1.1; letter-spacing: -0.02em;
+}
+.logo-text small {
+  display: block; font-family: var(--font-mono); font-size: 0.72rem;
+  font-weight: 700; color: #DC2626; letter-spacing: 0.08em; text-transform: uppercase;
 }
 
 .nav { display: flex; align-items: center; gap: 28px; }
 .nav a {
-  font-weight: 600; font-size: 0.95rem; color: var(--text-muted);
-  transition: color 0.15s;
+  font-weight: 700; font-size: 1rem; color: var(--text-main);
+  padding: 8px 12px; border-radius: 8px; transition: all 0.15s;
 }
-.nav a:hover { color: var(--primary); }
+.nav a:hover { color: #1D4ED8; background: var(--bg-card-subtle); }
 
 .header__actions { display: flex; align-items: center; gap: 14px; }
 
 /* Bouton Thème Sombre/Clair */
 .theme-toggle-btn {
   display: inline-flex; align-items: center; justify-content: center;
-  width: 42px; height: 42px; border-radius: 10px;
+  width: 46px; height: 46px; border-radius: 12px;
   background: var(--bg-card-subtle); color: var(--text-main);
-  border: 1px solid var(--border-color); font-size: 1.2rem;
-  transition: all 0.2s;
+  border: 2px solid var(--border-color); font-size: 1.3rem;
+  transition: all 0.2s; cursor: pointer;
 }
 .theme-toggle-btn:hover { background: var(--border-color); transform: scale(1.05); }
 
 /* Boutons CTA */
 .btn {
-  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
-  font-weight: 700; font-size: 0.95rem; padding: 12px 22px; border-radius: 10px;
+  display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+  font-weight: 800; font-size: 0.98rem; padding: 13px 24px; border-radius: 12px;
   transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1); white-space: nowrap;
 }
 .btn--primary {
   background: #1D4ED8; color: #FFFFFF;
-  box-shadow: 0 4px 14px rgba(29, 78, 216, 0.3);
+  box-shadow: 0 4px 14px rgba(29, 78, 216, 0.35);
 }
-.btn--primary:hover { background: #1E40AF; transform: translateY(-2px); box-shadow: 0 6px 20px rgba(29, 78, 216, 0.4); }
+.btn--primary:hover { background: #1E40AF; transform: translateY(-2px); box-shadow: 0 6px 20px rgba(29, 78, 216, 0.45); }
 .btn--success {
-  background: var(--accent-green); color: #FFFFFF;
-  box-shadow: 0 4px 14px rgba(5, 150, 105, 0.3);
+  background: #059669; color: #FFFFFF;
+  box-shadow: 0 4px 14px rgba(5, 150, 105, 0.35);
 }
 .btn--success:hover { background: #047857; transform: translateY(-2px); }
 .btn--outline {
   background: transparent; color: var(--text-main);
-  border: 1.5px solid var(--border-color);
+  border: 2px solid var(--border-color);
 }
-.btn--outline:hover { background: var(--bg-card-subtle); border-color: var(--text-muted); }
-.btn--lg { padding: 16px 28px; font-size: 1.05rem; border-radius: 12px; }
+.btn--outline:hover { background: var(--bg-card-subtle); border-color: var(--text-main); }
+.btn--lg { padding: 16px 32px; font-size: 1.08rem; border-radius: 14px; }
 .btn--full { width: 100%; }
 
 /* ==========================================================================
@@ -202,33 +216,33 @@ button { cursor: pointer; border: none; font-family: inherit; }
    ========================================================================== */
 .hero {
   padding: 60px 0 80px;
-  background: radial-gradient(circle at top right, rgba(37, 99, 235, 0.06) 0%, transparent 60%);
+  background: radial-gradient(circle at top right, rgba(37, 99, 235, 0.08) 0%, transparent 60%);
 }
 .hero__grid {
   display: grid; grid-template-columns: 1fr 1.05fr; gap: 48px; align-items: center;
 }
 .hero__badge-row { margin-bottom: 20px; display: flex; flex-wrap: wrap; gap: 10px; }
 .hero h1 {
-  font-size: clamp(2.3rem, 4vw, 3.4rem);
+  font-size: clamp(2.4rem, 4.2vw, 3.5rem);
   line-height: 1.15; margin-bottom: 20px;
 }
 .hero h1 em {
   font-style: normal; color: #1D4ED8;
-  background: linear-gradient(120deg, rgba(37, 99, 235, 0.12) 0%, rgba(37, 99, 235, 0.25) 100%);
-  padding: 2px 8px; border-radius: 6px;
+  background: linear-gradient(120deg, rgba(37, 99, 235, 0.12) 0%, rgba(37, 99, 235, 0.28) 100%);
+  padding: 2px 10px; border-radius: 8px;
 }
 .hero__desc {
-  font-size: 1.15rem; line-height: 1.65; margin-bottom: 32px;
-  max-width: 54ch; color: var(--text-muted);
+  font-size: 1.18rem; line-height: 1.65; margin-bottom: 32px;
+  max-width: 54ch; color: var(--text-muted); font-weight: 500;
 }
 .hero__cta-group { display: flex; flex-wrap: wrap; gap: 14px; margin-bottom: 36px; }
 .hero__guarantee {
-  display: flex; align-items: center; gap: 16px; font-size: 0.9rem;
-  color: var(--text-light); font-weight: 600;
+  display: flex; align-items: center; gap: 16px; font-size: 0.95rem;
+  color: var(--text-muted); font-weight: 700;
 }
 .hero__guarantee-dot {
-  width: 10px; height: 10px; border-radius: 50%;
-  background: #10B981; box-shadow: 0 0 10px #10B981;
+  width: 12px; height: 12px; border-radius: 50%;
+  background: #10B981; box-shadow: 0 0 12px #10B981; flex-shrink: 0;
 }
 
 /* ==========================================================================
@@ -239,7 +253,7 @@ button { cursor: pointer; border: none; font-family: inherit; }
   color: var(--stylo-bleu);
   border-radius: var(--radius-md);
   box-shadow: var(--cahier-shadow);
-  border: 1px solid #CBD5E1;
+  border: 2px solid #CBD5E1;
   position: relative;
   overflow: hidden;
 }
@@ -274,7 +288,7 @@ button { cursor: pointer; border: none; font-family: inherit; }
 .cahier-head {
   border-bottom: 2px solid var(--stylo-rouge);
   padding-bottom: 12px; margin-bottom: 18px;
-  display: flex; justify-content: space-between; align-items: flex-start;
+  display: flex; justify-content: space-between; align-items: flex-start; gap: 12px;
 }
 .cahier-titre {
   font-family: var(--font-heading);
@@ -288,7 +302,7 @@ button { cursor: pointer; border: none; font-family: inherit; }
   color: var(--stylo-bleu);
   border: 1.5px solid var(--stylo-bleu);
   padding: 4px 8px; border-radius: 6px;
-  background: #EFF6FF; text-transform: uppercase;
+  background: #EFF6FF; text-transform: uppercase; white-space: nowrap;
 }
 
 /* Grille de métadonnées du cahier */
@@ -345,32 +359,55 @@ button { cursor: pointer; border: none; font-family: inherit; }
    ========================================================================== */
 .generator-wrapper {
   background: var(--bg-card);
-  border: 1px solid var(--border-color);
+  border: 2px solid var(--border-color);
   border-radius: var(--radius-lg);
   padding: 40px;
   box-shadow: var(--shadow-lg);
 }
 
+/* Sélecteur de cycle avec contraste maximum et visibilité garantie */
 .cycle-selector {
-  display: grid; grid-template-columns: 1fr 1fr; gap: 14px;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 16px;
   margin-bottom: 32px;
 }
 .cycle-card {
-  display: flex; align-items: center; gap: 14px; padding: 18px 24px;
-  border-radius: var(--radius-md); border: 2px solid var(--border-color);
+  display: flex; align-items: center; gap: 16px; padding: 20px 24px;
+  border-radius: var(--radius-md); border: 2.5px solid var(--border-color);
   background: var(--bg-card-subtle); color: var(--text-main);
-  cursor: pointer; transition: all 0.2s; font-weight: 700;
+  cursor: pointer; transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  user-select: none;
 }
-.cycle-card:hover { border-color: var(--primary); }
+.cycle-card:hover { border-color: #1D4ED8; transform: translateY(-2px); }
+
+/* État actif Préscolaire (Visible et contrasté à 100%) */
 .cycle-card.active-pre {
-  border-color: #059669; background: var(--accent-green-bg); color: #065F46;
+  border-color: #059669 !important;
+  background: #ECFDF5 !important;
+  color: #064E3B !important;
+  box-shadow: 0 8px 24px rgba(5, 150, 105, 0.25);
 }
+[data-theme="dark"] .cycle-card.active-pre {
+  background: #064E3B !important;
+  color: #FFFFFF !important;
+  border-color: #10B981 !important;
+}
+
+/* État actif Élémentaire */
 .cycle-card.active-elem {
-  border-color: #1D4ED8; background: #EFF6FF; color: #1E40AF;
+  border-color: #1D4ED8 !important;
+  background: #EFF6FF !important;
+  color: #1E3A8A !important;
+  box-shadow: 0 8px 24px rgba(29, 78, 216, 0.25);
 }
-.cycle-icon { font-size: 1.8rem; }
-.cycle-info strong { display: block; font-size: 1.05rem; }
-.cycle-info small { font-size: 0.82rem; opacity: 0.85; }
+[data-theme="dark"] .cycle-card.active-elem {
+  background: #1E3A8A !important;
+  color: #FFFFFF !important;
+  border-color: #3B82F6 !important;
+}
+
+.cycle-icon { font-size: 2.2rem; flex-shrink: 0; }
+.cycle-info strong { display: block; font-size: 1.15rem; font-weight: 800; }
+.cycle-info small { font-size: 0.88rem; font-weight: 600; opacity: 0.9; }
 
 .form-grid-3 {
   display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;
@@ -378,17 +415,17 @@ button { cursor: pointer; border: none; font-family: inherit; }
 }
 .form-field { display: flex; flex-direction: column; gap: 8px; }
 .form-field label {
-  font-weight: 700; font-size: 0.85rem; text-transform: uppercase;
+  font-weight: 800; font-size: 0.88rem; text-transform: uppercase;
   color: var(--text-main); letter-spacing: 0.04em;
 }
 .form-input {
-  padding: 13px 16px; border-radius: 10px; border: 1.5px solid var(--border-color);
-  background: var(--bg-body); color: var(--text-main); font-size: 0.95rem;
-  font-family: inherit; transition: all 0.2s;
+  padding: 14px 16px; border-radius: 12px; border: 2px solid var(--border-color);
+  background: var(--bg-body); color: var(--text-main); font-size: 1rem;
+  font-weight: 600; font-family: inherit; transition: all 0.2s;
 }
 .form-input:focus {
   outline: none; border-color: var(--border-focus); background: var(--bg-card);
-  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.2);
 }
 
 /* ==========================================================================
@@ -443,36 +480,38 @@ button { cursor: pointer; border: none; font-family: inherit; }
    SECTIONS CONTENU & FAQ
    ========================================================================== */
 .curric-card {
-  background: var(--bg-card); border: 1px solid var(--border-color);
+  background: var(--bg-card); border: 2px solid var(--border-color);
   border-radius: var(--radius-lg); padding: 36px; margin-bottom: 32px;
 }
 .domains-list { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
 .domain-tag {
   background: var(--bg-card-subtle); color: var(--text-main);
-  border: 1px solid var(--border-color); padding: 8px 16px;
-  border-radius: 8px; font-weight: 600; font-size: 0.9rem;
+  border: 1.5px solid var(--border-color); padding: 10px 18px;
+  border-radius: 10px; font-weight: 700; font-size: 0.95rem;
 }
-.domain-tag--pre { background: #ECFDF5; border-color: #A7F3D0; color: #065F46; }
-.domain-tag--elem { background: #EFF6FF; border-color: #BFDBFE; color: #1E40AF; }
+.domain-tag--pre { background: #ECFDF5; border-color: #86EFAC; color: #047857; }
+[data-theme="dark"] .domain-tag--pre { background: #064E3B; border-color: #10B981; color: #FFFFFF; }
+.domain-tag--elem { background: #EFF6FF; border-color: #93C5FD; color: #1D4ED8; }
+[data-theme="dark"] .domain-tag--elem { background: #1E3A8A; border-color: #3B82F6; color: #FFFFFF; }
 
-.faq-box { max-width: 800px; margin: 0 auto; display: grid; gap: 16px; }
+.faq-box { max-width: 820px; margin: 0 auto; display: grid; gap: 16px; }
 .faq-item {
-  background: var(--bg-card); border: 1px solid var(--border-color);
+  background: var(--bg-card); border: 2px solid var(--border-color);
   border-radius: var(--radius-md); overflow: hidden;
 }
 .faq-question {
-  width: 100%; text-align: left; padding: 20px 24px;
-  background: none; font-size: 1.05rem; font-weight: 700; color: var(--text-main);
+  width: 100%; text-align: left; padding: 22px 26px;
+  background: none; font-size: 1.1rem; font-weight: 800; color: var(--text-main);
   display: flex; justify-content: space-between; align-items: center; cursor: pointer;
 }
 .faq-question::after {
-  content: "+"; font-size: 1.4rem; color: #1D4ED8; font-weight: 700;
+  content: "+"; font-size: 1.5rem; color: #1D4ED8; font-weight: 800;
   transition: transform 0.2s;
 }
 .faq-item.is-open .faq-question::after { content: "−"; }
 .faq-answer {
-  display: none; padding: 0 24px 22px; color: var(--text-muted);
-  font-size: 0.95rem; line-height: 1.6;
+  display: none; padding: 0 26px 24px; color: var(--text-muted);
+  font-size: 1rem; line-height: 1.65;
 }
 .faq-item.is-open .faq-answer { display: block; }
 
@@ -480,7 +519,7 @@ button { cursor: pointer; border: none; font-family: inherit; }
    FOOTER
    ========================================================================== */
 .footer {
-  background: var(--bg-card); border-top: 1px solid var(--border-color);
+  background: var(--bg-card); border-top: 2px solid var(--border-color);
   padding: 50px 0 40px; margin-top: 80px;
 }
 .footer__inner {
@@ -507,23 +546,27 @@ button { cursor: pointer; border: none; font-family: inherit; }
   .hero__grid { grid-template-columns: 1fr; gap: 40px; }
   .form-grid-3, .pricing-grid { grid-template-columns: 1fr; }
   .cycle-selector { grid-template-columns: 1fr; }
+  .nav { display: none; }
 }
 </style>
 </head>
 <body>
 
-<!-- HEADER & NAVIGATION -->
+<!-- HEADER & NAVIGATION HAUTE VISIBILITÉ -->
 <header class="header" id="header">
   <div class="container header__inner">
     <a class="logo" href="#top" aria-label="SUÑU FICHES Accueil">
       <div class="logo-icon">SF</div>
-      <span>SUÑU FICHES</span>
+      <div class="logo-text">
+        <strong>SUÑU FICHES</strong>
+        <small>CONFORME MEN SÉNÉGAL</small>
+      </div>
     </a>
 
     <nav class="nav" aria-label="Navigation principale">
       <a href="#generateur">Générateur APC</a>
-      <a href="#niveaux-prescolaire">Préscolaire (2024)</a>
-      <a href="#niveaux-elementaire">Élémentaire (Guides 1, 2, 3)</a>
+      <a href="#niveaux-prescolaire">🧸 Préscolaire (2024)</a>
+      <a href="#niveaux-elementaire">🎒 Élémentaire (Guides 1, 2, 3)</a>
       <a href="#tarifs">Tarifs (1500F/7500F)</a>
       <a href="#faq">FAQ</a>
     </nav>
@@ -533,7 +576,7 @@ button { cursor: pointer; border: none; font-family: inherit; }
       <button class="theme-toggle-btn" id="themeToggleBtn" aria-label="Basculer entre mode sombre et clair" title="Basculer Mode Clair / Sombre">
         <span id="themeIcon">🌙</span>
       </button>
-      <a class="btn btn--primary" href="#generateur">Créer ma Fiche</a>
+      <a class="btn btn--primary" href="#generateur">⚡ Créer ma Fiche</a>
     </div>
   </div>
 </header>
@@ -546,14 +589,14 @@ button { cursor: pointer; border: none; font-family: inherit; }
     <div class="hero__grid">
       <div>
         <div class="hero__badge-row">
-          <span class="badge badge--green">Guides 1, 2, 3 &amp; Préscolaire</span>
-          <span class="badge badge--primary">Guides Officiels MEN Sénégal</span>
+          <span class="badge badge--green">Guide Préscolaire (2024)</span>
+          <span class="badge badge--primary">Guides Élémentaire 1, 2, 3 (2025)</span>
         </div>
 
         <h1>Le cahier de préparation des enseignants, <em>sourcé dans chaque guide officiel.</em></h1>
 
         <p class="hero__desc">
-          Chaque fiche générée prend fidèlement ses sources dans son guide de référence : <strong>Guide 1 pour CI-CP</strong>, <strong>Guide 2 pour CE1-CE2</strong>, <strong>Guide 3 pour CM1-CM2</strong> et le <strong>Guide Préscolaire (2024)</strong>.
+          Chaque fiche générée prend fidèlement ses sources dans son guide de référence : <strong>Guide Préscolaire (5 Domaines)</strong>, <strong>Guide 1 (CI-CP)</strong>, <strong>Guide 2 (CE1-CE2)</strong> et <strong>Guide 3 (CM1-CM2 &amp; CFEE)</strong>.
         </p>
 
         <div class="hero__cta-group">
@@ -563,7 +606,7 @@ button { cursor: pointer; border: none; font-family: inherit; }
 
         <div class="hero__guarantee">
           <div class="hero__guarantee-dot"></div>
-          <span>Tarif accessible : <strong>1 500 F / mois</strong> ou <strong>7 500 F / an</strong> via Wave &amp; Orange Money.</span>
+          <span>Tarif accessible à tous : <strong>1 500 F / mois</strong> ou <strong>7 500 F / an</strong> via Wave &amp; Orange Money.</span>
         </div>
       </div>
 
@@ -637,20 +680,20 @@ button { cursor: pointer; border: none; font-family: inherit; }
 <!-- SECTION GÉNÉRATEUR INTERACTIF -->
 <section class="section" id="generateur">
   <div class="container">
-    <div style="text-align: center; max-width: 650px; margin: 0 auto 36px;">
-      <span class="badge badge--primary">Générateur Conforme aux 4 Guides</span>
-      <h2 style="font-size: 2.2rem; margin: 12px 0 8px;">Générez votre Fiche selon le Guide Dédié</h2>
-      <p>Sélectionnez votre classe : le générateur s'indexe automatiquement sur le <strong>Guide 1</strong> (CI-CP), <strong>Guide 2</strong> (CE1-CE2), <strong>Guide 3</strong> (CM1-CM2) ou le <strong>Guide Préscolaire</strong>.</p>
+    <div style="text-align: center; max-width: 680px; margin: 0 auto 36px;">
+      <span class="badge badge--primary">Générateur Pédagogique Conforme</span>
+      <h2 style="font-size: 2.3rem; margin: 12px 0 8px;">Générez votre Fiche Pédagogique</h2>
+      <p>Sélectionnez votre cycle : le formulaire s'adapte immédiatement au <strong>Guide Préscolaire</strong> (PS, MS, GS) ou aux <strong>Guides Élémentaire 1, 2, 3</strong> (CI à CM2).</p>
     </div>
 
     <div class="generator-wrapper">
-      <!-- Choix du Cycle -->
+      <!-- Choix du Cycle avec mise en valeur nette -->
       <div class="cycle-selector">
         <div class="cycle-card active-pre" id="cardPre" onclick="setCycle('pre')">
           <div class="cycle-icon">🧸</div>
           <div class="cycle-info">
             <strong>Cycle PRÉSCOLAIRE (Guide 2024)</strong>
-            <small>PS, MS, GS · 5 Domaines d'activités</small>
+            <small>PS, MS, GS · Les 5 Domaines d'activités officiels</small>
           </div>
         </div>
 
@@ -667,7 +710,7 @@ button { cursor: pointer; border: none; font-family: inherit; }
       <form id="ficheForm">
         <div class="form-grid-3">
           <div class="form-field">
-            <label for="fLevel">Niveau / Classe (Guide Associé)</label>
+            <label for="fLevel">Niveau / Classe (Guide Source)</label>
             <select id="fLevel" class="form-input" onchange="onLevelChanged()"></select>
           </div>
 
@@ -804,37 +847,37 @@ button { cursor: pointer; border: none; font-family: inherit; }
 <section class="section" id="niveaux-prescolaire">
   <div class="container">
     <!-- PRÉSCOLAIRE 2024 -->
-    <div class="curric-card" style="border-left: 6px solid #059669;">
-      <span class="badge badge--green">Guide Curriculaire Préscolaire 2024</span>
+    <div class="curric-card" style="border-left: 8px solid #059669;">
+      <span class="badge badge--green">Guide Curriculaire Préscolaire (MEN 2024)</span>
       <h3 style="font-size: 1.6rem; margin: 12px 0 8px;">Cycle Préscolaire (3 à 6 ans) — 5 Domaines Officiels</h3>
-      <p>Petite Section (PS) · Moyenne Section (MS) · Grande Section (GS) — Sourcé dans le Guide National du Préscolaire.</p>
+      <p style="font-weight: 600; color: var(--text-muted); margin-bottom: 12px;">Petite Section (PS) · Moyenne Section (MS) · Grande Section (GS) — Sourcé dans le Guide National du Préscolaire.</p>
       <div class="domains-list">
-        <span class="domain-tag domain-tag--pre">1. Langue et Communication (Langage, Conte, Pré-lecture, Graphisme)</span>
-        <span class="domain-tag domain-tag--pre">2. Mathématiques (Activités numériques, Géométrie, Mesure)</span>
-        <span class="domain-tag domain-tag--pre">3. Découverte du monde (IST, Repérage Temps/Espace, Hygiène)</span>
-        <span class="domain-tag domain-tag--pre">4. Développement socio-affectif et bien-être global</span>
-        <span class="domain-tag domain-tag--pre">5. Éducation psychomotrice et artistique</span>
+        <span class="domain-tag domain-tag--pre">🗣️ 1. Langue et Communication (Langage, Conte, Pré-lecture, Graphisme)</span>
+        <span class="domain-tag domain-tag--pre">🔢 2. Mathématiques (Activités numériques, Géométrie, Mesure)</span>
+        <span class="domain-tag domain-tag--pre">🌍 3. Découverte du monde (IST, Repérage Temps/Espace, Hygiène)</span>
+        <span class="domain-tag domain-tag--pre">❤️ 4. Développement socio-affectif et bien-être global</span>
+        <span class="domain-tag domain-tag--pre">🎨 5. Éducation psychomotrice et artistique</span>
       </div>
     </div>
 
     <!-- ÉLÉMENTAIRE GUIDES 1, 2, 3 -->
-    <div class="curric-card" id="niveaux-elementaire" style="border-left: 6px solid #1D4ED8;">
+    <div class="curric-card" id="niveaux-elementaire" style="border-left: 8px solid #1D4ED8;">
       <span class="badge badge--primary">Guides Pédagogiques Élémentaires MEN 2025</span>
       <h3 style="font-size: 1.6rem; margin: 12px 0 8px;">Cycle Élémentaire (6 à 12 ans) — Les 3 Guides Officiels</h3>
-      <p style="margin-bottom: 14px;">Chaque niveau scolaire puise ses compétences, ses paliers et ses objectifs spécifiques dans son guide propre :</p>
+      <p style="margin-bottom: 16px; font-weight: 600; color: var(--text-muted);">Chaque niveau scolaire puise ses compétences, ses paliers et ses objectifs spécifiques dans son guide propre :</p>
       
       <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 16px;">
-        <div style="background: var(--bg-card-subtle); padding: 18px; border-radius: 10px; border: 1px solid var(--border-color);">
-          <strong style="color: #1D4ED8; display: block; font-size: 1.1rem; margin-bottom: 4px;">📖 GUIDE 1 (CI - CP)</strong>
-          <span style="font-size: 0.9rem; color: var(--text-muted);">Étape 1 : Graphophonologie, acquisition globale, dénombrement 1-100, observation du milieu.</span>
+        <div style="background: var(--bg-card-subtle); padding: 20px; border-radius: 12px; border: 2px solid var(--border-color);">
+          <strong style="color: #1D4ED8; display: block; font-size: 1.15rem; margin-bottom: 6px;">📖 GUIDE 1 (CI - CP)</strong>
+          <span style="font-size: 0.95rem; color: var(--text-muted); font-weight: 500;">Étape 1 : Graphophonologie, acquisition globale, dénombrement 1-100, observation du milieu.</span>
         </div>
-        <div style="background: var(--bg-card-subtle); padding: 18px; border-radius: 10px; border: 1px solid var(--border-color);">
-          <strong style="color: #1D4ED8; display: block; font-size: 1.1rem; margin-bottom: 4px;">📖 GUIDE 2 (CE1 - CE2)</strong>
-          <span style="font-size: 0.9rem; color: var(--text-muted);">Étape 2 : Trames APC, grammaire/conjugaison, opérations posées, sciences appliquées.</span>
+        <div style="background: var(--bg-card-subtle); padding: 20px; border-radius: 12px; border: 2px solid var(--border-color);">
+          <strong style="color: #1D4ED8; display: block; font-size: 1.15rem; margin-bottom: 6px;">📖 GUIDE 2 (CE1 - CE2)</strong>
+          <span style="font-size: 0.95rem; color: var(--text-muted); font-weight: 500;">Étape 2 : Trames APC, grammaire/conjugaison, opérations posées, sciences appliquées.</span>
         </div>
-        <div style="background: var(--bg-card-subtle); padding: 18px; border-radius: 10px; border: 1px solid var(--border-color);">
-          <strong style="color: #1D4ED8; display: block; font-size: 1.1rem; margin-bottom: 4px;">📖 GUIDE 3 (CM1 - CM2)</strong>
-          <span style="font-size: 0.9rem; color: var(--text-muted);">Étape 3 : Intégration complexe, géométrie/mesures approfondies, préparation examen CFEE.</span>
+        <div style="background: var(--bg-card-subtle); padding: 20px; border-radius: 12px; border: 2px solid var(--border-color);">
+          <strong style="color: #1D4ED8; display: block; font-size: 1.15rem; margin-bottom: 6px;">📖 GUIDE 3 (CM1 - CM2)</strong>
+          <span style="font-size: 0.95rem; color: var(--text-muted); font-weight: 500;">Étape 3 : Intégration complexe, géométrie/mesures approfondies, préparation examen CFEE.</span>
         </div>
       </div>
     </div>
@@ -879,10 +922,10 @@ button { cursor: pointer; border: none; font-family: inherit; }
 <footer class="footer">
   <div class="container footer__inner">
     <div>
-      <strong>SUÑU FICHES</strong> — Plateforme Pédagogique Nationale du Sénégal.
-      <p style="font-size: 0.85rem; color: var(--text-light); margin-top: 4px;">Édité pour les enseignants et directeurs d'école du Sénégal.</p>
+      <strong style="font-size: 1.1rem;">SUÑU FICHES</strong> — Plateforme Pédagogique Nationale du Sénégal.
+      <p style="font-size: 0.9rem; color: var(--text-muted); margin-top: 4px;">Édité pour les enseignants et directeurs d'école du Sénégal.</p>
     </div>
-    <div style="display: flex; gap: 20px; font-size: 0.9rem; color: var(--text-muted);">
+    <div style="display: flex; gap: 20px; font-size: 0.95rem; color: var(--text-muted); font-weight: 600;">
       <a href="#tarifs">Tarifs (1 500F / 7 500F)</a>
       <a href="#generateur">Générateur APC</a>
       <a href="#top">Haut de page ↑</a>
@@ -934,7 +977,7 @@ const GUIDE_CONFIG = {
 
 // 3. OBJECTIFS ET ÉTAPES SPÉCIFIQUES PAR GUIDE ET DISCIPLINE
 const PEDAGOGICAL_DATABASE = {
-  // PRÉSCOLAIRE
+  // PRÉSCOLAIRE (5 DOMAINES OFFICIELS DU GUIDE 2024)
   "pre": {
     "D1 — Langue & Communication": {
       os: "Nommer les membres de sa famille en montrant leur image sur l'album de classe.",
@@ -1079,11 +1122,11 @@ const PRE_LEVELS = [
 ];
 
 const PRE_DISCIPLINES = [
-  { value: 'D1 — Langue & Communication', label: 'D1 — Langue & Communication (Langage, Conte, Graphisme)' },
-  { value: 'D2 — Mathématiques', label: 'D2 — Mathématiques (Activités numériques, Géométrie, Mesure)' },
-  { value: 'D3 — Découverte du monde', label: 'D3 — Découverte du monde (IST, Temps/Espace, Hygiène)' },
-  { value: 'D4 — Développement socio-affectif', label: 'D4 — Développement socio-affectif (Vivre ensemble)' },
-  { value: 'D5 — Éducation psychomotrice & artistique', label: 'D5 — Éducation psychomotrice & artistique' }
+  { value: 'D1 — Langue & Communication', label: '🗣️ D1 — Langue & Communication (Langage, Conte, Graphisme)' },
+  { value: 'D2 — Mathématiques', label: '🔢 D2 — Mathématiques (Activités numériques, Géométrie, Mesure)' },
+  { value: 'D3 — Découverte du monde', label: '🌍 D3 — Découverte du monde (IST, Temps/Espace, Hygiène)' },
+  { value: 'D4 — Développement socio-affectif', label: '❤️ D4 — Développement socio-affectif (Vivre ensemble)' },
+  { value: 'D5 — Éducation psychomotrice & artistique', label: '🎨 D5 — Éducation psychomotrice & artistique' }
 ];
 
 const ELEM_LEVELS = [
