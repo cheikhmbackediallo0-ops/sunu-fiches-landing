@@ -1,3 +1,8 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Cahier de fiches CE1-CE2</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -303,6 +308,8 @@ table.remed td:nth-child(2){width:29%; color:var(--graphite)}
   a{text-decoration:none; color:#000}
 }
 </style>
+</head>
+<body>
 
 <div class="wrap">
 
@@ -317,17 +324,17 @@ table.remed td:nth-child(2){width:29%; color:var(--graphite)}
 <div class="toolbar">
   <div class="grp" id="f-niveau">
     <span>Niveau</span>
-    <button class="chip" data-v="all" aria-pressed="true">Tous</button>
-    <button class="chip" data-v="CE1" aria-pressed="false">CE1</button>
-    <button class="chip" data-v="CE2" aria-pressed="false">CE2</button>
+    <button type="button" class="chip" data-v="all" aria-pressed="true">Tous</button>
+    <button type="button" class="chip" data-v="CE1" aria-pressed="false">CE1</button>
+    <button type="button" class="chip" data-v="CE2" aria-pressed="false">CE2</button>
   </div>
   <div class="grp" id="f-domaine">
     <span>Domaine</span>
-    <button class="chip" data-v="all" aria-pressed="true">Tous</button>
-    <button class="chip" data-v="LC" aria-pressed="false">Langue</button>
-    <button class="chip" data-v="MATH" aria-pressed="false">Maths</button>
-    <button class="chip" data-v="ESVS" aria-pressed="false">ESVS</button>
-    <button class="chip" data-v="EPSA" aria-pressed="false">EPSA</button>
+    <button type="button" class="chip" data-v="all" aria-pressed="true">Tous</button>
+    <button type="button" class="chip" data-v="LC" aria-pressed="false">Langue</button>
+    <button type="button" class="chip" data-v="MATH" aria-pressed="false">Maths</button>
+    <button type="button" class="chip" data-v="ESVS" aria-pressed="false">ESVS</button>
+    <button type="button" class="chip" data-v="EPSA" aria-pressed="false">EPSA</button>
   </div>
   <p class="count" id="count">9 fiches</p>
 </div>
@@ -1378,3 +1385,5 @@ table.remed td:nth-child(2){width:29%; color:var(--graphite)}
   apply();
 })();
 </script>
+</body>
+</html>

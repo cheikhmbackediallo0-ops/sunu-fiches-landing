@@ -7,7 +7,7 @@ redirects = []
 [functions."*"]
 
 [build]
-publish = "C:\\Users\\bmd-tech\\Documents\\SUNU FICHE PEDAG"
+publish = "C:\\Users\\bmd-tech\\Documents\\CODE\\SUNU FICHE PEDAG"
 publishOrigin = "default"
 
 [build.environment]

@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Générer une fiche · SUÑU FICHES</title>
+<meta name="theme-color" content="#0B6B47">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="assets/icons/icon.svg" type="image/svg+xml">
+<link rel="icon" href="assets/icons/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+<meta name="application-name" content="SUÑU FICHES">
+<meta name="apple-mobile-web-app-title" content="SUÑU FICHES">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="format-detection" content="telephone=no">
+<script src="assets/js/pwa.js" defer></script>
+<script>
+(function () { try { var t = localStorage.getItem('sunu_theme'); if (t === 'dark' || t === 'light') document.documentElement.setAttribute('data-theme', t); } catch (e) {} })();
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Inter:wght@400;500;600;700;800&family=Kalam:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/sunu.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a class="brand" href="accueil.html" aria-label="SUÑU FICHES, mon espace">
+      <span class="brand-mark">SF</span>
+      <span class="brand-name">SUÑU FICHES<small>Mon espace</small></span>
+    </a>
+    <div class="header-actions">
+      <a class="btn btn-ghost" href="accueil.html">Mon espace</a>
+      <button type="button" class="icon-btn" data-theme-toggle aria-label="Changer de thème"></button>
+      <span class="user-chip"><span class="user-avatar" data-user-initials></span><span class="user-name" data-user-name></span></span>
+      <button type="button" class="icon-btn" data-logout aria-label="Se déconnecter" title="Se déconnecter">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><path d="M16 17l5-5-5-5M21 12H9"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main class="app-main">
+  <div class="container">
+    <nav class="crumbs" aria-label="Fil d'Ariane">
+      <a href="accueil.html">Mon espace</a>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m9 6 6 6-6 6"/></svg>
+      <span id="crumbCycle"></span>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m9 6 6 6-6 6"/></svg>
+      <span>Générer une fiche</span>
+    </nav>
+    <div class="gen-head">
+      <div>
+        <h1 id="genTitle">Générer une fiche</h1>
+        <p id="genLead"></p>
+      </div>
+    </div>
+
+    <div class="gen-layout">
+      <!-- FORMULAIRE -->
+      <section class="panel gen-form" id="genPanel" aria-label="Formulaire de la fiche">
+        <form id="ficheForm" novalidate>
+
+          <div class="field">
+            <span class="field-label step-label" id="lblNiveau"><i>1</i><span id="lblNiveauText">Section</span></span>
+            <div class="seg" id="niveauSeg" role="group" aria-labelledby="lblNiveau"></div>
+          </div>
+
+          <div class="field">
+            <label class="step-label" for="fActivite"><i>2</i><span id="lblActivite">Activité</span></label>
+            <select class="select" id="fActivite"></select>
+          </div>
+
+          <div class="field">
+            <span class="field-label step-label" id="lblTrim"><i>3</i>Trimestre</span>
+            <div class="seg" id="trimSeg" role="group" aria-labelledby="lblTrim">
+              <button type="button" data-trim="1" aria-pressed="false">1er<small>oct. – déc.</small></button>
+              <button type="button" data-trim="2" aria-pressed="false">2e<small>janv. – mars</small></button>
+              <button type="button" data-trim="3" aria-pressed="false">3e<small>avr. – juin</small></button>
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="step-label" for="fOA"><i>4</i>Objectif d'apprentissage (OA)</label>
+            <select class="select" id="fOA"></select>
+            <input class="input" id="fOAText" placeholder="Écrivez l'OA" hidden>
+          </div>
+
+          <div class="field">
+            <label class="step-label" for="fOS"><i>5</i>Objectif spécifique (OS)</label>
+            <select class="select" id="fOS"></select>
+            <span class="hint" id="osFull"></span>
+            <textarea class="textarea" id="fOSText" rows="2" placeholder="Écrivez l'OS en commençant par un verbe (ex : Comparer des objets selon leur longueur)" hidden></textarea>
+          </div>
+
+          <div class="field">
+            <label class="step-label" for="fContenus"><i>6</i>Contenus</label>
+            <textarea class="textarea" id="fContenus" rows="3" placeholder="Notions, mots, structures ou savoir-faire de la séance"></textarea>
+            <span class="hint" id="contHint"></span>
+          </div>
+
+          <div class="field">
+            <label class="step-label" for="fRevision"><i>7</i>Révision : notion de la leçon précédente</label>
+            <textarea class="textarea" id="fRevision" rows="2" placeholder="ex : Comparer des tailles en utilisant une toise"></textarea>
+            <span class="hint" id="revHint">Elle est citée dans l'étape « Révision » de la fiche.</span>
+          </div>
+
+          <div class="field">
+            <label class="step-label" for="fDuree"><i>8</i>Durée de la séance</label>
+            <div class="duration-row">
+              <select class="select" id="fDuree"></select>
+            </div>
+            <span class="duration-note" id="dureeNote"></span>
+          </div>
+
+          <div class="grid-2">
+            <div class="field">
+              <label class="step-label" for="fDate"><i>9</i>Date</label>
+              <input class="input" id="fDate" type="date">
+            </div>
+            <div class="field">
+              <label class="step-label" for="fNumero"><i>10</i>Séance N°</label>
+              <input class="input" id="fNumero" placeholder="ex : 14">
+            </div>
+          </div>
+
+          <details class="more" id="moreBox">
+            <summary>Plus de détails (facultatif)</summary>
+            <div class="more-body">
+              <div class="field"><label for="fMateriel">Matériel</label><textarea class="textarea" id="fMateriel" rows="2" placeholder="Matériel de la séance"></textarea><span class="hint">Matériel concret proposé pour cette leçon. Ajoutez ou retirez selon votre classe.</span></div>
+              <div class="field" id="jeuField"><label for="fJeu">Jeu associé</label><input class="input" id="fJeu" placeholder="ex : RJMM 52 « jeu de baguettes »"></div>
+              <div class="field" id="effectifField" hidden><label for="fEffectif">Effectif</label><input class="input" id="fEffectif" inputmode="numeric" placeholder="ex : 52"></div>
+              <div class="field"><label for="fEnseignant" id="lblEnseignant">Éducateur(trice)</label><input class="input" id="fEnseignant" autocomplete="name"></div>
+              <div class="grid-2">
+                <div class="field"><label for="fEcole">École</label><input class="input" id="fEcole"></div>
+                <div class="field"><label for="fIef">IEF</label><input class="input" id="fIef"></div>
+              </div>
+            </div>
+          </details>
+
+          <div class="form-error" id="formError" role="alert"></div>
+          <button type="submit" class="btn btn-primary btn-lg btn-block" id="genBtn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.8 4.7 4.7 1.8-4.7 1.8L12 16l-1.8-4.7-4.7-1.8 4.7-1.8z"/></svg>
+            Générer la fiche
+          </button>
+        </form>
+      </section>
+
+      <!-- FICHE -->
+      <section class="gen-output" id="output" aria-live="polite">
+        <div class="gen-empty" id="emptyState">
+          <div class="hwf" data-hw-fiche aria-hidden="true"></div>
+          <h3>Votre fiche apparaîtra ici</h3>
+          <p>Remplissez le formulaire, puis cliquez sur « Générer la fiche ».</p>
+        </div>
+        <div id="result" hidden>
+          <div class="fiche-toolbar">
+            <div>
+              <strong style="font-family: var(--font-display); font-size: 1.15rem;">Votre fiche est prête</strong>
+              <p class="form-note" id="trameNote"></p>
+            </div>
+            <div class="tb-actions">
+              <div class="fmt-seg" role="group" aria-label="Format de la fiche"><span>Format</span><button type="button" data-fmt="A5" aria-pressed="true">A5</button><button type="button" data-fmt="A4" aria-pressed="false">A4</button></div>
+              <button type="button" class="btn btn-primary btn-sm" id="btnPrint">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9V3h12v6"/><rect x="3" y="9" width="18" height="8" rx="2"/><path d="M7 14h10v7H7z"/></svg>
+                <span id="printLabel">Imprimer (A5)</span>
+              </button>
+              <details class="dl-menu" id="dlMenu">
+                <summary class="btn btn-outline btn-sm">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg>
+                  Télécharger
+                </summary>
+                <div class="dl-pop">
+                  <button type="button" data-dl="pdf"><strong>PDF</strong><small id="dlPdfHint">Format A5, prêt à imprimer</small></button>
+                  <button type="button" data-dl="word"><strong>Word (.doc)</strong><small>Pour la retravailler sur l'ordinateur</small></button>
+                </div>
+              </details>
+              <button type="button" class="btn btn-outline btn-sm" id="btnEdit">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z"/></svg>
+                Modifier
+              </button>
+              <button type="button" class="btn btn-ghost btn-sm" id="btnCopy">Copier le texte</button>
+              <button type="button" class="btn btn-ghost btn-sm" id="btnNew">Nouvelle fiche</button>
+            </div>
+          </div>
+          <div class="edit-bar" id="editBar" hidden role="status">
+            <span><strong>Mode modification</strong> : cliquez dans une case de la fiche pour changer le texte.</span>
+            <span class="edit-actions">
+              <button type="button" class="btn btn-primary btn-sm" id="btnEditSave">Enregistrer les modifications</button>
+              <button type="button" class="btn btn-ghost btn-sm" id="btnEditCancel">Annuler</button>
+            </span>
+          </div>
+          <div id="ficheHolder" class="fmt-a5"></div>
+        </div>
+      </section>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>SUÑU FICHES · © <span data-year></span></p>
+    <nav aria-label="Liens"><a href="accueil.html">Mon espace</a><a href="https://wa.me/221775335604" target="_blank" rel="noopener">Aide WhatsApp</a></nav>
+  </div>
+</footer>
+
+<script src="assets/js/sunu-config.js"></script>
+<script src="assets/js/sunu-core.js"></script>
+<script src="assets/js/data-prescolaire.js"></script>
+<script src="assets/js/data-elementaire.js"></script>
+<script src="assets/js/materiel.js"></script>
+<script src="assets/js/fiche-engine.js"></script>
+<script src="assets/js/hw-fiche.js"></script>
+<script>
+(function () {
+  var user = SUNU.requireAuth();
+  if (!user) return;
+  SUNU.renderUser(user);
+
+  var PRE = window.SUNU_PRESCO;
+  var ELEM = window.SUNU_ELEM;
+  var isPre = true; // l'élémentaire est retiré de l'interface pour le moment
+  var AUTRE = '__autre';
+  var $ = function (id) { return document.getElementById(id); };
+  var esc = SUNU.escapeHtml;
+
+  var state = {
+    niveau: null,
+    trimestre: currentTrimester(),
+    ficheId: null,
+    materielAuto: true,
+    dureeAuto: true
+  };
+
+  function currentTrimester() {
+    var m = new Date().getMonth() + 1;
+    if (m >= 1 && m <= 3) return 2;
+    if (m >= 4 && m <= 6) return 3;
+    return 1;
+  }
+  function todayIso() {
+    var d = new Date();
+    return d.getFullYear() + '-' + ('0' + (d.getMonth() + 1)).slice(-2) + '-' + ('0' + d.getDate()).slice(-2);
+  }
+  var prefKey = 'sunu_pref_' + (isPre ? 'pre' : 'elem') + '_' + user.id;
+
+  // ---------- En-tête de page ----------
+  $('crumbCycle').textContent = 'Préscolaire';
+  $('genTitle').textContent = 'Préscolaire · Générer une fiche';
+  $('genLead').textContent = isPre
+    ? 'Les objectifs proposés viennent des guides PS, MS et GS 2024.'
+    : 'La fiche suit la démarche officielle de la discipline choisie.';
+  $('genPanel').classList.toggle('is-elem', !isPre);
+  $('lblNiveauText').textContent = isPre ? 'Section' : 'Classe';
+  $('lblActivite').textContent = isPre ? 'Activité' : 'Discipline';
+  $('lblEnseignant').textContent = isPre ? 'Éducateur(trice)' : 'Enseignant(e)';
+  $('jeuField').hidden = !isPre;
+  $('effectifField').hidden = isPre;
+  if (!isPre) $('fMateriel').placeholder = 'Matériel, manuel, documents';
+
+  // ---------- Durées ----------
+  var DUREES = [15, 20, 25, 30, 35, 40, 45, 50, 60, 90];
+  $('fDuree').innerHTML = DUREES.map(function (d) { return '<option value="' + d + '">' + d + ' mn</option>'; }).join('');
+
+  // ---------- Niveaux ----------
+  var niveaux = isPre
+    ? [{ v: 'PS', label: 'PS', sub: 'Petite' }, { v: 'MS', label: 'MS', sub: 'Moyenne' }, { v: 'GS', label: 'GS', sub: 'Grande' }]
+    : ELEM.niveaux.map(function (n) { return { v: n.v, label: n.v, sub: 'Étape ' + n.etape }; });
+  var seg = $('niveauSeg');
+  if (!isPre) seg.classList.add('seg-wrap');
+  seg.innerHTML = niveaux.map(function (n) {
+    return '<button type="button" data-niveau="' + n.v + '" aria-pressed="false">' + n.label + '<small>' + n.sub + '</small></button>';
+  }).join('');
+
+  function niveauLabel(v) {
+    if (isPre) return PRE.sections[v].label;
+    return ELEM.niveaux.filter(function (n) { return n.v === v; })[0].label.replace(' — ', ' · ');
+  }
+  function etapeOf(v) {
+    var n = ELEM.niveaux.filter(function (x) { return x.v === v; })[0];
+    return n ? n.etape : 2;
+  }
+
+  // ---------- Activités / disciplines ----------
+  function fillActivites() {
+    var sel = $('fActivite');
+    var keep = sel.value;
+    if (isPre) {
+      var acts = PRE.sections[state.niveau].activites;
+      var groups = {};
+      PRE.ordre.forEach(function (k) {
+        var a = acts[k];
+        if (!a) return;
+        (groups[a.domaine] = groups[a.domaine] || []).push('<option value="' + k + '">' + esc(a.label) + '</option>');
+      });
+      sel.innerHTML = Object.keys(groups).map(function (d) {
+        return '<optgroup label="' + esc('D' + d + ' · ' + PRE.domaines[d]) + '">' + groups[d].join('') + '</optgroup>';
+      }).join('');
+    } else {
+      var et = etapeOf(state.niveau);
+      sel.innerHTML = ELEM.domaines.map(function (dom) {
+        var opts = dom.items.filter(function (it) { return !it.etapes || it.etapes.indexOf(et) !== -1; })
+          .map(function (it) { return '<option value="' + it.key + '">' + esc(it.label) + '</option>'; }).join('');
+        return '<optgroup label="' + esc(dom.label) + '">' + opts + '</optgroup>';
+      }).join('');
+    }
+    if (keep && sel.querySelector('option[value="' + keep + '"]')) sel.value = keep;
+  }
+
+  function preActivite() { return PRE.sections[state.niveau].activites[$('fActivite').value]; }
+  function elemItem() {
+    var key = $('fActivite').value;
+    for (var i = 0; i < ELEM.domaines.length; i++) {
+      for (var j = 0; j < ELEM.domaines[i].items.length; j++) {
+        if (ELEM.domaines[i].items[j].key === key) return { item: ELEM.domaines[i].items[j], domaine: ELEM.domaines[i].label };
+      }
+    }
+    return null;
+  }
+
+  // ---------- OA / OS (préscolaire : guide officiel) ----------
+  function rowsOfTrim() {
+    var a = preActivite();
+    return a ? a.rows.map(function (r, i) { return { r: r, i: i }; }).filter(function (x) { return x.r.t.indexOf(state.trimestre) !== -1; }) : [];
+  }
+
+  function fillOA() {
+    var sel = $('fOA');
+    if (!isPre) { sel.hidden = true; $('fOAText').hidden = false; return; }
+    var seen = [];
+    rowsOfTrim().forEach(function (x) { if (seen.indexOf(x.r.oa) === -1) seen.push(x.r.oa); });
+    sel.innerHTML = seen.map(function (oa, i) { return '<option value="' + i + '">' + esc(oa) + '</option>'; }).join('') +
+      '<option value="' + AUTRE + '">Autre OA (je l\'écris moi-même)</option>';
+    sel.hidden = false;
+    sel.dataset.list = JSON.stringify(seen);
+    onOAChange();
+  }
+
+  function selectedOA() {
+    if (!isPre || $('fOA').value === AUTRE) return $('fOAText').value.trim();
+    var list = JSON.parse($('fOA').dataset.list || '[]');
+    return list[Number($('fOA').value)] || '';
+  }
+
+  function onOAChange() {
+    var custom = $('fOA').value === AUTRE;
+    $('fOAText').hidden = !custom;
+    fillOS();
+  }
+
+  function fillOS() {
+    var sel = $('fOS');
+    if (!isPre) { sel.hidden = true; $('fOSText').hidden = false; return; }
+    var oa = $('fOA').value === AUTRE ? null : selectedOA();
+    var rows = rowsOfTrim().filter(function (x) { return oa === null || x.r.oa === oa; });
+    if (oa === null) rows = rowsOfTrim();
+    sel.innerHTML = rows.map(function (x) { return '<option value="' + x.i + '">' + esc(x.r.os) + '</option>'; }).join('') +
+      '<option value="' + AUTRE + '">Autre OS (je l\'écris moi-même)</option>';
+    sel.hidden = false;
+    onOSChange();
+  }
+
+  function onOSChange() {
+    var custom = isPre && $('fOS').value === AUTRE;
+    var row0 = isPre && !custom ? preActivite().rows[Number($('fOS').value)] : null;
+    var jeux = row0 && row0.contenus.match(/Jeux? associés? : ([^.;]+)/i);
+    $('fOSText').hidden = isPre ? !custom : false;
+    if (isPre && !custom) {
+      var row = preActivite().rows[Number($('fOS').value)];
+      $('fContenus').value = row ? row.contenus : '';
+      $('osFull').textContent = row ? 'OS du guide : ' + row.os : '';
+      $('contHint').textContent = 'Repris du guide officiel. Vous pouvez les modifier.';
+    } else if (isPre) {
+      $('contHint').textContent = '';
+      $('osFull').textContent = '';
+    }
+    if (!$('fJeu').dataset.touched) $('fJeu').value = (jeux && jeux[1].replace(/[«»]/g, '').trim()) || '';
+    fillRevision();
+    suggestMateriel();
+  }
+
+  // Notion de la leçon précédente : OS + contenus de la ligne précédente du guide (même activité)
+  function fillRevision() {
+    if (!isPre || $('fRevision').dataset.touched) return;
+    var idx = $('fOS').value === AUTRE ? -1 : Number($('fOS').value);
+    var a = preActivite();
+    var prev = a && idx > 0 ? a.rows[idx - 1] : null;
+    var prevCont = prev ? prev.contenus.replace(/\s*\([^)]*\)/g, '').replace(/\s*Jeux? associés?.*$/i, '').trim() : '';
+    if (/^[A-ZÀ-Ý][a-zà-ÿ]/.test(prevCont)) prevCont = prevCont.charAt(0).toLowerCase() + prevCont.slice(1);
+    $('fRevision').value = prev ? prev.os + (prevCont ? ' : ' + prevCont : '') : '';
+    $('revHint').textContent = prev
+      ? "Leçon précédente du guide, citée dans l'étape « Révision ». Vous pouvez la modifier."
+      : 'Première leçon de la liste du guide : écrivez la notion vue à la séance précédente.';
+  }
+
+  // ---------- Durée et matériel conseillés ----------
+  function suggestedDuree() {
+    if (isPre) {
+      var k = $('fActivite').value;
+      if (k === 'psychomotricite') return { d: 30, note: "La psychomotricité dure plus longtemps : 30 mn dans l'emploi du temps du guide." };
+      if (state.niveau === 'PS') {
+        if (k === 'langage') return { d: 25, note: "Durée de l'emploi du temps de la PS : 25 mn." };
+        if (k === 'arts_musicaux') return { d: 20, note: "Durée de l'emploi du temps de la PS : 20 mn." };
+        return { d: 30, note: "Durée de l'emploi du temps de la PS : 30 mn." };
+      }
+      return { d: 25, note: "Durée de l'emploi du temps de la " + state.niveau + ' : 25 mn.' };
+    }
+    var it = elemItem();
+    var d = it ? it.item.d[etapeOf(state.niveau) - 1] : 30;
+    return { d: d, note: 'Durée habituelle à cette étape : ' + d + ' mn.' };
+  }
+  function applySuggestions() {
+    var s = suggestedDuree();
+    if (state.dureeAuto) $('fDuree').value = String(s.d);
+    $('dureeNote').textContent = s.note;
+    suggestMateriel();
+  }
+
+  // Matériel concret de la leçon (OS + contenus), et non la liste générale du guide
+  function suggestMateriel() {
+    if (!isPre || !window.SUNU_MATERIEL) return;
+    var custom = $('fOS').value === AUTRE;
+    var os = custom ? $('fOSText').value : (($('fOS').selectedOptions[0] || {}).textContent || '');
+    var s = SUNU_MATERIEL.suggest($('fActivite').value, os, $('fContenus').value, state.niveau);
+    if (state.materielAuto) $('fMateriel').value = s.materiel;
+    if (s.jeu && !$('fJeu').dataset.touched && !$('fJeu').value) $('fJeu').value = s.jeu;
+  }
+
+  // ---------- Événements ----------
+  function setNiveau(v) {
+    state.niveau = v;
+    seg.querySelectorAll('[data-niveau]').forEach(function (b) { b.setAttribute('aria-pressed', String(b.getAttribute('data-niveau') === v)); });
+    fillActivites();
+    onActivite();
+  }
+  function setTrim(t) {
+    state.trimestre = t;
+    document.querySelectorAll('[data-trim]').forEach(function (b) { b.setAttribute('aria-pressed', String(Number(b.getAttribute('data-trim')) === t)); });
+    if (state.niveau) fillOA();
+  }
+  function onActivite() {
+    fillOA();
+    fillOS();
+    applySuggestions();
+  }
+
+  seg.addEventListener('click', function (e) { var b = e.target.closest('[data-niveau]'); if (b) setNiveau(b.getAttribute('data-niveau')); });
+  document.getElementById('trimSeg').addEventListener('click', function (e) { var b = e.target.closest('[data-trim]'); if (b) setTrim(Number(b.getAttribute('data-trim'))); });
+  $('fActivite').addEventListener('change', function () { state.materielAuto = true; onActivite(); });
+  $('fOA').addEventListener('change', onOAChange);
+  $('fOS').addEventListener('change', function () { state.materielAuto = true; onOSChange(); });
+  $('fDuree').addEventListener('change', function () { state.dureeAuto = false; });
+  $('fMateriel').addEventListener('input', function () { state.materielAuto = false; });
+  $('fJeu').addEventListener('input', function () { $('fJeu').dataset.touched = '1'; });
+  $('fRevision').addEventListener('input', function () { $('fRevision').dataset.touched = '1'; });
+  $('fOSText').addEventListener('change', suggestMateriel);
+
+  // ---------- Valeurs de départ ----------
+  var pref = SUNU.store.get(prefKey, {});
+  $('fEnseignant').value = user.direct ? '' : (user.name || '');
+  $('fEcole').value = user.school || '';
+  $('fIef').value = user.ief || '';
+  $('fDate').value = todayIso();
+  setTrim(state.trimestre);
+  var askedSection = SUNU.param('section');
+  var startNiveau = askedSection && niveaux.some(function (n) { return n.v === askedSection; }) ? askedSection
+    : (pref.niveau && niveaux.some(function (n) { return n.v === pref.niveau; }) ? pref.niveau : 'PS');
+  setNiveau(startNiveau);
+  if (pref.activite && $('fActivite').querySelector('option[value="' + pref.activite + '"]')) { $('fActivite').value = pref.activite; onActivite(); }
+
+  // ---------- Lecture du formulaire ----------
+  function collect() {
+    var p = {
+      cycle: isPre ? 'pre' : 'elem',
+      niveau: state.niveau,
+      niveauLabel: niveauLabel(state.niveau),
+      activiteKey: $('fActivite').value,
+      trimestre: state.trimestre,
+      oa: selectedOA(),
+      contenus: $('fContenus').value.trim(),
+      revision: $('fRevision').value.trim(),
+      duree: Number($('fDuree').value),
+      numero: $('fNumero').value.trim(),
+      date: $('fDate').value,
+      materiel: $('fMateriel').value.trim(),
+      jeu: isPre ? $('fJeu').value.trim() : '',
+      effectif: isPre ? '' : $('fEffectif').value.trim(),
+      enseignant: $('fEnseignant').value.trim(),
+      ecole: $('fEcole').value.trim(),
+      ief: $('fIef').value.trim()
+    };
+    if (isPre) {
+      var a = preActivite();
+      var custom = $('fOS').value === AUTRE;
+      var idx = Number($('fOS').value);
+      p.os = custom ? $('fOSText').value.trim() : a.rows[idx].os;
+      p.osIndex = custom ? null : idx;
+      p.prevOS = !custom && idx > 0 ? a.rows[idx - 1].os : '';
+      p.prevContenus = !custom && idx > 0 ? a.rows[idx - 1].contenus : '';
+      p.activiteLabel = a.label;
+      p.domaineLabel = PRE.domaines[a.domaine];
+      p.sousDomaine = a.sousDomaine || '';
+      p.cbase = a.cbase;
+      p.oaCustom = $('fOA').value === AUTRE;
+      p.source = 'Guide de la ' + PRE.sections[state.niveau].label + ' 2024 (MEN)';
+    } else {
+      var e = elemItem();
+      p.os = $('fOSText').value.trim();
+      p.prevOS = '';
+      p.activiteLabel = e.item.label;
+      p.domaineLabel = e.domaine;
+      p.trameKey = e.item.trame;
+      p.source = ELEM.guides[etapeOf(state.niveau)];
+    }
+    return p;
+  }
+
+  function showError(msg, focusId) {
+    var box = $('formError');
+    box.textContent = msg;
+    box.classList.add('is-visible');
+    if (focusId) $(focusId).focus();
+  }
+
+  function renderFiche(p, scroll, html) {
+    if (state.editing) stopEdit();
+    state.params = p;
+    $('ficheHolder').innerHTML = html || SUNU_FICHE.render(p);
+    $('trameNote').textContent = SUNU_FICHE.trameInfo(p).label;
+    $('emptyState').hidden = true;
+    $('result').hidden = false;
+    if (scroll && window.matchMedia('(max-width: 1060px)').matches) $('output').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
+  $('ficheForm').addEventListener('submit', function (e) {
+    e.preventDefault();
+    $('formError').classList.remove('is-visible');
+    var p = collect();
+    if (!p.oa) return showError("Indiquez l'objectif d'apprentissage (OA).", isPre ? 'fOAText' : 'fOAText');
+    if (!p.os) return showError("Indiquez l'objectif spécifique (OS).", 'fOSText');
+    if (state.edited && !window.confirm('Générer à nouveau remplacera les modifications faites à la main dans la fiche. Continuer ?')) return;
+    state.edited = false;
+    renderFiche(p, true);
+    var saved = SUNU.fiches.save({ id: state.ficheId, params: p });
+    if (saved) state.ficheId = saved.id;
+    SUNU.store.set(prefKey, { niveau: p.niveau, activite: p.activiteKey });
+    SUNU.toast('Fiche enregistrée dans « Mes dernières fiches »');
+  });
+
+  // ---------- Actions sur la fiche ----------
+  // Format de la fiche : A5 (par défaut) ou A4, pour l'aperçu et pour l'impression
+  var pageStyle = document.createElement('style');
+  pageStyle.id = 'pageFormat';
+  document.head.appendChild(pageStyle);
+  function setFormat(fmt) {
+    fmt = fmt === 'A4' ? 'A4' : 'A5';
+    $('ficheHolder').className = 'fmt-' + fmt.toLowerCase();
+    pageStyle.textContent = '@page { size: ' + fmt + ' portrait; margin: ' + (fmt === 'A5' ? '7mm' : '12mm') + '; }';
+    document.querySelectorAll('[data-fmt]').forEach(function (b) { b.setAttribute('aria-pressed', String(b.getAttribute('data-fmt') === fmt)); });
+    $('printLabel').textContent = 'Imprimer (' + fmt + ')';
+    $('dlPdfHint').textContent = 'Format ' + fmt + ', prêt à imprimer';
+    SUNU.store.set('sunu_format', fmt);
+  }
+  document.querySelectorAll('[data-fmt]').forEach(function (b) {
+    b.addEventListener('click', function () { setFormat(b.getAttribute('data-fmt')); });
+  });
+  setFormat(SUNU.store.get('sunu_format', 'A5'));
+  $('btnPrint').addEventListener('click', function () { window.print(); });
+  $('btnCopy').addEventListener('click', function () {
+    var doc = document.getElementById('ficheDoc');
+    if (!doc) return;
+    SUNU.copyText(doc.innerText).then(function () { SUNU.toast('Texte de la fiche copié'); })
+      .catch(function () { SUNU.toast('Copie impossible : sélectionnez le texte à la main'); });
+  });
+  $('btnNew').addEventListener('click', function () {
+    if (state.editing) stopEdit();
+    state.ficheId = null;
+    state.edited = false;
+    $('result').hidden = true;
+    $('emptyState').hidden = false;
+    $('fNumero').value = '';
+    history.replaceState(null, '', 'generateur.html?cycle=' + (isPre ? 'pre' : 'elem'));
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  // ---------- Modifier la fiche (directement dans les cases) ----------
+  var editSnapshot = null;
+
+  // Nettoie un HTML de fiche (pas de script ni d'attribut d'événement)
+  function cleanFiche(root) {
+    root.querySelectorAll('script, style, iframe, object, embed, link, meta').forEach(function (el) { el.remove(); });
+    root.querySelectorAll('*').forEach(function (el) {
+      Array.prototype.slice.call(el.attributes).forEach(function (a) {
+        if (/^on/i.test(a.name) || a.name === 'contenteditable' || /^javascript:/i.test(a.value)) el.removeAttribute(a.name);
+      });
+    });
+    return root;
+  }
+  function ficheFromHtml(html) {
+    var box = document.createElement('div');
+    box.innerHTML = html;
+    cleanFiche(box);
+    var doc = box.querySelector('#ficheDoc');
+    return doc ? doc.outerHTML : '';
+  }
+  function editableCells() { return document.querySelectorAll('#ficheDoc td'); }
+
+  function startEdit() {
+    if (!document.getElementById('ficheDoc') || state.editing) return;
+    state.editing = true;
+    editSnapshot = $('ficheHolder').innerHTML;
+    editableCells().forEach(function (td) { td.setAttribute('contenteditable', 'true'); td.setAttribute('spellcheck', 'true'); });
+    $('ficheHolder').classList.add('is-editing');
+    $('editBar').hidden = false;
+    $('btnEdit').disabled = true;
+    var first = document.querySelector('#ficheDoc .f-id td');
+    if (first) first.focus();
+  }
+  function stopEdit() {
+    state.editing = false;
+    editableCells().forEach(function (td) { td.removeAttribute('contenteditable'); td.removeAttribute('spellcheck'); });
+    $('ficheHolder').classList.remove('is-editing');
+    $('editBar').hidden = true;
+    $('btnEdit').disabled = false;
+  }
+  $('btnEdit').addEventListener('click', startEdit);
+  $('btnEditCancel').addEventListener('click', function () {
+    stopEdit();
+    if (editSnapshot !== null) $('ficheHolder').innerHTML = editSnapshot;
+    SUNU.toast('Modifications annulées');
+  });
+  $('btnEditSave').addEventListener('click', function () {
+    stopEdit();
+    var html = ficheFromHtml($('ficheHolder').innerHTML);
+    $('ficheHolder').innerHTML = html;
+    state.edited = true;
+    var saved = SUNU.fiches.save({ id: state.ficheId, params: state.params, html: html });
+    if (saved) state.ficheId = saved.id;
+    SUNU.toast('Modifications enregistrées');
+  });
+  // Coller du texte simple uniquement (pas de mise en forme venue d'ailleurs)
+  $('ficheHolder').addEventListener('paste', function (e) {
+    if (!state.editing) return;
+    e.preventDefault();
+    var text = (e.clipboardData || window.clipboardData).getData('text/plain');
+    document.execCommand('insertText', false, text);
+  });
+
+  // ---------- Télécharger : PDF (format choisi) ou Word ----------
+  function slug(s) {
+    return String(s || '').normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase()
+      .replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '').slice(0, 40);
+  }
+  function fileBase() {
+    var p = state.params || {};
+    return ['fiche', p.niveau, slug(p.activiteLabel), p.numero ? 'seance-' + slug(p.numero) : slug(p.date)].filter(Boolean).join('-');
+  }
+  function currentFormat() { return $('ficheHolder').classList.contains('fmt-a4') ? 'A4' : 'A5'; }
+
+  // Copie de la fiche avec les guillemets écrits en toutes lettres (Word et PDF ignorent <q>)
+  function exportClone() {
+    var doc = document.getElementById('ficheDoc').cloneNode(true);
+    cleanFiche(doc);
+    doc.querySelectorAll('q').forEach(function (q) { q.replaceWith(document.createTextNode('« ' + q.textContent + ' »')); });
+    var src = doc.querySelector('.fiche-source');
+    if (src) src.remove();
+    return doc;
+  }
+
+  var PDF_LIB = 'https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js';
+  var pdfLibPromise = null;
+  function loadPdfLib() {
+    if (window.html2pdf) return Promise.resolve();
+    if (!pdfLibPromise) {
+      pdfLibPromise = new Promise(function (resolve, reject) {
+        var s = document.createElement('script');
+        s.src = PDF_LIB;
+        s.onload = resolve;
+        s.onerror = function () { pdfLibPromise = null; reject(); };
+        document.head.appendChild(s);
+      });
+    }
+    return pdfLibPromise;
+  }
+
+  function downloadPdf() {
+    var fmt = currentFormat();
+    SUNU.toast('Préparation du PDF ' + fmt + '…');
+    loadPdfLib().then(function () {
+      // Largeur imprimable : A5 = 148 − 2 × 7 mm ; A4 = 210 − 2 × 12 mm (96 px par pouce)
+      var mm = fmt === 'A5' ? 134 : 186;
+      var wrap = document.createElement('div');
+      wrap.className = 'pdf-export fmt-' + fmt.toLowerCase();
+      wrap.style.width = (Math.floor(mm * 96 / 25.4) - 12) + 'px'; // petite marge pour ne rien rogner à droite
+      wrap.appendChild(exportClone());
+      var stage = document.createElement('div');
+      stage.className = 'pdf-stage';
+      stage.appendChild(wrap);
+      document.body.appendChild(stage);
+      return window.html2pdf().set({
+        margin: fmt === 'A5' ? 7 : 12,
+        filename: fileBase() + '-' + fmt + '.pdf',
+        image: { type: 'jpeg', quality: 0.95 },
+        html2canvas: { scale: 2, backgroundColor: '#FFFFFF', useCORS: true },
+        jsPDF: { unit: 'mm', format: fmt.toLowerCase(), orientation: 'portrait' },
+        pagebreak: { mode: ['css', 'legacy'], avoid: ['tr', '.f-head'] }
+      }).from(wrap).save().then(function () {
+        stage.remove();
+        SUNU.toast('PDF téléchargé');
+      }, function () {
+        stage.remove();
+        throw new Error('pdf');
+      });
+    }).catch(function () {
+      SUNU.toast('Téléchargement impossible : vérifiez Internet, ou utilisez « Imprimer / PDF »');
+    });
+  }
+
+  var WORD_CSS = [
+    'body { font-family: "Kalam", "Comic Sans MS", cursive; color: #1D3FB5; font-size: 11pt; }',
+    'table { border-collapse: collapse; width: 100%; margin-bottom: 8pt; }',
+    'td, th { border: 1pt solid #3A5BD0; padding: 4pt 5pt; vertical-align: top; text-align: left; color: #1D3FB5; }',
+    '.f-head td { border: 1.5pt solid #D3201B; vertical-align: middle; }',
+    '.f-id th, .f-id td { border-color: #D3201B; }',
+    '.f-lab, .fs-etape span, .f-steps th { color: #D3201B; font-weight: bold; text-decoration: underline; }',
+    '.f-steps th { text-align: center; }',
+    '.fh-center { text-align: center; }',
+    '.fh-title { color: #D3201B; font-size: 16pt; font-weight: bold; text-transform: uppercase; text-decoration: underline; }',
+    '.fh-act { font-weight: bold; text-transform: uppercase; }',
+    '.f-os { font-weight: bold; }',
+    '.fs-mat { color: #D3201B; }',
+    '.fs-tps { text-align: center; white-space: nowrap; }',
+    'ul { margin: 0; padding-left: 12pt; }'
+  ].join('\n');
+
+  function downloadWord() {
+    var fmt = currentFormat();
+    var size = fmt === 'A5' ? '148mm 210mm' : '210mm 297mm';
+    var html = '<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:w="urn:schemas-microsoft-com:office:word" xmlns="http://www.w3.org/TR/REC-html40">' +
+      '<head><meta charset="utf-8"><title>' + esc(fileBase()) + '</title>' +
+      '<style>@page Section1 { size: ' + size + '; margin: ' + (fmt === 'A5' ? '8mm' : '12mm') + '; } div.Section1 { page: Section1; }\n' + WORD_CSS + '</style></head>' +
+      '<body><div class="Section1">' + exportClone().outerHTML + '</div></body></html>';
+    var blob = new Blob(['﻿', html], { type: 'application/msword' });
+    var a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = fileBase() + '.doc';
+    document.body.appendChild(a);
+    a.click();
+    setTimeout(function () { URL.revokeObjectURL(a.href); a.remove(); }, 1500);
+    SUNU.toast('Fichier Word téléchargé');
+  }
+
+  document.querySelectorAll('[data-dl]').forEach(function (b) {
+    b.addEventListener('click', function () {
+      $('dlMenu').open = false;
+      if (state.editing) $('btnEditSave').click();
+      if (b.getAttribute('data-dl') === 'pdf') downloadPdf(); else downloadWord();
+    });
+  });
+  document.addEventListener('click', function (e) {
+    if ($('dlMenu').open && !e.target.closest('#dlMenu')) $('dlMenu').open = false;
+  });
+
+  // ---------- Réouverture d'une fiche de l'historique ----------
+  var ficheParam = SUNU.param('fiche');
+  var saved = ficheParam ? SUNU.fiches.get(ficheParam) : null;
+  if (saved && saved.params && (saved.params.cycle === 'elem') === !isPre) {
+    var p = saved.params;
+    state.ficheId = saved.id;
+    state.dureeAuto = false;
+    state.materielAuto = false;
+    setTrim(p.trimestre || state.trimestre);
+    setNiveau(p.niveau);
+    $('fActivite').value = p.activiteKey;
+    onActivite();
+    if (isPre) {
+      var oaList = JSON.parse($('fOA').dataset.list || '[]');
+      var oaIdx = oaList.indexOf(p.oa);
+      if (oaIdx !== -1 && !p.oaCustom) { $('fOA').value = String(oaIdx); onOAChange(); }
+      else { $('fOA').value = AUTRE; onOAChange(); $('fOAText').value = p.oa; }
+      if (p.osIndex !== null && p.osIndex !== undefined && $('fOS').querySelector('option[value="' + p.osIndex + '"]')) { $('fOS').value = String(p.osIndex); onOSChange(); }
+      else { $('fOS').value = AUTRE; onOSChange(); $('fOSText').value = p.os; }
+      $('fJeu').value = p.jeu || '';
+    } else {
+      $('fOAText').value = p.oa;
+      $('fOSText').value = p.os;
+      $('fEffectif').value = p.effectif || '';
+    }
+    $('fContenus').value = p.contenus || '';
+    $('fRevision').value = p.revision || '';
+    $('fRevision').dataset.touched = '1';
+    $('fDuree').value = String(p.duree);
+    $('fNumero').value = p.numero || '';
+    $('fDate').value = p.date || todayIso();
+    $('fMateriel').value = p.materiel || '';
+    $('fEnseignant').value = p.enseignant || '';
+    $('fEcole').value = p.ecole || '';
+    $('fIef').value = p.ief || '';
+    if (saved.html) {
+      state.edited = true;
+      renderFiche(p, false, ficheFromHtml(saved.html));
+    } else {
+      renderFiche(p, false);
+    }
+  }
+})();
+</script>
+</body>
+</html>

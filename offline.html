@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hors ligne · SUÑU FICHES</title>
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#0B6B47">
+<link rel="icon" href="assets/icons/icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/css/sunu.css">
+<style>
+  .offline { min-height: 100vh; min-height: 100dvh; display: grid; place-items: center; padding: 24px 16px; background: var(--bg); }
+  .offline-card { max-width: 440px; text-align: center; background: var(--surface); border: 1px solid var(--line); border-radius: 24px; padding: 32px 24px; box-shadow: var(--shadow-md); }
+  .offline-card img { width: 72px; height: 72px; border-radius: 18px; margin: 0 auto 18px; display: block; }
+  .offline-card h1 { font-size: 1.5rem; margin-bottom: 10px; }
+  .offline-card p { color: var(--ink-2); margin-bottom: 22px; }
+  .offline-actions { display: grid; gap: 10px; }
+</style>
+</head>
+<body>
+<main class="offline">
+  <div class="offline-card">
+    <img src="assets/icons/icon-192.png" alt="" width="72" height="72">
+    <h1>Pas de connexion Internet</h1>
+    <p>Cette page n'est pas encore enregistrée sur cet appareil. Votre espace et le générateur de fiches restent disponibles hors ligne.</p>
+    <div class="offline-actions">
+      <button type="button" class="btn btn-primary btn-block" id="retry">Réessayer</button>
+      <a class="btn btn-outline btn-block" href="accueil.html">Ouvrir mon espace</a>
+    </div>
+  </div>
+</main>
+<script>
+  document.getElementById('retry').addEventListener('click', function () { window.location.reload(); });
+  window.addEventListener('online', function () { window.location.reload(); });
+</script>
+</body>
+</html>

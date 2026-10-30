@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mon espace · SUÑU FICHES</title>
+<meta name="theme-color" content="#0B6B47">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="assets/icons/icon.svg" type="image/svg+xml">
+<link rel="icon" href="assets/icons/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+<meta name="application-name" content="SUÑU FICHES">
+<meta name="apple-mobile-web-app-title" content="SUÑU FICHES">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="format-detection" content="telephone=no">
+<script src="assets/js/pwa.js" defer></script>
+<script>
+(function () { try { var t = localStorage.getItem('sunu_theme'); if (t === 'dark' || t === 'light') document.documentElement.setAttribute('data-theme', t); } catch (e) {} })();
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Inter:wght@400;500;600;700;800&family=Kalam:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/sunu.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a class="brand" href="accueil.html" aria-label="SUÑU FICHES, mon espace">
+      <span class="brand-mark">SF</span>
+      <span class="brand-name">SUÑU FICHES<small>Préscolaire</small></span>
+    </a>
+    <div class="header-actions">
+      <button type="button" class="icon-btn" data-theme-toggle aria-label="Changer de thème"></button>
+      <span class="user-chip"><span class="user-avatar" data-user-initials></span><span class="user-name" data-user-name></span></span>
+      <button type="button" class="icon-btn" data-logout aria-label="Se déconnecter" title="Se déconnecter">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><path d="M16 17l5-5-5-5M21 12H9"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="space-hero">
+    <div class="container">
+      <div>
+        <span class="pill pill-dot rise">Préscolaire · Guides officiels PS, MS, GS 2024</span>
+        <h1 class="rise" style="--rd: .08s;">Bonjour, <span data-user-first></span>&nbsp;!</h1>
+        <p class="lead rise" style="--rd: .16s;">Choisissez votre section. Vous retrouverez les objectifs du guide officiel pour chaque activité et chaque trimestre, et votre fiche sera prête à imprimer.</p>
+        <div class="space-steps rise" style="--rd: .24s;">
+          <span><b>1</b>Section</span>
+          <span><b>2</b>Activité &amp; trimestre</span>
+          <span><b>3</b>OA, OS, contenus</span>
+          <span><b>4</b>Imprimer</span>
+        </div>
+      </div>
+      <div class="hwf rise" style="--rd: .2s;" data-hw-fiche aria-hidden="true"></div>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="sections" id="sections"></div>
+
+    <section class="space-block rise" style="--rd: .5s;" aria-labelledby="histTitle">
+      <div class="space-block-head">
+        <div>
+          <h2 id="histTitle">Mes dernières fiches</h2>
+          <p class="form-note">Cliquez sur une fiche pour la rouvrir et la modifier.</p>
+        </div>
+      </div>
+      <div class="panel">
+        <ul class="history" id="historyList"></ul>
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>SUÑU FICHES · Préscolaire · © <span data-year></span></p>
+    <nav aria-label="Liens"><a href="https://wa.me/221775335604" target="_blank" rel="noopener">Aide WhatsApp</a></nav>
+  </div>
+</footer>
+
+<script src="assets/js/sunu-config.js"></script>
+<script src="assets/js/sunu-core.js"></script>
+<script src="assets/js/data-prescolaire.js"></script>
+<script src="assets/js/hw-fiche.js"></script>
+<script>
+(function () {
+  var user = SUNU.requireAuth();
+  if (!user) return;
+  SUNU.renderUser(user);
+  var esc = SUNU.escapeHtml;
+
+  // Les trois sections, avec les repères de leur guide
+  var SECTIONS = [
+    { v: 'PS', cls: 'ps', name: 'Petite Section', age: '3 – 4 ans', sub: 'Dominante : expression spontanée',
+      points: ['750 mots de vocabulaire', 'Nombres de 1 à 3, comptine jusqu\'à 5', 'Coins jeux et ateliers de découverte'] },
+    { v: 'MS', cls: 'ms', name: 'Moyenne Section', age: '4 – 5 ans', sub: 'Dominante : structuration',
+      points: ['1 500 mots de vocabulaire', 'Nombres jusqu\'à 10', 'Séances de 25 mn, psychomotricité 30 mn'] },
+    { v: 'GS', cls: 'gs', name: 'Grande Section', age: '5 – 6 ans', sub: 'Dominante : communication',
+      points: ['2 500 mots de vocabulaire', 'Nombres jusqu\'à 20', 'Écriture dans les trois graphies, prénom en cursive'] }
+  ];
+  var ARROW = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>';
+  var data = window.SUNU_PRESCO;
+  document.getElementById('sections').innerHTML = SECTIONS.map(function (s, i) {
+    var acts = data.sections[s.v].activites;
+    var count = Object.keys(acts).reduce(function (n, k) { return n + acts[k].rows.length; }, 0);
+    return '<a class="section-card section-card--' + s.cls + ' rise" style="--rd: ' + (0.28 + i * 0.1).toFixed(2) + 's;" href="generateur.html?section=' + s.v + '">' +
+      '<div class="sc-top"><span class="sc-code">' + s.v + '</span><span class="sc-age">' + s.age + '</span></div>' +
+      '<h3>' + s.name + '</h3>' +
+      '<p class="sc-sub">' + s.sub + '</p>' +
+      '<ul class="sc-list">' + s.points.map(function (p) { return '<li>' + esc(p) + '</li>'; }).join('') + '</ul>' +
+      '<div class="sc-foot"><span class="sc-count">15 activités · ' + count + ' objectifs du guide</span><span class="sc-go" aria-hidden="true">' + ARROW + '</span></div>' +
+    '</a>';
+  }).join('');
+
+  // Historique (réaffiché quand les fiches enregistrées en ligne arrivent)
+  renderHistory();
+  document.addEventListener('sunu:synced', renderHistory);
+  function renderHistory() {
+  var list = SUNU.fiches.list().filter(function (f) { return !f.params || f.params.cycle !== 'elem'; });
+  var ul = document.getElementById('historyList');
+  if (!list.length) {
+    ul.innerHTML = '<li class="empty">Aucune fiche pour le moment.<br>Choisissez une section ci-dessus pour préparer votre première fiche.</li>';
+  } else {
+    ul.innerHTML = list.slice(0, 8).map(function (f) {
+      var p = f.params || {};
+      var d = new Date(f.createdAt);
+      var date = isNaN(d) ? '' : d.toLocaleDateString('fr-FR', { day: 'numeric', month: 'short' });
+      return '<li><a href="generateur.html?fiche=' + encodeURIComponent(f.id) + '">' +
+        '<span class="h-ico">' + esc(p.niveau || '') + '</span>' +
+        '<span><span class="h-title">' + esc(p.os || '') + '</span>' +
+        '<span class="h-meta">' + esc((p.activiteLabel || '') + ' · trimestre ' + (p.trimestre || '')) + '</span></span>' +
+        '<span class="h-date">' + date + '</span></a></li>';
+    }).join('');
+  }
+  }
+})();
+</script>
+</body>
+</html>
